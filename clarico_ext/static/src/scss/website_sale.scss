@@ -1,0 +1,310 @@
+// Prevent grid gutter to be higher that bootstrap gutter width to make sure
+// the negative margin layout does not overflow on elements. This prevents the
+// use of an ugly overflow: hidden which would break box-shadows.
+
+
+
+.bg-black-50{
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    
+    }
+
+.s_text{
+    color: white;
+    }
+
+.s_title{
+    color: white;
+    }
+
+.cto{
+    padding-left: 10%;
+    padding-right: 10%;
+    }
+
+
+.place_order{
+    margin-top: 9px;
+    
+    }
+
+
+#products_grid {
+    .table {
+        table-layout: fixed;
+
+        td {
+            margin-top: $o-wsale-products-layout-grid-gutter-width; // For list and mobile design
+            padding: 0;
+
+            @if $o-wsale-products-layout-grid-gutter-width <= 0 {
+                border: $card-border-width solid $card-border-color;
+            }
+        }
+        tr:first-child td:first-child {
+            margin-top: 0; // For list and mobile design
+        }
+
+        .o_wsale_product_grid_wrapper {
+            position: relative;
+
+            @for $x from 1 through 4 {
+                @for $y from 1 through 4 {
+                    &.o_wsale_product_grid_wrapper_#{$x}_#{$y} {
+                        padding-top: 100% * $o-wsale-products-layout-grid-ratio * $y / $x;
+                    }
+                }
+            }
+
+            > * {
+                $-pos: ($o-wsale-products-layout-grid-gutter-width / 2);
+                @include o-position-absolute($-pos, $-pos, $-pos, $-pos);
+
+                @if $o-wsale-products-layout-grid-gutter-width <= 0 {
+                    &.card {
+                        border: none;
+
+                        &, .card-body {
+                            border-radius: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .o_wsale_products_grid_table_wrapper {
+        // Necessary to compensate the outer border-spacing of the table. No
+        // overflow will occur as the gutter width cannot be higher than the
+        // BS4 grid gutter and the vertical margins of the wrapper's parent are
+        // set accordingly.
+        // Note: a possible layout could also be ok by removing the wrapper
+        // related spacings and setting a background to it, thus including the
+        // outer border spacing as part of the design.
+        margin: (-$o-wsale-products-layout-grid-gutter-width / 2);
+    }
+
+    @include media-breakpoint-down(sm) {
+        @include wsale-break-table-to-list();
+
+        .table .o_wsale_product_grid_wrapper {
+            padding-top: 100% !important;
+        }
+    }
+
+    &.o_wsale_layout_list {
+        @include media-breakpoint-up(sm) {
+            @include wsale-break-table-to-list();
+
+            .o_wsale_products_grid_table_wrapper {
+                margin: 0;
+            }
+
+            .table .o_wsale_product_grid_wrapper {
+                padding-top: 0 !important;
+
+                > * {
+                    @include o-position-absolute(0, 0, 0, 0);
+                    position: relative;
+                }
+            }
+        
+            .quick-sec {
+                    background-color: #e6e7e4;
+                    justify-content: center;
+                    margin-top: 5px;
+                    width: 20%;
+                    left: 0px !important;
+                    position: absolute;
+                    margin-left: 110px !important;
+                }
+            
+            .tick-icon{
+                margin-left: 250px !important;
+                }
+            .css_quantity{
+                //margin-top: -30px;
+                display: inline-flex;
+                }
+
+            .oe_product_cart {
+                $-wsale-list-layout-height: 5rem !important;
+
+                flex-flow: row nowrap;
+                min-height: $-wsale-list-layout-height;
+
+                .oe_product_image {
+                    flex: 0 0 auto;
+                    width: $-wsale-list-layout-height;
+                    max-width: 35%;
+                    min-width: 100px;
+                    height: auto;
+                }
+                .o_wsale_product_information {
+                    position: static;
+                    display: flex;
+                    flex: 1 1 auto;
+                    text-align: left !important;
+                }
+                .o_wsale_product_information_text {
+                    flex: 1 1 auto;
+                }
+                .o_wsale_product_btn {
+                    flex: 0 0 auto;
+                    position: static;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    align-items: center;
+                    padding: map-get($spacers, 2);
+                    background-color: gray('200');
+
+                    .btn + .btn {
+                        margin-top: map-get($spacers, 2);
+                    }
+                }
+
+                .oe_subdescription {
+                    max-height: none !important;
+                }
+                .oe_subdescription,
+                .o_wsale_product_btn .btn {
+                    transform: scale(1) !important;
+                }
+
+                &:hover {
+                    .o_wsale_product_information {
+                        background-color: $white !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+.quick-add{
+    
+    margin-top: 2px;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 19px;
+    
+    }
+
+    
+.quick-in{
+    
+    max-width: 60px;
+    height: 27px !important;
+    margin-top: 4px;
+    
+    }
+
+    
+.quick-sec{
+    
+    background-color: #e6e7e4;
+    justify-content: center;
+    margin-top: 5px;
+    
+    }
+
+.po_number{
+    width: 180px !important;
+    margin-right: 10px;
+    display: inline !important;
+    float: right;
+    }
+
+#o_proceed{
+    float: right !important;
+    }
+
+
+    
+@media (min-width: 1000px) {
+#products_grid .table td {
+    //height: 282px !important;
+}
+
+
+.oe_product {
+    
+    //height: 420px !important;
+    }
+
+.place_order{
+    margin-left: 10px;
+    
+    }
+
+.po_number{
+    width: 126px !important;
+    margin-bottom: 8px !important;
+    }
+
+.o_wsale_products_grid_table_wrapper .table{
+    width: 72% !important; 
+    margin-left: 14% !important;
+    
+    }
+.css_quantity{
+    width: 25% !important;
+    }
+
+
+}
+
+
+@media (min-width: 550px) and (max-width: 999px) {
+.css_quantity {
+    width: 35% !important;
+}
+
+}
+
+
+
+    
+ .tick-icon{
+     
+    color: green;
+    font-size: xx-large;
+     }   
+ 
+ .tick{
+     
+     font-size: 14px;
+     color: grey;
+     }
+    
+    
+    
+  
+.bann-img{
+    width: 100%;
+    height: fit-content;
+    
+    }  
+    
+.main_login{
+    margin-bottom: 5%;
+    }   
+    
+
+.div-btn{
+    
+    margin-top: 1%;
+    }
+
+#home_log_in{
+    margin-left: 35%;
+    padding-left: 150px;
+    padding-right: 150px;
+    height: 60px;
+    padding-top: 15px;
+    }  
+    

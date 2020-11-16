@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    
+<!--    <template id="customize_home_clarico" inherit_id="portal.frontend_layout" >-->
+<!--        <xpath expr="//div[@id='top_menu_collapse']" position="replace">-->
+<!--            -->
+<!--        </xpath>-->
+<!--        -->
+<!--    </template>-->
+    
+    <template id="frontend_layout_clarico" name="Main Frontend Layout Clarico" inherit_id="web.frontend_layout">
+        <xpath expr="//div[@id='wrapwrap']" position="replace">
+        
+        	<div id="AVcontentBox" 
+        	style="position: fixed; left: 50%; top: 50%; margin-top: -180px; margin-left: -180px; width: 340px; z-index: 10000100;
+        	 height: 240px; background-color: rgba(0, 0, 0, 0.7); text-align: center; color: rgb(255, 255, 255) !important; 
+        	 font-size: 20px !important; font-family: Helvetica !important; font-weight: lighter !important; font-style: normal !important; 
+        	 letter-spacing: 0px !important; text-transform: none !important; box-sizing: initial !important; 
+        	 overflow-wrap: break-word !important; line-height: normal !important; padding: 30px 10px 0px;">
+        	 
+        	 Welcome!<br></br>Please submit your<br></br>date of birth to enter.</div>
+        	 
+        	 
+        	 
+        	 <div id="AVbgImg" style="width: 100% !important; height: 100% !important; position: fixed !important; left: 0px; top: 0px; border: 0px; 
+        	 z-index: 9999700; background-image: url(&quot;clarico_ext/static/img/back.jpg&quot;); 
+        	 background-repeat: no-repeat; background-position: center center; background-size: cover;"></div>
+        	 
+        	 
+        	 
+        	 <input id="bmonth" type="tel" maxlength="2" autocomplete="off" placeholder="MM"  
+        	 style="position: fixed; margin: 10px 0px 0px -149px; left: 50%; top: 50%; height: 40px !important; color: rgb(225, 255, 255) !important; 
+        	 font-size: 24px !important; padding: 5px 3px 3px !important; text-align: center !important; line-height: normal !important; 
+        	 font-family: Helvetica !important; font-weight: lighter !important; font-style: normal !important; background-color: rgba(0, 0, 0, 0.7); 
+        	 border: 2px solid rgb(130, 194, 64) !important; border-radius: 0px !important; outline: none !important; box-shadow: none !important; 
+        	 box-sizing: content-box !important; width: 80px !important; z-index: 10000301;" />
+        	 
+        	 
+        	 
+        	 <input id="bday" type="tel" maxlength="2" autocomplete="off" placeholder="DD" 
+        	 style="text-align: center !important; line-height: normal !important; position: fixed; margin: 10px 0px 0px -44px; left: 50%; top: 50%; 
+        	 height: 40px !important; color: rgb(255, 255, 255) !important; font-size: 24px !important; padding: 5px 3px 3px !important; 
+        	 font-family: Helvetica !important; font-weight: lighter !important; font-style: normal !important; 
+        	 background-color: rgba(0, 0, 0, 0.7); border-width: 2px !important; border-style: solid !important; 
+        	 border-color: rgb(130, 194, 64); border-image: initial !important; border-radius: 0px !important; outline: none !important; 
+        	 box-shadow: none !important; width: 80px !important; box-sizing: content-box !important; z-index: 10000301;" />
+        	 
+        	 
+        	 
+        	 <input id="byear" type="tel" maxlength="4" autocomplete="off" placeholder="YYYY" 
+        	  style="position: fixed; margin: 10px 0px 0px 61px; left: 50%; top: 50%; height: 40px !important; color: rgb(255, 255, 255) !important; 
+        	  font-size: 24px !important; padding: 5px 3px 3px !important; font-family: Helvetica !important; font-weight: lighter !important; 
+        	  font-style: normal !important; text-align: center !important; line-height: normal !important; background-color: rgba(0, 0, 0, 0.7);
+        	  border-width: 2px !important; border-style: solid !important; border-color: rgb(130, 194, 64); 
+        	  border-image: initial !important; border-radius: 0px !important; outline: none !important; box-shadow: none !important; 
+        	  width: 80px !important; box-sizing: content-box !important; z-index: 10000301;" />
+        	 
+        	
+        	
+        	 
+        
+        </xpath>
+    </template>
+    
+</odoo>
