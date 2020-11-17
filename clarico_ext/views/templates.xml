@@ -1,66 +1,305 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    
-    
-<!--    <template id="customize_home_clarico" inherit_id="portal.frontend_layout" >-->
-<!--        <xpath expr="//div[@id='top_menu_collapse']" position="replace">-->
-<!--            -->
-<!--        </xpath>-->
-<!--        -->
-<!--    </template>-->
-    
-    <template id="frontend_layout_clarico" name="Main Frontend Layout Clarico" inherit_id="web.frontend_layout">
-        <xpath expr="//div[@id='wrapwrap']" position="replace">
-        
-        	<div id="AVcontentBox" 
-        	style="position: fixed; left: 50%; top: 50%; margin-top: -180px; margin-left: -180px; width: 340px; z-index: 10000100;
-        	 height: 240px; background-color: rgba(0, 0, 0, 0.7); text-align: center; color: rgb(255, 255, 255) !important; 
-        	 font-size: 20px !important; font-family: Helvetica !important; font-weight: lighter !important; font-style: normal !important; 
-        	 letter-spacing: 0px !important; text-transform: none !important; box-sizing: initial !important; 
-        	 overflow-wrap: break-word !important; line-height: normal !important; padding: 30px 10px 0px;">
-        	 
-        	 Welcome!<br></br>Please submit your<br></br>date of birth to enter.</div>
-        	 
-        	 
-        	 
-        	 <div id="AVbgImg" style="width: 100% !important; height: 100% !important; position: fixed !important; left: 0px; top: 0px; border: 0px; 
-        	 z-index: 9999700; background-image: url(&quot;clarico_ext/static/img/back.jpg&quot;); 
-        	 background-repeat: no-repeat; background-position: center center; background-size: cover;"></div>
-        	 
-        	 
-        	 
-        	 <input id="bmonth" type="tel" maxlength="2" autocomplete="off" placeholder="MM"  
-        	 style="position: fixed; margin: 10px 0px 0px -149px; left: 50%; top: 50%; height: 40px !important; color: rgb(225, 255, 255) !important; 
-        	 font-size: 24px !important; padding: 5px 3px 3px !important; text-align: center !important; line-height: normal !important; 
-        	 font-family: Helvetica !important; font-weight: lighter !important; font-style: normal !important; background-color: rgba(0, 0, 0, 0.7); 
-        	 border: 2px solid rgb(130, 194, 64) !important; border-radius: 0px !important; outline: none !important; box-shadow: none !important; 
-        	 box-sizing: content-box !important; width: 80px !important; z-index: 10000301;" />
-        	 
-        	 
-        	 
-        	 <input id="bday" type="tel" maxlength="2" autocomplete="off" placeholder="DD" 
-        	 style="text-align: center !important; line-height: normal !important; position: fixed; margin: 10px 0px 0px -44px; left: 50%; top: 50%; 
-        	 height: 40px !important; color: rgb(255, 255, 255) !important; font-size: 24px !important; padding: 5px 3px 3px !important; 
-        	 font-family: Helvetica !important; font-weight: lighter !important; font-style: normal !important; 
-        	 background-color: rgba(0, 0, 0, 0.7); border-width: 2px !important; border-style: solid !important; 
-        	 border-color: rgb(130, 194, 64); border-image: initial !important; border-radius: 0px !important; outline: none !important; 
-        	 box-shadow: none !important; width: 80px !important; box-sizing: content-box !important; z-index: 10000301;" />
-        	 
-        	 
-        	 
-        	 <input id="byear" type="tel" maxlength="4" autocomplete="off" placeholder="YYYY" 
-        	  style="position: fixed; margin: 10px 0px 0px 61px; left: 50%; top: 50%; height: 40px !important; color: rgb(255, 255, 255) !important; 
-        	  font-size: 24px !important; padding: 5px 3px 3px !important; font-family: Helvetica !important; font-weight: lighter !important; 
-        	  font-style: normal !important; text-align: center !important; line-height: normal !important; background-color: rgba(0, 0, 0, 0.7);
-        	  border-width: 2px !important; border-style: solid !important; border-color: rgb(130, 194, 64); 
-        	  border-image: initial !important; border-radius: 0px !important; outline: none !important; box-shadow: none !important; 
-        	  width: 80px !important; box-sizing: content-box !important; z-index: 10000301;" />
-        	 
-        	
-        	
-        	 
-        
-        </xpath>
-    </template>
-    
+
+	<template id="assets_frontend_clarico_ext" inherit_id="website.assets_frontend">
+		<xpath expr="link[last()]" position="after">
+			<link rel="stylesheet" type="text/scss"
+				href="/clarico_ext/static/src/scss/website_sale.scss" />
+		</xpath>
+		<xpath expr="script[last()]" position="after">
+			<script type="text/javascript" src="/clarico_ext/static/src/js/website_sale.js"></script>
+		</xpath>
+	</template>
+
+
+	<template id="clarico_home">
+		<t t-call="website.layout">
+
+
+
+
+
+
+
+
+
+
+			<div id="myCarousel1605614006792" class="s_carousel s_carousel_default carousel slide"
+				data-interval="70000" data-name="Style 2">
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel1605614006792" data-slide-to="0"
+						class="active"></li>
+					<li data-target="#myCarousel1605614006792" data-slide-to="1"></li>
+				</ol>
+				<div class="carousel-inner te_arrow_small">
+					<div class="carousel-item oe_custom_bg oe_img_bg active" style="opacity: 1;"
+						data-name="Slide">
+						<div class="carousel-content">
+							<div class="row ">
+								<section class="col-lg-12">
+									<div class="t_img_hover_1">
+										<img class="img img-responsive img-fluid d-block mx-auto"
+											alt="Clarico-Slider Style 5" src="/clarico_ext/static/img/banner1.jpg" />
+									</div>
+								</section>
+								<section class="col-lg-6 te_t_slider_5_txt ban-over">
+									<h5 class="te_t_furniture_text o_default_snippet_text">My Heading</h5>
+									<h2 class="te_t_slider_5_title_text o_default_snippet_text">My Title</h2>
+									<p class="te_t_good_product_text o_default_snippet_text">
+										Some description
+										Some description
+                                </p>
+									<section class="pb48 s_btn">
+										<a href="#"
+											class="btn btn-primary te_theme_button mt32 o_default_snippet_text">Know more</a>
+									</section>
+								</section>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-item oe_custom_bg oe_img_bg" style="opacity: 1;"
+						data-name="Slide">
+						<div class="carousel-content">
+							<div class="row">
+								<section class="col-lg-12">
+									<div class="t_img_hover_1">
+										<img class="img img-responsive img-fluid d-block mx-auto"
+											alt="Clarico-Slider Style 5" src="/clarico_ext/static/img/banner2.jpg" />
+									</div>
+								</section>
+								<section class="col-lg-6 te_t_slider_5_txt ban-over">
+									<h5 class="te_t_furniture_text o_default_snippet_text">My Heading</h5>
+									<h2 class="te_t_slider_5_title_text o_default_snippet_text">My Titlr</h2>
+									<p class="te_t_good_product_text o_default_snippet_text">
+										Some description
+										Some description
+                                </p>
+									<section class="pb48 s_btn">
+										<a href="#"
+											class="btn btn-primary te_theme_button mt16 o_default_snippet_text">Know more</a>
+									</section>
+								</section>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-control-prev" data-target="#myCarousel1605614006792"
+						data-slide="prev" role="img" aria-label="Previous" title="Previous">
+						<span class="carousel-control-prev-icon te_arrow_top"></span>
+						<span class="sr-only o_default_snippet_text">Previous</span>
+					</div>
+					<div class="carousel-control-next" data-target="#myCarousel1605614006792"
+						data-slide="next" role="img" aria-label="Next" title="Next">
+						<span class="carousel-control-next-icon te_arrow_top"></span>
+						<span class="sr-only o_default_snippet_text">Next</span>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+			<section class="s_three_columns pb32 pt32" data-name="Style 2">
+				<div class="container">
+					<div class="row d-flex align-items-stretch">
+						<div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+							<div class="te_3_column_left_heading">
+								<section class="te_img_hover_overflow t_img_hover_1">
+									<img class="card-img-top img img-responsive te_feature_image"
+										src="/clarico_ext/static/img/imgb1.png" alt="Clarico-3 Columns Style 2" />
+								</section>
+								<div class="card-body bg-100 oe_custom_bg">
+									<p class="card-title te_three_columns_heading o_default_snippet_text">Lorem ipsum</p>
+									<p class="card-text te_three_columns_para o_default_snippet_text">
+										Lorem ipsum dolor sit amet, eam et reque justo quidam, te est
+										audire persius. Duis
+										meis quas vim ex, ius no oblique. Ornatus
+
+										<em class="o_default_snippet_text"></em>
+										cu.
+
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+							<div class="te_3_column_left_heading">
+								<section class="te_img_hover_overflow t_img_hover_1">
+									<img class="card-img-top img img-responsive te_feature_image"
+										src="/clarico_ext/static/img/imgb2.png" alt="Clarico-3 Columns Style 2" />
+								</section>
+								<div class="card-body bg-100 oe_custom_bg">
+									<p class="card-title te_three_columns_heading o_default_snippet_text">Lorem ipsum
+                                </p>
+									<p class="card-text te_three_columns_para o_default_snippet_text">
+										Lorem ipsum dolor sit amet, eam et reque justo quidam, te est
+										audire persius. Duis
+										meis quas vim ex, ius no oblique. Ornatus
+
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+							<div class="te_3_column_left_heading">
+								<section class="te_img_hover_overflow t_img_hover_1">
+									<img class="card-img-top img img-responsive te_feature_image"
+										src="/clarico_ext/static/img/imgb3.png" alt="Clarico-3 Columns Style 2" />
+								</section>
+								<div class="card-body bg-100 oe_custom_bg">
+									<p class="card-title te_three_columns_heading o_default_snippet_text">Lorem ipsum
+                                </p>
+									<p class="card-text te_three_columns_para o_default_snippet_text">
+										Lorem ipsum dolor sit amet, eam et reque justo quidam, te est
+										audire persius. Duis
+										meis quas vim ex, ius no oblique. Ornatus
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+
+
+
+
+
+			<div style="display: inline-flex; ">
+				<section class="s_text_image pt32 pb32" data-name="Image - Text">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-lg-6">
+								<div class="t_img_hover_1 te_img_txt_s1">
+									<img src="/clarico_ext/static/img/imgb4.jpg" class="img img-fluid mx-auto"
+										alt="Clarico-Image-Text" />
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<h2 class="text-capitalize te_s_it_heading o_default_snippet_text">SMART SET</h2>
+								<div class="s_hr text-left pb32 pt8">
+									<hr
+										class="border-600 aos-init s_hr_solid w-25 mr-auto s_hr_4px border-alpha aos-animate"
+										data-aos="s_hr_4px" />
+								</div>
+								<p class="mb16 o_default_snippet_text">
+									Uses state-of-the-art computer software (SpaceVUES)
+									to represent
+									the top-selling categories, product mixes, and reduces out of
+									stocks.
+								</p>
+								<div class="s_btn text-left pt16 pb16">
+									<a href="#"
+										class="btn btn-primary te_theme_button o_default_snippet_text">Know more</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="s_text_image pt32 pb32" data-name="Image - Text">
+					<div class="container">
+						<div class="row align-items-center">
+							<div class="col-lg-6">
+								<div class="t_img_hover_1 te_img_txt_s1">
+									<img src="/clarico_ext/static/img/imgb5.jpg" class="img img-fluid mx-auto"
+										alt="Clarico-Image-Text" />
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<h2 class="text-capitalize te_s_it_heading o_default_snippet_text">PROMO POWER</h2>
+								<div class="s_hr text-left pb32 pt8">
+									<hr
+										class="border-600 aos-init s_hr_solid w-25 mr-auto s_hr_4px border-alpha aos-animate"
+										data-aos="s_hr_4px" />
+								</div>
+								<p class="mb16 o_default_snippet_text">
+									Promo Power is our monthly promotional brochure that
+									features the newest items, value-packed deals on best-selling
+									products,
+									and high-margin seasonal offerings.
+								</p>
+								<div class="s_btn text-left pt16 pb16">
+									<a href="#"
+										class="btn btn-primary te_theme_button o_default_snippet_text">Know more</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+
+
+
+
+
+
+
+
+			<section class="pb32 pt32" data-name="Style 3">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-sm-6 te_col_5_main">
+							<section class="t_img_hover_1">
+								<a href="#">
+									<img class="img img-responsive img-fluid mx-auto d-block"
+										alt="" src="/clarico_ext/static/img/imgb4_1.png" />
+								</a>
+							</section>
+
+						</div>
+						<div class="col-lg-3 col-sm-6 te_col_5_main">
+							<section class="t_img_hover_1">
+								<a href="#">
+									<img class="img img-responsive img-fluid mx-auto d-block"
+										alt="" src="/clarico_ext/static/img/imgb4_2.jpg" />
+								</a>
+							</section>
+
+						</div>
+						<div class="col-lg-3 col-sm-6 te_col_5_main">
+							<section class="t_img_hover_1">
+								<a href="#">
+									<img class="img img-responsive img-fluid mx-auto d-block"
+										alt="" src="/clarico_ext/static/img/imgb4_3.png" />
+								</a>
+							</section>
+
+						</div>
+						<div class="col-lg-3 col-sm-6 te_col_5_main">
+							<section class="t_img_hover_1">
+								<a href="#">
+									<img class="img img-responsive img-fluid mx-auto d-block"
+										alt="" src="/clarico_ext/static/img/imgb4_4.png" />
+								</a>
+							</section>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		</t>
+	</template>
+
+
 </odoo>
