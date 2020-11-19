@@ -16,14 +16,6 @@
 		<t t-call="website.layout">
 
 
-
-
-
-
-
-
-
-
 			<div id="myCarousel1605614006792" class="s_carousel s_carousel_default carousel slide"
 				data-interval="70000" data-name="Style 2">
 				<ol class="carousel-indicators">
@@ -38,17 +30,31 @@
 							<div class="row ">
 								<section class="col-lg-12">
 									<div class="t_img_hover_1">
-										<img class="img img-responsive img-fluid d-block mx-auto"
-											alt="Clarico-Slider Style 5" src="/clarico_ext/static/img/banner1.jpg" />
+
+
+										<div class="video-wrapper">
+											<iframe class="slider-image-mockup" width="100%"
+												height="100%"
+												src="https://www.youtube.com/embed/EGCpO9NdESA?rel=0&amp;controls=0&amp;showinfo=0&amp;
+											modestbranding=0&amp;autoplay=1&amp;loop=1&amp;playlist=EGCpO9NdESA"
+												frameborder="0" allowfullscreen="allowfullscreen"
+												mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen"
+												oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"
+												style="pointer-events: none;">
+											</iframe>
+										</div>
+
+
+										<!-- <img class="img img-responsive img-fluid d-block mx-auto" -->
+										<!-- alt="Clarico-Slider Style 5" src="/clarico_ext/static/img/banner1.jpg" 
+											/> -->
 									</div>
 								</section>
 								<section class="col-lg-6 te_t_slider_5_txt ban-over">
-									<h5 class="te_t_furniture_text o_default_snippet_text">My Heading</h5>
-									<h2 class="te_t_slider_5_title_text o_default_snippet_text">My Title</h2>
+									<h5 class="te_t_furniture_text o_default_snippet_text">With KT&amp;G</h5>
 									<p class="te_t_good_product_text o_default_snippet_text">
-										Some description
-										Some description
-                                </p>
+										Imagine for a better tomorrow, KT&amp;G is with you.
+                                	</p>
 									<section class="pb48 s_btn">
 										<a href="#"
 											class="btn btn-primary te_theme_button mt32 o_default_snippet_text">Know more</a>
@@ -56,41 +62,6 @@
 								</section>
 							</div>
 						</div>
-					</div>
-					<div class="carousel-item oe_custom_bg oe_img_bg" style="opacity: 1;"
-						data-name="Slide">
-						<div class="carousel-content">
-							<div class="row">
-								<section class="col-lg-12">
-									<div class="t_img_hover_1">
-										<img class="img img-responsive img-fluid d-block mx-auto"
-											alt="Clarico-Slider Style 5" src="/clarico_ext/static/img/banner2.jpg" />
-									</div>
-								</section>
-								<section class="col-lg-6 te_t_slider_5_txt ban-over">
-									<h5 class="te_t_furniture_text o_default_snippet_text">My Heading</h5>
-									<h2 class="te_t_slider_5_title_text o_default_snippet_text">My Titlr</h2>
-									<p class="te_t_good_product_text o_default_snippet_text">
-										Some description
-										Some description
-                                </p>
-									<section class="pb48 s_btn">
-										<a href="#"
-											class="btn btn-primary te_theme_button mt16 o_default_snippet_text">Know more</a>
-									</section>
-								</section>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-control-prev" data-target="#myCarousel1605614006792"
-						data-slide="prev" role="img" aria-label="Previous" title="Previous">
-						<span class="carousel-control-prev-icon te_arrow_top"></span>
-						<span class="sr-only o_default_snippet_text">Previous</span>
-					</div>
-					<div class="carousel-control-next" data-target="#myCarousel1605614006792"
-						data-slide="next" role="img" aria-label="Next" title="Next">
-						<span class="carousel-control-next-icon te_arrow_top"></span>
-						<span class="sr-only o_default_snippet_text">Next</span>
 					</div>
 				</div>
 			</div>
@@ -106,18 +77,12 @@
 							<div class="te_3_column_left_heading">
 								<section class="te_img_hover_overflow t_img_hover_1">
 									<img class="card-img-top img img-responsive te_feature_image"
-										src="/clarico_ext/static/img/imgb1.png" alt="Clarico-3 Columns Style 2" />
+										src="/clarico_ext/static/img/cr100.png" alt="Clarico-3 Columns Style 2" />
 								</section>
 								<div class="card-body bg-100 oe_custom_bg">
-									<p class="card-title te_three_columns_heading o_default_snippet_text">Lorem ipsum</p>
+									<p class="card-title te_three_columns_heading o_default_snippet_text">Carnival Red 100 s</p>
 									<p class="card-text te_three_columns_para o_default_snippet_text">
-										Lorem ipsum dolor sit amet, eam et reque justo quidam, te est
-										audire persius. Duis
-										meis quas vim ex, ius no oblique. Ornatus
-
-										<em class="o_default_snippet_text"></em>
-										cu.
-
+										Carnival Red 100 s
 									</p>
 								</div>
 							</div>
@@ -126,16 +91,13 @@
 							<div class="te_3_column_left_heading">
 								<section class="te_img_hover_overflow t_img_hover_1">
 									<img class="card-img-top img img-responsive te_feature_image"
-										src="/clarico_ext/static/img/imgb2.png" alt="Clarico-3 Columns Style 2" />
+										src="/clarico_ext/static/img/cb100.png" alt="Clarico-3 Columns Style 2" />
 								</section>
 								<div class="card-body bg-100 oe_custom_bg">
-									<p class="card-title te_three_columns_heading o_default_snippet_text">Lorem ipsum
+									<p class="card-title te_three_columns_heading o_default_snippet_text">Carnival Blue 100 s
                                 </p>
 									<p class="card-text te_three_columns_para o_default_snippet_text">
-										Lorem ipsum dolor sit amet, eam et reque justo quidam, te est
-										audire persius. Duis
-										meis quas vim ex, ius no oblique. Ornatus
-
+										Carnival Blue 100 s
 									</p>
 								</div>
 							</div>
@@ -144,15 +106,13 @@
 							<div class="te_3_column_left_heading">
 								<section class="te_img_hover_overflow t_img_hover_1">
 									<img class="card-img-top img img-responsive te_feature_image"
-										src="/clarico_ext/static/img/imgb3.png" alt="Clarico-3 Columns Style 2" />
+										src="/clarico_ext/static/img/cs100.png" alt="Clarico-3 Columns Style 2" />
 								</section>
 								<div class="card-body bg-100 oe_custom_bg">
-									<p class="card-title te_three_columns_heading o_default_snippet_text">Lorem ipsum
+									<p class="card-title te_three_columns_heading o_default_snippet_text">Carnival Silver 100 s
                                 </p>
 									<p class="card-text te_three_columns_para o_default_snippet_text">
-										Lorem ipsum dolor sit amet, eam et reque justo quidam, te est
-										audire persius. Duis
-										meis quas vim ex, ius no oblique. Ornatus
+										Carnival Silver 100 s
 									</p>
 								</div>
 							</div>
@@ -160,120 +120,116 @@
 					</div>
 				</div>
 			</section>
-
-
-
-
-
-
-			<div style="display: inline-flex; ">
-				<section class="s_text_image pt32 pb32" data-name="Image - Text">
-					<div class="container">
-						<div class="row align-items-center">
-							<div class="col-lg-6">
-								<div class="t_img_hover_1 te_img_txt_s1">
-									<img src="/clarico_ext/static/img/imgb4.jpg" class="img img-fluid mx-auto"
-										alt="Clarico-Image-Text" />
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<h2 class="text-capitalize te_s_it_heading o_default_snippet_text">SMART SET</h2>
-								<div class="s_hr text-left pb32 pt8">
-									<hr
-										class="border-600 aos-init s_hr_solid w-25 mr-auto s_hr_4px border-alpha aos-animate"
-										data-aos="s_hr_4px" />
-								</div>
-								<p class="mb16 o_default_snippet_text">
-									Uses state-of-the-art computer software (SpaceVUES)
-									to represent
-									the top-selling categories, product mixes, and reduces out of
-									stocks.
-								</p>
-								<div class="s_btn text-left pt16 pb16">
-									<a href="#"
-										class="btn btn-primary te_theme_button o_default_snippet_text">Know more</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="s_text_image pt32 pb32" data-name="Image - Text">
-					<div class="container">
-						<div class="row align-items-center">
-							<div class="col-lg-6">
-								<div class="t_img_hover_1 te_img_txt_s1">
-									<img src="/clarico_ext/static/img/imgb5.jpg" class="img img-fluid mx-auto"
-										alt="Clarico-Image-Text" />
-								</div>
-							</div>
-							<div class="col-lg-6">
-								<h2 class="text-capitalize te_s_it_heading o_default_snippet_text">PROMO POWER</h2>
-								<div class="s_hr text-left pb32 pt8">
-									<hr
-										class="border-600 aos-init s_hr_solid w-25 mr-auto s_hr_4px border-alpha aos-animate"
-										data-aos="s_hr_4px" />
-								</div>
-								<p class="mb16 o_default_snippet_text">
-									Promo Power is our monthly promotional brochure that
-									features the newest items, value-packed deals on best-selling
-									products,
-									and high-margin seasonal offerings.
-								</p>
-								<div class="s_btn text-left pt16 pb16">
-									<a href="#"
-										class="btn btn-primary te_theme_button o_default_snippet_text">Know more</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
-
-
-
-
-
-
-
-
-			<section class="pb32 pt32" data-name="Style 3">
+			
+			
+			
+			
+			
+			
+			<section class="s_three_columns pb32 pt32" data-name="Style 2">
 				<div class="container">
-					<div class="row">
-						<div class="col-lg-3 col-sm-6 te_col_5_main">
-							<section class="t_img_hover_1">
-								<a href="#">
-									<img class="img img-responsive img-fluid mx-auto d-block"
-										alt="" src="/clarico_ext/static/img/imgb4_1.png" />
-								</a>
-							</section>
-
+					<div class="row d-flex align-items-stretch">
+						<div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+							<div class="te_3_column_left_heading">
+								<section class="te_img_hover_overflow t_img_hover_1">
+									<img class="card-img-top img img-responsive te_feature_image"
+										src="/clarico_ext/static/img/cm100s.png" alt="Clarico-3 Columns Style 2" />
+								</section>
+								<div class="card-body bg-100 oe_custom_bg">
+									<p class="card-title te_three_columns_heading o_default_snippet_text">Carnivar M 100 s</p>
+									<p class="card-text te_three_columns_para o_default_snippet_text">
+										Carnival M 100 s
+									</p>
+								</div>
+							</div>
 						</div>
-						<div class="col-lg-3 col-sm-6 te_col_5_main">
-							<section class="t_img_hover_1">
-								<a href="#">
-									<img class="img img-responsive img-fluid mx-auto d-block"
-										alt="" src="/clarico_ext/static/img/imgb4_2.jpg" />
-								</a>
-							</section>
+						<div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+							<div class="te_3_column_left_heading">
+								<section class="te_img_hover_overflow t_img_hover_1">
+									<img class="card-img-top img img-responsive te_feature_image"
+										src="/clarico_ext/static/img/cmg100s.png" alt="Clarico-3 Columns Style 2" />
+								</section>
+								<div class="card-body bg-100 oe_custom_bg">
+									<p class="card-title te_three_columns_heading o_default_snippet_text">Carnival MG 100 s
+                                </p>
+									<p class="card-text te_three_columns_para o_default_snippet_text">
+										Carnival MG 100 s
 
+									</p>
+								</div>
+							</div>
 						</div>
-						<div class="col-lg-3 col-sm-6 te_col_5_main">
-							<section class="t_img_hover_1">
-								<a href="#">
-									<img class="img img-responsive img-fluid mx-auto d-block"
-										alt="" src="/clarico_ext/static/img/imgb4_3.png" />
-								</a>
-							</section>
-
+						<div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+							<div class="te_3_column_left_heading">
+								<section class="te_img_hover_overflow t_img_hover_1">
+									<img class="card-img-top img img-responsive te_feature_image"
+										src="/clarico_ext/static/img/cmg100h.png" alt="Clarico-3 Columns Style 2" />
+								</section>
+								<div class="card-body bg-100 oe_custom_bg">
+									<p class="card-title te_three_columns_heading o_default_snippet_text">Carnival MG 100 H
+                                </p>
+									<p class="card-text te_three_columns_para o_default_snippet_text">
+										Carnival MG 100 H
+									</p>
+								</div>
+							</div>
 						</div>
-						<div class="col-lg-3 col-sm-6 te_col_5_main">
-							<section class="t_img_hover_1">
-								<a href="#">
-									<img class="img img-responsive img-fluid mx-auto d-block"
-										alt="" src="/clarico_ext/static/img/imgb4_4.png" />
-								</a>
-							</section>
+					</div>
+				</div>
+			</section>
+			
+			
+			
 
+
+
+
+
+			<section class="s_three_columns pb32 pt32" data-name="Style 2">
+				<div class="container">
+					<div class="row d-flex align-items-stretch">
+						<div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+							<div class="te_3_column_left_heading">
+								<section class="te_img_hover_overflow t_img_hover_1">
+									<img class="card-img-top img img-responsive te_feature_image"
+										src="/clarico_ext/static/img/thismg84h.png" alt="Clarico-3 Columns Style 2" />
+								</section>
+								<div class="card-body bg-100 oe_custom_bg">
+									<p class="card-title te_three_columns_heading o_default_snippet_text">THIS MG 84 H</p>
+									<p class="card-text te_three_columns_para o_default_snippet_text">
+										THIS MG 84 H
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+							<div class="te_3_column_left_heading">
+								<section class="te_img_hover_overflow t_img_hover_1">
+									<img class="card-img-top img img-responsive te_feature_image"
+										src="/clarico_ext/static/img/thism84h.png" alt="Clarico-3 Columns Style 2" />
+								</section>
+								<div class="card-body bg-100 oe_custom_bg">
+									<p class="card-title te_three_columns_heading o_default_snippet_text">THIS M 84 H</p>
+									<p class="card-text te_three_columns_para o_default_snippet_text">
+										THIS M 84 H
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+							<div class="te_3_column_left_heading">
+								<section class="te_img_hover_overflow t_img_hover_1">
+									<img class="card-img-top img img-responsive te_feature_image"
+										src="/clarico_ext/static/img/thiss84h.png" alt="Clarico-3 Columns Style 2" />
+								</section>
+								<div class="card-body bg-100 oe_custom_bg">
+									<p class="card-title te_three_columns_heading o_default_snippet_text">THIS SILVER 84 H
+                                </p>
+									<p class="card-text te_three_columns_para o_default_snippet_text">
+										THIS SILVER 84 H
+									</p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
