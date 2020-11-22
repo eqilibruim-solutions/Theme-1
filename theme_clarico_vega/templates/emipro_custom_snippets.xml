@@ -364,7 +364,6 @@
                 Inner Snippets
             </div>
             <div class="o_panel_body">
-                <!-- Header Offer -->
                 <t t-snippet="theme_clarico_vega.header_offer_text"
                    t-thumbnail="/theme_clarico_vega/static/src/img/snippets/snippets_icon/header-offer-text.jpg"/>
             </div>
@@ -1671,7 +1670,7 @@
     </template>
     <!--================ Header Offer =======================-->
     <template id="header_offer_text" name="Header Offer">
-        <div class="s_rating row te_s_header_offer_text">
+        <div class="s_rating row te_s_header_offer_text" style="display: none!important" >
             <ul>
                 <li>Lorem ipsum dolor sit amet,</li>
                 <li>

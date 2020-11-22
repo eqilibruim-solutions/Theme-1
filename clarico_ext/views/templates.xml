@@ -1,128 +1,140 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
-
-	<template id="assets_frontend_clarico_ext" inherit_id="website.assets_frontend">
-		<xpath expr="link[last()]" position="after">
-			<link rel="stylesheet" type="text/scss"
-				href="/clarico_ext/static/src/scss/website_sale.scss" />
-		</xpath>
-		<xpath expr="script[last()]" position="after">
-			<script type="text/javascript" src="/clarico_ext/static/src/js/website_sale.js"></script>
-		</xpath>
-	</template>
-
-
-	<template id="clarico_home">
-		<t t-call="website.layout">
-
-
-			<!-- FIRST ROW BANNER -->
-			<div id="myCarousel1605614006792" class="s_carousel s_carousel_default carousel slide"
-				data-interval="70000" data-name="Style 2">
-				<ol class="carousel-indicators">
-					<li data-target="#myCarousel1605614006792" data-slide-to="0"
-						class="active"></li>
-					<li data-target="#myCarousel1605614006792" data-slide-to="1"></li>
-				</ol>
-				<div class="carousel-inner te_arrow_small">
-					<div class="carousel-item oe_custom_bg oe_img_bg active" style="opacity: 1;"
-						data-name="Slide">
-						<div class="carousel-content">
-							<div class="row ">
-								<section class="col-lg-12">
-									<div class="t_img_hover_1">
-
-										<section class="" data-name="Full Image Banner">
-											<section class="t_img_hover_1 te_banner_img pb0 pt0">
-												<img class="img-fluid d-block mx-auto o_we_selected_image"
-													alt="Clarico-Full Image" src="/clarico_ext/static/img/yoga-banner.jpg"
-													data-original-title="" title="" aria-describedby="tooltip785043" />
-											</section>
-										</section>
-									</div>
-								</section>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-
-
-
-
-
-
-			<!-- SECOND ROW -->
-
-			<section class="s_text_image pt32 pb32" data-name="Text - Image">
-				<div class="container">
-					<div class="row align-items-center" data_aos_ept="align-items-center">
-						<div class="col-lg-6">
-							<h2 class="text-capitalize te_s_it_heading" style="color: red">CARNIVAL
+    <template id="assets_frontend_clarico" inherit_id="website.assets_frontend">
+        <xpath expr="link[last()]" position="after">
+            <link href="/clarico_ext/static/src/scss/website_sale.scss"
+                rel="stylesheet" type="text/scss"/>
+        </xpath>
+        <xpath expr="script[last()]" position="after">
+            <script src="/clarico_ext/static/src/js/website_sale.js" type="text/javascript"/>
+        </xpath>
+    </template>
+    
+    
+    
+    
+    <template id="layout_clarico" name="Clarico Layout" inherit_id="website.layout">
+    <xpath expr="." position="inside">
+    
+        <div id="plus18" style="display: none" >
+            <div id="AVoverlay" style="width: 100% !important; height: 100% !important; position: fixed !important; left: 0px !important; top: 0px !important;              padding: 0px !important; margin: 0px !important; z-index: 10000000; background-color: transparent; border: 0px;              background-image: url(&quot;/clarico_ext/static/img/back.jpg&quot;) "/>
+            <div id="AVcontentBox" style="position: fixed; left: 50%; top: 50%; margin-top: -180px; margin-left: -180px; width: 340px;          z-index: 10000100; height: 240px; background-color: rgba(0, 0, 0, 0.7); text-align: center; color: rgb(255, 255, 255) !important;          font-size: 20px !important; font-family: Helvetica !important; font-weight: lighter !important; font-style: normal !important;          letter-spacing: 0px !important; text-transform: none !important; box-sizing: initial !important;          overflow-wrap: break-word !important; line-height: normal !important; padding: 30px 10px 0px;">
+                Welcome!<br/>Please submit your<br/>date of birth to enter.</div>
+            <input autocomplete="off" id="bmonth" maxlength="2"
+                placeholder="MM"
+                style="position: fixed; margin: 10px 0px 0px -149px; left: 50%; top: 50%; height: 40px !important; color: rgb(225, 1, 33) !important;          font-size: 24px !important; padding: 5px 3px 3px !important; text-align: center !important; line-height: normal !important;          font-family: Helvetica !important; font-weight: lighter !important; font-style: normal !important; background-color: transparent !important;          border: 2px solid rgb(225, 1, 33) !important; border-radius: 0px !important; outline: none !important; box-shadow: none !important;          box-sizing: content-box !important; width: 80px !important; z-index: 10000301; margin-top: -40px; " type="tel"/>
+            <input autocomplete="off" id="bday" maxlength="2"
+                placeholder="DD"
+                style="text-align: center !important; line-height: normal !important; position: fixed; margin: 10px 0px 0px -44px; left: 50%;          top: 50%; height: 40px !important; color: rgb(255, 255, 255) !important; font-size: 24px !important; padding: 5px 3px 3px !important;          font-family: Helvetica !important; font-weight: lighter !important; font-style: normal !important; background-color: transparent !important;          border-width: 2px !important; border-style: solid !important; border-color: rgb(130, 194, 64); border-image: initial !important;          border-radius: 0px !important; outline: none !important; box-shadow: none !important; width: 80px !important;          box-sizing: content-box !important; z-index: 10000301; margin-top: -40px; " type="tel"/>
+            <input autocomplete="off" id="byear" maxlength="4"
+                placeholder="YYYY"
+                style="position: fixed; margin: 10px 0px 0px 61px; left: 50%; top: 50%; height: 40px !important; color: rgb(255, 255, 255) !important;          font-size: 24px !important; padding: 5px 3px 3px !important; font-family: Helvetica !important; font-weight: lighter !important;          font-style: normal !important; text-align: center !important; line-height: normal !important; background-color: transparent !important;          border-width: 2px !important; border-style: solid !important; border-color: rgb(130, 194, 64);          border-image: initial !important; border-radius: 0px !important; outline: none !important; box-shadow: none !important;          width: 80px !important; box-sizing: content-box !important; z-index: 10000301; margin-top: -40px; " type="tel"/>
+        </div>
+    
+    </xpath>
+    </template>
+    
+    
+    
+    <template id="clarico_home">
+        <t t-call="website.layout">
+            
+            
+            <!-- FIRST ROW BANNER -->
+            <div class="s_carousel s_carousel_default carousel slide"
+                data-interval="70000" data-name="Style 2" id="myCarousel1605614006792">
+                <ol class="carousel-indicators">
+                    <li class="active" data-slide-to="0" data-target="#myCarousel1605614006792"/>
+                    <li data-slide-to="1" data-target="#myCarousel1605614006792"/>
+                </ol>
+                <div class="carousel-inner te_arrow_small">
+                    <div
+                        class="carousel-item oe_custom_bg oe_img_bg active"
+                        data-name="Slide" style="opacity: 1;">
+                        <div class="carousel-content">
+                            <div class="row ">
+                                <section class="col-lg-12">
+                                    <div class="t_img_hover_1">
+                                    <section class="" data-name="Full Image Banner">
+                                    <section class="t_img_hover_1 te_banner_img pb0 pt0">
+                                    <img
+                                    alt="Clarico-Full Image"
+                                    aria-describedby="tooltip785043"
+                                    class="img-fluid d-block mx-auto o_we_selected_image"
+                                    data-original-title=""
+                                    src="/clarico_ext/static/img/bann.jpg" title=""/>
+                                    </section>
+                                    </section>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SECOND ROW -->
+            <section class="s_text_image pt32 pb32" data-name="Text - Image">
+                <div class="container">
+                    <div class="row align-items-center p-info" data_aos_ept="align-items-center" >
+                        <div class="col-lg-6">
+                            <h2 class="text-capitalize te_s_it_heading" style="color: red">CARNIVAL
 							</h2>
-							<div class="s_hr text-left pb32 pt8">
-								<hr class="border-600 s_hr_solid w-25 mr-auto s_hr_4px border-alpha" />
-							</div>
-							<p class="mb16 o_default_snippet_text">
+                            <div class="s_hr text-left pb32 pt8">
+                                <hr class="border-600 s_hr_solid w-25 mr-auto s_hr_4px border-alpha"/>
+                            </div>
+                            <p class="mb16 o_default_snippet_text">
 								Carnival is the brand that has been selling for the longest time
 								in U.S. American blend, with fine flue-cured and burley leaf.
 								We
 								have enjoyed CARNIVAL for over 20 years in U.S.
-								<br></br>
-							</p>
-							<p class="mb16 o_default_snippet_text">
+								<br/>
+                            </p>
+                            <p class="mb16 o_default_snippet_text">
 								CARNIVAL strongly presents its PASSION in diverse circumstances,
 								such as festival times as the name represents and in the
 								professional work place
 								CARNIVAL's rich taste can be described as
 								an Energetic and Lively feeling
 								to its target consumers.
-								<br></br>
-							</p>
-						</div>
-						<div class="col-lg-6">
-							<div class="t_img_hover_1 te_txt_img_s1">
-								<img src="/clarico_ext/static/img/cmg100h.png" class="img img-fluid mx-auto"
-									alt="Clarico-Text-Image" />
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-
-
-
-			<!-- THIRD ROW -->
-
-			<section class="s_text_image pt32 pb0" data-name="Image - Text">
-				<div class="container">
-					<div class="row align-items-center">
-						<div class="col-lg-6">
-							<div class="t_img_hover_1 te_img_txt_s1">
-								<img src="/clarico_ext/static/img/time-blue.png" class="img img-fluid mx-auto"
-									alt="Clarico-Image-Text" />
-							</div>
-						</div>
-						<div class="col-lg-6">
-							<h2 class="text-capitalize te_s_it_heading o_default_snippet_text"
-								style="color: red">TIME</h2>
-							<div class="s_hr text-left pb32 pt8">
-								<hr
-									class="border-600 aos-init s_hr_solid w-25 mr-auto s_hr_4px border-alpha aos-animate"
-									data-aos="s_hr_4px" />
-							</div>
-							<p class="mb16 o_default_snippet_text">
+								<br/>
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="t_img_hover_1 te_txt_img_s1"  >
+                                <img alt="Clarico-Text-Image"
+                                    class="img img-fluid mx-auto" src="/clarico_ext/static/img/cmg100h.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- THIRD ROW -->
+            <section class="s_text_image pt32 pb0" data-name="Image - Text">
+                <div class="container">
+                    <div class="row align-items-center p-info" >
+                        <div class="col-lg-6">
+                            <div class="t_img_hover_1 te_img_txt_s1">
+                                <img alt="Clarico-Image-Text" 
+                                    class="img img-fluid mx-auto" src="/clarico_ext/static/img/time-blue.png"/>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h2
+                                class="text-capitalize te_s_it_heading o_default_snippet_text" style="color: red">TIME</h2>
+                            <div class="s_hr text-left pb32 pt8">
+                                <hr
+                                    class="border-600 aos-init s_hr_solid w-25 mr-auto s_hr_4px border-alpha aos-animate" data-aos="s_hr_4px"/>
+                            </div>
+                            <p class="mb16 o_default_snippet_text">
 								timeless TIME
 								Timeless TIME is the best selling brand in the U.S.
 								Introduced in 2010,
 								Tmeless TIME uses premium tobacco leaf for a
 								rich flavor at
 								reasonable price.
-								<br></br>
-							</p>
-							<p class="mb16 o_default_snippet_text">
+								<br/>
+                            </p>
+                            <p class="mb16 o_default_snippet_text">
 								Timeless Time represents the time when you are finally relieved
 								during a short break.
 								The smooth taste of TIME sets you free and
@@ -130,343 +142,288 @@
 								puff it in and inhale.
 								A Clean &amp; Unique
 								flavor will satisfy all consumers.
-								<br></br>
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-
-
-
-
-
-
-			<!-- FOURTH ROW -->
-			<section class="s_text_image pt32 pb32" data-name="Text - Image">
-				<div class="container">
-					<div class="row align-items-center" data_aos_ept="align-items-center">
-						<div class="col-lg-6">
-							<h2 class="text-capitalize te_s_it_heading" style="color: red">THIS</h2>
-							<div class="s_hr text-left pb32 pt8">
-								<hr class="border-600 s_hr_solid w-25 mr-auto s_hr_4px border-alpha" />
-							</div>
-							<p class="mb16 o_default_snippet_text">
+								<br/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- FOURTH ROW -->
+            <section class="s_text_image pt32 pb32" data-name="Text - Image">
+                <div class="container">
+                    <div class="row align-items-center p-info" data_aos_ept="align-items-center"  >
+                        <div class="col-lg-6">
+                            <h2 class="text-capitalize te_s_it_heading" style="color: red">THIS</h2>
+                            <div class="s_hr text-left pb32 pt8">
+                                <hr class="border-600 s_hr_solid w-25 mr-auto s_hr_4px border-alpha"/>
+                            </div>
+                            <p class="mb16 o_default_snippet_text">
 								THIS is the new brand for 2018, now available in the U.S. THIS
 								is one of the famous brands in South Korea.
 								Made with high
 								quality burley leaf for a smooth taste.
-								<br></br>
-							</p>
-							<p class="mb16 o_default_snippet_text">
+								<br/>
+                            </p>
+                            <p class="mb16 o_default_snippet_text">
 								THIS represents the American Standard for taste and quality.
 								Reasonable and effective that originated from its authentic
 								taste, and
 								clearly represent proud and patriotic United State
 								citizens.
-								<br></br>
-							</p>
-						</div>
-						<div class="col-lg-6">
-							<div class="t_img_hover_1 te_txt_img_s1">
-								<img src="/clarico_ext/static/img/this-silver.png" class="img img-fluid mx-auto"
-									alt="Clarico-Text-Image" />
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-
-
-
-
-			<!-- FIFTH ROW -->
-
-			<section class="s_three_columns pb32 pt32" data-name="Style 2">
-				<div class="container">
-					<div class="row d-flex align-items-stretch">
-						<div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
-							<div class="te_3_column_left_heading">
-								<section class="te_img_hover_overflow t_img_hover_1">
-									<img class="card-img-top img img-responsive te_feature_image"
-										src="/clarico_ext/static/img/cr100.png" alt="Clarico-3 Columns Style 2" />
-								</section>
-								<div class="card-body bg-100 oe_custom_bg">
-									<p class="card-title te_three_columns_heading o_default_snippet_text">Carnival Red 100 s</p>
-									<p class="card-text te_three_columns_para o_default_snippet_text">
+								<br/>
+                            </p>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="t_img_hover_1 te_txt_img_s1">
+                                <img alt="Clarico-Text-Image" 
+                                    class="img img-fluid mx-auto" src="/clarico_ext/static/img/this-silver.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            
+            <!-- FIFTH ROW -->
+            <section class="s_three_columns pb32 pt32" data-name="Style 2">
+                <div class="container">
+                    <div class="row d-flex align-items-stretch">
+                        <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+                            <div class="te_3_column_left_heading">
+                                <section class="te_img_hover_overflow t_img_hover_1">
+                                    <img alt="Clarico-3 Columns Style 2"
+                                    class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/img/cr100.png"/>
+                                </section>
+                                <div class="card-body bg-100 oe_custom_bg">
+                                    <p class="card-title te_three_columns_heading o_default_snippet_text">Carnival Red 100 s</p>
+                                    <p class="card-text te_three_columns_para o_default_snippet_text">
 										Carnival Red 100 s
 									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
-							<div class="te_3_column_left_heading">
-								<section class="te_img_hover_overflow t_img_hover_1">
-									<img class="card-img-top img img-responsive te_feature_image"
-										src="/clarico_ext/static/img/cb100.png" alt="Clarico-3 Columns Style 2" />
-								</section>
-								<div class="card-body bg-100 oe_custom_bg">
-									<p class="card-title te_three_columns_heading o_default_snippet_text">Carnival Blue 100 s
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+                            <div class="te_3_column_left_heading">
+                                <section class="te_img_hover_overflow t_img_hover_1">
+                                    <img alt="Clarico-3 Columns Style 2"
+                                    class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/img/cb100.png"/>
+                                </section>
+                                <div class="card-body bg-100 oe_custom_bg">
+                                    <p class="card-title te_three_columns_heading o_default_snippet_text">Carnival Blue 100 s
                                 </p>
-									<p class="card-text te_three_columns_para o_default_snippet_text">
+                                    <p class="card-text te_three_columns_para o_default_snippet_text">
 										Carnival Blue 100 s
 									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
-							<div class="te_3_column_left_heading">
-								<section class="te_img_hover_overflow t_img_hover_1">
-									<img class="card-img-top img img-responsive te_feature_image"
-										src="/clarico_ext/static/img/cs100.png" alt="Clarico-3 Columns Style 2" />
-								</section>
-								<div class="card-body bg-100 oe_custom_bg">
-									<p class="card-title te_three_columns_heading o_default_snippet_text">Carnival Silver 100 s
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+                            <div class="te_3_column_left_heading">
+                                <section class="te_img_hover_overflow t_img_hover_1">
+                                    <img alt="Clarico-3 Columns Style 2"
+                                    class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/img/cs100.png"/>
+                                </section>
+                                <div class="card-body bg-100 oe_custom_bg">
+                                    <p class="card-title te_three_columns_heading o_default_snippet_text">Carnival Silver 100 s
                                 </p>
-									<p class="card-text te_three_columns_para o_default_snippet_text">
+                                    <p class="card-text te_three_columns_para o_default_snippet_text">
 										Carnival Silver 100 s
 									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-
-
-
-			<!-- SIXTH ROW -->
-
-			<section class="s_three_columns pb32 pt32" data-name="Style 2">
-				<div class="container">
-					<div class="row d-flex align-items-stretch">
-						<div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
-							<div class="te_3_column_left_heading">
-								<section class="te_img_hover_overflow t_img_hover_1">
-									<img class="card-img-top img img-responsive te_feature_image"
-										src="/clarico_ext/static/img/cm100s.png" alt="Clarico-3 Columns Style 2" />
-								</section>
-								<div class="card-body bg-100 oe_custom_bg">
-									<p class="card-title te_three_columns_heading o_default_snippet_text">Carnivar M 100 s</p>
-									<p class="card-text te_three_columns_para o_default_snippet_text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- SIXTH ROW -->
+            <section class="s_three_columns pb32 pt32" data-name="Style 2">
+                <div class="container">
+                    <div class="row d-flex align-items-stretch">
+                        <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+                            <div class="te_3_column_left_heading">
+                                <section class="te_img_hover_overflow t_img_hover_1">
+                                    <img alt="Clarico-3 Columns Style 2"
+                                    class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/img/cm100s.png"/>
+                                </section>
+                                <div class="card-body bg-100 oe_custom_bg">
+                                    <p class="card-title te_three_columns_heading o_default_snippet_text">Carnival M 100 s</p>
+                                    <p class="card-text te_three_columns_para o_default_snippet_text">
 										Carnival M 100 s
 									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
-							<div class="te_3_column_left_heading">
-								<section class="te_img_hover_overflow t_img_hover_1">
-									<img class="card-img-top img img-responsive te_feature_image"
-										src="/clarico_ext/static/img/cmg100s.png" alt="Clarico-3 Columns Style 2" />
-								</section>
-								<div class="card-body bg-100 oe_custom_bg">
-									<p class="card-title te_three_columns_heading o_default_snippet_text">Carnival MG 100 s
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+                            <div class="te_3_column_left_heading">
+                                <section class="te_img_hover_overflow t_img_hover_1">
+                                    <img alt="Clarico-3 Columns Style 2"
+                                    class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/img/cmg100s.png"/>
+                                </section>
+                                <div class="card-body bg-100 oe_custom_bg">
+                                    <p class="card-title te_three_columns_heading o_default_snippet_text">Carnival MG 100 s
                                 </p>
-									<p class="card-text te_three_columns_para o_default_snippet_text">
+                                    <p class="card-text te_three_columns_para o_default_snippet_text">
 										Carnival MG 100 s
 
 									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
-							<div class="te_3_column_left_heading">
-								<section class="te_img_hover_overflow t_img_hover_1">
-									<img class="card-img-top img img-responsive te_feature_image"
-										src="/clarico_ext/static/img/cmg100h.png" alt="Clarico-3 Columns Style 2" />
-								</section>
-								<div class="card-body bg-100 oe_custom_bg">
-									<p class="card-title te_three_columns_heading o_default_snippet_text">Carnival MG 100 H
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+                            <div class="te_3_column_left_heading">
+                                <section class="te_img_hover_overflow t_img_hover_1">
+                                    <img alt="Clarico-3 Columns Style 2"
+                                    class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/img/cmg100h.png"/>
+                                </section>
+                                <div class="card-body bg-100 oe_custom_bg">
+                                    <p class="card-title te_three_columns_heading o_default_snippet_text">Carnival MG 100 H
                                 </p>
-									<p class="card-text te_three_columns_para o_default_snippet_text">
+                                    <p class="card-text te_three_columns_para o_default_snippet_text">
 										Carnival MG 100 H
 									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-
-
-
-
-
-
-
-			<section class="s_three_columns pb32 pt32" data-name="Style 2">
-				<div class="container">
-					<div class="row d-flex align-items-stretch">
-						<div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
-							<div class="te_3_column_left_heading">
-								<section class="te_img_hover_overflow t_img_hover_1">
-									<img class="card-img-top img img-responsive te_feature_image"
-										src="/clarico_ext/static/img/thismg84h.png" alt="Clarico-3 Columns Style 2" />
-								</section>
-								<div class="card-body bg-100 oe_custom_bg">
-									<p class="card-title te_three_columns_heading o_default_snippet_text">THIS MG 84 H</p>
-									<p class="card-text te_three_columns_para o_default_snippet_text">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="s_three_columns pb32 pt32" data-name="Style 2">
+                <div class="container">
+                    <div class="row d-flex align-items-stretch">
+                        <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+                            <div class="te_3_column_left_heading">
+                                <section class="te_img_hover_overflow t_img_hover_1">
+                                    <img alt="Clarico-3 Columns Style 2"
+                                    class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/img/thismg84h.png"/>
+                                </section>
+                                <div class="card-body bg-100 oe_custom_bg">
+                                    <p class="card-title te_three_columns_heading o_default_snippet_text">THIS MG 84 H</p>
+                                    <p class="card-text te_three_columns_para o_default_snippet_text">
 										THIS MG 84 H
 									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
-							<div class="te_3_column_left_heading">
-								<section class="te_img_hover_overflow t_img_hover_1">
-									<img class="card-img-top img img-responsive te_feature_image"
-										src="/clarico_ext/static/img/thism84h.png" alt="Clarico-3 Columns Style 2" />
-								</section>
-								<div class="card-body bg-100 oe_custom_bg">
-									<p class="card-title te_three_columns_heading o_default_snippet_text">THIS M 84 H</p>
-									<p class="card-text te_three_columns_para o_default_snippet_text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+                            <div class="te_3_column_left_heading">
+                                <section class="te_img_hover_overflow t_img_hover_1">
+                                    <img alt="Clarico-3 Columns Style 2"
+                                    class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/img/thism84h.png"/>
+                                </section>
+                                <div class="card-body bg-100 oe_custom_bg">
+                                    <p class="card-title te_three_columns_heading o_default_snippet_text">THIS M 84 H</p>
+                                    <p class="card-text te_three_columns_para o_default_snippet_text">
 										THIS M 84 H
 									</p>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
-							<div class="te_3_column_left_heading">
-								<section class="te_img_hover_overflow t_img_hover_1">
-									<img class="card-img-top img img-responsive te_feature_image"
-										src="/clarico_ext/static/img/thiss84h.png" alt="Clarico-3 Columns Style 2" />
-								</section>
-								<div class="card-body bg-100 oe_custom_bg">
-									<p class="card-title te_three_columns_heading o_default_snippet_text">THIS SILVER 84 H
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+                            <div class="te_3_column_left_heading">
+                                <section class="te_img_hover_overflow t_img_hover_1">
+                                    <img alt="Clarico-3 Columns Style 2"
+                                    class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/img/thiss84h.png"/>
+                                </section>
+                                <div class="card-body bg-100 oe_custom_bg">
+                                    <p class="card-title te_three_columns_heading o_default_snippet_text">THIS SILVER 84 H
                                 </p>
-									<p class="card-text te_three_columns_para o_default_snippet_text">
+                                    <p class="card-text te_three_columns_para o_default_snippet_text">
 										THIS SILVER 84 H
 									</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-
-
-
-
-
-			<div class="video-wrapper" style="margin-left: 20%;">
-				<iframe width="900" height="345"
-					src="https://www.youtube.com/embed/EGCpO9NdESA?rel=0&amp;controls=0&amp;showinfo=0&amp; 
-										 modestbranding=0&amp;loop=1&amp;playlist=EGCpO9NdESA"
-					frameborder="0" allowfullscreen="allowfullscreen"
-					mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen"
-					oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen">
-				</iframe>
-			</div>
-
-
-
-
-
-			<div id="myCarousel1605880203084" class="s_carousel carousel s_carousel_default"
-				data-interval="10000" data-name="Full screen 1" data_aos_ept="s_carousel_default"
-				style="margin-top: 50px">
-				<ol class="carousel-indicators">
-					<li data-target="#myCarousel1605880203084" data-slide-to="0"
-						class="active"></li>
-					<li data-target="#myCarousel1605880203084" data-slide-to="1"
-						class=""></li>
-					<li data-target="#myCarousel1605880203084" data-slide-to="2"
-						class=""></li>
-				</ol>
-				<div class="carousel-inner te_arrow_small">
-					<div class="carousel-item oe_custom_bg oe_img_bg pt96 pb96 active"
-						style="background-image: url(&quot;/clarico_ext/static/img/bcr1.jpg&quot;); min-height: 501.594px; background-size: 1180px 400px;"
-						data-name="Slide">
-						<div class="container">
-							<div class="row content">
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item oe_custom_bg oe_img_bg pt96 pb96"
-						style="background-image: url(&quot;/clarico_ext/static/img/bcr2.jpg&quot;); min-height: 501.594px; background-size: 1180px 400px;"
-						data-name="Slide">
-						<div class="container">
-							<div class="row content">
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item oe_custom_bg oe_img_bg pt96 pb96"
-						style="background-image: url(&quot;/clarico_ext/static/img/bcr3.jpg&quot;); min-height: 501.594px; background-size: 1180px 400px;"
-						data-name="Slide">
-						<div class="container">
-							<div class="row content">
-							</div>
-						</div>
-					</div>
-					<div class="carousel-control-prev" data-target="#myCarousel1605880203084"
-						data-slide="prev" role="img" aria-label="Previous" title="Previous">
-						<span class="carousel-control-prev-icon"></span>
-						<span class="sr-only o_default_snippet_text">Previous</span>
-					</div>
-					<div class="carousel-control-next" data-target="#myCarousel1605880203084"
-						data-slide="next" role="img" aria-label="Next" title="Next">
-						<span class="carousel-control-next-icon"></span>
-						<span class="sr-only o_default_snippet_text">Next</span>
-					</div>
-				</div>
-			</div>
-
-
-			<section class="s_text_block" data-name="Text block">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 pt32 pb32">
-							<p class="lead o_default_snippet_text">
-								SURGEON GENERAL’S WARNING: Smoking Causes Lung Cancer, Heart Disease,
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="video-wrapper" style="margin-left: 7%;">
+                <iframe allowfullscreen="allowfullscreen"
+                    frameborder="0" height="450"
+                    mozallowfullscreen="mozallowfullscreen"
+                    msallowfullscreen="msallowfullscreen"
+                    oallowfullscreen="oallowfullscreen"
+                    src="https://www.youtube.com/embed/EGCpO9NdESA?rel=0&amp;controls=0&amp;showinfo=0&amp;             modestbranding=0&amp;loop=1&amp;playlist=EGCpO9NdESA"
+                    webkitallowfullscreen="webkitallowfullscreen" width="93%"/>
+            </div>
+            <div class="s_carousel carousel s_carousel_default"
+                data-interval="10000" data-name="Full screen 1"
+                data_aos_ept="s_carousel_default"
+                id="myCarousel1605880203084" style="margin-top: 50px">
+                <ol class="carousel-indicators">
+                    <li class="active" data-slide-to="0" data-target="#myCarousel1605880203084"/>
+                    <li class="" data-slide-to="1" data-target="#myCarousel1605880203084"/>
+                    <li class="" data-slide-to="2" data-target="#myCarousel1605880203084"/>
+                </ol>
+                <div class="carousel-inner te_arrow_small">
+                    <div
+                        class="carousel-item oe_custom_bg oe_img_bg pt96 pb96 active"
+                        data-name="Slide" style="background-image: url(&quot;/clarico_ext/static/img/bcr1.jpg&quot;); min-height: 501.594px; background-size: 1180px 400px;">
+                        <div class="container">
+                            <div class="row content"/>
+                        </div>
+                    </div>
+                    <div
+                        class="carousel-item oe_custom_bg oe_img_bg pt96 pb96"
+                        data-name="Slide" style="background-image: url(&quot;/clarico_ext/static/img/bcr2.jpg&quot;); min-height: 501.594px; background-size: 1180px 400px;">
+                        <div class="container">
+                            <div class="row content"/>
+                        </div>
+                    </div>
+                    <div
+                        class="carousel-item oe_custom_bg oe_img_bg pt96 pb96"
+                        data-name="Slide" style="background-image: url(&quot;/clarico_ext/static/img/bcr3.jpg&quot;); min-height: 501.594px; background-size: 1180px 400px;">
+                        <div class="container">
+                            <div class="row content"/>
+                        </div>
+                    </div>
+                    <div aria-label="Previous"
+                        class="carousel-control-prev" data-slide="prev"
+                        data-target="#myCarousel1605880203084"
+                        role="img" title="Previous">
+                        <span class="carousel-control-prev-icon"/>
+                        <span class="sr-only o_default_snippet_text">Previous</span>
+                    </div>
+                    <div aria-label="Next" class="carousel-control-next"
+                        data-slide="next"
+                        data-target="#myCarousel1605880203084"
+                        role="img" title="Next">
+                        <span class="carousel-control-next-icon"/>
+                        <span class="sr-only o_default_snippet_text">Next</span>
+                    </div>
+                </div>
+            </div>
+            <section class="s_text_block" data-name="Text block">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 pt32 pb32">
+                            <p class="lead o_default_snippet_text">
+								SURGEON GENERAL’S WARNING: Smoking Causes Lung Cancer,
+								Heart Disease,
 								Emphysema, and May Complicate Pregnancy.
                             </p>
-							<p class="o_default_snippet_text">
-								SURGEON GENERAL’S WARNING: Quitting Smoking Now Greatly Reduces Serious
+                            <p class="o_default_snippet_text">
+								SURGEON GENERAL’S WARNING: Quitting Smoking Now
+								Greatly Reduces Serious
 								Risks to Your Health.
                             </p>
-							<p class="o_default_snippet_text">
-								SURGEON GENERAL’S WARNING: Smoking by Pregnant Women May Result in
-								Fetal Injury, Premature Birth, and Low Birth Weight.
+                            <p class="o_default_snippet_text">
+								SURGEON GENERAL’S WARNING: Smoking by Pregnant Women
+								May Result in
+								Fetal Injury, Premature Birth, and Low Birth
+								Weight.
                             </p>
-							<p class="o_default_snippet_text">
-								SURGEON GENERAL’S WARNING: Cigarette Smoke Contains Carbon Monoxide.
+                            <p class="o_default_snippet_text">
+								SURGEON GENERAL’S WARNING: Cigarette Smoke Contains
+								Carbon Monoxide.
 							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-
-
-
-
-
-
-			<br></br>
-			<br></br>
-			<br></br>
-			<br></br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		</t>
-	</template>
-
-
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+        </t>
+    </template>
 </odoo>
