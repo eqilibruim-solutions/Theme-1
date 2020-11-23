@@ -12,6 +12,7 @@
     """,
     'data': [
     	'views/sale_views.xml',
+    	'views/res_config_settings_views.xml',
         'security/ir.model.access.csv',
     ],
     'summary':'Quick Product add into Cart and other modifications in website order processing',

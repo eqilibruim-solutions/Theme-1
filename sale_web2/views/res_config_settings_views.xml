@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form_sync" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.website.sync</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="website.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <div id="webmaster_settings" position="after">
+                <h2>Server Details to Sync Orders</h2>
+                <div class="row mt16 o_settings_container" id="ktng_ftp_settings">
+                    <div class="col-12 col-lg-6 o_setting_box" id="ktng_ftp_settings2">
+                        <div class="o_setting_right_pane">
+                        	<span class="o_form_label">Server Details to Sync Sale Orders</span>
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <label class="o_light_label col-lg-3" string="Server URL/Domain" for="sync_url"/>
+                                    <field name="sync_url" />
+                                </div>
+                                <div class="row">
+                                    <label class="o_light_label col-lg-3" string="Database" for="sync_db"/>
+                                    <field name="sync_db" />
+                                </div>
+                                <div class="row">
+                                    <label class="o_light_label col-lg-3" string="Port" for="sync_port"/>
+                                    <field name="sync_port" />
+                                </div>
+                                <div class="row">
+                                    <label class="o_light_label col-lg-3" string="User" for="sync_user"/>
+                                    <field name="sync_user" />
+                                </div>
+                                <div class="row">
+                                    <label class="o_light_label col-lg-3" string="Password" for="sync_pwd"/>
+                                    <field name="sync_pwd" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </field>
+    </record>
+    
+		
+   
+  
+</odoo>
