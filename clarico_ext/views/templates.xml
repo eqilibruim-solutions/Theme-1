@@ -23,7 +23,7 @@
                 Welcome!<br/>Please submit your<br/>date of birth to enter.</div>
             <input autocomplete="off" id="bmonth" maxlength="2"
                 placeholder="MM"
-                style="position: fixed; margin: 10px 0px 0px -149px; left: 50%; top: 50%; height: 40px !important; color: rgb(225, 1, 33) !important;          font-size: 24px !important; padding: 5px 3px 3px !important; text-align: center !important; line-height: normal !important;          font-family: Helvetica !important; font-weight: lighter !important; font-style: normal !important; background-color: transparent !important;          border: 2px solid rgb(225, 1, 33) !important; border-radius: 0px !important; outline: none !important; box-shadow: none !important;          box-sizing: content-box !important; width: 80px !important; z-index: 10000301; margin-top: -40px; " type="tel"/>
+                style="position: fixed; margin: 10px 0px 0px -149px; left: 50%; top: 50%; height: 40px !important; color: rgb(225, 1, 33) !important;          font-size: 24px !important; padding: 5px 3px 3px !important; text-align: center !important; line-height: normal !important;          font-family: Helvetica !important; font-weight: lighter !important; font-style: normal !important; background-color: transparent !important;          border: 2px solid rgb(130, 194, 64) !important; border-radius: 0px !important; outline: none !important; box-shadow: none !important;          box-sizing: content-box !important; width: 80px !important; z-index: 10000301; margin-top: -40px; " type="tel"/>
             <input autocomplete="off" id="bday" maxlength="2"
                 placeholder="DD"
                 style="text-align: center !important; line-height: normal !important; position: fixed; margin: 10px 0px 0px -44px; left: 50%;          top: 50%; height: 40px !important; color: rgb(255, 255, 255) !important; font-size: 24px !important; padding: 5px 3px 3px !important;          font-family: Helvetica !important; font-weight: lighter !important; font-style: normal !important; background-color: transparent !important;          border-width: 2px !important; border-style: solid !important; border-color: rgb(130, 194, 64); border-image: initial !important;          border-radius: 0px !important; outline: none !important; box-shadow: none !important; width: 80px !important;          box-sizing: content-box !important; z-index: 10000301; margin-top: -40px; " type="tel"/>
@@ -393,6 +393,11 @@
                     </div>
                 </div>
             </div>
+            
+            
+            
+            
+            
             <section class="s_text_block" data-name="Text block">
                 <div class="container">
                     <div class="row">
