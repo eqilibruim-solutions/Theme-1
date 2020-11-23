@@ -9,74 +9,43 @@
             <script src="/clarico_ext/static/src/js/website_sale.js" type="text/javascript"/>
         </xpath>
     </template>
-    
-    
-    
-    
-    
-    <template id="layout_clarico" name="Clarico Layout" inherit_id="website.layout">
-    <xpath expr="." position="inside">
-    
-        <div id="plus18" style="display: none" >
-            <div id="AVoverlay" style="width: 100% !important; height: 100% !important; position: fixed !important; left: 0px !important; top: 0px !important;              padding: 0px !important; margin: 0px !important; z-index: 10000000; background-color: transparent; border: 0px;              background-image: url(&quot;/clarico_ext/static/img/back.jpg&quot;) "/>
-            <div id="AVcontentBox" style="position: fixed; left: 50%; top: 50%; margin-top: -180px; margin-left: -180px; width: 340px;          z-index: 10000100; height: 240px; background-color: rgba(0, 0, 0, 0.7); text-align: center; color: rgb(255, 255, 255) !important;          font-size: 20px !important; font-family: Helvetica !important; font-weight: lighter !important; font-style: normal !important;          letter-spacing: 0px !important; text-transform: none !important; box-sizing: initial !important;          overflow-wrap: break-word !important; line-height: normal !important; padding: 30px 10px 0px;">
+    <template id="layout_clarico" inherit_id="website.layout" name="Clarico Layout">
+        <xpath expr="." position="inside">
+            <div id="plus18" style="display: none">
+                <div id="AVoverlay" style="width: 100% !important; height: 100% !important; position: fixed !important; left: 0px !important; top: 0px !important;              padding: 0px !important; margin: 0px !important; z-index: 10000000; background-color: transparent; border: 0px;              background-image: url(&quot;/clarico_ext/static/img/back.jpg&quot;) "/>
+                <div id="AVcontentBox" style="position: fixed; left: 50%; top: 50%; margin-top: -180px; margin-left: -180px; width: 340px;          z-index: 10000100; height: 240px; background-color: rgba(0, 0, 0, 0.7); text-align: center; color: rgb(255, 255, 255) !important;          font-size: 20px !important; font-family: Helvetica !important; font-weight: lighter !important; font-style: normal !important;          letter-spacing: 0px !important; text-transform: none !important; box-sizing: initial !important;          overflow-wrap: break-word !important; line-height: normal !important; padding: 30px 10px 0px;">
                 Welcome!<br/>Please submit your<br/>date of birth to enter.</div>
-            <input autocomplete="off" id="bmonth" maxlength="2"
-                placeholder="MM"
-                style="position: fixed; margin: 10px 0px 0px -149px; left: 50%; top: 50%; height: 40px !important; color: rgb(225, 1, 33) !important;          font-size: 24px !important; padding: 5px 3px 3px !important; text-align: center !important; line-height: normal !important;          font-family: Helvetica !important; font-weight: lighter !important; font-style: normal !important; background-color: transparent !important;          border: 2px solid rgb(130, 194, 64) !important; border-radius: 0px !important; outline: none !important; box-shadow: none !important;          box-sizing: content-box !important; width: 80px !important; z-index: 10000301; margin-top: -40px; " type="tel"/>
-            <input autocomplete="off" id="bday" maxlength="2"
-                placeholder="DD"
-                style="text-align: center !important; line-height: normal !important; position: fixed; margin: 10px 0px 0px -44px; left: 50%;          top: 50%; height: 40px !important; color: rgb(255, 255, 255) !important; font-size: 24px !important; padding: 5px 3px 3px !important;          font-family: Helvetica !important; font-weight: lighter !important; font-style: normal !important; background-color: transparent !important;          border-width: 2px !important; border-style: solid !important; border-color: rgb(130, 194, 64); border-image: initial !important;          border-radius: 0px !important; outline: none !important; box-shadow: none !important; width: 80px !important;          box-sizing: content-box !important; z-index: 10000301; margin-top: -40px; " type="tel"/>
-            <input autocomplete="off" id="byear" maxlength="4"
-                placeholder="YYYY"
-                style="position: fixed; margin: 10px 0px 0px 61px; left: 50%; top: 50%; height: 40px !important; color: rgb(255, 255, 255) !important;          font-size: 24px !important; padding: 5px 3px 3px !important; font-family: Helvetica !important; font-weight: lighter !important;          font-style: normal !important; text-align: center !important; line-height: normal !important; background-color: transparent !important;          border-width: 2px !important; border-style: solid !important; border-color: rgb(130, 194, 64);          border-image: initial !important; border-radius: 0px !important; outline: none !important; box-shadow: none !important;          width: 80px !important; box-sizing: content-box !important; z-index: 10000301; margin-top: -40px; " type="tel"/>
-        </div>
-    
-    </xpath>
+                <input autocomplete="off" id="bmonth" maxlength="2"
+                    placeholder="MM"
+                    style="position: fixed; margin: 10px 0px 0px -149px; left: 50%; top: 50%; height: 40px !important; color: rgb(225, 1, 33) !important;          font-size: 24px !important; padding: 5px 3px 3px !important; text-align: center !important; line-height: normal !important;          font-family: Helvetica !important; font-weight: lighter !important; font-style: normal !important; background-color: transparent !important;          border: 2px solid rgb(130, 194, 64) !important; border-radius: 0px !important; outline: none !important; box-shadow: none !important;          box-sizing: content-box !important; width: 80px !important; z-index: 10000301; margin-top: -40px; " type="tel"/>
+                <input autocomplete="off" id="bday" maxlength="2"
+                    placeholder="DD"
+                    style="text-align: center !important; line-height: normal !important; position: fixed; margin: 10px 0px 0px -44px; left: 50%;          top: 50%; height: 40px !important; color: rgb(255, 255, 255) !important; font-size: 24px !important; padding: 5px 3px 3px !important;          font-family: Helvetica !important; font-weight: lighter !important; font-style: normal !important; background-color: transparent !important;          border-width: 2px !important; border-style: solid !important; border-color: rgb(130, 194, 64); border-image: initial !important;          border-radius: 0px !important; outline: none !important; box-shadow: none !important; width: 80px !important;          box-sizing: content-box !important; z-index: 10000301; margin-top: -40px; " type="tel"/>
+                <input autocomplete="off" id="byear" maxlength="4"
+                    placeholder="YYYY"
+                    style="position: fixed; margin: 10px 0px 0px 61px; left: 50%; top: 50%; height: 40px !important; color: rgb(255, 255, 255) !important;          font-size: 24px !important; padding: 5px 3px 3px !important; font-family: Helvetica !important; font-weight: lighter !important;          font-style: normal !important; text-align: center !important; line-height: normal !important; background-color: transparent !important;          border-width: 2px !important; border-style: solid !important; border-color: rgb(130, 194, 64);          border-image: initial !important; border-radius: 0px !important; outline: none !important; box-shadow: none !important;          width: 80px !important; box-sizing: content-box !important; z-index: 10000301; margin-top: -40px; " type="tel"/>
+            </div>
+        </xpath>
     </template>
-    
-    
-    
     <template id="clarico_home">
         <t t-call="website.layout">
-            
+        
             
             <!-- FIRST ROW BANNER -->
-            <div class="s_carousel s_carousel_default carousel slide"
-                data-interval="70000" data-name="Style 2" id="myCarousel1605614006792">
-                <ol class="carousel-indicators">
-                    <li class="active" data-slide-to="0" data-target="#myCarousel1605614006792"/>
-                    <li data-slide-to="1" data-target="#myCarousel1605614006792"/>
-                </ol>
-                <div class="carousel-inner te_arrow_small">
-                    <div
-                        class="carousel-item oe_custom_bg oe_img_bg active"
-                        data-name="Slide" style="opacity: 1;">
-                        <div class="carousel-content">
-                            <div class="row ">
-                                <section class="col-lg-12">
-                                    <div class="t_img_hover_1">
-                                    <section class="" data-name="Full Image Banner">
-                                    <section class="t_img_hover_1 te_banner_img pb0 pt0">
-                                    <img
-                                    alt="Clarico-Full Image"
-                                    aria-describedby="tooltip785043"
-                                    class="img-fluid d-block mx-auto o_we_selected_image"
-                                    data-original-title=""
-                                    src="/clarico_ext/static/img/bann.jpg" title=""/>
-                                    </section>
-                                    </section>
-                                    </div>
-                                </section>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <section class="t_img_hover_1 te_banner_img pb0 pt0">
+                <img alt="Clarico-Full Image" style="height: 450px; min-width: 100%; max-width: 100%;" 
+                    aria-describedby="tooltip785043"
+                    class="img-fluid d-block mx-auto o_we_selected_image"
+                    data-original-title=""
+                    src="/clarico_ext/static/img/bann.jpg" title=""/>
+            </section>
+                        
+            
+            
             <!-- SECOND ROW -->
             <section class="s_text_image pt32 pb32" data-name="Text - Image">
                 <div class="container">
-                    <div class="row align-items-center p-info" data_aos_ept="align-items-center" >
+                    <div class="row align-items-center p-info" data_aos_ept="align-items-center">
                         <div class="col-lg-6">
                             <h2 class="text-capitalize te_s_it_heading" style="color: red">CARNIVAL
 							</h2>
@@ -101,7 +70,7 @@
                             </p>
                         </div>
                         <div class="col-lg-6">
-                            <div class="t_img_hover_1 te_txt_img_s1"  >
+                            <div class="t_img_hover_1 te_txt_img_s1">
                                 <img alt="Clarico-Text-Image"
                                     class="img img-fluid mx-auto" src="/clarico_ext/static/img/cmg100h.png"/>
                             </div>
@@ -112,10 +81,10 @@
             <!-- THIRD ROW -->
             <section class="s_text_image pt32 pb0" data-name="Image - Text">
                 <div class="container">
-                    <div class="row align-items-center p-info" >
+                    <div class="row align-items-center p-info">
                         <div class="col-lg-6">
                             <div class="t_img_hover_1 te_img_txt_s1">
-                                <img alt="Clarico-Image-Text" 
+                                <img alt="Clarico-Image-Text"
                                     class="img img-fluid mx-auto" src="/clarico_ext/static/img/time-blue.png"/>
                             </div>
                         </div>
@@ -152,7 +121,7 @@
             <!-- FOURTH ROW -->
             <section class="s_text_image pt32 pb32" data-name="Text - Image">
                 <div class="container">
-                    <div class="row align-items-center p-info" data_aos_ept="align-items-center"  >
+                    <div class="row align-items-center p-info" data_aos_ept="align-items-center">
                         <div class="col-lg-6">
                             <h2 class="text-capitalize te_s_it_heading" style="color: red">THIS</h2>
                             <div class="s_hr text-left pb32 pt8">
@@ -176,15 +145,13 @@
                         </div>
                         <div class="col-lg-6">
                             <div class="t_img_hover_1 te_txt_img_s1">
-                                <img alt="Clarico-Text-Image" 
+                                <img alt="Clarico-Text-Image"
                                     class="img img-fluid mx-auto" src="/clarico_ext/static/img/this-silver.png"/>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            
-            
             <!-- FIFTH ROW -->
             <section class="s_three_columns pb32 pt32" data-name="Style 2">
                 <div class="container">
@@ -393,11 +360,6 @@
                     </div>
                 </div>
             </div>
-            
-            
-            
-            
-            
             <section class="s_text_block" data-name="Text block">
                 <div class="container">
                     <div class="row">
