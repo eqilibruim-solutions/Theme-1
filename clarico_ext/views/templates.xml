@@ -13,6 +13,7 @@
     
     
     
+    
     <template id="layout_clarico" name="Clarico Layout" inherit_id="website.layout">
     <xpath expr="." position="inside">
     
