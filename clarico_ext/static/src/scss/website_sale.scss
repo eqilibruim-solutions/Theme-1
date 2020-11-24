@@ -15,6 +15,109 @@
     
     
 .p-info{
-    box-shadow: rgba(188, 188, 188, 0.53) 3px 3px 2px 0px;
-    border: 1px solid rgba(188, 188, 188, 0.48);
+    background-color: white;
+    box-shadow: 0 20px 80px #000;
+    }
+
+.p-img{
+    box-shadow: 0 20px 80px #000;
+    background-color: #046d95;
+    }
+
+    
+.hs1{
+    background-color: white;
+    //box-shadow: 0 20px 80px #000;
+    border-radius: 20px;
+    }
+
+  
+.hs2{
+    
+    background-color: #949496;
+    }
+
+  
+@media only screen and (max-width: 320px) {
+    .p-info{
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+    
+    .hs1{
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+    
+     .hs2{
+    margin-left: 5%;
+    margin-right: 5%;
+    }
+    
+    .ifv{
+        height: 130px;
+        }
+
+}
+
+
+@media only screen and (max-width: 600px) and (min-width: 321px) {
+    .p-info{
+    margin-left: 3%;
+    margin-right: 3%;
+    }
+    
+    .hs1{
+    margin-left: 3%;
+    margin-right: 3%;
+    }
+
+    .hs2{
+    margin-left: 3%;
+    margin-right: 3%;
+    }
+
+    .ifv{
+        height: 130px;
+        }
+
+}
+
+
+
+
+
+.row1 {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column1 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column1 img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 30%;
+}
+
+
+.mx-auto{
+    box-shadow: 0 1px 6px 1px #d1d1e7;
+    }
+
+
+.impad{
+    
+    padding-top: 40px;
+padding-bottom: 40px;
+
     }

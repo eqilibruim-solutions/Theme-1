@@ -5,6 +5,15 @@ odoo.define('clarico_ext.website_sale', function(require) {
     var d = new Date();
 
 
+
+    if ( $('.te_header_style_1_main').length > 0 ){
+        
+        $('.te_header_style_1_main').find('.img-fluid').css('width', '200px')
+        $('.te_header_style_1_main').find('.img-fluid').css('height', '200px')
+        
+    }
+    
+    
     console.log(sessionStorage.getItem("plus18"), 'KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK')
     
     if ( sessionStorage.getItem("plus18") + "" == "0" || sessionStorage.getItem("plus18") + "" == 'undefined' || sessionStorage.getItem("plus18") + "" == 'null') {

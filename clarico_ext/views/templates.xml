@@ -9,6 +9,8 @@
             <script src="/clarico_ext/static/src/js/website_sale.js" type="text/javascript"/>
         </xpath>
     </template>
+    
+    
     <template id="layout_clarico" inherit_id="website.layout" name="Clarico Layout">
         <xpath expr="." position="inside">
             <div id="plus18" style="display: none">
@@ -27,6 +29,9 @@
             </div>
         </xpath>
     </template>
+    
+    
+    
     <template id="clarico_home">
         <t t-call="website.layout">
         
@@ -42,11 +47,23 @@
                         
             
             
+            
+            
+            
+            
+            
+            
+    
+    
+    
+    
+    
             <!-- SECOND ROW -->
+            <div style="background-image: url(&quot;/clarico_ext/static/img/imgf1.png&quot;);" >
             <section class="s_text_image pt32 pb32" data-name="Text - Image">
                 <div class="container">
-                    <div class="row align-items-center p-info" data_aos_ept="align-items-center">
-                        <div class="col-lg-6">
+                    <div class="row align-items-center" data_aos_ept="align-items-center">
+                        <div class="col-lg-6 p-info">
                             <h2 class="text-capitalize te_s_it_heading" style="color: red">CARNIVAL
 							</h2>
                             <div class="s_hr text-left pb32 pt8">
@@ -66,13 +83,13 @@
 								CARNIVAL's rich taste can be described as
 								an Energetic and Lively feeling
 								to its target consumers.
-								<br/>
+								<br/><br/><br/>
                             </p>
                         </div>
                         <div class="col-lg-6">
                             <div class="t_img_hover_1 te_txt_img_s1">
                                 <img alt="Clarico-Text-Image"
-                                    class="img img-fluid mx-auto" src="/clarico_ext/static/img/cmg100h.png"/>
+                                    class="img img-fluid mx-auto p-img" src="/clarico_ext/static/img/cmg100h.png"/>
                             </div>
                         </div>
                     </div>
@@ -81,14 +98,14 @@
             <!-- THIRD ROW -->
             <section class="s_text_image pt32 pb0" data-name="Image - Text">
                 <div class="container">
-                    <div class="row align-items-center p-info">
+                    <div class="row align-items-center">
                         <div class="col-lg-6">
                             <div class="t_img_hover_1 te_img_txt_s1">
                                 <img alt="Clarico-Image-Text"
-                                    class="img img-fluid mx-auto" src="/clarico_ext/static/img/time-blue.png"/>
+                                    class="img img-fluid mx-auto p-img" src="/clarico_ext/static/img/time-blue.png"/>
                             </div>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 p-info">
                             <h2
                                 class="text-capitalize te_s_it_heading o_default_snippet_text" style="color: red">TIME</h2>
                             <div class="s_hr text-left pb32 pt8">
@@ -102,7 +119,7 @@
 								Tmeless TIME uses premium tobacco leaf for a
 								rich flavor at
 								reasonable price.
-								<br/>
+								<br/><br/><br/><br/>
                             </p>
                             <p class="mb16 o_default_snippet_text">
 								Timeless Time represents the time when you are finally relieved
@@ -118,11 +135,12 @@
                     </div>
                 </div>
             </section>
+            
             <!-- FOURTH ROW -->
             <section class="s_text_image pt32 pb32" data-name="Text - Image">
                 <div class="container">
-                    <div class="row align-items-center p-info" data_aos_ept="align-items-center">
-                        <div class="col-lg-6">
+                    <div class="row align-items-center" data_aos_ept="align-items-center">
+                        <div class="col-lg-6 p-info">
                             <h2 class="text-capitalize te_s_it_heading" style="color: red">THIS</h2>
                             <div class="s_hr text-left pb32 pt8">
                                 <hr class="border-600 s_hr_solid w-25 mr-auto s_hr_4px border-alpha"/>
@@ -140,22 +158,26 @@
 								taste, and
 								clearly represent proud and patriotic United State
 								citizens.
-								<br/>
+								<br/><br/><br/><br/>
                             </p>
                         </div>
                         <div class="col-lg-6">
                             <div class="t_img_hover_1 te_txt_img_s1">
                                 <img alt="Clarico-Text-Image"
-                                    class="img img-fluid mx-auto" src="/clarico_ext/static/img/this-silver.png"/>
+                                    class="img img-fluid mx-auto p-img" src="/clarico_ext/static/img/this-silver.png"/>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            </div>
+            
+            
+            
             <!-- FIFTH ROW -->
-            <section class="s_three_columns pb32 pt32" data-name="Style 2">
+            <section class="s_three_columns pb32 pt32" data-name="Style 2" style="background-image: url(&quot;/clarico_ext/static/img/imgf2.png&quot;);" >
                 <div class="container">
-                    <div class="row d-flex align-items-stretch">
+                    <div class="row d-flex align-items-stretch hs1">
                         <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
                             <div class="te_3_column_left_heading">
                                 <section class="te_img_hover_overflow t_img_hover_1">
@@ -203,10 +225,12 @@
                     </div>
                 </div>
             </section>
+            
+            
             <!-- SIXTH ROW -->
-            <section class="s_three_columns pb32 pt32" data-name="Style 2">
+            <section class="s_three_columns pb32 pt32" data-name="Style 2" style="background-image: url(&quot;/clarico_ext/static/img/imgf2.png&quot;);" >
                 <div class="container">
-                    <div class="row d-flex align-items-stretch">
+                    <div class="row d-flex align-items-stretch hs1 ">
                         <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
                             <div class="te_3_column_left_heading">
                                 <section class="te_img_hover_overflow t_img_hover_1">
@@ -255,57 +279,110 @@
                     </div>
                 </div>
             </section>
-            <section class="s_three_columns pb32 pt32" data-name="Style 2">
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            <section class="s_three_columns pb32 pt32" data-name="Style 2" style="background-image: url(&quot;/clarico_ext/static/img/imgf2.png&quot;);" >
                 <div class="container">
-                    <div class="row d-flex align-items-stretch">
+                    <div class="row d-flex align-items-stretch hs2 ">
                         <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
                             <div class="te_3_column_left_heading">
-                                <section class="te_img_hover_overflow t_img_hover_1">
+                                <section class="te_img_hover_overflow t_img_hover_1 impad">
+                                    <img alt="Clarico-3 Columns Style 2"
+                                    class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/photo/im2.png"/>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+                            <div class="te_3_column_left_heading">
+                                <section class="te_img_hover_overflow t_img_hover_1 impad">
+                                    <img alt="Clarico-3 Columns Style 2"
+                                    class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/photo/im4.png"/>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+                            <div class="te_3_column_left_heading">
+                                <section class="te_img_hover_overflow t_img_hover_1 impad">
+                                    <img alt="Clarico-3 Columns Style 2"
+                                    class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/photo/im6.png"/>
+                                </section>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+                            <div class="te_3_column_left_heading">
+                                <section class="te_img_hover_overflow t_img_hover_1 impad">
+                                    <img alt="Clarico-3 Columns Style 2"
+                                    class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/photo/im3.png"/>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+                            <div class="te_3_column_left_heading">
+                                <section class="te_img_hover_overflow t_img_hover_1 impad">
+                                    <img alt="Clarico-3 Columns Style 2"
+                                    class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/photo/im5.png"/>
+                                </section>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+                            <div class="te_3_column_left_heading">
+                                <section class="te_img_hover_overflow t_img_hover_1 impad">
+                                    <img alt="Clarico-3 Columns Style 2"
+                                    class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/photo/im8.png"/>
+                                </section>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
+                            <div class="te_3_column_left_heading">
+                                <section class="te_img_hover_overflow t_img_hover_1 impad">
                                     <img alt="Clarico-3 Columns Style 2"
                                     class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/img/thismg84h.png"/>
                                 </section>
-                                <div class="card-body bg-100 oe_custom_bg">
-                                    <p class="card-title te_three_columns_heading o_default_snippet_text">THIS MG 84 H</p>
-                                    <p class="card-text te_three_columns_para o_default_snippet_text">
-										THIS MG 84 H
-									</p>
-                                </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
                             <div class="te_3_column_left_heading">
-                                <section class="te_img_hover_overflow t_img_hover_1">
+                                <section class="te_img_hover_overflow t_img_hover_1 impad">
                                     <img alt="Clarico-3 Columns Style 2"
                                     class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/img/thism84h.png"/>
                                 </section>
-                                <div class="card-body bg-100 oe_custom_bg">
-                                    <p class="card-title te_three_columns_heading o_default_snippet_text">THIS M 84 H</p>
-                                    <p class="card-text te_three_columns_para o_default_snippet_text">
-										THIS M 84 H
-									</p>
-                                </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
                             <div class="te_3_column_left_heading">
-                                <section class="te_img_hover_overflow t_img_hover_1">
+                                <section class="te_img_hover_overflow t_img_hover_1 impad">
                                     <img alt="Clarico-3 Columns Style 2"
                                     class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/img/thiss84h.png"/>
                                 </section>
-                                <div class="card-body bg-100 oe_custom_bg">
-                                    <p class="card-title te_three_columns_heading o_default_snippet_text">THIS SILVER 84 H
-                                </p>
-                                    <p class="card-text te_three_columns_para o_default_snippet_text">
-										THIS SILVER 84 H
-									</p>
-                                </div>
                             </div>
                         </div>
+                        
+                        
                     </div>
                 </div>
             </section>
-            <div class="video-wrapper" style="margin-left: 7%;">
-                <iframe allowfullscreen="allowfullscreen"
+            
+            
+            
+            
+            
+            
+            <div style="background-image: url(&quot;/clarico_ext/static/img/imgf1.png&quot;);" >
+            
+            <div class="video-wrapper" style="margin-left: 7%; padding-top: 30px; padding-bottom: 50px; ">
+                <iframe allowfullscreen="allowfullscreen" class="ifv" 
                     frameborder="0" height="450"
                     mozallowfullscreen="mozallowfullscreen"
                     msallowfullscreen="msallowfullscreen"
@@ -313,6 +390,10 @@
                     src="https://www.youtube.com/embed/EGCpO9NdESA?rel=0&amp;controls=0&amp;showinfo=0&amp;             modestbranding=0&amp;loop=1&amp;playlist=EGCpO9NdESA"
                     webkitallowfullscreen="webkitallowfullscreen" width="93%"/>
             </div>
+            </div>
+            
+            
+            <div style="background-image: url(&quot;/clarico_ext/static/img/imgf2.png&quot;);" >
             <div class="s_carousel carousel s_carousel_default"
                 data-interval="10000" data-name="Full screen 1"
                 data_aos_ept="s_carousel_default"
@@ -360,6 +441,13 @@
                     </div>
                 </div>
             </div>
+            </div>
+            
+            
+            
+            
+            
+            
             <section class="s_text_block" data-name="Text block">
                 <div class="container">
                     <div class="row">
@@ -388,6 +476,9 @@
                     </div>
                 </div>
             </section>
+            
+            
+            
             <br/>
             <br/>
             <br/>
