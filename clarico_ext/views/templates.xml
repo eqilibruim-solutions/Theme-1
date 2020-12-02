@@ -37,145 +37,88 @@
         
             
             <!-- FIRST ROW BANNER -->
-            <section class="t_img_hover_1 te_banner_img pb0 pt0">
+           <!-- <section class="t_img_hover_1 te_banner_img pb0 pt0">
                 <img alt="Clarico-Full Image" style="height: 450px; min-width: 100%; max-width: 100%;" 
                     aria-describedby="tooltip785043"
                     class="img-fluid d-block mx-auto o_we_selected_image"
                     data-original-title=""
                     src="/clarico_ext/static/img/bann.jpg" title=""/>
             </section>
-                        
+            -->
             
             
+<section class="banner-wrap">
+    <div class="wsite-section-wrap">
+        <div class="bannerimgsec">
+        
+        </div>    
+    </div>            
+</section>            
             
-            
-            
-            
-            
-            
+       
+<section class="greybg-section">
+    <div class="container">
+     <div class="row">
+         
+<div class="col-md-4 col-sm-6 col-xs-12 t_img_hover_1">
+             
+    <img alt="Clarico-Text-Image" class="img img-fluid" src="/clarico_ext/static/img/cmg100h.png"/>
     
+    <div class="">
+             <h3>CARNIVAL</h3>
+         <p><b>Carnival</b> is the brand that has been selling for the longest time in U.S. American blend, with fine flue-cured and burley leaf. We have enjoyed CARNIVAL for over 20 years in U.S.
+CARNIVAL strongly presents its PASSION in diverse circumstances, such as festival times as the name represents and in the professional work place CARNIVAL's rich taste can be described as an Energetic and Lively feeling to its target consumers.</p>
+    <div class="center_btn"><a class="border-btn" href="#">LEARN MORE</a></div>         
+   </div>
     
-    
-    
-    
-            <!-- SECOND ROW -->
-            <div style="background-image: url(&quot;/clarico_ext/static/img/imgf1.png&quot;);" >
-            <section class="s_text_image pt32 pb32" data-name="Text - Image">
-                <div class="container">
-                    <div class="row align-items-center" data_aos_ept="align-items-center">
-                        <div class="col-lg-6 p-info">
-                            <h2 class="text-capitalize te_s_it_heading" style="color: red">CARNIVAL
-							</h2>
-                            <div class="s_hr text-left pb32 pt8">
-                                <hr class="border-600 s_hr_solid w-25 mr-auto s_hr_4px border-alpha"/>
-                            </div>
-                            <p class="mb16 o_default_snippet_text">
-								Carnival is the brand that has been selling for the longest time
-								in U.S. American blend, with fine flue-cured and burley leaf.
-								We
-								have enjoyed CARNIVAL for over 20 years in U.S.
-								<br/>
-                            </p>
-                            <p class="mb16 o_default_snippet_text">
-								CARNIVAL strongly presents its PASSION in diverse circumstances,
-								such as festival times as the name represents and in the
-								professional work place
-								CARNIVAL's rich taste can be described as
-								an Energetic and Lively feeling
-								to its target consumers.
-								<br/><br/><br/>
-                            </p>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="t_img_hover_1 te_txt_img_s1">
-                                <img alt="Clarico-Text-Image"
-                                    class="img img-fluid mx-auto p-img" src="/clarico_ext/static/img/cmg100h.png"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- THIRD ROW -->
-            <section class="s_text_image pt32 pb0" data-name="Image - Text">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <div class="t_img_hover_1 te_img_txt_s1">
-                                <img alt="Clarico-Image-Text"
-                                    class="img img-fluid mx-auto p-img" src="/clarico_ext/static/img/time-blue.png"/>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 p-info">
-                            <h2
-                                class="text-capitalize te_s_it_heading o_default_snippet_text" style="color: red">TIME</h2>
-                            <div class="s_hr text-left pb32 pt8">
-                                <hr
-                                    class="border-600 aos-init s_hr_solid w-25 mr-auto s_hr_4px border-alpha aos-animate" data-aos="s_hr_4px"/>
-                            </div>
-                            <p class="mb16 o_default_snippet_text">
-								timeless TIME
-								Timeless TIME is the best selling brand in the U.S.
-								Introduced in 2010,
-								Tmeless TIME uses premium tobacco leaf for a
-								rich flavor at
-								reasonable price.
-								<br/><br/><br/><br/>
-                            </p>
-                            <p class="mb16 o_default_snippet_text">
-								Timeless Time represents the time when you are finally relieved
-								during a short break.
-								The smooth taste of TIME sets you free and
-								it feels smooth as you
-								puff it in and inhale.
-								A Clean &amp; Unique
-								flavor will satisfy all consumers.
-								<br/>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+    </div>
+         
+         
+ <div class="col-md-4 col-sm-6 col-xs-12 t_img_hover_1"> 
+     
+     <img alt="Clarico-Text-Image" class="img img-fluid" src="/clarico_ext/static/img/time-blue.png"/>
+     
+     <div>
+             <h3>TIME</h3>
+<p><b>Timeless</b> TIME Timeless TIME is the best selling brand in the U.S. Introduced in 2010, Tmeless TIME uses premium tobacco leaf for a rich flavor at reasonable price.
+</p>
+             
+<p>Timeless Time represents the time when you are finally relieved during a short break. The smooth taste of TIME sets you free and it feels smooth as you puff it in and inhale. A Clean &amp; Unique flavor will satisfy all consumers.</p>             
+             
+             
+    <a class="border-btn" href="#">LEARN MORE</a>         
+         </div>
+     
+</div> 
+         
+         
+         
+ <div class="col-md-4 col-sm-6 col-xs-12 t_img_hover_1">
+
+     <img alt="Clarico-Text-Image" class="img img-fluid" src="/clarico_ext/static/img/this-silver.png"/>
+     
+  <div>
+             <h3>THIS</h3>
+<p><b>THIS</b>is the new brand for 2018, now available in the U.S. THIS is one of the famous brands in South Korea. Made with high quality burley leaf for a smooth taste.</p>            
+<p>THIS represents the American Standard for taste and quality. Reasonable and effective that originated from its authentic taste, and clearly represent proud and patriotic United State citizens.</p>             
+             
+    <a class="border-btn" href="#">LEARN MORE</a>         
+         </div> 
+     
+</div>        
+         
+         
+         
             
-            <!-- FOURTH ROW -->
-            <section class="s_text_image pt32 pb32" data-name="Text - Image">
-                <div class="container">
-                    <div class="row align-items-center" data_aos_ept="align-items-center">
-                        <div class="col-lg-6 p-info">
-                            <h2 class="text-capitalize te_s_it_heading" style="color: red">THIS</h2>
-                            <div class="s_hr text-left pb32 pt8">
-                                <hr class="border-600 s_hr_solid w-25 mr-auto s_hr_4px border-alpha"/>
-                            </div>
-                            <p class="mb16 o_default_snippet_text">
-								THIS is the new brand for 2018, now available in the U.S. THIS
-								is one of the famous brands in South Korea.
-								Made with high
-								quality burley leaf for a smooth taste.
-								<br/>
-                            </p>
-                            <p class="mb16 o_default_snippet_text">
-								THIS represents the American Standard for taste and quality.
-								Reasonable and effective that originated from its authentic
-								taste, and
-								clearly represent proud and patriotic United State
-								citizens.
-								<br/><br/><br/><br/>
-                            </p>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="t_img_hover_1 te_txt_img_s1">
-                                <img alt="Clarico-Text-Image"
-                                    class="img img-fluid mx-auto p-img" src="/clarico_ext/static/img/this-silver.png"/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            </div>
-            
+         
+        </div>
+     </div>                   
+</section>
+
             
             
             <!-- FIFTH ROW -->
-            <section class="s_three_columns pb32 pt32" data-name="Style 2" style="background-image: url(&quot;/clarico_ext/static/img/imgf2.png&quot;);" >
+            <section class="s_three_columns pb32 pt32" data-name="Style 2">
                 <div class="container">
                     <div class="row d-flex align-items-stretch hs1">
                         <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
@@ -184,7 +127,7 @@
                                     <img alt="Clarico-3 Columns Style 2"
                                     class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/img/cr100.png"/>
                                 </section>
-                                <div class="card-body bg-100 oe_custom_bg">
+                                <div class="card-body bg-100 oe_custom_bg text-center">
                                     <p class="card-title te_three_columns_heading o_default_snippet_text">Carnival Red 100 s</p>
                                     <p class="card-text te_three_columns_para o_default_snippet_text">
 										Carnival Red 100 s
@@ -198,7 +141,7 @@
                                     <img alt="Clarico-3 Columns Style 2"
                                     class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/img/cb100.png"/>
                                 </section>
-                                <div class="card-body bg-100 oe_custom_bg">
+                                <div class="card-body bg-100 oe_custom_bg text-center">
                                     <p class="card-title te_three_columns_heading o_default_snippet_text">Carnival Blue 100 s
                                 </p>
                                     <p class="card-text te_three_columns_para o_default_snippet_text">
@@ -213,7 +156,7 @@
                                     <img alt="Clarico-3 Columns Style 2"
                                     class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/img/cs100.png"/>
                                 </section>
-                                <div class="card-body bg-100 oe_custom_bg">
+                                <div class="card-body bg-100 oe_custom_bg text-center">
                                     <p class="card-title te_three_columns_heading o_default_snippet_text">Carnival Silver 100 s
                                 </p>
                                     <p class="card-text te_three_columns_para o_default_snippet_text">
@@ -228,7 +171,7 @@
             
             
             <!-- SIXTH ROW -->
-            <section class="s_three_columns pb32 pt32" data-name="Style 2" style="background-image: url(&quot;/clarico_ext/static/img/imgf2.png&quot;);" >
+            <section class="s_three_columns pb32 pt32" data-name="Style 2" >
                 <div class="container">
                     <div class="row d-flex align-items-stretch hs1 ">
                         <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
@@ -237,7 +180,7 @@
                                     <img alt="Clarico-3 Columns Style 2"
                                     class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/img/cm100s.png"/>
                                 </section>
-                                <div class="card-body bg-100 oe_custom_bg">
+                                <div class="card-body bg-100 oe_custom_bg text-center">
                                     <p class="card-title te_three_columns_heading o_default_snippet_text">Carnival M 100 s</p>
                                     <p class="card-text te_three_columns_para o_default_snippet_text">
 										Carnival M 100 s
@@ -251,7 +194,7 @@
                                     <img alt="Clarico-3 Columns Style 2"
                                     class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/img/cmg100s.png"/>
                                 </section>
-                                <div class="card-body bg-100 oe_custom_bg">
+                                <div class="card-body bg-100 oe_custom_bg text-center">
                                     <p class="card-title te_three_columns_heading o_default_snippet_text">Carnival MG 100 s
                                 </p>
                                     <p class="card-text te_three_columns_para o_default_snippet_text">
@@ -267,7 +210,7 @@
                                     <img alt="Clarico-3 Columns Style 2"
                                     class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/img/cmg100h.png"/>
                                 </section>
-                                <div class="card-body bg-100 oe_custom_bg">
+                                <div class="card-body bg-100 oe_custom_bg text-center">
                                     <p class="card-title te_three_columns_heading o_default_snippet_text">Carnival MG 100 H
                                 </p>
                                     <p class="card-text te_three_columns_para o_default_snippet_text">
@@ -290,11 +233,11 @@
             
             
             
-            <section class="s_three_columns pb32 pt32" data-name="Style 2" style="background-image: url(&quot;/clarico_ext/static/img/imgf2.png&quot;);" >
+            <section class="s_three_columns pb32 pt32 cigaratesec" data-name="Style 2">
                 <div class="container">
-                    <div class="row d-flex align-items-stretch hs2 ">
+                    <div class="row d-flex align-items-stretch">
                         <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
-                            <div class="te_3_column_left_heading">
+                            <div class="te_3_column_left_heading text-center">
                                 <section class="te_img_hover_overflow t_img_hover_1 impad">
                                     <img alt="Clarico-3 Columns Style 2"
                                     class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/photo/im2.png"/>
@@ -302,7 +245,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
-                            <div class="te_3_column_left_heading">
+                            <div class="te_3_column_left_heading text-center">
                                 <section class="te_img_hover_overflow t_img_hover_1 impad">
                                     <img alt="Clarico-3 Columns Style 2"
                                     class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/photo/im4.png"/>
@@ -310,7 +253,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
-                            <div class="te_3_column_left_heading">
+                            <div class="te_3_column_left_heading text-center">
                                 <section class="te_img_hover_overflow t_img_hover_1 impad">
                                     <img alt="Clarico-3 Columns Style 2"
                                     class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/photo/im6.png"/>
@@ -319,7 +262,7 @@
                         </div>
                         
                         <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
-                            <div class="te_3_column_left_heading">
+                            <div class="te_3_column_left_heading text-center">
                                 <section class="te_img_hover_overflow t_img_hover_1 impad">
                                     <img alt="Clarico-3 Columns Style 2"
                                     class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/photo/im3.png"/>
@@ -327,7 +270,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
-                            <div class="te_3_column_left_heading">
+                            <div class="te_3_column_left_heading text-center">
                                 <section class="te_img_hover_overflow t_img_hover_1 impad">
                                     <img alt="Clarico-3 Columns Style 2"
                                     class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/photo/im5.png"/>
@@ -335,7 +278,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
-                            <div class="te_3_column_left_heading">
+                            <div class="te_3_column_left_heading text-center">
                                 <section class="te_img_hover_overflow t_img_hover_1 impad">
                                     <img alt="Clarico-3 Columns Style 2"
                                     class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/photo/im8.png"/>
@@ -345,7 +288,7 @@
                         
                         
                         <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
-                            <div class="te_3_column_left_heading">
+                            <div class="te_3_column_left_heading text-center">
                                 <section class="te_img_hover_overflow t_img_hover_1 impad">
                                     <img alt="Clarico-3 Columns Style 2"
                                     class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/img/thismg84h.png"/>
@@ -353,7 +296,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
-                            <div class="te_3_column_left_heading">
+                            <div class="te_3_column_left_heading text-center">
                                 <section class="te_img_hover_overflow t_img_hover_1 impad">
                                     <img alt="Clarico-3 Columns Style 2"
                                     class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/img/thism84h.png"/>
@@ -361,7 +304,7 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
-                            <div class="te_3_column_left_heading">
+                            <div class="te_3_column_left_heading text-center">
                                 <section class="te_img_hover_overflow t_img_hover_1 impad">
                                     <img alt="Clarico-3 Columns Style 2"
                                     class="card-img-top img img-responsive te_feature_image" src="/clarico_ext/static/img/thiss84h.png"/>
@@ -418,8 +361,7 @@
                             <div class="row content"/>
                         </div>
                     </div>
-                    <div
-                        class="carousel-item oe_custom_bg oe_img_bg pt96 pb96"
+                    <div class="carousel-item oe_custom_bg oe_img_bg pt96 pb96"
                         data-name="Slide" style="background-image: url(&quot;/clarico_ext/static/img/bcr3.jpg&quot;); min-height: 501.594px; background-size: 1180px 400px;">
                         <div class="container">
                             <div class="row content"/>

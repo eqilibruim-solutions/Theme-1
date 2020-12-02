@@ -21,10 +21,10 @@
         <xpath expr="//header" position="before">
             <div class="te_header_before_overlay">
                 <div class="container">
-                    <!-- <section class="te_header_offer_top">
+                    <section class="te_header_offer_top">
                         <p></p>
                         <section t-field="website.website_header_offer_ept"/>
-                    </section> -->
+                    </section>
                     <div class="row py-3 align-items-center te_header_style_1_main py-sm-2">
                         <div class="col-lg-4 t_header_1_left">
                             <t t-set="website_sale_pricelists"
