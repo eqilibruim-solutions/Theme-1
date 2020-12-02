@@ -18,20 +18,6 @@ class Website(models.Model):
 
     def _get_default_header_content(self):
         return """
-            <p></p>
-            <div class="s_rating row te_s_header_offer_text">
-            <ul>
-                <li>Special Offer on First Purchase</li>
-                <li>
-                    <section>|</section>
-                </li>
-                <li>Code : #ASDA44</li>
-                <li>
-                    <section>|</section>
-                </li>
-                <li>Get 50% Off</li>
-            </ul>
-            </div>
             """
 
     def _get_default_footer_extra_links(self):

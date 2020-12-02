@@ -14,7 +14,7 @@
                                 <label string="Video URL for Banner" for="banner_video_url"/>
                                 <span class="fa fa-lg fa-globe"/>
                                 <div class="text-muted">
-                                    Video URL for the banner
+                                    https://www.youtube.com/embed/EGCpO9NdESA
                                 </div>
                                 <div class="mt8">
                                     <field name="banner_video_url" />
