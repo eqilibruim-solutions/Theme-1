@@ -59,7 +59,7 @@
     
     
             <!-- SECOND ROW -->
-            <div style="background-image: url(&quot;/clarico_ext/static/img/imgf1.png&quot;);" >
+            <div class="sec-div"  >
             <section class="s_text_image pt32 pb32" data-name="Text - Image">
                 <div class="container">
                     <div class="row align-items-center" data_aos_ept="align-items-center">
@@ -175,7 +175,7 @@
             
             
             <!-- FIFTH ROW -->
-            <section class="s_three_columns pb32 pt32" data-name="Style 2" style="background-image: url(&quot;/clarico_ext/static/img/imgf2.png&quot;);" >
+            <section class="s_three_columns pb32 pt32 thi-div" data-name="Style 2" >
                 <div class="container">
                     <div class="row d-flex align-items-stretch hs1">
                         <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
@@ -228,7 +228,7 @@
             
             
             <!-- SIXTH ROW -->
-            <section class="s_three_columns pb32 pt32" data-name="Style 2" style="background-image: url(&quot;/clarico_ext/static/img/imgf2.png&quot;);" >
+            <section class="s_three_columns pb32 pt32 fo-div" data-name="Style 2">
                 <div class="container">
                     <div class="row d-flex align-items-stretch hs1 ">
                         <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
@@ -290,7 +290,7 @@
             
             
             
-            <section class="s_three_columns pb32 pt32" data-name="Style 2" style="background-image: url(&quot;/clarico_ext/static/img/imgf2.png&quot;);" >
+            <section class="s_three_columns pb32 pt32 fiv-div" data-name="Style 2" >
                 <div class="container">
                     <div class="row d-flex align-items-stretch hs2 ">
                         <div class="col-lg-4 col-md-4 s_col_no_bgcolor te_ts_img_hvr">
@@ -379,7 +379,7 @@
             
             
             
-            <div style="background-image: url(&quot;/clarico_ext/static/img/imgf1.png&quot;);" >
+            <div class="six-div" >
             
             <div class="video-wrapper" style="margin-left: 7%; padding-top: 30px; padding-bottom: 50px; ">
                 <iframe allowfullscreen="allowfullscreen" class="ifv" 

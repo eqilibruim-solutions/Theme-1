@@ -3,6 +3,46 @@
 // use of an ugly overflow: hidden which would break box-shadows.
 
 
+.sec-div {
+    
+    background-image: url("/clarico_ext/static/img/imgf1.png");
+  background-attachment: fixed;
+  //opacity: 0.75;
+    
+    }
+
+
+
+
+// .sec-div .bg {
+//     opacity: 0.4;
+// }
+
+
+.thi-div {
+    background-image: url("/clarico_ext/static/img/imgf2.png");
+  background-attachment: fixed;
+    
+    }
+
+.fo-div {
+    background-image: url("/clarico_ext/static/img/imgf2.png");
+  background-attachment: fixed;
+    
+    }
+
+// .fiv-div {
+//     background-image: url("/clarico_ext/static/img/imgf2.png");
+//   background-attachment: fixed;
+//     
+//     }
+
+// .six-div {
+//     background-image: url("/clarico_ext/static/img/imgf1.png");
+//   background-attachment: fixed;
+//     
+//     }
+
 .ban-over{
 	position: absolute;
     background-color: black;
@@ -32,10 +72,10 @@
     }
 
   
-.hs2{
-    
-    background-color: #949496;
-    }
+// .hs2{
+//     
+//     background-color: #949496;
+//     }
 
   
 @media only screen and (max-width: 320px) {
@@ -119,5 +159,12 @@
     
     padding-top: 40px;
 padding-bottom: 40px;
-
+box-shadow:0 5px 8px -6px black;
+ -webkit-box-shadow:0 5px 8px -6px black;
+ -moz-box-shadow:0 5px 8px -6px black;
+ margin-bottom: 35px;
     }
+
+    
+    
+    

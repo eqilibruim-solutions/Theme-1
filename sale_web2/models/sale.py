@@ -26,6 +26,19 @@ class sale_order(models.Model):
 	
 	moved = fields.Boolean("Moved")
 	
+	
+	def write(self, vals):
+		
+		res = super(sale_order, self).write(vals)
+		
+		if 'access_token' in vals:
+			self.action_synch_so()
+		
+		return res
+	
+	
+		
+	
 	def action_synch_so(self):
 		
 		ICP_obj = self.env['ir.config_parameter'].sudo()
