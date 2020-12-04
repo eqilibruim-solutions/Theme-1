@@ -68,7 +68,9 @@ class sale_order(models.Model):
 			print (remote_odoo.env.db, 'DDDDDDDDDDDDDDDDDDD')
 			
 			local_partner_id = self.partner_id
-			remote_partner_id = Partner_r.search(['|', ('email', '=', local_partner_id.email), ('customer_id', '=', local_partner_id.customer_id)], limit=1)
+			remote_partner_id = Partner_r.search([('email', '=', local_partner_id.email)], limit=1)
+			if not remote_partner_id and local_partner_id.customer_id:
+				remote_partner_id = Partner_r.search([('customer_id', '=', local_partner_id.customer_id)], limit=1)
 			if not remote_partner_id:
 				remote_partner_id = Partner_r.create({
 											'name': local_partner_id.name,
@@ -117,35 +119,6 @@ class sale_order(models.Model):
 													})
 													
 													
-			local_user_id = order.user_id
-			remote_user_id = False
-			if local_user_id:
-				remote_user_id = User_r.search([('email', '=', local_user_id.email)], limit=1)
-				if remote_user_id:
-					remote_user_id = remote_user_id[0]
-				else:
-					user_local_partner_id = local_user_id.partner_id
-					user_remote_partner_id = Partner_r.search(['|', ('email', '=', user_local_partner_id.email), ('customer_id', '=', user_local_partner_id.customer_id)], limit=1)
-					if not user_remote_partner_id:
-						user_remote_partner_id = Partner_r.create({
-													'name': user_local_partner_id.name,
-													'email': user_local_partner_id.email or '',
-													'customer_id': user_local_partner_id.customer_id or '',
-													'street': user_local_partner_id.street or '',
-													'street2': user_local_partner_id.street2 or '',
-													'zip': user_local_partner_id.zip or '',
-													'city': user_local_partner_id.city or '',
-													'phone': user_local_partner_id.phone or '',
-													'mobile': user_local_partner_id.mobile or '',
-													'company_type': user_local_partner_id.company_type,
-													})
-					else:user_remote_partner_id = user_remote_partner_id[0]
-						
-					remote_user_id = User_r.create({
-													'name': local_user_id.name,
-													'email': local_user_id.email,
-													'partner_id': user_remote_partner_id,
-													})
 																		
 																		
 																		
@@ -170,7 +143,7 @@ class sale_order(models.Model):
 				'team_id': remote_team_id, 
 				'partner_invoice_id': remote_partner_id, 
 				'partner_shipping_id': remote_partner_id, 
-				'user_id': remote_user_id, 
+# 				'user_id': remote_user_id, 
 				'website_id': remote_website_id, 
 				'company_id': 1, 
 				#'plain_date': order.plain_date, 
