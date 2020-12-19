@@ -11,6 +11,7 @@
     """,
     'data': [
         'views/templates.xml',
+        'views/product_views.xml',
         'security/ir.model.access.csv',
         'security/website_sale.xml',
     ],
