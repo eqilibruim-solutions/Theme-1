@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <template id="assets_frontend_clarico" inherit_id="website.assets_frontend">
+        <xpath expr="link[last()]" position="after">
+            <link href="/customer_pricing/static/src/scss/website_sale.scss"
+                rel="stylesheet" type="text/scss"/>
+        </xpath>
+        <xpath expr="script[last()]" position="after">
+            <script src="/customer_pricing/static/src/js/website_sale.js" type="text/javascript"/>
+        </xpath>
+    </template>
+    
+    
+</odoo>
