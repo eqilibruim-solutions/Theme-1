@@ -149,6 +149,13 @@ def _compute_price_rule(self, products_qty_partner, date=False, uom_id=False):
 							price_max_margin = convert_to_price_uom(rule.price_max_margin)
 							price = min(price, price_limit + price_max_margin)
 					suitable_rule = rule
+					
+					rule = self.env['product.pricelist.item'].sudo().browse(rule.id)
+					userss = rule.user_id.ids
+					print (self._uid, userss, rule.pricelist_id.name, rule.user_id, rule.percent_price, 'AAAAAAAAAAAAAAAAAAAA')
+					if self._uid and userss and self._uid not in userss:
+						price = product.list_price
+				
 				break
 			# Final price conversion into pricelist currency
 			if suitable_rule and suitable_rule.compute_price != 'fixed' and suitable_rule.base != 'pricelist':
@@ -162,14 +169,10 @@ def _compute_price_rule(self, products_qty_partner, date=False, uom_id=False):
 				cur = product.currency_id
 				price = cur._convert(price, self.currency_id, self.env.company, date, round=False)
 
-			userss = rule.user_id.ids
-			if self._uid and self._uid not in userss:
-				price = product.list_price
-						
 			results[product.id] = (price, suitable_rule and suitable_rule.id or False)
 
 		
-		print (results, '\n RRRRRRRRRRRRR')
+		print (results, '\n RRRRRRRRRRRRR111111111111111')
 		return results
 	   
 	   
