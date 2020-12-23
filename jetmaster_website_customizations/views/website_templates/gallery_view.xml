@@ -1,0 +1,209 @@
+<odoo>
+    <data>
+        <template id="gallery_view_template" name="Gallery View Template">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="oe_structure">
+                        <section class="gallery_sec">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-sm-12">
+                                        <h1>Gallery</h1>
+                                        <h2>Get inspired by images of our brands to freshen
+                                            up life
+                                        </h2>
+
+                                        <p>We have Worlds most selling brands of Cigarettes in the word .
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="oe_structure">
+                        <section class="home-productcategory gallerypage-sec">
+                            <div class="container">
+                                <div class="row">
+                                    <t t-foreach="gallery_images" t-as="gallery_image_id">
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-6">
+                                            <!--<a class="thumb_box" id="#gallery-popup"-->
+                                            <!--href="#" data-toggle="modal" data-target="#gallery-popup">-->
+                                            <!--<img t-att-src="'data:image/png;base64,%s' % to_text(gallery_image_id.gallery_image)"-->
+                                            <!--t-att-alt="gallery_image_id.name"-->
+                                            <!--style="width:642px;height:332px"/>-->
+                                            <!--<button class="btn small_btn">View</button>-->
+                                            <!--</a>-->
+                                            <a class="thumb_box gallery-popup_view" id="#gallery-popup"
+                                               t-att-data-gallery-image="gallery_image_id.gallery_image"
+                                               href="#" data-toggle="modal" data-target="#gallery-popup"
+                                               t-att-data-product_id="gallery_image_id.product_id.id"
+                                               t-att-data_product_slug_url="gallery_image_id.product_slug_url">
+                                                <img t-att-src="'data:image/png;base64,%s' % to_text(gallery_image_id.gallery_image)"
+                                                     t-att-alt="gallery_image_id.name"
+                                                     style="width:642px;height:332px" id="gallery_image_id"/>
+                                                <button class="btn small_btn">View</button>
+                                            </a>
+                                            <h3>
+                                                <a href="#" id="#gallery-popup" data-toggle="modal"
+                                                   data-target="#gallery-popup">
+                                                    <span t-esc="gallery_image_id.name"/>
+                                                </a>
+                                            </h3>
+                                        </div>
+                                    </t><!-- end of loop -->
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="oe_structure">
+                        <section class="getin-touchsec">
+                            <div class="container">
+                                <div class="row">
+                                    <p>Got a question for our fireplace specialists?</p>
+                                    <p>
+                                        <strong>Call Us Now
+                                            <a style="color: black;" href="tel:+611300025316">1300 025 316</a>
+                                        </strong>
+                                    </p>
+                                    <a class="btn btn-sm btn-primary btn-padding" style="margin: auto;"
+                                       id="getin-touchbtn">
+                                        Get in Touch
+                                    </a>
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <!-- Modal -->
+                    <div class="modal fade custom-popup" id="gallery-popup" tabindex="-1" role="dialog"
+                         aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog popup-content" role="document">
+                            <div class="modal-content">
+
+                                <div class="modal-body">
+                                    <button type="button" class="close custom-close" data-dismiss="modal">X</button>
+                                    <div class="popup-leftright">
+
+                                        <div class="col-12 col-md-8" style="padding:0px;">
+                                            <!--<img src="/jetmaster_website_customizations/static/src/images/gallery-img/ST-Caroline-Springs.jpg"-->
+                                            <!--alt="Heat &amp; Glo ST-HVBI, Caroline Springs VIC"/>-->
+                                            <img src="" id="gallery_image_popup" class="gallery_image_popup"/>
+                                        </div>
+
+                                        <div class="col-12 col-md-4 right-div">
+                                            <div class="gallery-rightheight">
+                                                <h3>Like This Style?</h3>
+                                                <h5>Ask Us a Question</h5>
+
+                                                <form action="/thankyou-gallery" method="post"
+                                                      id="gallery_queries_form_id">
+
+                                                    <div class="form-group">
+                                                        <input type="hidden" class="form-control o_website_form_input"
+                                                               id="gallery_product_id" name="gallery_product_id"/>
+                                                    </div>
+
+                                                    <div class="main-validation_error" style="display:none; ">
+                                                        There was a problem with your submission. Errors have been
+                                                        highlighted
+                                                        below.
+                                                    </div>
+
+                                                    <div class="form-group name-gallerysec">
+                                                        <label for="inputAddress">Name*</label>
+                                                        <input type="text" class="form-control o_website_form_input"
+                                                               id="gallery-name" name="name"/>
+
+
+                                                        <div class="name-validatemsg" style="display:none;">This field
+                                                            is
+                                                            required.
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="form-group email-gallerysec">
+                                                        <label for="inputAddress">Email*</label>
+                                                        <input type="text" class="form-control o_website_form_input"
+                                                               id="gallery-email" name="email"/>
+
+                                                        <div class="email-validatemsg" style="display:none;">This field
+                                                            is
+                                                            required.
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group phone-gallerysec">
+                                                        <label for="inputAddress">Phone*</label>
+                                                        <input type="text" class="form-control o_website_form_input"
+                                                               id="gallery-phone" name="phone"/>
+
+                                                        <div class="phone-validatemsg" style="display:none;">This field
+                                                            is
+                                                            required.
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <lable>Message</lable>
+                                                        <textarea name="gallery-message" id="gallery-message"
+                                                                  class="form-control"
+                                                                  tabindex="18" aria-invalid="false" rows="5"
+                                                                  cols="50"/>
+                                                    </div>
+
+                                                    <div class="form-submit">
+                                                         <input type="button" id="addgallery_query" name="addgallery_query"
+                                                               class="btn btn-sm btn-primary btn-padding" value="Submit"/>
+                                                        <!--<input type="submit" class="btn btn-sm btn-primary btn-padding"-->
+                                                        <!--value="Submit"/>-->
+
+                                                        <a class="btn btn-sm transparant-btn btn-padding"
+                                                           id="view_more_product"
+                                                           style="color:#fe5900!important;"
+                                                           t-attf-href="#">
+                                                            View More
+                                                        </a>
+                                                    </div>
+
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </t>
+        </template>
+
+        <template name="Gallery Page Thanks" id="gallery_page_thanks">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <section class="gallery_page_form-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="gallery_page_thanks">
+                                        <h1>Thank You</h1>
+
+                                        <h2>Thanks for contacting us! We will get in touch with you shortly.
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

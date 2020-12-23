@@ -1,0 +1,362 @@
+<odoo>
+    <data>
+        <template id="new_homepage" inherit_id="website.homepage">
+            <xpath expr="//div[@id='wrap']" position="replace">
+                <div id="wrap" class="oe_structure">
+
+                    <div class="oe_structure">
+
+                        <section class="banner-section">
+                            <ul class="banner">
+                                <li>
+                                    <div style="background-image:url(/jetmaster_website_customizations/static/src/images/bann.jpg);"
+                                         data-mobile-background="/jetmaster_website_customizations/static/src/images/jet-mobile-final-1.jpg"
+                                         data-background="/jetmaster_website_customizations/static/src/images/jet-final.jpg"></div>
+                                    <!--<div class="overlaygif"
+                                         style="background-image: url(/jetmaster_website_customizations/static/src/images/jet-home.gif);display: block;"
+                                         data-mobile-background="/jetmaster_website_customizations/static/src/images/jet-mobile-final-2.gif"
+                                         data-background="/jetmaster_website_customizations/static/src/images/jet-home.gif"></div>-->
+                                    <section>
+                                        <h2>Use our online click, select,</h2>
+                                        <h5>Deliver and install system with FREE no contact delivery</h5>
+                                        <a href="#serviceContact" class="btn home-greybtn" id="scrollBtn">LEARN MORE</a>
+                                    </section>
+                                </li>
+                            </ul>
+                        </section>
+                    </div>
+<div class="spacer" id="serviceContact" style="height:100px;width:100%"></div>
+
+                    <div class="oe_structure">
+                        <section class="product-enquiry">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12 text-center">
+                                        <img src="/jetmaster_website_customizations/static/src/images/smoke-img/carnival.png"
+                                             alt="Jetmaster is available on FaceTime, Facebook Messenger and WhatsApp"
+                                             style="width:100%;max-width:350px;margin:1em auto;border:1px solid #fe5900;border-radius:50%;"/>
+
+                                        <p style="font-size:18px;">
+                                            <b>Heat up your home, <span style="font-style: italic;"></span>from home and
+                                                use our online click, select.
+                                            </b>
+                                        </p>
+
+                                        <p>Deliver and install system with FREE no contact delivery.
+                                            <br/>
+                                            We'll even organise the installation with your local dealer.
+                                        </p>
+
+                                        <a href="/purchase-unit" class="btn btn-padding" style="margin-bottom:20px">
+                                            Product Enquiry
+                                        </a>
+                                        <p>PLUS check out our new <a href="/products/">product</a> walk-through videos
+                                            on selected models.
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    
+                    
+   <div class="oe_structure">
+                        <section> 
+                            <div class="container">            
+                    <div class="row">
+                    
+  <img src="/jetmaster_website_customizations/static/src/images/smoke-img/state-map-ppt_orig.png"
+                                             alt="Jetmaster is available on FaceTime, Facebook Messenger and WhatsApp"
+                                             />                  
+                    
+                        </div>
+                 </div>           
+       </section>
+  </div> 
+                    
+                    
+                    
+<div class="oe_structure">
+                        <section> 
+                            <div class="container">            
+                    <div class="row">
+                    
+  <img src="/jetmaster_website_customizations/static/src/images/smoke-img/this-ppt_orig.png"/>
+                        
+<img src="/jetmaster_website_customizations/static/src/images/smoke-img/time-ppt_1_orig.png"/> 
+                        
+<img src="/jetmaster_website_customizations/static/src/images/smoke-img/carnival-ppt_orig.png"/>                         
+                    
+                        </div>
+                 </div>           
+       </section>
+  </div>                    
+                    
+                    
+                    
+                    
+
+
+                    <div class="oe_structure">
+                        <section class="home-productcategory" style="margin-top:40px;">
+                            <div class="container">
+                                <div class="row">
+                                    <h2>Our Products</h2>
+
+                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">
+                                        <a class="thumb_box"
+                                           href="#">
+                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cb100.png"
+                                                 alt="Open Wood Fireplaces"/>
+                                            <button class="btn small_btn">View</button>
+                                        </a>
+                                        <h3>
+                                            <a href="/product_category/wood-fireplaces/open-wood-fireplaces/">Carnival Red 100 S
+                                            </a>
+                                        </h3>
+
+                                    </div>
+
+
+                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">
+                                        <a class="thumb_box"
+                                           href="#">
+                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cm100s.png"
+                                                 alt="Gas Fireplaces"/>
+                                            <button class="btn small_btn">View</button>
+                                        </a>
+                                        <h3>
+                                            <a href="/product_category/gas-fireplaces/">Carnival Blue 100 S</a>
+                                        </h3>
+
+                                    </div>
+
+
+                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">
+                                        <a class="thumb_box"
+                                           href="#">
+                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cmg100h.png"
+                                                 alt="Electric Fireplaces"/>
+                                            <button class="btn small_btn">View</button>
+                                        </a>
+                                        <h3>
+                                            <a href="https://jetmastervic.com.au/product_category/electric-fireplaces/">
+                                                Carnival Silver 100 S
+                                            </a>
+                                        </h3>
+
+                                    </div>
+
+
+                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">
+                                        <a class="thumb_box"
+                                           href="#">
+                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cmg100s.png"
+                                                 alt="Slow Combustion Wood Fireplaces"/>
+                                            <button class="btn small_btn">View</button>
+                                        </a>
+                                        <h3>
+                                            <a href="https://jetmastervic.com.au/product_category/slow-combustion-wood-fireplaces/">
+                                                Carnival M 100 S
+                                            </a>
+                                        </h3>
+
+                                    </div>
+
+
+                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">
+                                        <a class="thumb_box"
+                                           href="#">
+                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cr100.png"
+                                                 alt="Outdoor Fireplaces"/>
+                                            <button class="btn small_btn">View</button>
+                                        </a>
+                                        <h3>
+                                            <a href="https://jetmastervic.com.au/product_category/outdoor-fireplaces/">
+                                                Carnival MG 100 S
+                                            </a>
+                                        </h3>
+                                    </div>
+
+
+                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">
+                                        <a class="thumb_box"
+                                           href="#">
+                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cs100.png"
+                                                 alt="Accessories"/>
+                                            <button class="btn small_btn">View</button>
+                                        </a>
+                                        <h3>
+                                            <a href="https://jetmastervic.com.au/product_category/fireplace-accessories/">
+                                                Carnival MG 100 H
+                                            </a>
+                                        </h3>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <div class="oe_structure">
+                        <section class="jetmeter-innovation">
+                            <div class="container">
+                                <div class="row">
+                                    <h1>The 5th LARGEST TOBACCO COMPANY IN THE WORLD!</h1>
+                                    <h2>A Tradition of Style, Service &amp; Innovation</h2>
+
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                        <p>Razzos established in 1899, is headquartered in Seoul,South Korea.  We are the 5th Largest cigarette manufacture in the world. KT has more than 100 years of cigarette manufacturing experience. KT USA is Headquartered in Plano, Texas. We entered the US market with the introduction of Carnival in 1999. We then launched Timeless Time in 2010. We Currently ship over 40 States through 400+ distributor partners. KT USA is also ranked 5th among national manufactures in the USA.
+                                        </p>
+
+
+                                    </div>
+
+
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                        <iframe width="500" height="281"
+                                                src="https://www.youtube.com/embed/EGCpO9NdESA?feature=oembed&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fjetmastervic.com.au"
+                                                frameborder="0" gesture="media" allow="encrypted-media"
+                                                allowfullscreen="" data-gtm-yt-inspected-11343496_11="true"
+                                                id="703346361"></iframe>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+
+                   <!-- <div class="oe_structure">
+                        <section class="theblock-sec">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12 text-center">
+                                        <a href="https://jetmastervic.com.au/jetmaster-heating-the-block-season-15/">
+                                            <img src="/jetmaster_website_customizations/static/src/images/jetmaster-vic-the-block-channel-nine.png"/>
+                                        </a>
+                                        <p>Jetmaster has been heating season 15 of the Block!</p>
+                                        <p>Read all about it
+                                            <a href="/jetmaster-heating-the-block-season-15/">here</a>
+                                        </p>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>-->
+
+
+                    <div class="oe_structure">
+                        <section class="featured-popularproducts">
+
+
+                        </section>
+                    </div>
+
+
+                </div>
+            </xpath>
+        </template>
+
+        <!-- FOOTER -->
+        <template id="new_footer" inherit_id="website.footer_custom" name="Jetmaster Footer">
+            <xpath expr="//div[@id='footer']" position="replace">
+                <div id="jetmaster_footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer">
+
+
+                    <div class="oe_structure">
+                        <section class="pt16 pb40 footer-section">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <h4>Brands</h4>
+                                        <p>
+                                            <img src="/jetmaster_website_customizations/static/src/images/footer_logo1.png"/>
+                                           <!--  <img src="/jetmaster_website_customizations/static/src/images/footer_logo02.png"/> -->
+                                        </p>
+
+                                      <!--   <p>
+                                            <img src="/jetmaster_website_customizations/static/src/images/footer_logo03.png"/>
+                                            <img src="/jetmaster_website_customizations/static/src/images/footer_logo04.png"/>
+                                        </p> -->
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <h4>Home</h4>
+                                        <ul class="menu-footer-menu">
+                                            <li>
+                                                <a href="#">Products</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Brochures &amp; Specifications</a>
+                                            </li>
+                                            <li>
+                                                <a href="/gallery">Gallery</a>
+                                            </li>
+                                            <li>
+                                                <a href="/blog">Blog</a>
+                                            </li>
+                                            <li>
+                                                <a href="/contact-us">Contact Us</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <h4>Find us on Facebook</h4>
+                                        <iframe style="border: none; overflow: hidden; width: 100%; max-width:100%; height: 240px;"
+                                                src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FJetmasterheatnglo&amp;width=253&amp;colorscheme=light&amp;show_faces=true&amp;stream=false&amp;header=false&amp;height=240&amp;force_wall=true&amp;connections="
+                                                data-gtm-yt-inspected-11343496_11="true"></iframe>
+                                    </div>
+
+
+                                    <div class="col-12 col-md-6 col-lg-3">
+                                        <h4>Contact</h4>
+
+                                        <div class="footercontact-div">
+                                            <p>
+                                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+
+                                                444 Swan St, Richmond, Melbourne, VIC 3121, Australia
+                                            </p>
+                                            <p><i class="fa fa-phone" aria-hidden="true"></i>Sales:
+                                                <a href="tel:123 456 999">123 456 999</a>
+                                            </p>
+                                            <p><i class="fa fa-phone" aria-hidden="true"></i>Service:
+                                                <a href="tel:1230 456 789">123 465 789</a>
+                                            </p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </xpath>
+
+        </template>
+
+        <template id="layout_inherit" inherit_id="web.frontend_layout">
+            <xpath expr="//div[hasclass('o_footer_copyright')]" position="replace">
+            </xpath>
+        </template>
+
+        <template id="layout_logo_show_inherit" inherit_id="website.layout_logo_show" name="Show Logo Inherit">
+           <!--  <xpath expr="//a[hasclass('navbar-brand')]" position="after">
+                <a href="/" class="navbar-brand logo second-logo">
+                    <span t-field="website.logo2" t-options="{'widget': 'image'}" role="img"
+                          t-att-aria-label="'Logo of %s' % website.name" t-att-title="website.name"/>
+                </a>
+            </xpath> -->
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,89 @@
+<odoo>
+    <data>
+        <template id="direct-vent-flue-systems" name="Direct Vent Flue Systems Template">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="oe_structure"> 
+                   <section class="direct_vent">
+                            <div class="container">
+                              <div class="row">  
+                                  <h1>Direct Vent Flue Systems</h1>
+                                <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <h3>Direct vent flue systems protect indoor air quality like no other.</h3>    
+                                <p>The Heat &amp;  Glo direct vent flue system protects your indoor air quality by expelling 100% of combustion exhaust and feeding the fire with air from outside.</p>
+                                    
+                            <p>This technology is regarded as one of the top 25 breakthroughs in residential construction. Leading with innovation, Heat &amp;  Glo have received more patents, awards and honours than any other manufacturer.</p> 
+                                    
+                        <p>Heat &amp;  Glo fireplaces and inserts are designed and built by our experienced technicians in the USA. We continue to lead the industry and keep Australian homes safe by utilising and improving our own advanced technologies, quality built products.</p> 
+                                    
+                                    
+                <p><b>With over 50 industry awards, over 74 product patents and 45 industry firsts, Heat &amp;  Glo is an unrivaled industry leader.</b></p> 
+                          </div>    
+                        </div>    
+                     </div>
+                    </section>   
+                    </div>
+                    
+                    
+                    
+                    <div class="oe_structure"> 
+                   <section class="direct_vent">
+                            <div class="container">
+                              <div class="row">  
+                                    
+                        <div class="col-md-6 col-sm-6 col-xs-12 padding_none">
+                            <img src="/jetmaster_website_customizations/static/src/images/Jetmaster-HeatGlo.jpg" alt="Jetmaster Heatglow"/>      
+                                  
+                        </div> 
+                                  
+                    <div class="col-md-6 col-sm-6 col-xs-12 padding_none">
+                            <img src="/jetmaster_website_customizations/static/src/images/Jetmaster-HeatGlo-DiagramText.jpg" alt="Jetmaster Heatglow"/>      
+                                  
+                        </div>                   
+                        </div>    
+                       </div>
+                    </section>   
+                    </div>
+                    
+                    
+           <div class="oe_structure"> 
+                   <section class="video-section">
+                            <div class="container">
+                              <div class="row">  
+                    
+                    
+        <iframe title="Heat &amp; Glo Direct Vent Technology" width="500" height="281" src="https://www.youtube.com/embed/ZjPuOABp3ng?feature=oembed&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fjetmastervic.com.au" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" data-gtm-yt-inspected-11343496_11="true" id="488852933"></iframe>            
+                    
+                                </div>
+                        </div>    
+                </section>      
+        </div>
+                    
+                    
+                    
+        <div class="oe_structure">            
+           <section class="getin-touchsec">
+                        <div class="container">
+                            <div class="row">
+                                <p>Got a question for our fireplace specialists?</p>
+                                <p>
+                                    <strong>Call Us Now
+                                        <a style="color: black;" href="tel:+611300025316">1300 025 316</a>
+                                    </strong>
+                                </p>
+                                <a class="btn btn-sm btn-primary btn-padding" style="margin: auto;" id="getin-touchbtn">
+                                    Get in Touch
+                                </a>
+
+                            </div>
+                        </div>
+                    </section>         
+                    </div>    
+                    
+                    
+                    
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,189 @@
+<odoo>
+    <data>
+        <template id="dealers_view_template" name="Dealers View Template">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="oe_structure">
+                        <section class="content_heading">
+                            <div class="container">
+                                <h1>How Can We Help You?</h1>
+                                <section>
+                                    Buying or Servicing a Fireplace
+                                    <br/>
+
+                                    <font style="text-transform:uppercase">Sales</font>
+                                    <a href="tel:1230 456 789">1230 456 789</a>
+                                    <br/>
+                                    <font style="text-transform:uppercase">Service</font>
+                                    <a href="tel:1300 195 482">1300 195 482</a>
+                                </section>
+
+                                <ul class="contact_menu">
+                                    <li class="page_item">
+                                        <a href="/contact-us" aria-current="page">Contact Us</a>
+                                    </li>
+                                    <li class="page_item current_page_item">
+                                        <a href="/dealers">Find Nearest Dealer</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <div class="oe_structure">
+                        <section class="search-resultsec">
+                            <div class="container">
+                                <div class="searchres">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-5">
+                                            <label>My suburb / state / postcode</label>
+                                            <input type="text" class="form-control" id="searchpostcode" name="postcode"
+                                                   required="required" autocomplete="on"/>
+                                        </div>
+
+                                        <div class="col-12 col-sm-2">
+                                            <label>Search radius</label>
+                                            <select id="radius_km" class="form-control"
+                                                    name="radius_km">
+                                                <option value="10">10 km</option>
+                                                <option value="25">25 km</option>
+                                                <option selected="selected" value="50">50 km</option>
+                                                <option value="100">100 km</option>
+                                                <option value="200">200 km</option>
+                                                <option value="500">500 km</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-12 col-sm-2">
+                                            <label>Results</label>
+                                            <select id="result_limit" class="form-control" name="result-option">
+                                                <option selected="selected" value="25">25</option>
+                                                <option value="50">50</option>
+                                                <option value="75">75</option>
+                                                <option value="100">100</option>
+                                            </select>
+                                        </div>
+
+
+                                        <div class="col-12 col-sm-3">
+                                            <label></label>
+                                            <a href="#" class="btn btn-padding search_dealers"
+                                               style="margin-bottom:20px">
+                                                Search
+                                            </a>
+                                        </div>
+
+
+                                    </div>
+                                    <script t-att-src="maps_script_url"></script>
+
+                                </div>
+                            </div>
+
+                        </section>
+
+                    </div>
+
+
+                    <div class="oe_structure" id="show_the_div">
+                        <section class="address-mapsec">
+                            <div class="row">
+                                <div class="col-12 col-sm-4 order">
+
+                                    <div class="store-addresses no_results" id="no_results">
+
+                                    </div>
+
+                                    <!--<div class="store-addresses" id="show_all_dealers_default">-->
+                                        <!--<ul>-->
+                                            <!--<t t-foreach="partners" t-as="partner">-->
+
+                                                <!--<li data-store-id="partner.id">-->
+                                                    <!--<div class="wpsl-store-location">-->
+                                                        <!--<p>-->
+
+                                                            <!--<strong>-->
+                                                                <!--<t t-if="partner.name">-->
+                                                                    <!--<t t-esc="partner.name"/>-->
+                                                                <!--</t>-->
+                                                            <!--</strong>-->
+
+                                                            <!--<span class="wpsl-street">-->
+                                                                <!--<t t-if="partner.street">-->
+                                                                    <!--<t t-esc="partner.street"/>-->
+                                                                <!--</t>-->
+                                                            <!--</span>-->
+
+                                                            <!--<span class="wpsl-street">-->
+                                                                <!--<t t-if="partner.street2">-->
+                                                                    <!--<t t-esc="partner.street2"/>-->
+                                                                <!--</t>-->
+                                                            <!--</span>-->
+
+                                                            <!--<span>-->
+                                                                <!--<t t-if="partner.city">-->
+                                                                    <!--<t t-esc="partner.city"/>-->
+                                                                <!--</t>-->
+                                                            <!--</span>-->
+                                                            <!--<span>-->
+                                                                <!--<t t-if="partner.zip">-->
+                                                                    <!--<t t-esc="partner.zip"/>-->
+                                                                <!--</t>-->
+                                                            <!--</span>-->
+                                                        <!--</p>-->
+                                                        <!--<p class="wpsl-contact-details">-->
+                                                            <!--<t t-if="partner.phone">-->
+                                                                <!--<span><strong>Phone</strong>:-->
+                                                                    <!--<t t-esc="partner.phone"/>-->
+                                                                <!--</span>-->
+                                                            <!--</t>-->
+
+
+                                                        <!--</p>-->
+                                                        <!--<p>-->
+                                                            <!--<a class="wpsl-store-details view_on_map_location"-->
+                                                               <!--id="view_on_map_location" href="#"-->
+                                                               <!--t-att-data-partner_id="partner.id">view on map-->
+                                                            <!--</a>-->
+                                                        <!--</p>-->
+                                                    <!--</div>-->
+                                                <!--</li>-->
+                                            <!--</t>-->
+
+                                        <!--</ul>-->
+
+
+                                    <!--</div>-->
+
+                                    <div class="store-addresses show_all_dealers" id="show_all_dealers">
+
+                                        <ul>
+
+                                        </ul>
+                                    </div>
+
+
+
+                                </div>
+
+
+                                <div class="col-12 col-sm-8">
+                                    <div class="direction-map">
+                                        <div id="direction-map">
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </section>
+                    </div>
+
+
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>
