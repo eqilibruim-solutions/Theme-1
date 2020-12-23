@@ -5,7 +5,7 @@
     'name': 'Clarico Theme Extension',
     'version': '13.1.5.1',
     'category': 'Website',
-    'depends': ['theme_clarico_vega'],
+    'depends': ['website_sale'],
     'description': """
     Clarico Theme Extension
     """,
