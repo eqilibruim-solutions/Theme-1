@@ -14,7 +14,6 @@ odoo.define('clarico_ext.website_sale', function(require) {
     }
     
     
-    console.log(sessionStorage.getItem("plus18"), 'KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK')
     
     if ( sessionStorage.getItem("plus18") + "" == "0" || sessionStorage.getItem("plus18") + "" == 'undefined' || sessionStorage.getItem("plus18") + "" == 'null') {
         $('#plus18').show();
@@ -66,7 +65,19 @@ odoo.define('clarico_ext.website_sale', function(require) {
     });
 
 
-
+    $(document).ready(function() {
+    	//ONCHANGE OF UoM VIEW PRICE ACCORDINGLY
+    	$('#uom_id').on('change', function(ev){
+    		var base_price = $('.base_price').text()
+    		var price_ele = $(this).parents('.js_main_product').find('.product_price').find('.oe_price_h4').find('.oe_price').find('.oe_currency_value')
+    		ajax.jsonRpc('/get_uom_price', 'call', {price: base_price, uom: $(this).val()}).then(function (data) {
+                var result = JSON.parse(data);
+                price_ele.text(result.price)
+            });
+    	});
+    });
+    
+    
 
 
 });

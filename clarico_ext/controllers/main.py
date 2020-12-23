@@ -44,7 +44,27 @@ def index(self, **kw):
 Website.index = index	
 
 
+	
+	
 class EmiproThemeBase(http.Controller):
+	
+	@http.route(['/get_uom_price'], type='json')
+	def get_uom_price(self, **kw):
+		
+		print (kw, 'QQQQQQQQQQQQQQQQQQQQQ')
+		uom = request.env['uom.uom'].sudo().browse(int(kw['uom']))
+		factor = uom.factor_inv
+		ref = uom.uom_type
+		
+		price = float(kw['price'])
+		if ref == 'bigger':
+			price = price * factor
+		if ref == 'smaller':
+			price = price / factor
+		
+		return json.dumps({'price': price})
+	
+	
 	
 	
 	@http.route(['/shop/cart/update_custom'], type='json', auth="public", methods=['GET', 'POST'], website=True, csrf=False)

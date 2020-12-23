@@ -21,9 +21,11 @@
                         </option>
                     </t>
                 </select>
+                <span t-field="product.list_price" class="base_price" style="display: none" />
 		  	</div>
 		</xpath>
     </template>
+    
     
 
 
