@@ -91,11 +91,14 @@ odoo.define('theme_clarico_vega.ajax_cart', function (require) {
             if(/*variant_count == 1 || */is_product == 0 || is_ajax_cart || is_quick_view) {
                 /** if product has no variant then success popup will be opened */
                 var product_product = frm.find('input[name="product_id"]').val();
+                
+                //KTNG CHANGE --VISHNU
+                var uom = frm.find('select[name="uom_id"]').val();
                 var quantity = frm.find('.quantity').val();
                 if(!quantity) {
                    quantity = 1;
                 }
-                ajax.jsonRpc('/shop/cart/update_custom', 'call',{'product_id':product_product,'add_qty':quantity}).then(function(data) {
+                ajax.jsonRpc('/shop/cart/update_custom', 'call',{'product_id':product_product,'add_qty':quantity, 'uom_id': uom}).then(function(data) {
                     var ajaxCart = new publicWidget.registry.ajax_cart();
                     if(data) {
                         var $quantity = $(".my_cart_quantity");
@@ -187,6 +190,7 @@ odoo.define('theme_clarico_vega.ajax_cart', function (require) {
                     if(!quantity) {
                        quantity = 1;
                     }
+                    
                     ajax.jsonRpc('/shop/cart/update_custom', 'call',{'product_id':product_product,'add_qty':quantity}).then(function(data) {
                         var ajaxCart = new publicWidget.registry.ajax_cart();
                         if(data) {

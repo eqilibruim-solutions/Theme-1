@@ -9,12 +9,23 @@
 			<field name="model">product.pricelist.item</field>
 			<field name="inherit_id" ref="product.product_pricelist_item_form_view" />
 			<field name="arch" type="xml">
-				<xpath expr="//field[@name='company_id']" position="after">
-					<field name="user_ids" widget='many2many_tags' />
+				<xpath expr="//group[@name='pricelist_rule_computation']" position="before">
+					<group name='csg' col='1'>
+						<span style="display: inline-flex;">
+							<h4>Customers</h4><h7 style="margin-left: 30px; color: gray;font-style: italic;">If not set, PriceList work as default</h7>
+						</span>
+						<field name="user_ids" widget='many2many_tags' nolabel='1' />
+						
+						<span style="margin-top: 40px; display: inline-flex;">
+							<h4>States/Provinces</h4><h7 style="margin-left: 30px; color: gray;font-style: italic;">If not set, PriceList work as default</h7>
+						</span>
+						<field name="state_ids_pricelist" widget='many2many_tags' nolabel='1' />
+					</group>
 				</xpath>
 			</field>
 		</record>
-
+		
+		
 
 
 

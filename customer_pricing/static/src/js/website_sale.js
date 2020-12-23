@@ -1,4 +1,4 @@
-odoo.define('clarico_ext.website_sale', function(require) {
+odoo.define('customer_pricing.website_sale', function(require) {
     'use strict';
 
     var ajax = require('web.ajax');
