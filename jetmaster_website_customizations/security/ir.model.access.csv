@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_enquiry_user1,product.enquiry.user1,jetmaster_website_customizations.model_product_enquiry,sales_team.group_sale_manager,1,1,1,1
+access_gallery_view_user,access.gallery.view.user,jetmaster_website_customizations.model_gallery_view,base.group_user,1,1,1,1
+access_booking_service_view_user,access.booking.service.user,jetmaster_website_customizations.model_booking_service,base.group_user,1,1,1,1
+access_contact_details_view_user,access.contact.details.user,jetmaster_website_customizations.model_contact_details,base.group_user,1,1,1,1
+access_gallery_view_queries_user,access.gallery.view.queries.user,jetmaster_website_customizations.model_gallery_view_queries,base.group_user,1,1,1,1

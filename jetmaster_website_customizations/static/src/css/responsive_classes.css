@@ -1,0 +1,19 @@
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 575.98px) {
+    .second-logo {display: none;}
+    
+    
+}
+
+
+
+
+/* Small devices (landscape phones, less than 768px)*/
+@media (max-width: 767.98px) {
+    a.header_menu_contact {font-size:12px; }
+    
+    .o_header_affix .navbar-collapse a {text-align: left;}
+
+    .navbar-nav .nav-item {border-bottom: 1px solid #a19d9d; text-align: left;}
+
+}

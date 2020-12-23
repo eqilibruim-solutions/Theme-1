@@ -1,0 +1,1099 @@
+/*===================== START Font Added By Rohit =================*/
+
+
+@font-face {
+    font-family: 'montserratblack';
+    src: url('fonts/montserrat-black-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'montserratbold';
+    src: url('fonts/montserrat-bold-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserratextrabold';
+    src: url('fonts/montserrat-extrabold-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'montserratsemibold';
+    src: url('fonts/montserrat-semibold-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-semibold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'montserratmedium';
+    src: url('fonts/montserrat-medium-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-medium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'montserratregular';
+    src: url('fonts/montserrat-regular-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserratlight';
+    src: url('fonts/montserrat-light-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'montserratextralight';
+    src: url('fonts/montserrat-extralight-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-extralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+@font-face {
+    font-family: 'montserratthin';
+    src: url('fonts/montserrat-thin-webfont.woff2') format('woff2'),
+         url('fonts/montserrat-thin-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/*===================== END Font Added By Rohit =================*/
+
+
+
+
+
+/********************
+Global Reset
+*********************/
+a { text-decoration:none!important;}
+
+
+body, html {
+font-family: 'montserratregular';
+    font-weight:400;
+	padding: 0;
+	margin: 0;
+    color:#000!important;
+}
+
+
+b, strong {font-family: 'montserratbold';}
+
+/*********************
+TYPOGRAPHY
+*********************/
+input[type=button],
+input[type=text],
+input[type=password],
+input[type=select] {
+	 -webkit-appearance: none;
+}
+
+
+
+img {
+	 max-width: 100%;
+	 vertical-align: middle;
+	 height: auto;
+}
+ blockquote {
+	 margin-left: 0;
+}
+ blockquote p {
+	 line-height: 19.2px;
+	 margin-bottom: 10px;
+	 margin-top: 10px;
+}
+ blockquote h5 {
+	 font-size: 16px;
+	 margin-top: 0;
+	 margin-bottom: 0;
+}
+
+
+a {
+	 /*color: #fe5900;*/
+   color:#d51521;
+}
+ h1, h2, h3, h4, h5, h6 {
+	 line-height: 1.2;
+	 margin-top: 0px;
+	 color: #000;
+}
+ h1 {
+	 font-size: 34px;
+	 font-weight: 700;
+	 text-align: center;
+	 margin-bottom: 42px;
+	 padding-left: 0px;
+	 padding-right: 20px;
+     width:100%;
+         font-family: 'montserratbold';
+
+}
+
+ h2 {
+	 font-size: 22px;
+	 font-weight: 500;
+ font-family: 'montserratmedium';
+}
+ h3 {
+	 font-size: 16px;
+	 font-weight: 500;
+}
+ h4 {
+	 font-size: 16px;
+	 font-weight: 500;
+     font-family: 'montserratbold';
+}
+ h5 {
+	 font-size: 14px;
+	 font-weight: 700;
+}
+ h6 {
+	 font-size: 12px;
+}
+ p {
+	 font-size: 14px;
+	 line-height: 1.5;
+	 margin-top: 0px;
+	 margin-bottom: 22px;
+    /*font-family: 'montserratmedium';*/
+    display: block;
+    width: 100%;
+}
+ p a {
+	 color: #d51521;
+	 text-decoration: none;
+}
+ li {
+	 line-height: 1.5;
+	 margin-bottom: 21px;
+	 font-size: 14px;
+}
+ li > ul {
+	 margin-top: 10px;
+}
+ li li {
+	 margin-bottom: 10px;
+}
+
+
+
+/* Chrome/Opera/Safari */
+ ::-webkit-input-placeholder {
+	 color: #000;
+	 opacity: 1;
+}
+ ::-moz-placeholder {
+	/* Firefox 19+ */
+	 color: #000;
+	 opacity: 1;
+}
+ :-ms-input-placeholder {
+	/* IE 10+ */
+	 color: #000;
+	 opacity: 1;
+}
+ :-moz-placeholder {
+	/* Firefox 18- */
+	 color: #000;
+	 opacity: 1;
+}
+
+
+.gray_btn {
+    background: #6d6e70;}
+
+#wpsl-search-btn, input[type="submit"], .btn, .button, .button:visited, * .button, * .button:visited {font-family: "Montserrat", sans-serif;
+    display: inline-block;
+    vertical-align: middle;
+    /*background: #fe5900;*/
+    background-color:#000;
+  /*  background: #d82530;
+    background: -moz-linear-gradient(top,#d82530 0%,#9a051e 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#d82530),color-stop(100%,#9a051e));
+    background: -webkit-linear-gradient(top,#d82530 0%,#9a051e 100%);
+    background: -o-linear-gradient(top,#d82530 0%,#9a051e 100%);
+    background: -ms-linear-gradient(top,#d82530 0%,#9a051e 100%);
+    background: linear-gradient(top,#d82530 0%,#9a051e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d82530',endColorstr='#9a051e',GradientType=0 );*/
+    color: #fff!important;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    border: 0;
+    /*min-width: 150px;*/
+    border-radius: 4px;
+   /* padding: 15px 30px 14px;*/
+    text-align: center;
+    height: auto;}
+
+
+/*@media (min-width: 1200px){
+
+.container {
+    max-width: 1220px;
+}
+}
+
+*/
+
+.navbar > .container { max-width: 1220px;}
+
+section.banner-section {padding-top:0px; padding-bottom:0px;}
+
+
+
+
+/*======================= Start HOME PAGE ===================*/
+
+#wrapwrap > main {padding-top: 150px;}
+
+header {position: fixed;
+    width: 100%;
+    /*top: 0;*/
+    z-index: 10;}
+
+.navbar-light {background-color:#fff!important; }
+
+
+header .navbar-brand.logo img {max-width: none;
+    width: 150px!important;
+    padding-right: 20px;}
+
+.nav-item a{
+font-size: 15px;
+    font-weight: 600;
+    padding: 8px 15px 7px;
+    text-decoration: none;
+    zoom: 1;
+    color: #000;
+}
+
+.navbar-light {
+    padding-top: 15px;
+    padding-bottom: 20px;
+    position: relative;
+    min-height: 90px;
+}
+
+.navbar .nav-item {margin-bottom: 0px!important;}
+
+
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus{
+    color: #d51521!important;}
+
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active { color: #d51521!important;}
+
+.nav-item a {display: block;
+    position: relative;}
+
+
+.navbar-light .navbar-nav .nav-link {color: #000;}
+
+.home-greybtn {min-width: 150px; background: #6d6e70;
+    border-radius: 4px;
+    padding: 15px 30px 14px;
+    text-align: center;}
+
+/*============= HOME MAIN BANNER ===============*/
+
+/*-- Banner --*/
+ .banner_panel .bx-wrapper {
+	 position: relative;
+}
+ .banner_panel .bx-pager {
+	 opacity: 0;
+	 position: absolute;
+	 bottom: 15px;
+	 left: 0px;
+	 width: 100%;
+	 text-align: center;
+}
+ .banner_panel .bx-pager .bx-pager-item {
+	 display: inline-block;
+	 vertical-align: middle;
+	 width: 18px;
+	 height: 18px;
+	 margin: 0px 10px;
+}
+ .banner_panel .bx-pager .bx-pager-item .bx-pager-link {
+	 display: inline-block;
+	 vertical-align: middle;
+	 width: 100%;
+	 height: 100%;
+	 border: 1px solid #fff;
+	 background: none;
+	 text-indent: -999em;
+	 border-radius: 50%;
+}
+ .banner_panel .bx-pager .bx-pager-item .active {
+	 background: #fff;
+}
+ .banner_panel .bx-prev, .banner_panel .bx-next {
+	 opacity: 0;
+	 width: 30px;
+	 height: 40px;
+	 position: absolute;
+	 top: 50%;
+	 margin-top: -20px;
+	 display: block;
+	 text-indent: -999em;
+	 background-image: url(/jetmaster_website_customizations/static/src/images/);
+	 background-repeat: no-repeat;
+}
+ .banner_panel .bx-prev {
+	 left: 30px;
+	 background-position: -89px -26px;
+}
+ .banner_panel .bx-next {
+	 right: 30px;
+	 background-position: -89px -103px;
+}
+ .banner_panel:hover .bx-pager, .banner_panel:hover .bx-prev, .banner_panel:hover .bx-next {
+	 opacity: 1;
+}
+ .banner {
+	 width: 100%;
+	 height: 100vh;
+	 margin-top: -82px;
+     padding: 0px;
+}
+ .banner li {
+	 height: 100%;
+	 position: relative;
+}
+ .banner li > div {
+	 height: 92%;
+	 background-repeat: no-repeat;
+	 background-position: center center;
+	 background-size: cover;
+}
+ .banner li > div.overlaygif {
+	 width: 100%;
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 z-index: 1;
+	 display: none;
+}
+ .banner li > section {
+	 background: rgba(0, 0, 0, 0.5);
+	 width: 470px;
+	 position: absolute;
+	 left: 0px;
+	 bottom: 70px;
+	 padding: 30px;
+     z-index: 9;
+}
+ .banner li > section h2 {
+	 font-size: 34px;
+	 font-weight: 700;
+	 text-align: left;
+	 color: #fff;
+	 margin-bottom: 20px;
+	 padding: 0;
+}
+ .banner li > section h5 {
+	 color: #fff;
+	 font-size: 18px;
+	 font-weight: 700;
+}
+
+
+
+
+
+.product-enquiry img {width: 100%;
+    max-width: 350px;
+    margin: 1em auto;
+    border: 2px solid #d51521!important;
+    border-radius: 50%;
+}
+
+
+
+.home-productcategory h2{text-align: center; width:100%;
+    font-family: 'montserratbold';
+    font-size: 34px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 30px;}
+
+
+.home-productcategory .thumb_box{display: block;
+    position: relative;
+    margin-bottom: 15px;
+    overflow: hidden;}
+
+.home-productcategory .thumb_box:hover img {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    -webkit-transition: all ease-in-out 0.2s;
+    -o-transition: all ease-in-out 0.2s;
+    transition: all ease-in-out 0.2s;
+}
+
+.home-productcategory .thumb_box .btn {    border: 1px solid #fff;
+    width: 130px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -65px;
+    margin-top: -17px;
+    opacity: 0;}
+
+
+.home-productcategory .thumb_box:hover .btn {
+    opacity: 1;
+}
+
+.home-productcategory h3 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    min-height: 60px;
+    font-family: 'montserratmedium';
+    margin-bottom: 40px;
+}
+
+.home-productcategory h3 a {
+    color: #000;
+}
+
+.btn:hover {color: #fff;}
+
+.home-productcategory h3 a:hover{text-decoration: none;}
+
+.small_btn {
+font-size: 12px;
+    min-width: inherit;
+    padding: 8px 10px 9px;
+}
+
+
+
+.jetmeter-innovation {     background: #f0f0f0;
+    padding-top: 50px;
+    padding-bottom: 65px;
+}
+
+
+.jetmeter-innovation h1{
+        font-family: 'montserratbold'; width:100%;
+}
+
+.jetmeter-innovation h2{
+    text-align: center;
+    font-size: 28px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 30px;
+    width:100%;
+    font-family: 'montserratlight';
+}
+
+
+.theblock-sec img {width:330px;}
+
+.theblock-sec p {font-size:16px; font-family: 'montserratbold'; margin-bottom: 1px;  }
+
+.footer-section {background-color: #fff!important; }
+
+.footer-section H4 {font-family: 'montserratsemibold'!important; color: #000; margin-bottom:30px; }
+
+.menu-footer-menu {margin:0px; padding:0px;  }
+
+.menu-footer-menu li {    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+    margin-bottom: 7px; list-style: none;
+    font-family: 'montserratmedium';
+}
+
+
+.menu-footer-menu li a{color: #000; list-style: none;}
+
+.menu-footer-menu li a:hover{color: #d51521; list-style: none;}
+/*======================== Product Description Page ===================*/
+
+
+#product_details h1{font-size:22px; text-transform: uppercase; margin-top: 0px; color: #000; text-align: left;
+    font-family: 'montserratlight'; margin-bottom: 10px;  }
+
+.progress-wizard .progress-wizard-step.active .progress-wizard-dot {background-color:#d51521;
+       box-shadow: 0 0 0 0.1875rem white, 0 0 0 0.25rem #dc3545; }
+
+.progress-wizard .progress-wizard-step.complete .progress-wizard-dot:after {color: #d51521!important;}
+
+.progress-wizard .progress-wizard-step.complete .progress-wizard-steplabel {color: #d51521;}
+
+.grey-button {background: #6d6e70;
+padding: 12px;
+width: 120px;
+margin-right: 10px; }
+
+.breadcrumb {background-color: inherit; margin-bottom: 30px; }
+
+.breadcrumb li {margin-bottom:0px; }
+
+.breadcrumb-item.active {font-family: 'montserratsemibold'; color:#444!important;}
+
+.product-featuressec {    float: left;     width: 100%;
+    margin: 0px;
+    margin-top: 36px;}
+
+.product-featuressec ul {padding:0px; margin:auto; margin-top: 10px; width: 100%; float: left;}
+
+.product-featuressec ul li {float:left; margin: auto; margin-bottom: 20px; width:50%; }
+
+.btn-padding {padding: 15px 30px 14px;}
+
+.product-videosec h2 {display: block; float: left; text-align: center; width: 100%; font-size: 22px; font-family: 'montserratmedium';
+    font-weight: 500; }
+
+.product-videosec h3{display: block; float: left; text-align: center; width: 100%;}
+
+.product-videosec {    padding-top: 30px;
+    padding-bottom: 30px;}
+
+
+.btn-primary:hover, .btn-primary:focus {
+    color: #FFFFFF;
+    background-color: #979797!important;
+    /* border-color: #006d6b; */
+}
+
+
+
+.product-threebtn {float: left; margin:auto; width:100%; margin-top: 10px;
+margin-bottom: 25px;  }
+
+.product-threebtn div {float:left; }
+
+
+
+/*[aria-hidden="true"], [aria-hidden="1"] {
+    display: inline-block!important;
+}*/
+
+i {display: inline-block!important;}
+
+.footercontact-div i {position: absolute;
+    left: 0px;
+    top: 3px;
+    color: #d51521;
+    font-size: 18px;}
+
+
+.footercontact-div p {    padding-left: 18px; font-family: 'montserratmedium';
+    position: relative;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 500;}
+
+.phone-div {    background: #f0f0f0; float:left; margin: auto; padding:0px; text-align: right;
+    width: 100%;}
+
+.phone-div h3 {margin-bottom: 0px;}
+
+.phone-div .container {max-width: 1220px;}
+
+a.header_menu_contact {
+    display: inline-block;
+    padding: 0.5em 0;
+    font-weight: 600;
+    margin-left: 32px; font-size: 16px; font-family: 'montserratmedium';
+}
+
+.navbar-toggler {border: 0px solid transparent!important;}
+
+
+
+/*====================== Product Enquiry Form ==================*/
+
+.productform-section {padding-bottom: 80px; /*padding-top:50px;*/ }
+
+.product-formenquiry h2 {font-size:34px; color:#000!important; font-family: 'montserratbold'; margin-bottom: 20px; }
+
+.form-control {    background: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 51px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    padding-left: 10px!important; border: 0;
+    background: #f0f0f0;}
+
+.form-control:focus {background: #f0f0f0!important;}
+
+.form-group span {font-size:11px; color:#000; font-family: 'montserratmedium'; }
+
+.form-group p {font-family: 'montserratmedium'; color:#000;}
+
+.form-row label{width:100%;}
+
+.form-submit {width:100%; text-align: center; margin: auto; margin-bottom: 20px;}
+
+.form-submit .btn-primary {width:180px;}
+
+.form-check-label { font-family: 'montserratmedium'; font-size: 13px;
+    margin-bottom: 5px;
+    margin-top: 5px; }
+
+label {font-size:16px; font-family: 'montserratmedium'; }
+
+.getin-touchsec {    text-align: center;
+    background: #f0f0f0;
+    padding-top: 54px;
+    padding-bottom: 55px;}
+
+/*=============== Form Validation Product Enquiry =============*/
+
+.error {
+  color: red;
+  margin-left: 5px;
+}
+
+label.error {
+  display: inline;
+}
+
+ .error-section{    background-color: rgba(255,223,224,.25);
+    margin-bottom: 6px!important;
+    border-top: 1px solid #c89797;
+    border-bottom: 1px solid #c89797;
+    padding-bottom: 6px;
+    padding-top: 8px;}
+
+
+.name-errormsg, .addressdiv-errormsg, .phone-errormsg, .email-errormsg, .name-emailmsg, .phone_postcodemsg  {color: #790000;
+    font-weight: 700;
+    letter-spacing: normal;}
+
+        .error-section label {color: #790000;}
+
+        .main-validation_error {color: #790000;
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 25px;
+    border-top: 2px solid #790000;
+    border-bottom: 2px solid #790000;
+    padding: 10px 0 10px 0;
+    clear: both;
+    width: 100%;
+    text-align: center;}
+
+
+/*====== Styles for customize add to cart and Plus minus Button =====*/
+
+.add_to_cart_on_products .css_quantity {justify-content: center!important;}
+
+.o_wsale_layout_list .add_to_cart_on_products .css_quantity {justify-content: flex-end;}
+
+.add_to_cart_on_products {margin-bottom: 8px; }
+
+.o_wsale_layout_list .add_to_cart_on_products{
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;}
+
+.o_wsale_layout_list .css_quantity {justify-content: flex-end!important;}
+
+.o_wsale_product_information h6 {font-size: 16px;
+    font-weight: 800;}
+
+.css_quantity .btn {height: 30px!important; font-size: 12px;}
+
+.products_pager {align-items: baseline!important; justify-content: space-between !important;}
+
+.page-item.active .page-link{background-color: #6d6e70; border-color: #6d6e70; font-family: 'montserratbold'!important; }
+
+.badge {    width: 18px;
+    height: 18px; padding: 5px!important;
+    font-weight: bold;
+    font-weight: 600; border-radius: 50%; background-color: #d51521;}
+
+/*============= Contact US Page =============*/
+
+
+.content_heading {text-align:center ;}
+
+.content_heading h1 {
+    margin-bottom: 36px;
+    font-family: 'montserratbold';
+}
+
+
+.content_heading section {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 35px;
+    margin-bottom: 40px;
+    margin-top:0px;
+    text-align: center;
+    padding-top:0px!important;
+    font-family: 'montserratmedium';
+}
+
+.contact_menu {
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.content_heading .contact_menu li {
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+    list-style: none;
+}
+
+.content_heading .contact_menu li a {
+    display: block;
+    border-radius: 4px;
+    width: 275px;
+    height: 50px;
+    font-family: "Montserrat", sans-serif;
+    background: #6d6e70;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 13px 15px 0px;
+}
+
+.content_heading .contact_menu li.current_page_item a {
+    background: #d51521;
+}
+
+.form-width {max-width: 600px !important;}
+
+section.content_heading {padding-top:0px; padding-bottom:30px; }
+
+.contact_leftborder {border-left: 1px solid #000;}
+
+.contact_leftborder h4 {padding-top:20px; padding-bottom:20px;  }
+
+.contact-formsec {padding-top:10px; padding-bottom: 70px; }
+
+.form-group select:after{
+content: "";
+    height: 100%;
+    width: 50px;
+    pointer-events: none;
+    position: absolute;
+    display: block;
+    top: 0px;
+    right: 0px;
+    background-image: url(/jetmaster_website_customizations/static/src/images/down-arrow.png);
+    background-repeat: no-repeat;
+    background-position: 0px -247px;
+}
+
+.padding_none {padding:0px; }
+
+.video-section {margin-top:60px; margin-bottom:60px; }
+
+
+
+
+.video-section iframe {    width: 100% !important;
+    height: 618px !important;}
+
+
+
+/*================== Book a Service page =============*/
+
+.booka-servicesec h1{text-align:left!important; }
+
+.booka-servicesec h4 {font-family: 'montserratmedium'!important; margin-bottom: 30px;}
+
+.labl {
+    display : block;
+   /* width: 400px;*/
+}
+.labl > input{ /* HIDE RADIO */
+    visibility: hidden; /* Makes input not-clickable */
+    position: absolute; /* Remove input from document flow */
+}
+.labl > input + div{ /* DIV STYLES */
+    cursor:pointer;
+    border:2px solid transparent;
+     text-align: center;
+    background-color: #f0f0f0;
+    margin-right: 10px;
+    height: 130px;
+        color: #6d6e70;
+    padding: 9px;
+}
+
+.labl > input + div i{ /* DIV STYLES */
+    font-size:40px; text-align: center;
+
+}
+
+.labl > input:checked + div{ /* (RADIO CHECKED) DIV STYLES */
+     background: #d51521;
+    color: #fff;
+}
+
+.whata-service-require {display: flex; margin-bottom:50px;
+    flex-wrap: wrap;
+    align-items: stretch;}
+
+.whatservice-requiredper {
+    flex: 0 0 150px;
+}
+
+.service-title{text-align:center; font-weight: 500;
+    font-size: 13px;}
+
+.checkbox input[type="checkbox"] {margin-right:10px; }
+
+.checkbox label {font-size: 12px; font-weight: 500;}
+
+.booka-servicesec .form-width {margin-bottom: 80px;}
+
+
+#otherservice-menu {padding-left:0px}
+
+#otherservice-menu li{list-style: none; }
+
+#otherservice-menu li a{list-style:none; color:#000; }
+
+#otherservice-menu li a:hover {color: #fe5900;}
+
+.o_wsale_product_information h6 a{color:#000;}
+
+/*======= Other Servicing right menu ========*/
+
+.service-methodogysec h3 {font-size:16px; color:#000; font-family: 'montserratmedium';  }
+
+.service-methodogysec {margin-bottom:50px; }
+
+.troubleshottingsec h3 {text-align: center;  margin-bottom: 50px;
+    font-size: 25px;
+    font-weight: 500;
+    min-height: 60px;}
+
+.trouble-video {padding-top:30px; padding-bottom:60px;}
+
+
+.trouble-video h3 {text-align: center;
+    font-size: 25px;
+    font-weight: 500; font-family: 'montserratmedium';
+}
+
+.faq-qa h2, .faq-qa h3 {margin-bottom:20px; }
+
+.searchres {max-width:900px; background: #f4f3f3; margin:auto;}
+
+.searchres .form-control {background-color:#fff!important; border: 1px solid #d2d2d2;
+    border-radius: 3px; }
+
+.search-resultsec {padding-top:50px; padding-bottom:50px;     margin-bottom: 27px;     background: #f4f3f3;}
+
+.search-resultsec label {height:30px; width:100%; display: block;  }
+
+.address-mapsec ul li p:first-child strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.address-mapsec ul li p:first-child strong + span {margin-bottom: 5px;
+    font-size: 14px; font-family: 'montserratmedium';
+    font-weight: 500;
+    text-transform: uppercase;}
+
+.address-mapsec ul li p span {display:block; }
+
+.store-addresses li{list-style:none; }
+
+.store-addresses {
+   justify-content: center;
+    height: 650px;
+    overflow: scroll;
+    position: relative;
+    overflow-x: hidden;
+    align-items: top;
+    display: flex;
+}
+
+.address-mapsec {margin-bottom: 50px;}
+
+#direction-map, .direction-map {height:100%; width:100%; }
+
+.dropdown-item.active, .dropdown-item:active {background-color: #66595a;}
+
+
+
+/*====================== Gallery Section ======*/
+
+.gallery_sec {text-align:center; }
+
+.gallery_sec h2 {text-align: center; width: 100%;}
+
+.gallery_sec p {margin-bottom:50px; }
+
+.fa {display: inline-block!important;}
+
+.popup-content {max-width:1300px; min-height: 626px; background: #f0f0f0;
+    margin-top: 20px; margin-bottom: 20px; padding: 0px;
+    border-radius: 0px!important; }
+
+.popup-content .modal-body {padding:0px!important; }
+
+.padding-none {padding:0px!important;}
+
+.custom-popup {height:auto!important;}
+
+.popup-leftright {display: flex;
+    flex-wrap: wrap; }
+
+.popup-leftright h3 {font-size:22px; margin-bottom: 10px;
+    text-align: center; font-family: 'montserratbold'; }
+
+.popup-leftright h5 {font-size:22px; margin-bottom: 10px;
+    text-align: center; font-family: 'montserratlight';  }
+
+.right-div {padding-top: 32px;
+    padding-left: 20px;
+    padding-right: 20px;}
+
+.transparant-btn {color: #fe5900!important; background-color: transparent!important;
+    border: 1px solid #fe5900 !important;}
+
+.popup-leftright img {    max-width: 100%;
+    vertical-align: middle;
+    height: 100%;
+    background-size: auto;
+  object-fit: cover;
+    width: 100%;}
+
+.custom-close {z-index: 999999999999;
+    position: absolute;
+    right: 0;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #000!important;
+    margin-top: 15px;
+    margin-right: 15px;
+    border-radius: 50%;}
+
+.gallery-rightheight {        height: 620px;
+    position: relative;
+    overflow-x: hidden;}
+
+
+.contact_us_thanks h2, .gallery_page_thanks h2 {font-size: 30px; font-family: 'montserratsemibold'; }
+.contact_us_thanks, .gallery_page_thanks {padding-bottom:100px; text-align: center; }
+
+
+
+@media only screen and (max-width: 768px) {
+    .order {order: 2;}
+}
+
+
+
+/*======================== Product Page CSS =============*/
+
+.oe_product_cart .oe_product_image img {width: 100%!important;}
+
+.oe_product_cart .oe_product_image {height:100%!important;}
+
+#products_grid .table .o_wsale_product_grid_wrapper.o_wsale_product_grid_wrapper_1_1 {padding-top: 0px!important;}
+
+#products_grid .table .o_wsale_product_grid_wrapper > * {position: relative;}
+
+.product_price {font-size: 16px;
+    font-weight: 800;}
+
+#products_grid .table td {padding: 5px;}
+
+
+
+.partlist-table .table .thead-dark th {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #454d55;
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+
+
+
+
+/*======================= Freelancing Logos ============*/
+
+header .navbar-brand.logo img {height: 63px!important; width:130px!important;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.partlist-tableh .table td, .partlist-tableh .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+
+.second-logo {display: none;}
+
+
