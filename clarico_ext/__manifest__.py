@@ -5,7 +5,7 @@
     'name': 'Clarico Theme Extension',
     'version': '13.1.5.1',
     'category': 'Website',
-    'depends': ['website_sale'],
+    'depends': ['website_sale', 'jetmaster_website_customizations'],
     'description': """
     Clarico Theme Extension
     """,

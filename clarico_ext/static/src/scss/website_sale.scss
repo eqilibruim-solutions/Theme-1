@@ -4,8 +4,8 @@
 
 
 #uom_id{
-	width: 135px;
-    height: 37px;
+	width: 115px;
+    height: 32px;
 
 }
 
@@ -16,7 +16,7 @@
 
 .uom_sel{
     margin-bottom: 10px;
-    margin-top: -53px;
+    margin-top: -32px;
     margin-left: 25%;
 
 }
@@ -106,7 +106,7 @@
 @media only screen and (max-width: 600px) {
   .uom_sel{
 	    margin-bottom: 10px;
-	    margin-top: 0px;
+	    margin-top: 10px;
     	margin-left: 0%;
 	}
 	.css_quantity{

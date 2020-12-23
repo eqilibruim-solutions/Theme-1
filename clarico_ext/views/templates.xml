@@ -11,7 +11,7 @@
 	</template>
 
 
-	<template id="product_uom_web" inherit_id="website_sale.product_quantity" customize_show="True" name="Select Quantity">
+	<template id="product_uom_web1" inherit_id="website_sale.product" customize_show="True" name="Select Quantity">
 		<xpath expr="//a[@id='add_to_cart']" position="before">
 		  	<div class='uom_sel' >
 		  		<select id="uom_id" name="uom_id" class="form-control te_theme_button">

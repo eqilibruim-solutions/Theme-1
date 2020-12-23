@@ -99,8 +99,8 @@ def _cart_update(self, product_id=None, line_id=None, add_qty=0, set_qty=0, **kw
 
 			# create the line
 			order_line = SaleOrderLineSudo.create(values)
-			if 'product_uom' in kwargs:
-				order_line.product_uom = int(kwargs['product_uom'])
+			if 'product_uom_id' in kwargs:
+				order_line.product_uom = int(kwargs['product_uom_id'])
 				order_line.product_uom_change()
 				
 			print (order_line, values, '\n  \n\n OLOLOLOLOLOLOLOLOL........................')
@@ -152,8 +152,8 @@ def _cart_update(self, product_id=None, line_id=None, add_qty=0, set_qty=0, **kw
 			
 			
 				
-			if 'product_uom' in kwargs:
-				values.update({'product_uom': int(kwargs['product_uom'])})
+			if 'product_uom_id' in kwargs:
+				values.update({'product_uom': int(kwargs['product_uom_id'])})
 			else:
 				del values['product_uom']
 				
