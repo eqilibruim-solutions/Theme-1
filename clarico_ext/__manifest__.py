@@ -15,11 +15,15 @@
         'security/ir.model.access.csv',
         'security/website_sale.xml',
     ],
+    
+	'qweb': [
+			'static/src/xml/templates.xml',
+			],
+	
     'summary':'Clarico Theme Extension',
     'demo': [
     ],
     'author': 'KPAK',
-	'qweb': [ ],
     'installable': True,
     'auto_install': False,
 }

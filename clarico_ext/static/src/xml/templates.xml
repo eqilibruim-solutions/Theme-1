@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+	<t t-extend="website_sale.productsRecentlyViewed">
+        <t t-jquery=".js_add_cart" t-operation="append">
+            <div class='uom_sel2' >
+	  		<select id="uom_id" name="uom_id" class="form-control te_theme_button">
+                <t t-foreach="product.units_web()" t-as="uw">
+                    <option t-att-value="uw.id" >
+                        <t t-esc="uw.name" />
+                    </option>
+                </t>
+            </select>
+            <span t-field="product.list_price" class="base_price" style="display: none" />
+	  	</div>
+        </t>
+    </t>
+</templates>

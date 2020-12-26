@@ -6,18 +6,23 @@
 #uom_id{
 	width: 115px;
     height: 32px;
+    border: 1px solid;
 
 }
 
-.css_quantity{
-	width: 24% !important;
-
-}
 
 .uom_sel{
     margin-bottom: 10px;
     margin-top: -32px;
-    margin-left: 25%;
+    margin-left: 26%;
+    position: absolute;
+
+}
+
+
+.uom_sel1{
+	margin-top: 10px;
+    margin-left: 28%;
 
 }
 

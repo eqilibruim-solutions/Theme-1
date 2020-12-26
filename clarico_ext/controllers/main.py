@@ -94,7 +94,6 @@ class EmiproThemeBase(http.Controller):
 	@http.route(['/get_uom_price'], type='json', auth="public", website=True)
 	def get_uom_price(self, **kw):
 		
-		print (kw, 'QQQQQQQQQQQQQQQQQQQQQ111111')
 		uom = request.env['uom.uom'].sudo().browse(int(kw['uom']))
 		factor = uom.factor_inv
 		ref = uom.uom_type

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <odoo>
 	<template id="assets_frontend_clarico" inherit_id="website.assets_frontend">
 		<xpath expr="link[last()]" position="after">
@@ -10,7 +11,25 @@
 		</xpath>
 	</template>
 
-
+	
+	
+	<template id="products_item_inherited_uom" inherit_id="jetmaster_website_customizations.products_item_inherited">
+        <xpath expr="//div/form/div/div" position="after">
+            <div class='uom_sel1' >
+		  		<select id="uom_id" name="uom_id" class="form-control te_theme_button">
+                    <t t-foreach="product.units_web()" t-as="uw">
+                        <option t-att-value="uw.id" >
+                            <t t-esc="uw.name" />
+                        </option>
+                    </t>
+                </select>
+                <span t-field="product.list_price" class="base_price" style="display: none" />
+		  	</div>
+        </xpath>
+    </template>
+    
+    
+    
 	<template id="product_uom_web1" inherit_id="website_sale.product" customize_show="True" name="Select Quantity">
 		<xpath expr="//a[@id='add_to_cart']" position="before">
 		  	<div class='uom_sel' >
