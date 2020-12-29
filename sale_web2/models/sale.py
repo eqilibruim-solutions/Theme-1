@@ -25,6 +25,9 @@ class sale_order(models.Model):
 	_inherit = "sale.order"
 	
 	moved = fields.Boolean("Moved")
+	po_number = fields.Char("PO Number")
+	unique_seq = fields.Char("Unique Sequence")
+	remote_order_id = fields.Integer("Remote Order ID")
 	
 	
 	def write(self, vals):
@@ -52,6 +55,7 @@ class sale_order(models.Model):
 		for order in self.search([('moved', '=', False), ('state', 'not in', ['draft', 'cancel'])]):
 			
 			remote_odoo = False
+			so_id = False
 			try:
 				remote_odoo = odoorpc.ODOO(url, port=port1)
 				remote_odoo.login(db, user1, pwd)
@@ -69,9 +73,9 @@ class sale_order(models.Model):
 				Website_r = remote_odoo.env['website']
 				Product_r = remote_odoo.env['product.product']
 				
-				print (remote_odoo.env.db, 'DDDDDDDDDDDDDDDDDDD')
 				
-				local_partner_id = self.partner_id
+				local_partner_id = order.partner_id
+				print (order, order.name, order.partner_id, 'local_partner_id----------------------------\n\n\n\n\n\n')
 				remote_partner_id = Partner_r.search([('email', '=', local_partner_id.email)], limit=1)
 				if not remote_partner_id and local_partner_id.customer_id:
 					remote_partner_id = Partner_r.search([('customer_id', '=', local_partner_id.customer_id)], limit=1)
@@ -96,6 +100,10 @@ class sale_order(models.Model):
 					remote_pricelist_id = Pricelist_r.search([('name', '=', local_pricelist_id.name)], limit=1)
 					if remote_pricelist_id:
 						remote_pricelist_id = remote_pricelist_id[0]
+					else:
+						remote_pricelist_id = Pricelist_r.create({
+																'name': order.pricelist_id.name,
+																})
 					
 				
 				local_payment_term_id = order.payment_term_id
@@ -188,6 +196,8 @@ class sale_order(models.Model):
 			
 			
 				order.moved = True
+				if so_id:
+					order.remote_order_id = so_id
 				self._cr.commit()
 
 				
