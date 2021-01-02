@@ -5,9 +5,13 @@
 		<xpath expr="link[last()]" position="after">
 			<link href="/clarico_ext/static/src/scss/website_sale.scss" rel="stylesheet"
 				type="text/scss" />
+				
+			<link href="/clarico_ext/static/src/scss/enroll.scss" rel="stylesheet"
+				type="text/scss" />
 		</xpath>
 		<xpath expr="script[last()]" position="after">
 			<script src="/clarico_ext/static/src/js/website_sale.js" type="text/javascript" />
+			<script src="/clarico_ext/static/src/js/enroll.js" type="text/javascript" />
 		</xpath>
 	</template>
 
