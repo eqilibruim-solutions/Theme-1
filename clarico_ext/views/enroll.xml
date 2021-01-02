@@ -20,10 +20,10 @@
 					<form id="new-form">
 						<div class="tab-1">
 							
-							<h2 style="margin-top: 20px; text-align: center; font-size: 10px" >Page 1 of 3</h2>
+							<h2 style="margin-top: 20px; text-align: center; font-size: 10px; color: red; " >Page 1 of 3</h2>
 							<h2 style="margin-top: 20px; text-align: center;" >New Customer Information Form</h2>
 							
-							<hr style="border: 2px solid" ></hr>
+							<hr style="border: 1px solid" ></hr>
 							
 							<div class="form-row" style="margin-top: 50px;" >
 								
@@ -248,9 +248,9 @@ door.
 
 					<div class="tab-2" style="display: none" >
 							
-							<h2 style="margin-top: 20px; text-align: center; font-size: 10px" >Page 2 of 3</h2>
+							<h2 style="margin-top: 20px; text-align: center; font-size: 10px; color: red; " >Page 2 of 3</h2>
 							<h2 style="margin-top: 20px; text-align: center;" >BANK REFERENCE REQUEST</h2>
-							<hr style="border: 2px solid" ></hr>
+							<hr style="border: 1px solid" ></hr>
 							<br></br><br></br>
 							
 							Dear Customer:
@@ -385,9 +385,9 @@ door.
 
 					<div class="tab-3" style="display: none" >
 					
-						<h2 style="margin-top: 20px; text-align: center; font-size: 10px" >Page 3 of 3</h2>
+						<h2 style="margin-top: 20px; text-align: center; font-size: 10px; color: red; " >Page 3 of 3</h2>
 						<h2 style="margin-top: 20px; text-align: center;" >AGREEMENT for EFT TRANSACTION</h2>
-						<hr style="border: 2px solid" ></hr>
+						<hr style="border: 1px solid" ></hr>
 						<br></br><br></br>
 						
 						
@@ -469,10 +469,10 @@ door.
 							<div class="form-group  cus-div col-lg-6" style="padding-right: 20px" >
 								
 								<label class="col-form-label lab-size" for="aggreement_bottom_signature">Authorized Signature</label>
-								<input type="file" name="aggreement_bottom_signature" class="form-control my-height" style="display: inline-block; width: 60%" />
+								<input type="file" name="aggreement_bottom_signature" class="form-control my-height" style="display: inline-block; width: 90%" />
 								
 								<label class="col-form-label lab-size" for="aggreement_bottom_date">Date</label>
-								<input type="text" name="aggreement_bottom_date" class="form-control my-height" style="display: inline-block; width: 60%" />
+								<input type="text" name="aggreement_bottom_date" class="form-control my-height" style="display: inline-block; width: 90%" />
 								
 							</div>
 						</div>
