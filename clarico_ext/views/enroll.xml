@@ -10,17 +10,17 @@
 	</record>
 
 
-	<template id="enroll_me_form" name="Doctors">
+	<template id="show_doctors_list" name="Doctors">
 		<title>Register</title>
 		<t t-call="website.layout">
 			<div id="wrap">
 				<div class="oe_structure" />
 				<div class="container">
 					
-					<form id="new-form" action="/page/submit_enroll_action" method="post" >
+					<form id="new-form">
 						<div class="tab-1">
 							
-							<h2 style="margin-top: 20px; text-align: center; font-size: 10px; color: red; " >Page 1 of 5</h2>
+							<h2 style="margin-top: 20px; text-align: center; font-size: 10px; color: red; " >Page 1 of 3</h2>
 							<h2 style="margin-top: 20px; text-align: center;" >New Customer Information Form</h2>
 							
 							<hr style="border: 1px solid" ></hr>
@@ -248,7 +248,7 @@ door.
 
 					<div class="tab-2" style="display: none" >
 							
-							<h2 style="margin-top: 20px; text-align: center; font-size: 10px; color: red; " >Page 2 of 5</h2>
+							<h2 style="margin-top: 20px; text-align: center; font-size: 10px; color: red; " >Page 2 of 3</h2>
 							<h2 style="margin-top: 20px; text-align: center;" >BANK REFERENCE REQUEST</h2>
 							<hr style="border: 1px solid" ></hr>
 							<br></br><br></br>
@@ -385,7 +385,7 @@ door.
 
 					<div class="tab-3" style="display: none" >
 					
-						<h2 style="margin-top: 20px; text-align: center; font-size: 10px; color: red; " >Page 3 of 5</h2>
+						<h2 style="margin-top: 20px; text-align: center; font-size: 10px; color: red; " >Page 3 of 3</h2>
 						<h2 style="margin-top: 20px; text-align: center;" >AGREEMENT for EFT TRANSACTION</h2>
 						<hr style="border: 1px solid" ></hr>
 						<br></br><br></br>
@@ -497,244 +497,12 @@ door.
 							
 					</div>
 
-					<div class="tab-4" style="display: none" >
-						
-						<h2 style="margin-top: 20px; text-align: center; font-size: 10px; color: red; " >Page 4 of 5</h2>
-						<h2 style="margin-top: 20px; text-align: center;" >New Customer Deal Sheet</h2>
-						<hr style="border: 1px solid" ></hr>
-						<br></br>
-						
-						<div class="form-row" style="margin-top: 50px;" >
-									
-							<div class="form-group  cus-div col-lg-6" style="padding-right: 20px" >
-								
-								<label class="col-form-label lab-size" for="deal_customer_name">Customer Name</label>
-								<input type="text" name="deal_customer_name" class="form-control my-height" style="display: inline-block; width: 90%" />
-								
-								<label class="col-form-label lab-size" for="deal_customer_addr">Customer Address</label>
-								<textarea name="deal_customer_addr" class="form-control my-height1" rows="4" style="display: inline-block; width: 90%" />
-								
-								<label class="col-form-label lab-size" for="deal_customer_phone">Customer Phone</label>
-								<input type="text" name="deal_customer_phone" class="form-control my-height" style="display: inline-block; width: 90%" />
-								
-								
-							</div>
-							
-							
-							<div class="form-group  cus-div col-lg-6" style="padding-right: 20px" >
-								
-								<label class="col-form-label lab-size" for="deal_customer_fax">Customer Fax</label>
-								<input type="text" name="deal_customer_fax" class="form-control my-height" style="display: inline-block; width: 90%" />
-								
-								<label class="col-form-label lab-size" for="deal_customer_email">Customer Email</label>
-								<input type="text" name="deal_customer_email" class="form-control my-height" style="display: inline-block; width: 90%" />
-								
-								<label class="col-form-label lab-size" for="deal_customer_contact_name">Customer Contact Name</label>
-								<input type="text" name="deal_customer_contact_name" class="form-control my-height" style="display: inline-block; width: 90%" />
-								
-								<label class="col-form-label lab-size" for="deal_customer_ktng_rep_name">KT&amp;G Rep. Name</label>
-								<input type="text" name="deal_customer_ktng_rep_name" class="form-control my-height" style="display: inline-block; width: 90%" />
-								
-							</div>
-							
-							
-							Payment Terms and type of payment: <u><b>EFT due on receipt</b></u>
-							
-							<br></br>
-							
-							<label class="col-form-label lab-size" for="deal_applied_check">Please select if applied: (GA / FL) , (Stamped / Unstamped)</label>
-							<select name="deal_applied_check" class="form-control my-height"  style="display: inline-block; width: 200px; margin-right: 30px" >
-								<option value="none">--</option>
-								<option value="ga">GA</option>
-								<option value="fl">FL</option>
-							</select>
-							<select name="deal_special" class="form-control my-height"  style="display: inline-block; width: 200px" >
-								<option value="none">--</option>
-								<option value="st">(Stamped</option>
-								<option value="unst">Unstamped)</option>
-							</select>
-							
-							<br></br><br></br>
-							
-							
-							
-							
-							
-							
-							
-							
-							<table class="table deal-tab" >
-							<tbody>
-								<tr style="background-color: lightslategrey; text-align: center;" >
-								<th></th>
-								<th>THIS</th>
-								<th>Timeless TIME</th>
-								<th>Carnival</th>
-								</tr>
-								
-								<tr>
-								<th style="background-color: lightslategrey; text-align: center;" >List Price</th>
-								<td><input type="text" name="deal_this_list_price" class="form-control my-height " style="display: inline-block;" /></td>
-								<td><input type="text" name="deal_time_list_price" class="form-control my-height " style="display: inline-block;" /></td>
-								<td><input type="text" name="deal_carnival_list_price" class="form-control my-height " style="display: inline-block;" /></td>
-								</tr>
-
-								<tr style="text-align: center;" >
-								<th style="background-color: lightslategrey;text-align: center;" >Off Invoice</th>
-								<td><input type="text" name="deal_this_off_invoice" class="form-control my-height " style="display: inline-block;" /></td>
-								<td><input type="text" name="deal_time_off_invoice" class="form-control my-height " style="display: inline-block;" /></td>
-								<td><input type="text" name="deal_carnival_off_invoice" class="form-control my-height " style="display: inline-block;" /></td>
-								</tr>
-								
-								<tr style="text-align: center;" >
-								<th style="background-color: lightslategrey;" >MSA Refund</th>
-								<td><input type="text" name="deal_this_msa" class="form-control my-height " style="display: inline-block;" /></td>
-								<td><input type="text" name="deal_time_msa" class="form-control my-height " style="display: inline-block;" /></td>
-								<td><input type="text" name="deal_carnival_msa" class="form-control my-height " style="display: inline-block;" /></td>
-								</tr>
-								
-								<tr style="text-align: center;" >
-								<th style="background-color: lightslategrey;" >Rebate</th>
-								<td><input type="text" name="deal_this_rebate" class="form-control my-height " style="display: inline-block;" /></td>
-								<td><input type="text" name="deal_time_rebate" class="form-control my-height " style="display: inline-block;" /></td>
-								<td><input type="text" name="deal_carnival_rebate" class="form-control my-height " style="display: inline-block;" /></td>
-								</tr>
-								
-								<tr style="text-align: center;" >
-								<th style="background-color: lightslategrey;" >Invoice Net</th>
-								<td><input type="text" name="deal_this_invoice_net" class="form-control my-height " style="display: inline-block;" /></td>
-								<td><input type="text" name="deal_time_invoice_net" class="form-control my-height " style="display: inline-block;" /></td>
-								<td><input type="text" name="deal_carnival_invoice_net" class="form-control my-height " style="display: inline-block;" /></td>
-								</tr>
-															
-							</tbody>
-							</table>
-							
-							
-								
-							
-							<br></br><br></br>
-							
-							
-							
-							
-							<div class="form-group  cus-div col-lg-12" style="padding-right: 20px" >
-								<label class="col-form-label lab-size" for="deal_special">Special Deal</label>
-								<select name="deal_special" class="form-control my-height"  style="display: inline-block; width: 35%" >
-									<option value="yes">Yes</option>
-									<option value="no">No</option>
-								</select>
-								
-								<label class="col-form-label lab-size" for="deal_comment">Comments</label>
-								<textarea name="deal_comment" class="form-control my-height1" rows="4" style="display: inline-block; width: 90%" />
-							</div>
-							
-							
-							<div class="form-group  cus-div col-lg-12" style="padding-right: 20px; text-align: center;" >
-									
-								Account Manager Signature <input type="file" name="signature_deal" class="form-control my-height" style="margin-left: 11px; display: inline-block; width: 220px" ></input>
-								
-								<span style="margin-left: 30px; " >
-								Date <input type="date" name="deal_signature_date" class="form-control my-height" style="margin-left: 11px; display: inline-block; width: 170px" ></input>
-								</span> 								
-							</div>
-							
-							
-							
-							
-						</div>
-						
-						
-						<hr style="border: 2px solid; width: 100%;" ></hr>
-								
-						<div class="d-flex" style="margin: 50px; justify-content: center;" >
-							<a role="button" class="btn btn-primary tab-4-pre" href="#" >
-								<i class="fa fa-chevron-left"></i>
-								<span>Previous</span>
-							</a>
-							<a role="button" href="#"
-								class="btn btn-primary tab-4-next">
-								<span>Next</span>
-								<i class="fa fa-chevron-right"></i>
-							</a>
-						</div>
-						
-							
+					<div class="tab-4">
 
 					</div>
 
+					<div class="tab-5">
 
-
-
-
-
-
-					<div class="tab-5" style="display: none" >
-						
-						
-						<h2 style="margin-top: 20px; text-align: center; font-size: 10px; color: red; " >Page 5 of 5</h2>
-						<h2 style="margin-top: 20px; text-align: center;" >Purchase Order</h2>
-						<hr style="border: 1px solid" ></hr>
-						<br></br>
-						
-						<div class="form-row" style="margin-top: 50px;" >
-									
-							<div class="form-group  cus-div col-lg-6" style="padding-right: 20px" >
-								
-								<label class="col-form-label lab-size" for="po_company_name">Company Name</label>
-								<input type="text" name="po_company_name" class="form-control my-height" style="display: inline-block; width: 90%" />
-								
-								<label class="col-form-label lab-size" for="po_addr">Address</label>
-								<textarea name="po_addr" class="form-control my-height1" rows="4" style="display: inline-block; width: 90%" />
-								
-							</div>
-							<div class="form-group  cus-div col-lg-6" style="padding-right: 20px" >
-								
-								<label class="col-form-label lab-size" for="po_phone">Phone</label>
-								<input type="text" name="po_phone" class="form-control my-height" style="display: inline-block; width: 90%" />
-								
-								<label class="col-form-label lab-size" for="po_fax">Fax</label>
-								<input type="text" name="po_fax" class="form-control my-height" style="display: inline-block; width: 90%" />
-								
-								<label class="col-form-label lab-size" for="po_no">PO No.</label>
-								<input type="text" name="po_no" class="form-control my-height" style="display: inline-block; width: 90%" />
-								
-							</div>
-							
-							
-						</div>
-						
-						
-						
-						
-						<br></br><br></br>
-						<div class="form-group  cus-div col-lg-12" style="padding-right: 20px; text-align: center;" >
-								
-							Customer Signature <input type="file" name="signature_po_customer" class="form-control my-height" style="margin-left: 11px; display: inline-block; width: 220px" ></input>
-							
-							<span style="margin-left: 30px; " >
-							Date <input type="date" name="po_cust_signature_date" class="form-control my-height" style="margin-left: 11px; display: inline-block; width: 170px" ></input>
-							</span> 								
-						</div>
-						
-							
-						
-						
-						<hr style="border: 2px solid; width: 100%;" ></hr>
-								
-						<div class="d-flex" style="margin: 50px; justify-content: center;" >
-							<a role="button" class="btn btn-primary tab-5-pre" href="#" >
-								<i class="fa fa-chevron-left"></i>
-								<span>Previous</span>
-							</a>
-							<a role="button" href="#"
-								class="btn btn-primary tab-5-next">
-								<span>Next</span>
-								<i class="fa fa-chevron-right"></i>
-							</a>
-						</div>
-						
-						
 					</div>
 
 				</form>
