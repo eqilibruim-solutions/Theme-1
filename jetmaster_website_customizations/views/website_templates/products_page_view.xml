@@ -22,14 +22,14 @@
                     Product Enquiry
                 </a>
 
-				<!-- <t t-if="product.product_partlist_flag">
+				<t t-if="product.product_partlist_flag">
                 <button class="btn btn-sm btn-primary btn-padding"
                   		name="btn_partlist_show"
                   		t-attf-data="{{product.id}}"
                   		id="btn_partlist_show">
                     Show Partlist
                 </button>
-                </t> -->
+                </t>
 
                 <div class="product-featuressec col-md-12">
                     <!--<h1>PRODUCT PAGE SHOP INHERIT</h1>-->
@@ -136,12 +136,12 @@
 
                         <a href="tel:1300219875" class="header_menu_contact">
                             <i class="fa fa-phone" aria-hidden="true"></i>
-                            Sales: 1230 456 789
+                            Sales: 1300 219 875
                         </a>
 
                         <a href="tel:1300195482" class="header_menu_contact">
                             <i class="fa fa-phone" aria-hidden="true"></i>
-                            Customer Care: 1230 456 789
+                            Service: 1300 195 482
                         </a>
 
                     </div>

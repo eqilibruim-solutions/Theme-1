@@ -380,54 +380,54 @@ class Custom_Website(http.Controller):
         except Exception:
             return json.dumps({})
         
-class PartlistController(http.Controller):
-    
-    @http.route('/get_partlist_data', auth='user')
-    def get_partlist_data(self, **kwargs):
-        '''
-            This controller will fetch partlist data
-        '''
-        data_lst = []
-        exploded_view = False
-        if kwargs.get('product_id'):
-            bom_id = request.env['mrp.bom'].sudo().search([('product_tmpl_id', '=', int(kwargs.get('product_id')))],
-                                                          limit = 1)
-            if bom_id:
-                count = 1
-                for index, bom_line in enumerate(bom_id.bom_line_ids):
-                    data_dict = {}
-                    data_dict['product_id'] = bom_line.product_id.id
-                    data_dict['item_no'] = bom_line.ref_no or '-'
-                    data_dict['item_title'] = bom_line.product_id.name
-                    data_dict['item_comment'] = bom_line.comment or ''
-                    data_dict['item_description'] = bom_line.product_id.description_sale or '-'
-                    data_dict['item_partno'] = bom_line.product_id.default_code or '-'
-                    data_dict['child_bom_id'] = bom_line.child_bom_id.id if bom_line.child_bom_id else False
-                    count += 1
-                    data_lst.append(data_dict)
-                if bom_id.exploded_view:
-                    exploded_view = bom_id.exploded_view.decode('utf-8')
-        return json.dumps({'data':data_lst, 'exploded_view':str(exploded_view)})
-    
-    @http.route('/update_partlist_in_cart', auth='public', csrf=False, website=True)
-    def update_partlist_in_cart(self, product_id, add_qty=1, set_qty=0, **kw):
-        '''
-            This is controller which update partlist
-        '''
-        sale_order = request.website.sale_get_order(force_create=True)
-        if sale_order:
-            sale_order._cart_update(
-                product_id=int(product_id),
-                add_qty=add_qty,
-                set_qty=set_qty,
-                )
-        return request.redirect(request.httprequest.referrer)
-
-class WebsiteSaleInherit(WebsiteSale):
-
-    @http.route(['/shop/cart/update'], type='http', auth="public", methods=['GET', 'POST'], website=True,
-                csrf=False)
-    def cart_update(self, product_id, add_qty=1, set_qty=0, **kw):
-        # print("IN INHERITED CART UPDATE:::::::::::")
-        res = super(WebsiteSaleInherit, self).cart_update(product_id, add_qty, set_qty, **kw)
-        return request.redirect("/shop")
+# class PartlistController(http.Controller):
+#     
+#     @http.route('/get_partlist_data', auth='user')
+#     def get_partlist_data(self, **kwargs):
+#         '''
+#             This controller will fetch partlist data
+#         '''
+#         data_lst = []
+#         exploded_view = False
+#         if kwargs.get('product_id'):
+#             bom_id = request.env['mrp.bom'].sudo().search([('product_tmpl_id', '=', int(kwargs.get('product_id')))],
+#                                                           limit = 1)
+#             if bom_id:
+#                 count = 1
+#                 for index, bom_line in enumerate(bom_id.bom_line_ids):
+#                     data_dict = {}
+#                     data_dict['product_id'] = bom_line.product_id.id
+#                     data_dict['item_no'] = bom_line.ref_no or '-'
+#                     data_dict['item_title'] = bom_line.product_id.name
+#                     data_dict['item_comment'] = bom_line.comment or ''
+#                     data_dict['item_description'] = bom_line.product_id.description_sale or '-'
+#                     data_dict['item_partno'] = bom_line.product_id.default_code or '-'
+#                     data_dict['child_bom_id'] = bom_line.child_bom_id.id if bom_line.child_bom_id else False
+#                     count += 1
+#                     data_lst.append(data_dict)
+#                 if bom_id.exploded_view:
+#                     exploded_view = bom_id.exploded_view.decode('utf-8')
+#         return json.dumps({'data':data_lst, 'exploded_view':str(exploded_view)})
+#     
+#     @http.route('/update_partlist_in_cart', auth='public', csrf=False, website=True)
+#     def update_partlist_in_cart(self, product_id, add_qty=1, set_qty=0, **kw):
+#         '''
+#             This is controller which update partlist
+#         '''
+#         sale_order = request.website.sale_get_order(force_create=True)
+#         if sale_order:
+#             sale_order._cart_update(
+#                 product_id=int(product_id),
+#                 add_qty=add_qty,
+#                 set_qty=set_qty,
+#                 )
+#         return request.redirect(request.httprequest.referrer)
+# 
+# class WebsiteSaleInherit(WebsiteSale):
+# 
+#     @http.route(['/shop/cart/update'], type='http', auth="public", methods=['GET', 'POST'], website=True,
+#                 csrf=False)
+#     def cart_update(self, product_id, add_qty=1, set_qty=0, **kw):
+#         # print("IN INHERITED CART UPDATE:::::::::::")
+#         res = super(WebsiteSaleInherit, self).cart_update(product_id, add_qty, set_qty, **kw)
+#         return request.redirect("/shop")

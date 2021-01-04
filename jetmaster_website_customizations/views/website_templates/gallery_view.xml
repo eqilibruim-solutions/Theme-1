@@ -9,11 +9,12 @@
                                 <div class="row">
                                     <div class="col-12 col-sm-12">
                                         <h1>Gallery</h1>
-                                        <h2>Get inspired by images of our brands to freshen
-                                            up life
+                                        <h2>Get inspired by images of our gas fireplaces and wood fireplace
+                                            installations
                                         </h2>
 
-                                        <p>We have Worlds most selling brands of Cigarettes in the word .
+                                        <p>See how our popular fireplaces are brightening real homes around Victoria, in
+                                            rooms of all sizes, and with various customisation options and finishes.
                                         </p>
                                     </div>
                                 </div>
@@ -55,6 +56,238 @@
                             </div>
                         </section>
                     </div>
+
+
+                    <div class="oe_structure">
+                        <section class="product-enquiry">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12 text-center">
+                                        <img src="/jetmaster_website_customizations/static/src/images/smoke-img/carnival.png"
+                                             alt="Jetmaster is available on FaceTime, Facebook Messenger and WhatsApp"
+                                             style="width:100%;max-width:350px;margin:1em auto;border:1px solid #fe5900;border-radius:50%;"/>
+
+                                        <p style="font-size:18px;">
+                                            <b>Heat up your home, <span style="font-style: italic;"></span>from home and
+                                                use our online click, select.
+                                            </b>
+                                        </p>
+
+                                        <p>Deliver and install system with FREE no contact delivery.
+                                            <br/>
+                                            We'll even organise the installation with your local dealer.
+                                        </p>
+
+                                        <a href="/purchase-unit" class="btn btn-padding" style="margin-bottom:20px">
+                                            Product Enquiry
+                                        </a>
+                                        <p>PLUS check out our new <a href="/products/">product</a> walk-through videos
+                                            on selected models.
+                                        </p>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <div class="oe_structure">
+                        <section>
+                            <div class="container">
+                    <div class="row">
+
+                    <img src="/jetmaster_website_customizations/static/src/images/smoke-img/state-map-ppt_orig.png"
+                                             alt="Jetmaster is available on FaceTime, Facebook Messenger and WhatsApp"
+                                             />
+
+                        </div>
+                    </div>
+                    </section>
+                    </div>
+
+
+
+                    <div class="oe_structure">
+                        <section>
+                            <div class="container">
+                    <div class="row">
+
+                    <img src="/jetmaster_website_customizations/static/src/images/smoke-img/this-ppt_orig.png"/>
+
+                    <img src="/jetmaster_website_customizations/static/src/images/smoke-img/time-ppt_1_orig.png"/>
+
+                    <img src="/jetmaster_website_customizations/static/src/images/smoke-img/carnival-ppt_orig.png"/>
+
+                        </div>
+                    </div>
+                    </section>
+                    </div>
+
+
+
+
+
+
+                    <div class="oe_structure">
+                        <section class="home-productcategory" style="margin-top:40px;">
+                            <div class="container">
+                                <div class="row">
+                                    <h2 style="margin-top:30px;">Our Products</h2>
+
+                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">
+                                        <a class="thumb_box"
+                                           href="#">
+                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cb100.png"
+                                                 alt="Open Wood Fireplaces"/>
+                                            <button class="btn small_btn">View</button>
+                                        </a>
+                                        <h3>
+                                            <a href="/product_category/wood-fireplaces/open-wood-fireplaces/">Carnival Red 100 S
+                                            </a>
+                                        </h3>
+
+                                    </div>
+
+
+                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">
+                                        <a class="thumb_box"
+                                           href="#">
+                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cm100s.png"
+                                                 alt="Gas Fireplaces"/>
+                                            <button class="btn small_btn">View</button>
+                                        </a>
+                                        <h3>
+                                            <a href="/product_category/gas-fireplaces/">Carnival Blue 100 S</a>
+                                        </h3>
+
+                                    </div>
+
+
+                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">
+                                        <a class="thumb_box"
+                                           href="#">
+                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cmg100h.png"
+                                                 alt="Electric Fireplaces"/>
+                                            <button class="btn small_btn">View</button>
+                                        </a>
+                                        <h3>
+                                            <a href="https://jetmastervic.com.au/product_category/electric-fireplaces/">
+                                                Carnival Silver 100 S
+                                            </a>
+                                        </h3>
+
+                                    </div>
+
+
+                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">
+                                        <a class="thumb_box"
+                                           href="#">
+                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cmg100s.png"
+                                                 alt="Slow Combustion Wood Fireplaces"/>
+                                            <button class="btn small_btn">View</button>
+                                        </a>
+                                        <h3>
+                                            <a href="https://jetmastervic.com.au/product_category/slow-combustion-wood-fireplaces/">
+                                                Carnival M 100 S
+                                            </a>
+                                        </h3>
+
+                                    </div>
+
+
+                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">
+                                        <a class="thumb_box"
+                                           href="#">
+                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cr100.png"
+                                                 alt="Outdoor Fireplaces"/>
+                                            <button class="btn small_btn">View</button>
+                                        </a>
+                                        <h3>
+                                            <a href="https://jetmastervic.com.au/product_category/outdoor-fireplaces/">
+                                                Carnival MG 100 S
+                                            </a>
+                                        </h3>
+                                    </div>
+
+
+                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">
+                                        <a class="thumb_box"
+                                           href="#">
+                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cs100.png"
+                                                 alt="Accessories"/>
+                                            <button class="btn small_btn">View</button>
+                                        </a>
+                                        <h3>
+                                            <a href="https://jetmastervic.com.au/product_category/fireplace-accessories/">
+                                                Carnival MG 100 H
+                                            </a>
+                                        </h3>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+
+                    <div class="oe_structure">
+                        <section class="jetmeter-innovation">
+                            <div class="container">
+                                <div class="row">
+                                    <h1>The 5th LARGEST TOBACCO COMPANY IN THE WORLD!</h1>
+                                    <h2>A Tradition of Style, Service &amp; Innovation</h2>
+
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                        <p>KT established in 1899, is headquartered in Seoul,South Korea.  We are the 5th Largest cigarette manufacture in the world. KT has more than 100 years of cigarette manufacturing experience. KT USA is Headquartered in Plano, Texas. We entered the US market with the introduction of Carnival in 1999. We then launched Timeless Time in 2010. We Currently ship over 40 States through 400+ distributor partners. KT USA is also ranked 5th among national manufactures in the USA.
+                                        </p>
+
+
+                                    </div>
+
+
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                        <iframe width="500" height="281"
+                                                src="https://www.youtube.com/embed/EGCpO9NdESA?feature=oembed&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fjetmastervic.com.au"
+                                                frameborder="0" gesture="media" allow="encrypted-media"
+                                                allowfullscreen="" data-gtm-yt-inspected-11343496_11="true"
+                                                id="703346361"></iframe>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
                     <div class="oe_structure">
                         <section class="getin-touchsec">

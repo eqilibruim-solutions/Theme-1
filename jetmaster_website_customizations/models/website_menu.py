@@ -7,7 +7,7 @@ class WebsiteMenuInherit(models.Model):
 
     @api.model
     def create(self, vals):
-        website_urls = ["/", "/shop", '/gallery', '/book-a-service', '/contact-us']
+        website_urls = ["/", "/shop", '/gallery', '/contact-us']
         if "website_id" in vals and vals.get('url') in website_urls:
             website_menu = self.env['website.menu'].search(
                 [('url', '=', '/default-main-menu'), ('website_id', '=', int(vals.get('website_id')))])
@@ -31,7 +31,7 @@ class WebsiteMenuInherit(models.Model):
     def _compute_visible(self):
         res = super(WebsiteMenuInherit, self)._compute_visible()
         hide_menus = ['/', '/shop', '/blog']
-        hide_menus_names = ['Home', 'Shop', 'Blog']
+        hide_menus_names = ['Shop', 'Blog']
         hide_menus_parent = ['Resources']
         for menu in self:
             visible = True

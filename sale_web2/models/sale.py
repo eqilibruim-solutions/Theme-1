@@ -25,9 +25,6 @@ class sale_order(models.Model):
 	_inherit = "sale.order"
 	
 	moved = fields.Boolean("Moved")
-	po_number = fields.Char("PO Number")
-	unique_seq = fields.Char("Unique Sequence")
-	remote_order_id = fields.Integer("Remote Order ID")
 	
 	
 	def write(self, vals):
@@ -54,151 +51,140 @@ class sale_order(models.Model):
 		
 		for order in self.search([('moved', '=', False), ('state', 'not in', ['draft', 'cancel'])]):
 			
-			remote_odoo = False
-			so_id = False
-			try:
-				remote_odoo = odoorpc.ODOO(url, port=port1)
-				remote_odoo.login(db, user1, pwd)
-			except Exception as e:
-				print ("Error...")
+			
+			remote_odoo = odoorpc.ODOO(url, port=port1)
+			remote_odoo.login(db, user1, pwd)
+			
+			Partner_r = remote_odoo.env['res.partner']
+			User_r = remote_odoo.env['res.users']
+			Order_r = remote_odoo.env['sale.order']
+			Order_Line_r = remote_odoo.env['sale.order.line']
+			Pricelist_r = remote_odoo.env['product.pricelist']
+			Payment_Term_r = remote_odoo.env['account.payment.term']
+			Crm_Team_r = remote_odoo.env['crm.team']
+			Website_r = remote_odoo.env['website']
+			Product_r = remote_odoo.env['product.product']
+			
+			print (remote_odoo.env.db, 'DDDDDDDDDDDDDDDDDDD')
+			
+			local_partner_id = self.partner_id
+			remote_partner_id = Partner_r.search([('email', '=', local_partner_id.email)], limit=1)
+			if not remote_partner_id and local_partner_id.customer_id:
+				remote_partner_id = Partner_r.search([('customer_id', '=', local_partner_id.customer_id)], limit=1)
+			if not remote_partner_id:
+				remote_partner_id = Partner_r.create({
+											'name': local_partner_id.name,
+											'email': local_partner_id.email or '',
+											'customer_id': local_partner_id.customer_id or '',
+											'street': local_partner_id.street or '',
+											'street2': local_partner_id.street2 or '',
+											'zip': local_partner_id.zip or '',
+											'city': local_partner_id.city or '',
+											'phone': local_partner_id.phone or '',
+											'mobile': local_partner_id.mobile or '',
+											'company_type': local_partner_id.company_type,
+											})
+			else: remote_partner_id = remote_partner_id[0]
+											
+			local_pricelist_id = order.pricelist_id
+			remote_pricelist_id = False
+			if local_pricelist_id:
+				remote_pricelist_id = Pricelist_r.search([('name', '=', local_pricelist_id.name)], limit=1)
+				if remote_pricelist_id:
+					remote_pricelist_id = remote_pricelist_id[0]
 				
-			if remote_odoo:
-				Partner_r = remote_odoo.env['res.partner']
-				User_r = remote_odoo.env['res.users']
-				Order_r = remote_odoo.env['sale.order']
-				Order_Line_r = remote_odoo.env['sale.order.line']
-				Pricelist_r = remote_odoo.env['product.pricelist']
-				Payment_Term_r = remote_odoo.env['account.payment.term']
-				Crm_Team_r = remote_odoo.env['crm.team']
-				Website_r = remote_odoo.env['website']
-				Product_r = remote_odoo.env['product.product']
-				
-				
-				local_partner_id = order.partner_id
-				print (order, order.name, order.partner_id, 'local_partner_id----------------------------\n\n\n\n\n\n')
-				remote_partner_id = Partner_r.search([('email', '=', local_partner_id.email)], limit=1)
-				if not remote_partner_id and local_partner_id.customer_id:
-					remote_partner_id = Partner_r.search([('customer_id', '=', local_partner_id.customer_id)], limit=1)
-				if not remote_partner_id:
-					remote_partner_id = Partner_r.create({
-												'name': local_partner_id.name,
-												'email': local_partner_id.email or '',
-												'customer_id': local_partner_id.customer_id or '',
-												'street': local_partner_id.street or '',
-												'street2': local_partner_id.street2 or '',
-												'zip': local_partner_id.zip or '',
-												'city': local_partner_id.city or '',
-												'phone': local_partner_id.phone or '',
-												'mobile': local_partner_id.mobile or '',
-												'company_type': local_partner_id.company_type,
-												})
-				else: remote_partner_id = remote_partner_id[0]
-												
-				local_pricelist_id = order.pricelist_id
-				remote_pricelist_id = False
-				if local_pricelist_id:
-					remote_pricelist_id = Pricelist_r.search([('name', '=', local_pricelist_id.name)], limit=1)
-					if remote_pricelist_id:
-						remote_pricelist_id = remote_pricelist_id[0]
+			
+			local_payment_term_id = order.payment_term_id
+			remote_payment_term_id = False
+			if local_payment_term_id:
+				remote_payment_term_id = Payment_Term_r.search([('name', '=', local_payment_term_id.name)], limit=1)
+				if remote_payment_term_id:
+					remote_payment_term_id = remote_payment_term_id[0]
+				else:
+					remote_payment_term_id = Payment_Term_r.create({
+																	'name': local_payment_term_id.name,
+																	})
+																		
+																		
+																		
+			local_team_id = order.team_id
+			remote_team_id = False
+			if local_team_id:
+				remote_team_id = Crm_Team_r.search([('name', '=', local_team_id.name)], limit=1)
+				if remote_team_id:
+					remote_team_id = remote_team_id[0]
+				else:
+					remote_team_id = Crm_Team_r.create({
+													'name': local_team_id.name,
+													})
+													
+													
+																		
+																		
+																		
+			local_website_id = order.website_id
+			remote_website_id = False
+			if local_website_id:
+				remote_website_id = Website_r.search([('name', '=', local_website_id.name)], limit=1)
+				if remote_website_id:
+					remote_website_id = remote_website_id[0]
+				else:
+					remote_website_id = Website_r.create({
+													'name': local_website_id.name,
+													})
+													
+													
+													
+		
+			so_val = {
+				'partner_id': remote_partner_id, 
+				'pricelist_id': remote_pricelist_id, 
+				'payment_term_id': remote_payment_term_id, 
+				'team_id': remote_team_id, 
+				'partner_invoice_id': remote_partner_id, 
+				'partner_shipping_id': remote_partner_id, 
+# 				'user_id': remote_user_id, 
+				'website_id': remote_website_id, 
+				'company_id': 1, 
+				#'plain_date': order.plain_date, 
+				#'unique_seq': order.unique_seq
+				}
+		
+			so_id = Order_r.create(so_val)
+			
+			print ('\n', so_id, 'SO created...')
+		
+			for item in order.order_line:
+				local_product_id = item.product_id
+				remote_product_id = False
+				if local_product_id:
+					remote_product_id = Product_r.search([('default_code', '=', local_product_id.default_code)], limit=1)
+					if remote_product_id:
+						remote_product_id = remote_product_id[0]
 					else:
-						remote_pricelist_id = Pricelist_r.create({
-																'name': order.pricelist_id.name,
-																})
-					
-				
-				local_payment_term_id = order.payment_term_id
-				remote_payment_term_id = False
-				if local_payment_term_id:
-					remote_payment_term_id = Payment_Term_r.search([('name', '=', local_payment_term_id.name)], limit=1)
-					if remote_payment_term_id:
-						remote_payment_term_id = remote_payment_term_id[0]
-					else:
-						remote_payment_term_id = Payment_Term_r.create({
-																		'name': local_payment_term_id.name,
-																		})
-																			
-																			
-																			
-				local_team_id = order.team_id
-				remote_team_id = False
-				if local_team_id:
-					remote_team_id = Crm_Team_r.search([('name', '=', local_team_id.name)], limit=1)
-					if remote_team_id:
-						remote_team_id = remote_team_id[0]
-					else:
-						remote_team_id = Crm_Team_r.create({
-														'name': local_team_id.name,
+						remote_product_id = Product_r.create({
+														'name': local_product_id.name,
+														'default_code': local_product_id.default_code,
+														'type': local_product_id.type,
 														})
-														
-														
-																			
-																			
-																			
-				local_website_id = order.website_id
-				remote_website_id = False
-				if local_website_id:
-					remote_website_id = Website_r.search([('name', '=', local_website_id.name)], limit=1)
-					if remote_website_id:
-						remote_website_id = remote_website_id[0]
-					else:
-						remote_website_id = Website_r.create({
-														'name': local_website_id.name,
-														})
-														
-														
-														
-			
-				so_val = {
-					'partner_id': remote_partner_id, 
-					'pricelist_id': remote_pricelist_id, 
-					'payment_term_id': remote_payment_term_id, 
-					'team_id': remote_team_id, 
-					'partner_invoice_id': remote_partner_id, 
-					'partner_shipping_id': remote_partner_id, 
-	# 				'user_id': remote_user_id, 
-					'website_id': remote_website_id, 
-					'company_id': 1, 
-					#'plain_date': order.plain_date, 
-					#'unique_seq': order.unique_seq
-					}
-			
-				so_id = Order_r.create(so_val)
-				
-				print ('\n', so_id, 'SO created...')
-			
-				for item in order.order_line:
-					local_product_id = item.product_id
-					remote_product_id = False
-					if local_product_id:
-						remote_product_id = Product_r.search([('default_code', '=', local_product_id.default_code)], limit=1)
-						if remote_product_id:
-							remote_product_id = remote_product_id[0]
-						else:
-							remote_product_id = Product_r.create({
-															'name': local_product_id.name,
-															'default_code': local_product_id.default_code,
-															'type': local_product_id.type,
-															})
-							
-															
-					sol_val = {
-						'product_id': remote_product_id, 
-						'product_uom_qty': 1, 
-						'order_id': so_id, 
-						'product_uom': 1, 
-						'price_unit': item.price_unit, 
-						'discount': item.discount,
-						}
 						
+														
+				sol_val = {
+					'product_id': remote_product_id, 
+					'product_uom_qty': item.product_uom_qty, 
+					'order_id': so_id, 
+					'product_uom': 1, 
+					'price_unit': item.price_unit, 
+					'discount': item.discount,
+					}
 					
-					sol_id = Order_Line_r.create(sol_val)
-					print ('SOL', sol_id, 'SOL created...')
-			
-			
-				order.moved = True
-				if so_id:
-					order.remote_order_id = so_id
-				self._cr.commit()
+				
+				sol_id = Order_Line_r.create(sol_val)
+				print ('SOL', sol_id, 'SOL created...')
+		
+		
+			order.moved = True
+			self._cr.commit()
 
 				
 
