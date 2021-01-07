@@ -20,7 +20,7 @@
 					<form id="new-form">
 						<div class="tab-1">
 							
-							<h2 style="margin-top: 20px; text-align: center; font-size: 10px; color: red; " >Page 1 of 3</h2>
+							<h2 style="margin-top: 80px; text-align: center; font-size: 10px; color: red; " >Page 1 of 3</h2>
 							<h2 style="margin-top: 20px; text-align: center;" >New Customer Information Form</h2>
 							
 							<hr style="border: 1px solid" ></hr>
@@ -248,7 +248,7 @@ door.
 
 					<div class="tab-2" style="display: none" >
 							
-							<h2 style="margin-top: 20px; text-align: center; font-size: 10px; color: red; " >Page 2 of 3</h2>
+							<h2 style="margin-top: 80px; text-align: center; font-size: 10px; color: red; " >Page 2 of 3</h2>
 							<h2 style="margin-top: 20px; text-align: center;" >BANK REFERENCE REQUEST</h2>
 							<hr style="border: 1px solid" ></hr>
 							<br></br><br></br>
@@ -385,7 +385,7 @@ door.
 
 					<div class="tab-3" style="display: none" >
 					
-						<h2 style="margin-top: 20px; text-align: center; font-size: 10px; color: red; " >Page 3 of 3</h2>
+						<h2 style="margin-top: 80px; text-align: center; font-size: 10px; color: red; " >Page 3 of 3</h2>
 						<h2 style="margin-top: 20px; text-align: center;" >AGREEMENT for EFT TRANSACTION</h2>
 						<hr style="border: 1px solid" ></hr>
 						<br></br><br></br>

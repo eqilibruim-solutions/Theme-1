@@ -7,7 +7,7 @@ odoo.define('clarico_ext.enroll', function(require) {
 
 
     $(document).ready(function() {
-    	//ONCHANGE OF UoM VIEW PRICE ACCORDINGLY
+
     	$('.tab-1-next').on('click', function(ev){
     		$('.tab-1').css('display', 'none')
     		$('.tab-2').css('display', 'block')

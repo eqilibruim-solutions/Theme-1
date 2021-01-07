@@ -3,8 +3,33 @@
 // use of an ugly overflow: hidden which would break box-shadows.
 
 
+.navbar-light{
+	background-color: #e8d6d6ad !important;
+	max-height: 150px !important;
 
+}
+.bg-light{
+	background-color: #e8d6d6ad !important;
+	max-height: 150px !important;
+	
+}
+o_connected_user {
+    padding-top: 0px !important;
+    margin-top: -22px !important;
+    
+}
+body{
+	margin-top: -70px !important;
+}
 
+#top_menu_collapse{
+	margin-top: 70px !important;
+}
+.navbar-brand{
+	margin-top: 160px;
+}
+
+    
 .img-fluid {
     min-height: 154px !important;
     max-height: 154px !important;
