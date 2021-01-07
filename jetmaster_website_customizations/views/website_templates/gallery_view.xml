@@ -3,24 +3,33 @@
         <template id="gallery_view_template" name="Gallery View Template">
             <t t-call="website.layout">
                 <div id="wrap">
-                    <div class="oe_structure">
-                        <section class="gallery_sec">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12 col-sm-12">
-                                        <h1>Gallery</h1>
-                                        <h2>Get inspired by images of our gas fireplaces and wood fireplace
-                                            installations
-                                        </h2>
 
-                                        <p>See how our popular fireplaces are brightening real homes around Victoria, in
-                                            rooms of all sizes, and with various customisation options and finishes.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
+                    
+   <div class="wsite-section-wrap">
+	<div class="wsite-section wsite-header-section wsite-section-bg-image" style="height: 383px;background-image: url(/jetmaster_website_customizations/static/src/images/bann.jpg);background-repeat: no-repeat;background-position: undefined undefined;background-size: 100%;background-color: transparent;/* background-size: cover; */">
+		<div class="wsite-section-content">
+			
+          <div class="container">
+            <div class="banner-text">
+				We Stand Behind our Quality!
+			</div>
+          </div>
+      
+		</div>
+		<div class=""></div>
+	</div>
+</div>                  
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     <div class="oe_structure">
                         <section class="home-productcategory gallerypage-sec">
                             <div class="container">

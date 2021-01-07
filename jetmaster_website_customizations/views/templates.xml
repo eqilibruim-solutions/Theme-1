@@ -22,6 +22,22 @@
                 
             </xpath>
         </template>
+        
+      <!--   <template customize_show="True" id="add_website_product_quick"
+		inherit_id="website_sale.products_item" name="Quick Add To Cart">
+
+		<xpath expr="//form/div[1]" position="replace">
+			<div class="card-body p-1 oe_product_image">
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()" />
+                <a t-att-href="product_href" class="d-block h-100" itemprop="url">
+                    <span t-field="product.image_128" style="max-height: 64px !important; " 
+                        t-options="{'widget': 'image', 'preview_image': 'image_128' if product_image_big else 'image_128'}"
+                        class="d-flex h-100 justify-content-center align-items-center"/>
+                </a>
+            </div>
+		
+		</xpath>
+		</template> -->
 
     </data>
 </odoo>

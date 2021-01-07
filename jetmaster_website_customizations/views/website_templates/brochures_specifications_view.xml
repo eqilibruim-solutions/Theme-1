@@ -1,0 +1,88 @@
+<odoo>
+    <data>
+        <template id="brochures_specifications_view_template" name="Brochures Specifications View Template">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <div class="container">
+                        <h1>Brochures Specifications VIEW</h1>
+                        <br/>
+                        <div class="row">
+
+                            <div>
+                                <h2>Brochures</h2>
+                                <br/>
+                                <br/>
+                                <section>
+                                    <div>
+                                        <t t-if="prod_cat_lst_b">
+                                            <div>
+                                                <t t-foreach="prod_cat_lst_b" t-as="cat">
+                                                    <div>
+                                                        <h3>
+                                                            <t t-esc="cat['category'].name"/>
+                                                        </h3>
+                                                        <div>
+                                                            <ul>
+                                                                <t t-foreach="cat['product']" t-as="p">
+                                                                    <t t-if="p.product_brochures">
+                                                                        <li>
+                                                                            <a t-attf-href="/web/content/?model=product.template&amp;id={{p.id}}&amp;filename_field={{p.brochure_name}}&amp;field=product_brochures&amp;filename={{p.brochure_name}}"
+                                                                               target="_blank">
+                                                                                <t t-esc="p.brochure_name"/>
+                                                                            </a>
+                                                                        </li>
+                                                                    </t>
+                                                                </t>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </t>
+                                            </div>
+
+                                        </t>
+                                    </div>
+                                </section>
+                            </div>
+                            <div>
+                                <h2>Specifications &amp; Manuals</h2>
+                                <br/>
+                                <br/>
+
+                                <section>
+                                    <div>
+                                        <t t-if="prod_cat_lst_m">
+                                            <div>
+                                                <t t-foreach="prod_cat_lst_m" t-as="cat">
+                                                    <div>
+                                                        <h3>
+                                                            <t t-esc="cat['category'].name"/>
+                                                        </h3>
+                                                        <div>
+                                                            <ul>
+                                                                <t t-foreach="cat['product']" t-as="p">
+                                                                    <t t-if="p.product_manuals">
+                                                                        <li>
+                                                                            <a t-attf-href="/web/content/?model=product.template&amp;id={{p.id}}&amp;filename_field={{p.manual_name}}&amp;field=product_manuals&amp;filename={{p.manual_name}}"
+                                                                               target="_blank">
+                                                                                <t t-esc="p.manual_name"/>
+                                                                            </a>
+                                                                        </li>
+                                                                    </t>
+                                                                </t>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </t>
+                                            </div>
+
+                                        </t>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>
