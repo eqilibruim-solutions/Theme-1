@@ -1,0 +1,349 @@
+<odoo>
+    <data>
+        <template id="product_enquiry_view_template" name="Product Enquiry View Template">
+            <t t-call="website.layout">
+                <div id="wrap">
+
+                    <section class="productform-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-7">
+                                    <form action="/save/product_enquiry" method="post" id="first_form"
+                                          class="s_website_form form-horizontal container-fluid mt32">
+
+
+                                        <div class="product-formenquiry">
+
+                                            <h2>Product Enquiry</h2>
+                                            <p>Choose which model is right for your home. Submit the form below for an
+                                                obligation free quote and one of our experts will be in touch with you
+                                                shortly.
+                                            </p>
+
+                                            <div class="main-validation_error" style="display:none; ">
+                                                There was a problem with your submission. Errors have been highlighted
+                                                below.
+                                            </div>
+
+
+                                            <div class="form-row name-section">
+                                                <input type="hidden" name="product" t-att-value="product.id"/>
+                                                <label for="inputEmail4">Name*</label>
+                                                <div class="form-group col-md-6">
+                                                    <input type="text" class="form-control o_website_form_input"
+                                                           name="first_name" id="first_name"
+                                                    />
+                                                    <span>First</span>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <input type="text" class="form-control o_website_form_input"
+                                                           name="last_name" id="last_name"
+                                                    />
+                                                    <span>Last</span>
+                                                </div>
+
+                                                <div class="name-errormsg" style="display:none;">This field is
+                                                    required.
+                                                </div>
+                                            </div>
+
+
+                                            <div class="full_addesssec">
+                                                <div class="form-group">
+                                                    <label for="inputAddress">Address*</label>
+                                                    <input type="text" class="form-control o_website_form_input"
+                                                           id="streetaddress"
+                                                           name="street"/>
+                                                    <span>Street Address</span>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <input type="text" class="form-control o_website_form_input"
+                                                           id="addressline_2"
+                                                           name="street2"/>
+                                                    <span>Address Line 2</span>
+                                                </div>
+
+
+                                                <div class="form-row foraddress-msg">
+
+                                                    <div class="form-group col-md-6">
+                                                        <input type="text" class="form-control o_website_form_input"
+                                                               id="city"
+                                                               name="city"/>
+                                                        <span>City</span>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <input type="text" class="form-control o_website_form_input"
+                                                               id="state_region"
+                                                               name="state"/>
+                                                        <span>State / Province / Region</span>
+                                                    </div>
+
+                                                    <div class="form-group col-md-6">
+                                                        <input type="text" class="form-control o_website_form_input"
+                                                               id="zip_code"
+                                                               name="zip_code"/>
+                                                        <span>ZIP / Postal Code</span>
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="addressdiv-errormsg" style="display:none;">This field is
+                                                    required. Please enter a complete address.
+                                                </div>
+                                            </div>
+
+
+                                            <div class="phone_section">
+                                                <div class="form-row">
+                                                    <label for="inputEmail4">Phone*</label>
+                                                    <div class="form-group col-md-6">
+                                                        <input type="text"
+                                                               class="phone form-control o_website_form_input"
+                                                               id="phonenumber" placeholder="(XXX) XXX-XXXX"
+                                                               name="phone"/>
+                                                    </div>
+                                                </div>
+                                                <div class="phone-errormsg" style="display:none;">Phone format: (###)
+                                                    ###-####
+                                                </div>
+                                                <div class="phone-errormsg" style="display:none;">This field is
+                                                    required.
+                                                </div>
+                                            </div>
+
+
+                                            <div class="email_section">
+                                                <div class="form-row">
+                                                    <label for="inputEmail4">Email*</label>
+                                                    <div class="form-group col-md-6">
+                                                        <input type="text" class="form-control o_website_form_input"
+                                                               id="email" name="email"/>
+
+                                                    </div>
+                                                </div>
+                                                <div class="email-errormsg" style="display:none;">This field is
+                                                    required.
+                                                </div>
+                                            </div>
+
+
+                                            <div class="form-group" id="prefer-contacted">
+                                                <lable>How do you prefer to be contacted</lable>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="radio"
+                                                               class="form-check-input o_website_form_input"
+                                                               name="prefer-contacted" value="phone"/>Phone
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="radio"
+                                                               class="form-check-input o_website_form_input"
+                                                               name="prefer-contacted" value="email"/>Email
+                                                    </label>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="form-group" id="replace-unit">
+                                                <lable>New Unit or Replacing Existing Unit</lable>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="radio"
+                                                               class="form-check-input o_website_form_input"
+                                                               name="replace-unit" id="new_unit" value="new"/>
+                                                        New Unit
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="radio"
+                                                               class="form-check-input o_website_form_input"
+                                                               name="replace-unit" id="replace_existing"
+                                                               value="replace"/>
+                                                        Replace Existing
+                                                    </label>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="form-group" id="installation">
+                                                <lable>Installation</lable>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="radio"
+                                                               class="form-check-input o_website_form_input"
+                                                               name="installation" id="req_installation"
+                                                               value="required"/>I
+                                                        require Installation
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="radio"
+                                                               class="form-check-input o_website_form_input"
+                                                               name="installation" id="no_installation"
+                                                               value="not required"/>I
+                                                        do not require installation
+                                                    </label>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="form-group" id="house-type">
+                                                <lable>House Type</lable>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="radio"
+                                                               class="form-check-input o_website_form_input"
+                                                               name="house-type" id="single" value="single"/>
+                                                        Single Story
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="radio"
+                                                               class="form-check-input o_website_form_input"
+                                                               name="house-type" id="double" value="double"/>
+                                                        Double Story
+                                                    </label>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="form-group" id="unit-type">
+                                                <lable>Unit Type</lable>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="radio"
+                                                               class="form-check-input o_website_form_input"
+                                                               name="unit-type" value="free_standing_type"/>
+                                                        Free
+                                                        Standing
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                        <input type="radio"
+                                                               class="form-check-input o_website_form_input"
+                                                               checked="checked"
+                                                               name="unit-type" value="inbuilt_type"/>Inbuilt
+                                                    </label>
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="form-group inbuilt_type" id="inbuilt_type">
+                                                <label for="disabledSelect">Unit Type – Inbuilt</label>
+                                                <select id="unit-type" class="form-control o_website_form_input"
+                                                        name="unit_type_inbuilt">
+                                                    <option>Open Wood Fire</option>
+                                                    <option>Gas</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-group inbuilt_type" id="inbuilt_type1">
+                                                <label for="disabledSelect">Inbuilt Open Wood Fire Units</label>
+                                                <select id="unit-type" class="form-control o_website_form_input"
+                                                        name="inbuilt_units_sub">
+                                                    <option>Jetmaster Universal Double Sided</option>
+                                                    <option>Not yet decided</option>
+                                                </select>
+                                            </div>
+
+
+                                            <div class="form-group free_standing_type" id="free_standing_type">
+                                                <label for="disabledSelect">Unit Type – Free Standing</label>
+                                                <select id="unit-type" class="form-control o_website_form_input"
+                                                        name="free_standing_units">
+                                                    <option>— Dropdown to select Free Standing Type —</option>
+                                                    <option>not yet decided</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="form-submit">
+                                                <!--<input type="submit"-->
+                                                <!--class="btn btn-sm btn-primary btn-padding"-->
+                                                <!--value="Submit"/>-->
+                                                <input type="button" id="addproduct_enquiry"
+                                                       name="addproduct_enquiry"
+                                                       class="btn btn-sm btn-primary btn-padding"
+                                                       value="Submit"/>
+                                            </div>
+
+                                        </div>
+                                    </form>
+
+                                </div>
+
+
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-5"></div>
+
+                                <p>We do not sell to or trade personal information with third parties.</p>
+
+
+                            </div>
+                        </div>
+                    </section>
+
+
+                    <section class="getin-touchsec">
+                        <div class="container">
+                            <div class="row">
+                                <p>Got a question for our fireplace specialists?</p>
+                                <p>
+                                    <strong>Call Us Now
+                                        <a style="color: black;" href="tel:+611300025316">1300 025 316</a>
+                                    </strong>
+                                </p>
+                                <a class="btn btn-sm btn-primary btn-padding" style="margin: auto;" id="getin-touchbtn">
+                                    Get in Touch
+                                </a>
+
+                            </div>
+                        </div>
+                    </section>
+
+
+                </div>
+            </t>
+        </template>
+
+        <template name="Product Enquiry Thanks" id="product_enquiry_thanks">
+            <t t-call="website.layout">
+                <div id="wrap">
+                    <section class="productform-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-md-12 col-lg-7">
+                                    <div class="product-formenquiry_thanks">
+
+                                        <h2>Product Enquiry</h2>
+                                        <p>Choose which model is right for your home. Submit the form below for an
+                                            obligation free quote and one of our experts will be in touch with you
+                                            shortly.
+                                        </p>
+                                        <p>
+                                            Thanks for your order we will be in touch with you shortly.
+                                            <br/>
+                                            We do not sell to or trade personal information with third parties.
+                                        </p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </t>
+        </template>
+    </data>
+</odoo>

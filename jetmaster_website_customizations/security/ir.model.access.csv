@@ -1,3 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_gallery_view_user,access.gallery.view.user,jetmaster_website_customizations.model_gallery_view,base.group_user,1,1,1,1
-
+access_gallery_view_user,access.gallery.view.user,jetmaster_website_customizations.model_gallery_view,,1,1,1,1

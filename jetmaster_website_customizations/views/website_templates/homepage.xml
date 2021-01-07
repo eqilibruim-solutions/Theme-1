@@ -9,18 +9,25 @@
                         <section class="banner-section">
                             <ul class="banner">
                                 <li>
-                                    <div style="background-image:url(/jetmaster_website_customizations/static/src/images/bann.jpg);"
+                                    
+                            <div style="background-image:url(/jetmaster_website_customizations/static/src/images/nature_img.jpg);"
                                          data-mobile-background="/jetmaster_website_customizations/static/src/images/jet-mobile-final-1.jpg"
-                                         data-background="/jetmaster_website_customizations/static/src/images/jet-final.jpg"></div>
+                                         data-background="/jetmaster_website_customizations/static/src/images/jet-final.jpg">
                                     <!--<div class="overlaygif"
                                          style="background-image: url(/jetmaster_website_customizations/static/src/images/jet-home.gif);display: block;"
                                          data-mobile-background="/jetmaster_website_customizations/static/src/images/jet-mobile-final-2.gif"
                                          data-background="/jetmaster_website_customizations/static/src/images/jet-home.gif"></div>-->
-                                    <section>
+                                    <div class="container">
+                                       <div class="row">
+                                        <div class="col-md-6 col-sm-6 col-xs-12 banner_leftcontent">
                                         <h2>Use our online click, select,</h2>
                                         <h5>Deliver and install system with FREE no contact delivery</h5>
                                         <a href="#serviceContact" class="btn home-greybtn" id="scrollBtn">LEARN MORE</a>
-                                    </section>
+                                        </div>
+                                      </div> 
+                                  </div>
+                            </div>
+                                    
                                 </li>
                             </ul>
                         </section>
@@ -144,14 +151,12 @@
                                     <div class="col-12 col-md-6 col-lg-3">
                                         <h4>Brands</h4>
                                         <p>
-                                            <img src="/jetmaster_website_customizations/static/src/images/footer_logo1.png"/>
-                                            <img src="/jetmaster_website_customizations/static/src/images/footer_logo02.png"/>
+                                            <img src="/jetmaster_website_customizations/static/src/images/brands_logo/brand1.png" width="140" style="margin-bottom:20px;"/>
+                                            <img src="/jetmaster_website_customizations/static/src/images/brands_logo/brand2.png" width="140" style="margin-bottom:20px;"/>
+                                             <img src="/jetmaster_website_customizations/static/src/images/brands_logo/brand3.png" width="140" style="margin-bottom:20px;"/>
                                         </p>
-
-                                        <p>
-                                            <img src="/jetmaster_website_customizations/static/src/images/footer_logo03.png"/>
-                                            <img src="/jetmaster_website_customizations/static/src/images/footer_logo04.png"/>
-                                        </p>
+  
+                                       
                                     </div>
 
                                     <div class="col-12 col-md-6 col-lg-3">
