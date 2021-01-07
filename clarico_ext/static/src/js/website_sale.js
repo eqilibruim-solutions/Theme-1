@@ -67,7 +67,26 @@ odoo.define('clarico_ext.website_sale', function(require) {
     
     
     
+    function check_exist_class1(e){
+        var self = this;
+        setTimeout(function() {
+            if ($(".img-fluid-equal").length > 0){
+            	$('.img-fluid-equal').find('.img-fluid').css('min-height', '140px')
+            	$('.img-fluid-equal').find('.img-fluid').css('max-height', '140px')
+            }
+            else{
+            	check_exist_class1();
+            }
+            
+        }, 100);
+    }
+    
+    
     $(document).ready(function() {
+    	
+    	check_exist_class1();
+    	
+    	
     	//ONCHANGE OF UoM VIEW PRICE ACCORDINGLY
     	$('#uom_id').on('change', function(ev){
     		var base_price = $('.base_price').text()
