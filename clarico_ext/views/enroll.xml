@@ -10,7 +10,7 @@
 		<field name="arch" type="xml">
 			<form string="Registrations">
 				<header>
-					<button name="action_approve" type="object" string="Approve" attrs="{'invisible': [('state', 'in', ('draft', 'deny'))]}" />
+					<button name="action_approve" type="object" string="Approve" attrs="{'invisible': [('state', 'in', ('approve', 'deny'))]}" />
                     <button name="action_deny" string="Deny" type="object" attrs="{'invisible': [('state', '=', 'approve')]}"/>
                     
 					<field name="state" widget="statusbar" statusbar_visible="draft,approve,deny"/>
