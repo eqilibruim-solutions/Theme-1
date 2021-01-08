@@ -25,10 +25,9 @@ class sale_order(models.Model):
 	_inherit = "sale.order"
 	
 	moved = fields.Boolean("Moved")
-	
-	plain_date = fields.Date("Plain date")
 	po_number = fields.Char("PO Number")
 	unique_seq = fields.Char("Unique Sequence")
+	remote_order_id = fields.Integer("Remote Order ID")
 	
 	
 	
@@ -97,6 +96,11 @@ class sale_order(models.Model):
 				remote_pricelist_id = Pricelist_r.search([('name', '=', local_pricelist_id.name)], limit=1)
 				if remote_pricelist_id:
 					remote_pricelist_id = remote_pricelist_id[0]
+			else:
+				remote_pricelist_id = Pricelist_r.create({
+														'name': order.pricelist_id.name,
+														})
+
 				
 			
 			local_payment_term_id = order.payment_term_id
@@ -189,7 +193,8 @@ class sale_order(models.Model):
 		
 		
 			order.moved = True
-			order.remote_order_id = so_id
+			if so_id:
+					order.remote_order_id = so_id
 			self._cr.commit()
 
 				

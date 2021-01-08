@@ -10,14 +10,14 @@
                             <ul class="banner">
                                 <li>
                                     
-                            <div style="background-image:url(/jetmaster_website_customizations/static/src/images/nature_img.jpg);"
+                            <div style="background-image:url(/jetmaster_website_customizations/static/src/images/sunset_lady.jpg);"
                                          data-mobile-background="/jetmaster_website_customizations/static/src/images/jet-mobile-final-1.jpg"
                                          data-background="/jetmaster_website_customizations/static/src/images/jet-final.jpg">
                                     <!--<div class="overlaygif"
                                          style="background-image: url(/jetmaster_website_customizations/static/src/images/jet-home.gif);display: block;"
                                          data-mobile-background="/jetmaster_website_customizations/static/src/images/jet-mobile-final-2.gif"
                                          data-background="/jetmaster_website_customizations/static/src/images/jet-home.gif"></div>-->
-                                    <div class="container">
+                                  <!--   <div class="container">
                                        <div class="row">
                                         <div class="col-md-6 col-sm-6 col-xs-12 banner_leftcontent">
                                         <h2>Use our online click, select,</h2>
@@ -25,105 +25,15 @@
                                         <a href="#serviceContact" class="btn home-greybtn" id="scrollBtn">LEARN MORE</a>
                                         </div>
                                       </div> 
-                                  </div>
+                                  </div> -->
                             </div>
                                     
                                 </li>
                             </ul>
                         </section>
                     </div>
-<!-- <div class="spacer" id="serviceContact" style="height:100px;width:100%"></div>
-
-                    <div class="oe_structure">
-                        <section class="product-enquiry">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-12 text-center">
-                                        <img src="/jetmaster_website_customizations/static/src/images/smoke-img/carnival.png"
-                                             alt=""
-                                             style="width:100%;max-width:350px;margin:1em auto;border:1px solid #489925; border-radius:50%;"/>
-
-                                        <p style="font-size:18px;">
-                                            <b>Heat up your home, <span style="font-style: italic;"></span>from home and
-                                                use our online click, select.
-                                            </b>
-                                        </p>
-
-                                        <p>Deliver and install system with FREE no contact delivery.
-                                            <br/>
-                                            We'll even organise the installation with your local dealer.
-                                        </p>
-
-                                        <a href="/purchase-unit" class="btn btn-padding" style="margin-bottom:20px">
-                                            Product Enquiry
-                                        </a>
-                                        <p>PLUS check out our new <a href="/products/">product</a> walk-through videos
-                                            on selected models.
-                                        </p>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-
- -->
 
 
-
-
-
-
-
-                    <div class="oe_structure">
-                        <section class="jetmeter-innovation">
-                            <div class="container">
-                                <div class="row">
-                                    <h1>The 5th LARGEST TOBACCO COMPANY IN THE WORLD!</h1>
-                                    <h2>A Tradition of Style, Service &amp; Innovation</h2>
-
-                                    <div class="col-sm-12 col-md-6 col-lg-6">
-                                        <p>KT established in 1899, is headquartered in Seoul,South Korea.  We are the 5th Largest cigarette manufacture in the world. KT has more than 100 years of cigarette manufacturing experience. KT USA is Headquartered in Plano, Texas. We entered the US market with the introduction of Carnival in 1999. We then launched Timeless Time in 2010. We Currently ship over 40 States through 400+ distributor partners. KT USA is also ranked 5th among national manufactures in the USA.
-                                        </p>
-
-
-                                    </div>
-
-
-                                    <div class="col-sm-12 col-md-6 col-lg-6">
-                                        <iframe width="500" height="281"
-                                                src="https://www.youtube.com/embed/EGCpO9NdESA?feature=oembed&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fjetmastervic.com.au"
-                                                frameborder="0" gesture="media" allow="encrypted-media"
-                                                allowfullscreen="" data-gtm-yt-inspected-11343496_11="true"
-                                                id="703346361"></iframe>
-
-                                    </div>
-
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-
-
-                   <!-- <div class="oe_structure">
-                        <section class="theblock-sec">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-12 text-center">
-                                        <a href="https://jetmastervic.com.au/jetmaster-heating-the-block-season-15/">
-                                            <img src="/jetmaster_website_customizations/static/src/images/jetmaster-vic-the-block-channel-nine.png"/>
-                                        </a>
-                                        <p>Jetmaster has been heating season 15 of the Block!</p>
-                                        <p>Read all about it
-                                            <a href="/jetmaster-heating-the-block-season-15/">here</a>
-                                        </p>
-
-
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </div>-->
 
 
                     <div class="oe_structure">
@@ -148,25 +58,23 @@
                         <section class="pt16 pb40 footer-section">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-12 col-md-6 col-lg-3">
+                                    <div class="col-12 col-md-6 col-lg-4">
                                         <h4>Brands</h4>
                                         <p>
                                             <img src="/jetmaster_website_customizations/static/src/images/brands_logo/brand1.png" width="140" style="margin-bottom:20px;"/>
                                             <img src="/jetmaster_website_customizations/static/src/images/brands_logo/brand2.png" width="140" style="margin-bottom:20px;"/>
                                              <img src="/jetmaster_website_customizations/static/src/images/brands_logo/brand3.png" width="140" style="margin-bottom:20px;"/>
+                                             <img src="/jetmaster_website_customizations/static/src/images/brands_logo/brand1.png" width="140" style="margin-bottom:20px;"/>
                                         </p>
   
                                        
                                     </div>
 
-                                    <div class="col-12 col-md-6 col-lg-3">
+                                    <div class="col-12 col-md-6 col-lg-4">
                                         <h4>Home</h4>
                                         <ul class="menu-footer-menu">
                                             <li>
-                                                <a href="#">Products</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Brochures &amp; Specifications</a>
+                                                <a href="/shop">Products</a>
                                             </li>
                                             <li>
                                                 <a href="/gallery">Gallery</a>
@@ -177,18 +85,22 @@
                                             <li>
                                                 <a href="/contact-us">Contact Us</a>
                                             </li>
+                                              <li>
+                                                <a href="/contact-us">Become a Reseller</a>
+                                            </li>
+                                            
                                         </ul>
                                     </div>
 
-                                    <div class="col-12 col-md-6 col-lg-3">
+                                  <!--   <div class="col-12 col-md-6 col-lg-3">
                                         <h4>Find us on Facebook</h4>
                                         <iframe style="border: none; overflow: hidden; width: 100%; max-width:100%; height: 240px;"
                                                 src="https://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FJetmasterheatnglo&amp;width=253&amp;colorscheme=light&amp;show_faces=true&amp;stream=false&amp;header=false&amp;height=240&amp;force_wall=true&amp;connections="
                                                 data-gtm-yt-inspected-11343496_11="true"></iframe>
-                                    </div>
+                                    </div> -->
 
 
-                                    <div class="col-12 col-md-6 col-lg-3">
+                                    <div class="col-12 col-md-6 col-lg-4">
                                         <h4>Contact</h4>
 
                                         <div class="footercontact-div">
@@ -199,10 +111,10 @@
 												Plano, TX 75024​, United States.
                                             </p>
                                             <p><i class="fa fa-phone" aria-hidden="true"></i>Sales:
-                                                <a href="tel:1300 219 875">1300 219 875</a>
+                                                <a href="tel:123 456 789">123 456 789</a>
                                             </p>
                                             <p><i class="fa fa-phone" aria-hidden="true"></i>Service:
-                                                <a href="tel:1300 195 482">1300 195 482</a>
+                                                <a href="tel:987 654 321">987 654 321</a>
                                             </p>
                                         </div>
 

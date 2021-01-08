@@ -8,7 +8,6 @@
     'data': [
         'security/ir.model.access.csv',
         'views/website_templates/contact_us_view.xml',
-#         'views/website_templates/products_page_view.xml',
         'views/website_templates/gallery_view.xml',
         'views/website_templates/homepage.xml',
         'data/website_menus.xml',

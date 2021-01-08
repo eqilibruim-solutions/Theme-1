@@ -19,6 +19,7 @@ from odoo.addons.website_sale.models.sale_order import SaleOrder
 class enroll_partner(models.Model):
 	
 	_name = 'enroll.partner'
+	_rec_name ='c_name'
 	
 	
 	
@@ -36,12 +37,6 @@ class enroll_partner(models.Model):
 	def action_deny(self):
 		self.ensure_one()
 		self.state = 'deny'
-        
-        
-        
-        
-        
-        
 	
 	state = fields.Selection([('draft', 'Draft'), ('approve', 'Approved'), ('deny', 'Denied')], default="draft")
 	
@@ -98,7 +93,7 @@ class enroll_partner(models.Model):
 	stamp_product_yes_no = fields.Char("Are you able to receive stamped product?")
 	eft_yes_no = fields.Char("Will you be able to operate with EFT (Electronic Funds Transfer) as a payment option?")
 	signature_whole = fields.Binary("Signature (Wholesaler)")
-	signature_date = fields.Date("Date")
+	signature_date = fields.Date("Date",default=fields.Date.context_today)
 	
 	
 	#TAB 2 BANK REFERENCE REQUEST
@@ -109,7 +104,7 @@ class enroll_partner(models.Model):
 	client_email = fields.Char("Email")
 	client_date = fields.Char("Date")
 	client_name_customer = fields.Char("Name of Customer")
-	client_customer_aod = fields.Date("Date of Account Opening")
+	client_customer_aod = fields.Date("Date of Account Opening",default=fields.Date.context_today)
 	client_name_customer_bank_off_sig = fields.Binary("Bank Officers Signature")
 	
 	
@@ -129,7 +124,7 @@ class enroll_partner(models.Model):
 	aggreement_account_type = fields.Char("Type of Account")
 	aggreement_bottom_name = fields.Char("Agreement Name")
 	aggreement_bottom_title = fields.Char("Agreement Title/Position")
-	aggreement_bottom_date = fields.Date("Date")
+	aggreement_bottom_date = fields.Date("Date",default=fields.Date.context_today)
 	aggreement_bottom_signature = fields.Binary("Authorized Signature")
 	
 	
@@ -161,7 +156,7 @@ class enroll_partner(models.Model):
 	deal_special = fields.Char("Special Deals ?")
 	deal_comment = fields.Char("Comments")
 	signature_deal = fields.Binary("Account Manager Signature")
-	deal_signature_date = fields.Date("Date")
+	deal_signature_date = fields.Date("Date",default=fields.Date.context_today)
 	
 	
 	
@@ -173,7 +168,7 @@ class enroll_partner(models.Model):
 	po_fax = fields.Char("Fax")
 	po_no = fields.Char("PO Number")
 	signature_po_customer = fields.Binary("Customer Signature")
-	po_cust_signature_date = fields.Date("Date")
+	po_cust_signature_date = fields.Date("Date",default=fields.Date.context_today)
 	
 	
 	
