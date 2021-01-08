@@ -98,6 +98,24 @@ odoo.define('clarico_ext.website_sale', function(require) {
     	});
     	
     	
+    	
+    	
+    	//TO MAKE MENU BAR WHITE COLOR WHEN SCROLLED DOWN
+    	$(window).scroll(function() {
+		  if ($(".affixed").length > 0){
+			  $(".bg-light")[0].style.setProperty( 'background-color', 'white', 'important' );
+			  $(".bg-light")[0].style.setProperty( 'box-shadow', '-46px 10px 53px 3px #888888', 'important' );
+		  }
+		  
+		  else{
+			  $(".bg-light")[0].style.setProperty( 'background-color', '#e8d6d6ad', 'important' );
+			  $(".bg-light")[0].style.setProperty( 'box-shadow', '', 'important' );
+		  }
+		});
+    	
+    	
+    	
+    	
     });
     
     

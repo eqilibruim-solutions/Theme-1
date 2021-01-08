@@ -1,515 +1,278 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <odoo>
 
-	<record id="menu_enroll" model="website.menu">
-		<field name="name">Become a Reseller</field>
-		<field name="url">/page/enroll_me</field>
-		<field name="sequence" type="int">500</field>
-		<!-- <field name="code">enroll_me</field> -->
+
+
+	<record id="view_reg_form" model="ir.ui.view">
+		<field name="name">enroll.partner.form</field>
+		<field name="model">enroll.partner</field>
+		<field name="priority">4</field>
+		<field name="arch" type="xml">
+			<form string="Registrations">
+				<header>
+					<button name="action_approve" type="object" string="Approve" attrs="{'invisible': [('state', 'in', ('draft', 'deny'))]}" />
+                    <button name="action_deny" string="Deny" type="object" attrs="{'invisible': [('state', '=', 'approve')]}"/>
+                    
+					<field name="state" widget="statusbar" statusbar_visible="draft,approve,deny"/>
+				</header>
+				<sheet>
+					<group>
+						<h2>
+							<field name="c_name" />
+						</h2>
+					</group>
+
+					<notebook>
+						<page name="cust_detail" string="CUSTOMER DETAILS">
+							<group>
+								<group>
+									<field name="c_name" />
+									<field name="c_phone" />
+									<field name="c_fax" />
+								</group>
+								<group>
+
+								</group>
+							</group>
+
+							<group>
+								<group string="Billing details">
+									<field name="b_street" />
+									<field name="b_street2" />
+									<field name="b_city" />
+									<field name="b_zip" />
+									<field name="b_state" />
+									<field name="b_country" />
+								</group>
+								<group string="Shipping details">
+									<field name="s_street" />
+									<field name="s_street2" />
+									<field name="s_city" />
+									<field name="s_zip" />
+									<field name="s_state" />
+									<field name="s_country" />
+								</group>
+							</group>
+
+
+
+							<group>
+								<group string="Directors">
+									<field name="dir_name1" />
+									<field name="dir_phone1" />
+									<br></br>
+									<field name="dir_name2" />
+									<field name="dir_phone2" />
+									<br></br>
+									<field name="dir_name3" />
+									<field name="dir_phone3" />
+									<br></br>
+									<field name="dir_name4" />
+									<field name="dir_phone4" />
+								</group>
+								<group >
+									<field name="contact_person" />
+									<field name="dunn_no" />
+								</group>
+							</group>
+
+							<group>
+								<group string="Credit references">
+									<field name="cred_name1" />
+									<field name="cred_phone1" />
+									<field name="cred_addr1" />
+									<br></br>
+									<field name="cred_name2" />
+									<field name="cred_phone2" />
+									<field name="cred_addr2" />
+									<br></br>
+									<field name="cred_name3" />
+									<field name="cred_phone3" />
+									<field name="cred_addr3" />
+									<br></br>
+									<field name="cred_name4" />
+									<field name="cred_phone4" />
+									<field name="cred_addr4" />
+								</group>
+							</group>
+
+							<group>
+								<group string="Questionnaire">
+									<field name="service_acc_no" />
+									<field name="year_no" />
+									<field name="stamp_state_names" />
+									<field name="employee_no" />
+									<field name="sales_vol" />
+									<field name="business_state_names" />
+									<field name="activity_report_yes_no" />
+									<field name="stamp_product_yes_no" />
+									<field name="eft_yes_no" />
+									<field name="signature_whole" />
+									<field name="signature_date" />
+								</group>
+							</group>
+
+						</page>
+
+
+						<page name="brr" string="BANK REFERENCE REQUEST">
+							<group>
+								<group>
+									<field name="client_name" />
+									<field name="client_bank" />
+									<field name="client_account" />
+									<field name="client_phone" />
+									<field name="client_email" />
+									<field name="client_date" />
+									<field name="client_name_customer" />
+									<field name="client_customer_aod" />
+									<field name="client_name_customer_bank_off_sig" />
+								</group>
+							</group>
+						</page>
+						
+						
+						<page name="eft" string="AGREEMENT for EFT TRANSACTION">
+							<group>
+								<group>
+									<field name="aggreement_company_name" />
+									<field name="aggreement_street" />
+									<field name="aggreement_company_city" />
+									<field name="aggreement_company_state" />
+									<field name="aggreement_company_zip" />
+									<field name="aggreement_company_phone" />
+									<field name="aggreement_company_fax" />
+									<field name="aggreement_institute_name" />
+									<field name="aggreement_branch" />
+								</group>
+								<group>
+									<field name="aggreement_address" />
+									<field name="aggreement_route_no" />
+									<field name="aggreement_account_no" />
+									<field name="aggreement_account_type" />
+									<field name="aggreement_bottom_name" />
+									<field name="aggreement_bottom_title" />
+									<field name="aggreement_bottom_date" />
+									<field name="aggreement_bottom_signature" />
+								</group>
+								
+							</group>
+						</page>
+						
+						
+						<page name="cds" string="Customer Deal Sheet">
+							<group>
+								<group>
+									<field name="deal_customer_name" />
+									<field name="deal_customer_addr" />
+									<field name="deal_customer_phone" />
+									<field name="deal_customer_fax" />
+									<field name="deal_customer_email" />
+									<field name="deal_customer_contact_name" />
+									<field name="deal_customer_ktng_rep_name" />
+									<field name="deal_applied_check" />
+									<field name="deal_stamped" />
+								</group>
+								<group>
+									<field name="deal_this_list_price" />
+									<field name="deal_time_list_price" />
+									<field name="deal_carnival_list_price" />
+									<field name="deal_this_off_invoice" />
+									<field name="deal_time_off_invoice" />
+									<field name="deal_carnival_off_invoice" />
+									<field name="deal_this_msa" />
+									<field name="deal_time_msa" />
+									<field name="deal_carnival_msa" />
+									<field name="deal_this_rebate" />
+									<field name="deal_time_rebate" />
+									<field name="deal_carnival_rebate" />
+									<field name="deal_this_invoice_net" />
+									<field name="deal_time_invoice_net" />
+									<field name="deal_carnival_invoice_net" />
+								</group>
+								
+							</group>
+							<group>
+								<group>
+									<field name="deal_special" />
+									<field name="deal_comment" />
+									<field name="signature_deal" />
+									<field name="deal_signature_date" />
+								</group>
+							</group>
+						</page>
+						
+						
+						<page name="po" string="PURCHASE ORDER">
+							<group>
+								<group>
+									<field name="po_company_name" />
+									<field name="po_addr" />
+									<field name="po_phone" />
+									<field name="po_fax" />
+									<field name="po_no" />
+									<field name="signature_po_customer" />
+									<field name="po_cust_signature_date" />
+								</group>
+							</group>
+						</page>
+						
+						
+						
+						
+						
+						
+						
+
+					</notebook>
+
+				</sheet>
+			</form>
+
+		</field>
 	</record>
 
 
-	<template id="show_doctors_list" name="Doctors">
-		<title>Register</title>
-		<t t-call="website.layout">
-			<div id="wrap">
-				<div class="oe_structure" />
-				<div class="container">
-					
-					<form id="new-form">
-						<div class="tab-1">
-							
-							<h2 style="margin-top: 80px; text-align: center; font-size: 10px; color: red; " >Page 1 of 3</h2>
-							<h2 style="margin-top: 20px; text-align: center;" >New Customer Information Form</h2>
-							
-							<hr style="border: 1px solid" ></hr>
-							
-							<div class="form-row" style="margin-top: 50px;" >
-								
-								<div class="form-group  col-lg-4" style="padding-right: 20px" >
-									<h2>Company</h2>
-									<label class="col-form-label lab-size" for="c_name">Company Name</label>
-									<input type="text" name="c_name" class="form-control my-height" />
-									
-									<label class="col-form-label lab-size" for="c_phone">Telephone</label>
-									<input type="text" name="c_phone" class="form-control my-height" />
-									
-									<label class="col-form-label lab-size" for="c_fax">Fax</label>
-									<input type="text" name="c_fax" class="form-control my-height" />
-									
-								</div>
-								
-								<div class="form-group  cus-div col-lg-4" style="padding-right: 20px" >
-									<h2 style="margin-bottom: 35px;" >Billing Address</h2>
-									<input type="text" name="b_street" class="form-control my-height" placeholder="Street" />
-									
-									<input type="text" name="b_street2" class="form-control my-height" placeholder="Street2" />
-									
-									<input type="text" name="b_city" class="form-control my-height" placeholder="City" style="width: 45%; display: inline-block;" />
-									
-									<input type="text" name="b_zip" class="form-control my-height" placeholder="Zip" style="width: 45%; display: inline-block; margin-left: 8%;" />
-									
-									<input type="text" name="b_state" class="form-control my-height" placeholder="State" style="width: 45%; display: inline-block;" />
-									
-									<input type="text" name="b_country" class="form-control my-height" placeholder="Country" style="width: 45%; display: inline-block; margin-left: 8%;" />
-									
-								</div>
-								
-								<div class="form-group cus-div col-lg-4" style="padding-right: 20px;" >
-									<h2 style="margin-bottom: 35px;" >Shipping Address</h2>
-									<input type="text" name="s_street" class="form-control my-height" placeholder="Street" />
-									
-									<input type="text" name="s_street2" class="form-control my-height" placeholder="Street2" />
-									
-									<input type="text" name="s_city" class="form-control my-height" placeholder="City" style="width: 45%; display: inline-block;" />
-									
-									<input type="text" name="s_zip" class="form-control my-height" placeholder="Zip" style="width: 45%; display: inline-block; margin-left: 8%;" />
-									
-									<input type="text" name="s_state" class="form-control my-height" placeholder="State" style="width: 45%; display: inline-block;" />
-									
-									<input type="text" name="s_country" class="form-control my-height" placeholder="Country" style="width: 45%; display: inline-block; margin-left: 8%;" />
-									
-								</div>
-							</div>
-							
-							
-							
-							<div class="form-row" style="margin-top: 50px;" >
-								
-								<div class="form-group  cus-div col-lg-6" style="padding-right: 20px" >
-									<h2 style="margin-bottom: 35px;" >Directors</h2>
-									1. <input type="text" name="dir_name1" class="form-control my-height" placeholder="Name" style="display: inline-block; width: 60%" />
-									<input type="text" name="dir_phone1" class="form-control my-height" placeholder="Phone" style="display: inline-block; width: 35%" />
-									
-									2. <input type="text" name="dir_name2" class="form-control my-height" placeholder="Name" style="display: inline-block; width: 60%" />
-									<input type="text" name="dir_phone2" class="form-control my-height" placeholder="Phone" style="display: inline-block; width: 35%" />
-									
-									3. <input type="text" name="dir_name3" class="form-control my-height" placeholder="Name" style="display: inline-block; width: 60%" />
-									<input type="text" name="dir_phone3" class="form-control my-height" placeholder="Phone" style="display: inline-block; width: 35%" />
-									
-									4. <input type="text" name="dir_name4" class="form-control my-height" placeholder="Name" style="display: inline-block; width: 60%" />
-									<input type="text" name="dir_phone4" class="form-control my-height" placeholder="Phone" style="display: inline-block; width: 35%" />
-									
-									<br></br><br></br>
-									<label class="col-form-label lab-size" for="contact_person">Contact Person Name</label>
-									<input type="text" name="contact_person" class="form-control my-height" placeholder="Contact Person Name" style="" />
-									
-									<label class="col-form-label lab-size" for="dunn_no">Dunn &amp; Bradstreet #</label>
-									<input type="text" name="dunn_no" class="form-control my-height" placeholder="Dunn and Bradstreet #" style="" />
-									
-									
-								</div>
-								
-								<div class="form-group  cus-div col-lg-6" style="padding-right: 20px" >
-									<h2 style="margin-bottom: 35px;" >Credit References</h2>
-									1. <input type="text" name="cred_name1" class="form-control my-height" placeholder="Name" style="display: inline-block; width: 60%" />
-									<input type="text" name="cred_phone1" class="form-control my-height" placeholder="Phone" style="display: inline-block; width: 35%" />
-									<input type="text" name="cred_addr1" class="form-control my-height" placeholder="Address" style="margin-left: 11px; display: inline-block; width: 96%" />
-									<br></br>
-									
-									2. <input type="text" name="cred_name2" class="form-control my-height" placeholder="Name" style="display: inline-block; width: 60%" />
-									<input type="text" name="cred_phone2" class="form-control my-height" placeholder="Phone" style="display: inline-block; width: 35%" />
-									<input type="text" name="cred_addr2" class="form-control my-height" placeholder="Address" style="margin-left: 11px; display: inline-block; width: 96%" />
-									<br></br>
-									
-									3. <input type="text" name="cred_name3" class="form-control my-height" placeholder="Name" style="display: inline-block; width: 60%" />
-									<input type="text" name="cred_phone3" class="form-control my-height" placeholder="Phone" style="display: inline-block; width: 35%" />
-									<input type="text" name="cred_addr3" class="form-control my-height" placeholder="Address" style="margin-left: 11px; display: inline-block; width: 96%" />
-									<br></br>
-									
-									4. <input type="text" name="cred_name4" class="form-control my-height" placeholder="Name" style="display: inline-block; width: 60%" />
-									<input type="text" name="cred_phone4" class="form-control my-height" placeholder="Phone" style="display: inline-block; width: 35%" />
-									<input type="text" name="cred_addr4" class="form-control my-height" placeholder="Address" style="margin-left: 11px; display: inline-block; width: 96%" />
-									
-									
-								</div>
-								
-								
-								<br></br><br></br>
-								<div class="form-group  cus-div col-lg-12" style="padding-right: 20px" >
-									<h2 style="margin-top: 20px;" >Questionnaire</h2>
-									<br></br>
-									1. How many accounts do you service?
-									<br></br>
-									<input type="text" name="service_acc_no" class="form-control my-height" placeholder="0" style="margin-left: 11px; display: inline-block; width: 50%" />
-									<br></br><br></br>
-									
-									
-									2. How long have you been in business?
-									<br></br>
-									<input type="text" name="year_no" class="form-control my-height" placeholder="1" style="margin-left: 11px; display: inline-block; width: 50%" /> &#x2063; Years
-									<br></br><br></br>
-									
-									
-									3. Are you a stamping authority?
-									If yes, which states? (Put comma separated State names)
-									<br></br>
-									<input type="text" name="stamp_state_names" class="form-control my-height" placeholder="Enter comma separated state names" style="margin-left: 11px; display: inline-block; width: 50%" />
-									<br></br><br></br>
-									
-									
-									4. Number of Employees?
-									<br></br>
-									<input type="text" name="employee_no" class="form-control my-height" placeholder="0" style="margin-left: 11px; display: inline-block; width: 50%" />
-									<br></br><br></br>
-									
-									
-									5. Sales volume for last year?
-									<br></br>
-									<input type="text" name="sales_vol" class="form-control my-height" placeholder="0.0" style="margin-left: 11px; display: inline-block; width: 50%" />
-									<br></br><br></br>
-									
-									
-									6. Which states are you doing business in? (Put comma separated State names)
-									<br></br>
-									<input type="text" name="business_state_names" class="form-control my-height" placeholder="Enter comma separated state names" style="margin-left: 11px; display: inline-block; width: 50%" />
-									<br></br><br></br>
-									
-									
-									7. Are you able to provide an activity report?
-									<br></br>
-									<select name="activity_report_yes_no" class="form-control my-height" style="margin-left: 11px; display: inline-block; width: 50%" >
-										<option value='yes'>Yes</option>
-										<option value='no'>No</option>
-									</select>
-									<br></br><br></br>
-									
-									
-									8. Are you able to receive stamped product?
-									<br></br>
-									<select name="stamp+product_yes_no" class="form-control my-height" style="margin-left: 11px; display: inline-block; width: 50%" >
-										<option value='yes'>Yes</option>
-										<option value='no'>No</option>
-									</select>
-									<br></br><br></br>
-									
-									
-									9. Will you be able to operate with EFT (Electronic Funds Transfer) as a payment option?
-									<br></br>
-									<select name="eft_yes_no" class="form-control my-height" style="margin-left: 11px; display: inline-block; width: 50%" >
-										<option value='yes'>Yes</option>
-										<option value='no'>No</option>
-									</select>
-									<br></br><br></br>
-								</div>
-								
-								
-								<div class="form-group  cus-div col-lg-12" style="padding-right: 20px" >
-									<h2 style="margin-top: 20px;" >Memo</h2>
-									<br></br>
-									*KT&amp;G’s products are <b>100% guaranteed.</b> (When returning merchandise, an affidavit must be submitted indicating
-stamped and unstamped product, so a credit can be determined by the state.) And the wholesaler will be responsible
-for any costs associated with shipping/handling when returning any merchandise which was NOT refused at the
-door.
-								
-								<br></br>
-								<br></br>
-								<b>We sincerely appreciate your business. Thank you for the opportunity to work with you.</b>
-								<hr style="border: 2px solid" ></hr>
-								
-								</div>
-								
-								
-								<div class="form-group  cus-div col-lg-12" style="padding-right: 20px; text-align: center;" >
-									
-									Signature <input type="file" name="signature_whole" class="form-control my-height" style="margin-left: 11px; display: inline-block; width: 220px" ></input>
-									
-									<span style="margin-left: 30px; " >
-									Date <input type="date" name="signature_date" class="form-control my-height" style="margin-left: 11px; display: inline-block; width: 170px" ></input>
-									</span> 								
-								</div>
-								
-							</div>
-							
-							
 
-							<div class="d-flex" style="margin: 50px; justify-content: center;" >
-								<a role="button" class="btn btn-primary tab-1-pre" href="#" disabled='disabled' >
-									<i class="fa fa-chevron-left"></i>
-									<span>Previous</span>
-								</a>
-								<a role="button" href="#"
-									class="btn btn-primary tab-1-next">
-									<span>Next</span>
-									<i class="fa fa-chevron-right"></i>
-								</a>
-							</div>
-
-						</div>
-					
+	<record id="view_reg_tree" model="ir.ui.view">
+		<field name="name">enroll.partner.tree</field>
+		<field name="model">enroll.partner</field>
+		<field name="priority">4</field>
+		<field name="arch" type="xml">
+			<tree string="Registrations">
+				<field name="c_name" />
+			</tree>
+		</field>
+	</record>
 
 
 
 
+	<record id="action_registrations" model="ir.actions.act_window">
+		<field name="name">Website Registrations</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">enroll.partner</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="o_view_nocontent_smiling_face">
+				No Registrations found
+			</p>
+		</field>
+	</record>
 
 
 
 
-					<div class="tab-2" style="display: none" >
-							
-							<h2 style="margin-top: 80px; text-align: center; font-size: 10px; color: red; " >Page 2 of 3</h2>
-							<h2 style="margin-top: 20px; text-align: center;" >BANK REFERENCE REQUEST</h2>
-							<hr style="border: 1px solid" ></hr>
-							<br></br><br></br>
-							
-							Dear Customer:
-							
-							<br></br><br></br>
-							To request a bank reference, please complete and sign Part I, and provide it to your current
-							financial institution.
-							
-							<br></br><br></br>
-							<u><b>PART I CUSTOMER AUTHORIZATION</b></u>
-							
-							<br></br><br></br>
-							I hereby request a bank reference letter on your bank’s letterhead including the financial
-							information described below to be provided to KT&amp;G USA. You may use the template provided
-							in Part II or your own standard template for these types of requests. Please note that a
-							representative from KT&amp;G USA may call you to confirm this reference so it is important that
-							you include valid contact information.
-							
-							<br></br><br></br>
-							Please send the reference letter by fax to: (214) 299-4207 (fax)
-							
-							<br></br><br></br>
-							You may contact me at the below phone number/email if you require further information
-							about this request.
-							
-							
-							
-							<div class="form-row col-lg-12" style="margin-top: 50px;" >
-								<div class="form-group  col-lg-6" style="padding-right: 20px" >
-									<label class="col-form-label lab-size" for="client_name">Client Name</label>
-									<input type="text" name="client_name" class="form-control my-height" />
-									
-									<label class="col-form-label lab-size" for="client_signature">Client Signature</label>
-									<input type="file" name="client_signature" class="form-control my-height" style="width: 220px;" />
-									
-									<label class="col-form-label lab-size" for="client_bank">Bank Name</label>
-									<input type="text" name="client_bank" class="form-control my-height" />
-									
-									<label class="col-form-label lab-size" for="client_account">Account Number</label>
-									<input type="text" name="client_account" class="form-control my-height" />
-									
-								</div>
-								
-								<div class="form-group  col-lg-6" style="padding-right: 20px" >
-									<label class="col-form-label lab-size" for="client_phone">Client Phone</label>
-									<input type="text" name="client_phone" class="form-control my-height" />
-									
-									<label class="col-form-label lab-size" for="client_email">Client Email</label>
-									<input type="text" name="client_email" class="form-control my-height" />
-									
-									<label class="col-form-label lab-size" for="client_date">Date</label>
-									<input type="date" name="client_date" class="form-control my-height" />
-									
-								</div>
-								
-							</div>
-							
-							<br></br><br></br>
-							<u><b>PART II SAMPLE BANK REFERENCE LETTER (<span style="color: red" >please provide on bank letterhead</span>)</b></u>
-							
-							<br></br><br></br>
-							<b>KT&amp;G USA Corp.</b>
-							
-							<br></br><br></br>	
-							Re: Bank Reference Letter
-							This letter is provided at our customer’s request to inform the following:
-							
-							
-							<div class="form-row col-lg-12" style="margin-top: 50px;" >
-								<div class="form-group  col-lg-6" style="padding-right: 20px" >
-									<label class="col-form-label lab-size" for="client_name_customer">Name of Customer</label>
-									<input type="text" name="client_name_customer" class="form-control my-height" />
-									
-								</div>
-								
-								<div class="form-group  col-lg-6" style="padding-right: 20px" >
-									<label class="col-form-label lab-size" for="client_customer_aod">Date of Account Opening</label>
-									<input type="date" name="client_customer_aod" class="form-control my-height" />
-									
-								</div>
-								
-							</div>
-							
-							
-							<br></br><br></br>	
-							This letter confirms that (name) of (full address including zip code) is a customer in good
-							standing of this bank. Based on the past records, we confirm that the relationship with (name)
-							is maintained in a satisfactory manner.
-							
-							<br></br>	
-							I can be contacted at the following numbers and email:
+	<menuitem id="menu_reg_root" name="Registrations"
+		parent="website.menu_website_configuration" sequence="2"
+		groups="sales_team.group_sale_salesman" />
 
-							<br></br>
-							Sincerely,
-							
-							
-							<br></br><br></br>
-							<div class="form-row col-lg-6" style="margin-top: 50px;" >
-								<div class="form-group  col-lg-6" style="padding-right: 20px" >
-									<label class="col-form-label lab-size" for="client_name_customer_bank_off_sig">Bank Officers Signature</label>
-									<input type="file" name="client_name_customer_bank_off_sig" class="form-control my-height" />
-									
-								</div>
-								
-							</div>
-							
-							
-							
-							<hr style="border: 2px solid; width: 100%;" ></hr>
-						
-							<div class="d-flex" style="margin: 50px; justify-content: center;" >
-								<a role="button" class="btn btn-primary tab-2-pre" href="#" >
-									<i class="fa fa-chevron-left"></i>
-									<span>Previous</span>
-								</a>
-								<a role="button" href="#"
-									class="btn btn-primary tab-2-next">
-									<span>Next</span>
-									<i class="fa fa-chevron-right"></i>
-								</a>
-							</div>
 
-					</div>
-					
-					
-					
-					
-					
-					
-					
-					
+	<menuitem id="menu_website_reg" action="action_registrations"
+		parent="menu_reg_root" sequence="5" />
 
-					<div class="tab-3" style="display: none" >
-					
-						<h2 style="margin-top: 80px; text-align: center; font-size: 10px; color: red; " >Page 3 of 3</h2>
-						<h2 style="margin-top: 20px; text-align: center;" >AGREEMENT for EFT TRANSACTION</h2>
-						<hr style="border: 1px solid" ></hr>
-						<br></br><br></br>
-						
-						
-						<h2>Company Details</h2>
-						<div class="form-row" style="margin-top: 50px;" >
-								
-							<div class="form-group  cus-div col-lg-12" style="padding-right: 20px" >
-								
-								<input type="text" name="aggreement_company_name" class="form-control my-height" placeholder="Company Name" style="display: inline-block; width: 60%" />
-								<input type="text" name="aggreement_street" class="form-control my-height" placeholder="Street" style="display: inline-block; width: 35%" />
-								
-								<input type="text" name="aggreement_company_city" class="form-control my-height" placeholder="City" style="display: inline-block; width: 60%" />
-								<input type="text" name="aggreement_company_state" class="form-control my-height" placeholder="State" style="display: inline-block; width: 35%" />
-								
-								<input type="text" name="aggreement_company_zip" class="form-control my-height" placeholder="Zip" style="display: inline-block; width: 60%" />
-								<input type="text" name="aggreement_company_phone" class="form-control my-height" placeholder="Phone" style="display: inline-block; width: 35%" />
-								
-								<input type="text" name="aggreement_company_fax" class="form-control my-height" placeholder="Fax" style="display: inline-block; width: 60%" />
-								
-								
-							</div>
-						</div>
-						
-							I (We) hereby authorize KT&amp;G USA. at 1601 E Plano Parkway, Plano TX 75074, hereinafter called
-						COMPANY, to initiate debit entries to my (our) account indicated below and the financial institution named
-						below, hereinafter called FINANCIAL INSTITUTION. I (we) acknowledge that the origination of Automated
-						Clearing House (ACH) transactions to my (our) account must comply with the provisions of U.S. Laws.
-	
-						<br></br><br></br>
-						
-						
-						<h2>Institution Details</h2>
-						<div class="form-row" style="margin-top: 50px;" >
-							<div class="form-group  cus-div col-lg-12" style="padding-right: 20px" >
-								
-								<input type="text" name="aggreement_institute_name" class="form-control my-height" placeholder="Financial Institution Name" style="display: inline-block; width: 60%" />
-								<input type="text" name="aggreement_branch" class="form-control my-height" placeholder="Branch" style="display: inline-block; width: 35%" />
-								
-								<input type="text" name="aggreement_address" class="form-control my-height" placeholder="Address" style="display: inline-block; width: 60%" />
-								<input type="text" name="aggreement_route_no" class="form-control my-height" placeholder="Routing No." style="display: inline-block; width: 35%" />
-								
-								<input type="text" name="aggreement_account_no" class="form-control my-height" placeholder="Account No." style="display: inline-block; width: 60%" />
-								
-								<label class="col-form-label lab-size" for="aggreement_account_type">Type of Account</label>
-								<select name="aggreement_account_type" class="form-control my-height"  style="display: inline-block; width: 35%" >
-									<option value="check">CHECKING</option>
-									<option value="save">SAVING</option>
-								</select>
-								
-							</div>
-						</div>
-						
-						<br></br><br></br>
-							This authority is to remain in full force and effect until COMPANY has received written notification
-						from me (us) of its termination in such time and manner as to afford COMPANY and FINANCIAL
-						INSTITUTION reasonable opportunity to act on it.
-						
-						
-						
-						<br></br><br></br>
-						<input type="checkbox" name="aggreement_checkbox" class="form-control my-height" style="display: inline-block; width: 25px" />
-						
-						I (We) provide a voided check below. I (We) understand that COMPANY is not liable for any lost monies
-						or fees incurred for any erroneous debit entry caused by the information above if I (we) do not provide
-						a voided check.
-						
-						<br></br><br></br>
-						<div class="form-row" style="margin-top: 50px;" >
-									
-							<div class="form-group  cus-div col-lg-6" style="padding-right: 20px" >
-								
-								<label class="col-form-label lab-size" for="aggreement_bottom_name">Name</label>
-								<input type="text" name="aggreement_bottom_name" class="form-control my-height" placeholder="Name" style="display: inline-block; width: 90%" />
-								
-								<label class="col-form-label lab-size" for="aggreement_bottom_title">Title/Position</label>
-								<input type="text" name="aggreement_bottom_title" class="form-control my-height" placeholder="Title/Position" style="display: inline-block; width: 90%" />
-								
-							</div>
-							<div class="form-group  cus-div col-lg-6" style="padding-right: 20px" >
-								
-								<label class="col-form-label lab-size" for="aggreement_bottom_signature">Authorized Signature</label>
-								<input type="file" name="aggreement_bottom_signature" class="form-control my-height" style="display: inline-block; width: 90%" />
-								
-								<label class="col-form-label lab-size" for="aggreement_bottom_date">Date</label>
-								<input type="text" name="aggreement_bottom_date" class="form-control my-height" style="display: inline-block; width: 90%" />
-								
-							</div>
-						</div>
-						
-						<h1>Attach a VOID CHECK here</h1>
-						
-						
-						<hr style="border: 2px solid; width: 100%;" ></hr>
-							
-						<div class="d-flex" style="margin: 50px; justify-content: center;" >
-							<a role="button" class="btn btn-primary tab-3-pre" href="#" >
-								<i class="fa fa-chevron-left"></i>
-								<span>Previous</span>
-							</a>
-							<a role="button" href="#"
-								class="btn btn-primary tab-3-next">
-								<span>Next</span>
-								<i class="fa fa-chevron-right"></i>
-							</a>
-						</div>
-					
-							
-					</div>
 
-					<div class="tab-4">
 
-					</div>
 
-					<div class="tab-5">
-
-					</div>
-
-				</form>
-
-				</div>
-			</div>
-		</t>
-	</template>
 
 </odoo>

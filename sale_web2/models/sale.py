@@ -26,6 +26,11 @@ class sale_order(models.Model):
 	
 	moved = fields.Boolean("Moved")
 	
+	plain_date = fields.Date("Plain date")
+	po_number = fields.Char("PO Number")
+	unique_seq = fields.Char("Unique Sequence")
+	
+	
 	
 	def write(self, vals):
 		
@@ -184,6 +189,7 @@ class sale_order(models.Model):
 		
 		
 			order.moved = True
+			order.remote_order_id = so_id
 			self._cr.commit()
 
 				

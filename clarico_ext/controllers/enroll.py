@@ -34,8 +34,32 @@ class EmiproThemeBase(http.Controller):
 		value = {}
 		
 		return request.render(
-			'clarico_ext.show_doctors_list', value
+			'clarico_ext.enroll_me_form', value
 		)
+		
+		
+	
+	@http.route(['/page/submit_enroll_action'], auth="public", type='json', csrf=False)
+	def submit_enroll_action(self, **kw):
+		print ("In method--------------------\n\n")
+		print (kw)
+		
+		kw = kw['data']
+		values = {}
+		
+		for item in kw:
+			values[item['name']] = item['value']
+		
+		request.env['enroll.partner'].sudo().create(values)
+		
+		return json.dumps({'created': True})
+		
+		
+# 	@http.route(['/page/submit_enroll_action'], type='json', auth="public", methods=['GET', 'POST'], website=True, csrf=False)
+# 	def submit_enroll_action(self, **kwargs):
+# 		print ('In method---------------------------------------\n\n')
+# 		print (kwargs)
+		
 		
 		
 		

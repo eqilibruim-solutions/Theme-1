@@ -12,6 +12,7 @@
     'data': [
         'views/templates.xml',
         'views/enroll.xml',
+        'views/enroll_templates.xml',
         'views/product_views.xml',
         'security/ir.model.access.csv',
         'security/website_sale.xml',

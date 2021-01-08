@@ -2,6 +2,18 @@
 // the negative margin layout does not overflow on elements. This prevents the
 // use of an ugly overflow: hidden which would break box-shadows.
 
+//TO AVOID EXTRA POPUP MENU BAR ON DOWN SCROLL
+.affixed{
+	display: none !important;
+
+}
+
+
+.navbar-brand{
+	margin-left: -6% !important;
+    margin-top: 60px !important;
+
+}
 
 .navbar-light{
 	background-color: #e8d6d6ad !important;
@@ -25,9 +37,7 @@ body{
 #top_menu_collapse{
 	margin-top: 70px !important;
 }
-.navbar-brand{
-	margin-top: 160px;
-}
+
 
     
 .img-fluid {
