@@ -161,6 +161,7 @@
 									<field name="aggreement_bottom_title" />
 									<field name="aggreement_bottom_date" />
 									<field name="aggreement_bottom_signature" widget='image' class="oe_avatar" />
+									<field name="aggreement_checkbox" />
 								</group>
 								
 							</group>
