@@ -1145,9 +1145,11 @@ content: "";
 
 
 
+/*========================= Header Transparant CSS ==============*/
 
+.navbar-light {background-color:inherit!important;}
 
-
+.homepage > main {padding-top: 0px!important;}  
 
 
 
