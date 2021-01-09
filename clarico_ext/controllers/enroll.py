@@ -92,6 +92,11 @@ class EmiproThemeBase(http.Controller):
 		for item in kw:
 			if item['value']:
 				values[item['name']] = item['value']
+				if item['name'] == 'aggreement_checkbox' and item['value'] == 'on':  
+					values[item['name']] = True
+				if item['name'] == 'aggreement_checkbox' and item['value'] != 'on':  
+					values[item['name']] = False
+					
 		
 		id = request.env['enroll.partner'].sudo().create(values)
 		

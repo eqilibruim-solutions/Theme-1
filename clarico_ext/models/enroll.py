@@ -130,6 +130,7 @@ class enroll_partner(models.Model):
 	aggreement_bottom_title = fields.Char("Agreement Title/Position")
 	aggreement_bottom_date = fields.Date("Date",default=fields.Date.context_today)
 	aggreement_bottom_signature = fields.Binary("Authorized Signature")
+	aggreement_checkbox = fields.Boolean("I (We) provide a voided check below. I (We) understand that COMPANY is not liable for any lost monies or fees incurred for any erroneous debit entry caused by the information above if I (we) do not provide a voided check")
 	
 	
 	#Tab 4 Customer Deal Sheet
