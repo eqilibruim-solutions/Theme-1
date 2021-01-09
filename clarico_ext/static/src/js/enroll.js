@@ -59,16 +59,63 @@ odoo.define('clarico_ext.enroll', function(require) {
     	});
     	
     	
+    	
+    	function setupReader(file, id, field, done) {
+    		if (file){
+	            var name = file.name;
+	            var file_datas = [];
+	            var reader = new FileReader();  
+	            reader.readAsDataURL(file);
+	            
+	            reader.onload = function(e) {  
+	                file_datas.push([file.name, e.target.result]);
+	                ajax.jsonRpc("/page/submit_enroll_images", 'call', {
+	                					bin_data : file_datas[0][1],
+	                					'id': id,
+	                					'field': field,
+	                					'done': done,
+	                             })
+	                
+	            };
+    		}
+    	}
+            
+            
+            
     	$('.tab-5-next').on('click', function(ev){
+    		
+    		$('.loadclass').addClass("loading-submit");
     		
     		var formData = $('#new-form').serializeArray();
 			
-			var signature_whole = $('input[name ="signature_whole"]')[0].files;
+    		
 
-			ajax.jsonRpc('/page/submit_enroll_action', 'call', {'data' : formData}).then(function (data) {
+			ajax.jsonRpc('/page/submit_enroll_action', 'call', {'data' : formData})
+			.then(function (data) {
                 var result = JSON.parse(data);
-                alert(result.created);
+                if (result.created != 0){
+                	setupReader($('.signature_whole')[0].files[0], result.created, 'signature_whole', 'no');
+
+                	setupReader($('.client_signature')[0].files[0], result.created, 'client_signature', 'no');
+                	setupReader($('.client_name_customer_bank_off_sig')[0].files[0], result.created, 'client_name_customer_bank_off_sig', 'no');
+                	
+                	setupReader($('.aggreement_bottom_signature')[0].files[0], result.created, 'aggreement_bottom_signature', 'no');
+                	
+                	setupReader($('.signature_deal')[0].files[0], result.created, 'signature_deal', 'no');
+                	
+                	setupReader($('.signature_po_customer')[0].files[0], result.created, 'signature_po_customer', 'yes');
+                	
+                }
             });
+			
+			
+			setTimeout(
+			  function() 
+			  {
+				  window.location.replace("/page/enrolled")
+				  
+			  }, 3000);
+			
 			
     		
     	});

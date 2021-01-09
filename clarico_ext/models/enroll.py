@@ -24,11 +24,14 @@ class enroll_partner(models.Model):
 	
 	def action_approve(self):
 		self.ensure_one()
-		self.env['res.partner'].sudo().create(
-											{
-											'name': self.c_name
-											}
-											)
+		
+		val = {
+			'name': self.c_name
+			}
+		self.env['res.partner'].sudo().create( val )
+		
+		
+		
 		self.state = 'approve'
 		
 		
@@ -110,6 +113,7 @@ class enroll_partner(models.Model):
 	client_date = fields.Char("Date")
 	client_name_customer = fields.Char("Name of Customer")
 	client_customer_aod = fields.Date("Date of Account Opening")
+	client_signature = fields.Binary("Client Signature")
 	client_name_customer_bank_off_sig = fields.Binary("Bank Officers Signature")
 	
 	

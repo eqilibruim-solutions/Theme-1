@@ -70,13 +70,6 @@
 									<field name="dir_name4" />
 									<field name="dir_phone4" />
 								</group>
-								<group >
-									<field name="contact_person" />
-									<field name="dunn_no" />
-								</group>
-							</group>
-
-							<group>
 								<group string="Credit references">
 									<field name="cred_name1" />
 									<field name="cred_phone1" />
@@ -97,17 +90,29 @@
 							</group>
 
 							<group>
-								<group string="Questionnaire">
-									<field name="service_acc_no" />
-									<field name="year_no" />
-									<field name="stamp_state_names" />
-									<field name="employee_no" />
-									<field name="sales_vol" />
-									<field name="business_state_names" />
-									<field name="activity_report_yes_no" />
-									<field name="stamp_product_yes_no" />
-									<field name="eft_yes_no" />
-									<field name="signature_whole" />
+								<group >
+									<field name="contact_person" />
+									<field name="dunn_no" />
+								</group>
+								
+							</group>
+
+							<group string="Questionnaire">
+								<field name="service_acc_no" />
+								<field name="year_no" />
+								<field name="stamp_state_names" />
+								<field name="employee_no" />
+								<field name="sales_vol" />
+								<field name="business_state_names" />
+								<field name="activity_report_yes_no" />
+								<field name="stamp_product_yes_no" />
+								<field name="eft_yes_no" />
+							</group>
+							<group>
+								<group string="Signature/Date">
+									<field name="signature_whole" widget="image" class="oe_avatar" />
+								</group>
+								<group string="Signature">
 									<field name="signature_date" />
 								</group>
 							</group>
@@ -126,7 +131,9 @@
 									<field name="client_date" />
 									<field name="client_name_customer" />
 									<field name="client_customer_aod" />
-									<field name="client_name_customer_bank_off_sig" />
+									<field name="client_signature" widget="image" class="oe_avatar" />
+									<field name="client_name_customer_bank_off_sig" widget="image" class="oe_avatar" />
+									
 								</group>
 							</group>
 						</page>
@@ -153,7 +160,7 @@
 									<field name="aggreement_bottom_name" />
 									<field name="aggreement_bottom_title" />
 									<field name="aggreement_bottom_date" />
-									<field name="aggreement_bottom_signature" />
+									<field name="aggreement_bottom_signature" widget='image' class="oe_avatar" />
 								</group>
 								
 							</group>
@@ -196,10 +203,18 @@
 								<group>
 									<field name="deal_special" />
 									<field name="deal_comment" />
-									<field name="signature_deal" />
+								</group>
+							</group>
+							
+							<group>
+								<group>
+									<field name="signature_deal" widget='image' class="oe_avatar" />
+								</group>
+								<group>
 									<field name="deal_signature_date" />
 								</group>
 							</group>
+							
 						</page>
 						
 						
@@ -211,7 +226,7 @@
 									<field name="po_phone" />
 									<field name="po_fax" />
 									<field name="po_no" />
-									<field name="signature_po_customer" />
+									<field name="signature_po_customer" widget='image' class="oe_avatar" />
 									<field name="po_cust_signature_date" />
 								</group>
 							</group>
