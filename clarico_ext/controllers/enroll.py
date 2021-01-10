@@ -97,10 +97,12 @@ class EmiproThemeBase(http.Controller):
 				if item['name'] == 'aggreement_checkbox' and item['value'] != 'on':  
 					values[item['name']] = False
 					
-		
+		if 'c_name' not in values or 'c_email' not in values:
+			return json.dumps({'created': 'missing'})
+			
 		id = request.env['enroll.partner'].sudo().create(values)
 		
-		return json.dumps({'created': id.id})
+		return json.dumps({'created': 'yes', 'id': id.id})
 		
 		
 # 	@http.route(['/page/submit_enroll_action'], type='json', auth="public", methods=['GET', 'POST'], website=True, csrf=False)

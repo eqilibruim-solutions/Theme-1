@@ -26,9 +26,33 @@ class enroll_partner(models.Model):
 	def action_approve(self):
 		self.ensure_one()
 		
+		state_id = self.env['res.country.state'].sudo().search([('name', '=', self.b_state)])
+		if state_id:
+			state_id = state_id.id
+		else:
+			state_id = False
+			
+		
+		country_id = self.env['res.country'].sudo().search([('name', '=', self.b_country)])
+		if country_id:
+			country_id = country_id.id
+		else:
+			country_id = False
+			
+			
+		
 		val = {
-			'name': self.c_name
+			'name': self.c_name,
+			'email': self.c_email,
+			'phone': self.c_phone,
+			'street': self.b_street,
+			'street2': self.b_street2,
+			'city': self.b_city,
+			'zip': self.b_zip,
+			'state_id': state_id,
+			'country_id': country_id,
 			}
+		
 		self.env['res.partner'].sudo().create( val )
 		
 		
@@ -47,7 +71,7 @@ class enroll_partner(models.Model):
 	c_name = fields.Char("Company Name")
 	c_phone = fields.Char("Telephone")
 	c_fax = fields.Char("Fax")
-	
+	c_email = fields.Char("Email")
 	
 	b_street = fields.Char("Street")
 	b_street2 = fields.Char("Street2")
@@ -177,8 +201,46 @@ class enroll_partner(models.Model):
 	
 	
 	
+	po_red_100_soft_qty = fields.Integer("Carnival Red 100 Soft") 
+	po_blue_100_soft_qty = fields.Integer("Carnival Blue 100 Soft")
+	po_silver_100_soft_qty = fields.Integer("Carnival Silver 100 Soft")
+	po_menthol_100_soft_qty = fields.Integer("Carnival Menthol 100 Soft")
+	po_menthol_green_100_soft_qty = fields.Integer("Carnival Menthol Green 100 Soft")    
 	
+	po_red_100_box_qty = fields.Integer("Carnival Red 100 Box") 
+	po_blue_100_box_qty = fields.Integer("Carnival Blue 100 Box")
+	po_silver_100_box_qty = fields.Integer("Carnival Silver 100 Box")
+	po_menthol_100_box_qty = fields.Integer("Carnival Menthol 100 Box")
+	po_menthol_green_100_box_qty = fields.Integer("Carnival Menthol Green 100 Box")    
 	
+	po_red_king_box_qty = fields.Integer("Carnival Red King Box") 
+	po_blue_king_box_qty = fields.Integer("Carnival Blue King Box")
+	po_silver_king_box_qty = fields.Integer("Carnival Silver King Box")
+	po_menthol_king_box_qty = fields.Integer("Carnival Menthol King Box")
+	
+	po_red_100_box_qty2 = fields.Integer("Timeless Time Red 100 Box") 
+	po_blue_100_box_qty2 = fields.Integer("Timeless Time Blue 100 Box")
+	po_silver_100_box_qty2 = fields.Integer("Timeless Time Silver 100 Box")
+	po_menthol_100_box_qty2 = fields.Integer("Timeless Time Menthol 100 Box")
+	po_menthol_green_100_box_qty2 = fields.Integer("Timeless Time Menthol Green 100 Box")    
+	
+	po_red_king_box_qty2 = fields.Integer("Timeless Time Red King Box") 
+	po_blue_king_box_qty2 = fields.Integer("Timeless Time Blue King Box")
+	po_silver_king_box_qty2 = fields.Integer("Timeless Time Silver King Box")
+	po_menthol_king_box_qty2 = fields.Integer("Timeless Time Menthol King Box")
+	po_menthol_green_king_box_qty2 = fields.Integer("Timeless Time Menthol Green King Box")
+	
+	po_red_100_box_qty3 = fields.Integer("THIS Red 100 Box") 
+	po_blue_100_box_qty3 = fields.Integer("THIS Blue 100 Box")
+	po_silver_100_box_qty3 = fields.Integer("THIS Silver 100 Box")
+	po_menthol_100_box_qty3 = fields.Integer("THIS Menthol 100 Box")
+	po_menthol_green_100_box_qty3 = fields.Integer("THIS Menthol Green 100 Box")    
+	
+	po_red_king_box_qty3 = fields.Integer("THIS Red King Box") 
+	po_blue_king_box_qty3 = fields.Integer("THIS Blue King Box")
+	po_silver_king_box_qty3 = fields.Integer("THIS Silver King Box")
+	po_menthol_king_box_qty3 = fields.Integer("THIS Menthol King Box")
+	po_menthol_green_king_box_qty3 = fields.Integer("THIS Menthol Green King Box")
 	
 	
 	

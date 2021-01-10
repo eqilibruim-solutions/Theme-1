@@ -16,7 +16,7 @@
 			<div id="wrap">
 				<div class="oe_structure" />
 				<div class="container">
-				<div class="done1" >Done</div>
+				<div class="done1" ><i class="fa fa-check-circle fa-lg" style="color: green;font-size:65px; padding-bottom: 20px;" ></i></div>
 				<div class="done2" >Your Submission is waiting for Approval</div>
 				</div>
 			</div>
@@ -47,9 +47,12 @@
 
 								<div class="form-group  col-lg-4" style="padding-right: 20px">
 									<h2>Company</h2>
-									<label class="col-form-label lab-size" for="c_name">Company Name
+									<label class="col-form-label lab-size" for="c_name">Company Name<span style="color: red" >*</span>
 									</label>
 									<input type="text" name="c_name" class="form-control my-height" />
+
+									<label class="col-form-label lab-size" for="c_email">Email<span style="color: red" >*</span></label>
+									<input type="text" name="c_email" class="form-control my-height" />
 
 									<label class="col-form-label lab-size" for="c_phone">Telephone
 									</label>
@@ -57,6 +60,7 @@
 
 									<label class="col-form-label lab-size" for="c_fax">Fax</label>
 									<input type="text" name="c_fax" class="form-control my-height" />
+									
 
 								</div>
 
@@ -970,6 +974,9 @@
 									<textarea name="po_addr" class="form-control my-height1"
 										rows="4" style="display: inline-block; width: 90%" />
 
+								</div>
+								<div class="form-group  cus-div col-lg-6" style="padding-right: 20px">
+
 									<label class="col-form-label lab-size" for="po_phone">Phone</label>
 									<input type="text" name="po_phone" class="form-control my-height"
 										style="display: inline-block; width: 90%" />
@@ -986,7 +993,450 @@
 
 							</div>
 
+							<br></br>
+							<br></br>
+							
+							
+							
+							<table class="table deal-tab">
+									<tbody>
+										<tr style="background-color: lightslategrey; text-align: center;">
+											<th>Item</th>
+											<th>Description</th>
+											<th>Case</th>
+										</tr>
 
+
+
+
+
+
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Red 100 Soft</td>
+											
+											<td style="text-align: center;">
+												Carnival Red 100 Soft</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_red_100_soft_qty" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Blue 100 Soft</td>
+											
+											<td style="text-align: center;">
+												Carnival Blue 100 Soft</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_blue_100_soft_qty" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Silver 100 Soft</td>
+											
+											<td style="text-align: center;">
+												Carnival Silver 100 Soft</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_silver_100_soft_qty" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Menthol 100 Soft</td>
+											
+											<td style="text-align: center;">
+												Carnival Menthol 100 Soft</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_menthol_100_soft_qty" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Menthol Green 100 Soft</td>
+											
+											<td style="text-align: center;">
+												Carnival Menthol Green 100 Soft</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_menthol_green_100_soft_qty" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										
+										
+										
+										
+										
+										
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Red 100 Box</td>
+											
+											<td style="text-align: center;">
+												Carnival Red 100 Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_red_100_box_qty" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Blue 100 Box</td>
+											
+											<td style="text-align: center;">
+												Carnival Blue 100 Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_blue_100_box_qty" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Silver 100 Box</td>
+											
+											<td style="text-align: center;">
+												Carnival Silver 100 Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_silver_100_box_qty" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Menthol 100 Box</td>
+											
+											<td style="text-align: center;">
+												Carnival Menthol 100 Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_menthol_100_box_qty" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Menthol Green 100 Box</td>
+											
+											<td style="text-align: center;">
+												Carnival Menthol Green 100 Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_menthol_green_100_box_qty" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										
+										
+										
+										
+										
+										
+										
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Red King Box</td>
+											
+											<td style="text-align: center;">
+												Carnival Red King Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_red_king_box_qty" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Blue King Box</td>
+											
+											<td style="text-align: center;">
+												Carnival Blue King Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_blue_king_box_qty" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Silver King Box</td>
+											
+											<td style="text-align: center;">
+												Carnival Silver King Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_silver_king_box_qty" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Menthol King Box</td>
+											
+											<td style="text-align: center;">
+												Carnival Menthol King Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_menthol_king_box_qty" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										
+										
+										
+										
+										
+										
+										
+										
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Red 100 Box</td>
+											
+											<td style="text-align: center;">
+												Timeless Time Red 100 Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_red_100_box_qty2" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Blue 100 Box</td>
+											
+											<td style="text-align: center;">
+												Timeless Time Blue 100 Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_blue_100_box_qty2" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Silver 100 Box</td>
+											
+											<td style="text-align: center;">
+												Timeless Time Silver 100 Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_silver_100_box_qty2" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Menthol 100 Box</td>
+											
+											<td style="text-align: center;">
+												Timeless Time Menthol 100 Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_menthol_100_box_qty2" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Menthol Green 100 Box</td>
+											
+											<td style="text-align: center;">
+												Timeless Time Menthol Green 100 Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_menthol_green_100_box_qty2" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										
+										
+										
+										
+										
+										
+										
+										
+										
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Red King Box</td>
+											
+											<td style="text-align: center;">
+												Timeless Time Red King Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_red_king_box_qty2" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Blue King Box</td>
+											
+											<td style="text-align: center;">
+												Timeless Time Blue King Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_blue_king_box_qty2" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Silver King Box</td>
+											
+											<td style="text-align: center;">
+												Timeless Time Silver King Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_silver_king_box_qty2" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Menthol King Box</td>
+											
+											<td style="text-align: center;">
+												Timeless Time Menthol King Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_menthol_king_box_qty2" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Menthol King Box</td>
+											
+											<td style="text-align: center;">
+												Timeless Time Menthol green King Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_menthol_green_king_box_qty2" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										
+										
+										
+										
+										
+										
+										
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Red 100 Box</td>
+											
+											<td style="text-align: center;">
+												THIS Red 100 Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_red_100_box_qty3" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Blue 100 Box</td>
+											
+											<td style="text-align: center;">
+												THIS Blue 100 Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_blue_100_box_qty3" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Silver 100 Box</td>
+											
+											<td style="text-align: center;">
+												THIS Silver 100 Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_silver_100_box_qty3" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Menthol 100 Box</td>
+											
+											<td style="text-align: center;">
+												THIS Menthol 100 Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_menthol_100_box_qty3" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Menthol Green 100 Box</td>
+											
+											<td style="text-align: center;">
+												THIS Menthol Green 100 Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_menthol_green_100_box_qty3" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										
+										
+										
+										
+										
+										
+										
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Red King Box</td>
+											
+											<td style="text-align: center;">
+												THIS Red King Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_red_king_box_qty3" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Blue King Box</td>
+											
+											<td style="text-align: center;">
+												THIS Blue King Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_blue_king_box_qty3" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Silver King Box</td>
+											
+											<td style="text-align: center;">
+												THIS Silver King Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_silver_king_box_qty3" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Menthol King Box</td>
+											
+											<td style="text-align: center;">
+												THIS Menthol King Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_menthol_king_box_qty3" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										<tr style="text-align: center;">
+											<td style="text-align: center;">
+												Menthol King Box</td>
+											
+											<td style="text-align: center;">
+												THIS Menthol green King Box</td>
+											<td>
+												<input type="number" min="0" step="1" name="po_menthol_green_king_box_qty3" class="form-control my-height "
+													style="display: inline-block;" />
+											</td>
+										</tr>
+										
+										
+										
+										
+
+									</tbody>
+								</table>
+								
 
 
 							<br></br>

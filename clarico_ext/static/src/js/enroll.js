@@ -93,28 +93,34 @@ odoo.define('clarico_ext.enroll', function(require) {
 			ajax.jsonRpc('/page/submit_enroll_action', 'call', {'data' : formData})
 			.then(function (data) {
                 var result = JSON.parse(data);
-                if (result.created != 0){
-                	setupReader($('.signature_whole')[0].files[0], result.created, 'signature_whole', 'no');
+                if (result.created == 'missing'){
+                	alert("Please fill all required fields")
+                	$('.loadclass').removeClass("loading-submit");
+                }
+                
+                if (result.created == 'yes'){
+                	setupReader($('.signature_whole')[0].files[0], result.id, 'signature_whole', 'no');
 
-                	setupReader($('.client_signature')[0].files[0], result.created, 'client_signature', 'no');
-                	setupReader($('.client_name_customer_bank_off_sig')[0].files[0], result.created, 'client_name_customer_bank_off_sig', 'no');
+                	setupReader($('.client_signature')[0].files[0], result.id, 'client_signature', 'no');
+                	setupReader($('.client_name_customer_bank_off_sig')[0].files[0], result.id, 'client_name_customer_bank_off_sig', 'no');
                 	
-                	setupReader($('.aggreement_bottom_signature')[0].files[0], result.created, 'aggreement_bottom_signature', 'no');
+                	setupReader($('.aggreement_bottom_signature')[0].files[0], result.id, 'aggreement_bottom_signature', 'no');
                 	
-                	setupReader($('.signature_deal')[0].files[0], result.created, 'signature_deal', 'no');
+                	setupReader($('.signature_deal')[0].files[0], result.id, 'signature_deal', 'no');
                 	
-                	setupReader($('.signature_po_customer')[0].files[0], result.created, 'signature_po_customer', 'yes');
+                	setupReader($('.signature_po_customer')[0].files[0], result.id, 'signature_po_customer', 'yes');
+                	
+                	
+                	setTimeout(
+              			  function() 
+              			  {
+              				  window.location.replace("/page/enrolled")
+              				  
+              			  }, 3000);
                 	
                 }
             });
 			
-			
-			setTimeout(
-			  function() 
-			  {
-				  window.location.replace("/page/enrolled")
-				  
-			  }, 3000);
 			
 			
     		
