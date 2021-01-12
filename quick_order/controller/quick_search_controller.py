@@ -137,6 +137,7 @@ class QuickSearchConroller(Controller):
         delete_template_row = False
         template = ''
         product_r = []
+        print (kw, 'XXXXXXXXXXXXXXXXXXXXXXXX\n\n\n\n\n\n')
         try :
             if len(product_ids):
                 user_exists = request.env['quick.order'].search([('user_id', '=', request._uid),('state', '=', 'draft')])
@@ -206,6 +207,7 @@ class QuickSearchConroller(Controller):
     @route(['/quickorder/createorder'], auth="user", type="json", website=True)
     def create_order(self,id=0, order_now=[], **kw):
         success  = request.env['quick.order.message'].search([], limit = 1)
+        print ("\n\n\n\n\niNNNNNNNNNNNNNNNNNNNNNNNNN\n\n\n")
         try :
             quick_order = request.env['quick.order'].browse(int(id))
         except Exception as e:

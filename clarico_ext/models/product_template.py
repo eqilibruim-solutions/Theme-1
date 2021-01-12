@@ -151,7 +151,8 @@ def _cart_update(self, product_id=None, line_id=None, add_qty=0, set_qty=0, **kw
 				
 			
 			
-				
+			print (values, 'VVVVVVVVV')
+			print (kwargs, 'KKKKKKA')
 			if 'product_uom_id' in kwargs:
 				values.update({'product_uom': int(kwargs['product_uom_id'])})
 			else:
@@ -177,6 +178,8 @@ def _cart_update(self, product_id=None, line_id=None, add_qty=0, set_qty=0, **kw
 			# - linked_line_id
 			order_line.name = order_line.get_sale_order_line_multiline_description_sale(product)
 
+		
+			
 		option_lines = self.order_line.filtered(lambda l: l.linked_line_id.id == order_line.id)
 
 		return {'line_id': order_line.id, 'quantity': quantity, 'option_ids': list(set(option_lines.ids))}
@@ -206,4 +209,5 @@ class product(models.Model):
 			units.append(item)
 			
 		return units
-		
+	
+	

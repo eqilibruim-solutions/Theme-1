@@ -88,9 +88,21 @@ odoo.define('clarico_ext.website_sale', function(require) {
     	
     	
     	//ONCHANGE OF UoM VIEW PRICE ACCORDINGLY
+    	$('.uom_id1').on('change', function(ev){
+    		var base_price = $(this).parents('.uom_sel1').find('.base_price').text()
+    		var price_ele = $(this).parents('.oe_product_cart').find('.o_wsale_product_information').find('.product_price').find('.oe_currency_value')
+    		ajax.jsonRpc('/get_uom_price', 'call', {price: base_price, uom: $(this).val()}).then(function (data) {
+                var result = JSON.parse(data);
+                price_ele.text(result.price)
+            });
+    	});
+    	
+    	
+    	//ONCHANGE OF UoM VIEW PRICE ACCORDINGLY
     	$('#uom_id').on('change', function(ev){
+    		
     		var base_price = $('.base_price').text()
-    		var price_ele = $(this).parents('.o_wsale_product_information').find('.o_wsale_product_information_text').find('.product_price').find('.oe_currency_value')
+    		var price_ele = $(this).parents('.js_main_product').find('.oe_price_h4').find('.oe_currency_value')
     		ajax.jsonRpc('/get_uom_price', 'call', {price: base_price, uom: $(this).val()}).then(function (data) {
                 var result = JSON.parse(data);
                 price_ele.text(result.price)

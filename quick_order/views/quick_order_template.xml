@@ -108,6 +108,7 @@
                    <th class="text-black-50">PRODUCT</th>
                    <th class="text-black-50">PRICE </th>
                    <th />
+                   <th />
                </tr>
              </thead>
              <tbody >
@@ -140,6 +141,18 @@
                           <span itemprop="priceCurrency" style="display:none;" t-esc="website.currency_id.name" />
                         </b>
                       </div>
+                   </td>
+                   <td>
+                   		<div class='uom_sel1' >
+					  		<select name="uom_id" class="uom_id2 form-control te_theme_button">
+			                    <t t-foreach="product.units_web()" t-as="uw">
+			                        <option t-att-value="uw.id" >
+			                            <t t-esc="uw.name" />
+			                        </option>
+			                    </t>
+			                </select>
+			                <span t-field="product.list_price" class="base_price" style="display: none" />
+					  	</div>
                    </td>
                    <td>
                      <div class="slid-up-table">

@@ -118,6 +118,8 @@ class WebsiteSale2(WebsiteSale):
 		if kw.get('no_variant_attribute_values'):
 			no_variant_attribute_values = json.loads(kw.get('no_variant_attribute_values'))
 
+		print (kw, 'WWWWWWWWWWWWWWWQ\n\n\n')
+		
 		if 'uom_id' in kw:
 			sale_order._cart_update(
 				product_id=int(product_id),
@@ -162,6 +164,8 @@ class EmiproThemeBase(http.Controller):
 		if ref == 'smaller':
 			price = price / factor
 		
+		
+		print (price, 'PPPPPPPPPPPPPPPPPPPRICEEEEEEE\n\n\n\n\n')
 		return json.dumps({'price': price})
 	
 	

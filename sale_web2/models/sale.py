@@ -12,6 +12,50 @@ from odoo.exceptions import UserError, AccessError
 import odoorpc
 
 
+
+
+class Account(models.Model):
+	
+	_inherit = "account.move"
+	
+	
+	def trigger_cretae_invoice(self, data):
+		#=======================================================================
+		# DATA CONTAINSE-
+		# 1. DATA[0] -- LOCAL SALE ORDER ID
+		# 2. DATA[1] -- CREATING INVOICE TYPE
+		# 3. DATA[2] -- AMOUNT (PERCENTAGE OR FIXED)
+		#=======================================================================
+		
+		vals = {
+			'advance_payment_method': data[1],
+			}
+		
+		if data[1] == 'delivered':
+			vals.update({'amount': 0.0, 'fixed_amount': 0.0})
+		if data[1] == 'percentage':
+			vals.update({'amount': data[2], 'fixed_amount': 0.0})
+		if data[1] == 'fixed':
+			vals.update({'amount': 0.0, 'fixed_amount': data[2]})
+			
+		
+		wizard = self.env['sale.advance.payment.inv'].create(vals)
+		context = {
+		    "active_model": 'sale.order',
+		    "active_ids": [data[0]],
+		    "active_id": data[0],
+		    'open_invoices': False,
+		    }
+		new_inv = wizard.with_context(context).create_invoices()
+		so = self.env['sale.order'].browse(data[0])
+		
+		##FIND LATEST CREATED INVOICE TO RETURN
+		new_inv = self.env['account.move'].search([('invoice_origin', '=', so.name)], limit=1, order='id desc')
+		
+		return new_inv
+		
+	
+	
 class Partner(models.Model):
 	
 	_inherit = "res.partner"
@@ -69,12 +113,13 @@ class sale_order(models.Model):
 			Website_r = remote_odoo.env['website']
 			Product_r = remote_odoo.env['product.product']
 			
-			print (remote_odoo.env.db, 'DDDDDDDDDDDDDDDDDDD')
 			
-			local_partner_id = self.partner_id
+			local_partner_id = order.partner_id
 			remote_partner_id = Partner_r.search([('email', '=', local_partner_id.email)], limit=1)
 			if not remote_partner_id and local_partner_id.customer_id:
 				remote_partner_id = Partner_r.search([('customer_id', '=', local_partner_id.customer_id)], limit=1)
+				
+			print (order, local_partner_id, 'QQQQQ\n\n\n\n\n\n')
 			if not remote_partner_id:
 				remote_partner_id = Partner_r.create({
 											'name': local_partner_id.name,

@@ -1,4 +1,13 @@
 
+.oe_product_cart .o_wsale_product_btn{
+	margin-bottom: 40px !important;
+
+}
+.img-fluid-equal > .img-fluid {
+    min-height: 100px !important;
+    max-height: 108px !important;
+    max-width: 150px !important;
+}
     
     
 #uom_id{
@@ -8,6 +17,21 @@
 
 }
 
+.uom_id1{
+	width: 115px;
+    height: 32px;
+    border: 1px solid;
+
+}
+
+.uom_id2{
+	border: 1px solid black;
+    width: 80px;
+    height: 29px;
+    margin-top: -9px;
+    margin-right: 0px;
+    margin-left: -30px;
+}
 
 .uom_sel{
     margin-bottom: 10px;

@@ -16,11 +16,11 @@
 	</template>
 
 	
-	<!-- 
+	 
 	<template id="products_item_inherited_uom" inherit_id="website_sale.products_item">
-        <xpath expr="//div/form" position="after">
+        <xpath expr="//form/div" position="after">
             <div class='uom_sel1' >
-		  		<select id="uom_id" name="uom_id" class="form-control te_theme_button">
+		  		<select name="uom_id" class="uom_id1 form-control te_theme_button">
                     <t t-foreach="product.units_web()" t-as="uw">
                         <option t-att-value="uw.id" >
                             <t t-esc="uw.name" />
@@ -38,7 +38,7 @@
         </xpath>
         
     </template>
-     -->
+     
     
     
 	<template id="product_uom_web1" inherit_id="website_sale.product" customize_show="True" name="Select Quantity">
@@ -50,7 +50,7 @@
                             <t t-esc="uw.name" />
                         </option>
                     </t>
-                </select><span></span>
+                </select>
                 <span t-field="product.list_price" class="base_price" style="display: none" />
 		  	</div>
 		</xpath>
