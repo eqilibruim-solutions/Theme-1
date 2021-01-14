@@ -18,7 +18,8 @@
 	
 	 
 	<template id="products_item_inherited_uom" inherit_id="website_sale.products_item">
-        <xpath expr="//form/div" position="after">
+<!--        <xpath expr="//form/div" position="after">-->
+		<xpath expr="//form/div[@class='card-body p-0 text-center o_wsale_product_information']/div[1]" position="before">
             <div class='uom_sel1' >
 		  		<select name="uom_id" class="uom_id1 form-control te_theme_button">
                     <t t-foreach="product.units_web()" t-as="uw">
@@ -29,6 +30,22 @@
                 </select>
                 <span t-field="product.list_price" class="base_price" style="display: none" />
 		  	</div>
+		</xpath>
+		<xpath expr="//form/div[@class='card-body p-0 text-center o_wsale_product_information']/div[1]" position="before">
+			<div class="css_quantity input-group quick_qty" contenteditable="false">
+				<div class="input-group-prepend">
+					<a t-attf-href="#" class="btn btn-secondary js_add_cart_json" aria-label="Remove one" title="Remove one">
+						<i class="fa fa-minus"></i>
+					</a>
+				</div>
+				<input type="text" class="form-control quantity" data-min="1" name="add_qty" t-att-value="add_qty or 1"/>
+				<div class="input-group-append">
+					<a t-attf-href="#" class="btn btn-secondary float_left js_add_cart_json" aria-label="Add one" title="Add one">
+						<i class="fa fa-plus"></i>
+					</a>
+				</div>
+			</div>
+
         </xpath>
         
         <xpath expr="//form/div[1]/a/span" position="replace">

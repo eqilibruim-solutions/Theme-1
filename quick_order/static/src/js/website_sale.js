@@ -14,15 +14,27 @@ odoo.define('quick_order.website_sale', function (require) {
   	//ONCHANGE OF UoM VIEW PRICE ACCORDINGLY
   	$('.uom_id_quick').on('change', function(ev){
   		var base_price = $(this).parents('.uom_sel2').find('.base_price').text()
-  		var price_ele = $(this).parents('td').prev().find('.oe_currency_value')
+  		var price_ele = $(this).parents('tr').find('.oe_currency_value')
   		ajax.jsonRpc('/get_uom_price', 'call', {price: base_price, uom: $(this).val()}).then(function (data) {
               var result = JSON.parse(data);
               price_ele.text(result.price)
           });
   	});
-  	
-  	
-  
+
+  	$('.js_minus_cart_json_quick').on('click', function(ev){
+  		var current = $(this).parents('.quick_qty2').find('.quantity').val()
+  		current = parseInt(current)
+  		if (current > 1){
+  		    $(this).parents('.quick_qty2').find('.quantity').val((current - 1)+"")
+  		}
+  	});
+
+  	$('.js_plus_cart_json_quick').on('click', function(ev){
+  		var current = $(this).parents('.quick_qty2').find('.quantity').val()
+  		current = parseInt(current)
+  		$(this).parents('.quick_qty2').find('.quantity').val((current + 1)+"")
+  	});
+
   });
 
 

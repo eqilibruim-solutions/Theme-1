@@ -319,7 +319,9 @@ window.onbeforeunload = function() { return };
            if(bool){
              $(this).parents(".clickable").css("border-left","3px solid #428bca");
              var id = $(this).parents(".clickable").attr("data-oe-id");
-             $.get('/quickorder/getvariants', {"product_id" : id, 'uom_id': $('.uom_id_quick').val()})
+             var uom_id = $(e.target).parents('tr').find('.uom_id_quick').val()
+             var quantity = $(e.target).parents('tr').find('.quantity').val()
+             $.get('/quickorder/getvariants', {"product_id" : id, 'uom_id': uom_id, 'quantity': quantity})
                .done(function(data,textStatus, xhr) {
                    if(xhr.status == 211){
                      referr.find('.slid-up-table').slideUp(300, function(){

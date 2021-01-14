@@ -113,13 +113,13 @@ class QuickSearchConroller(Controller):
 			if user_exists:
 				products_exists = self.variants_availability()
 				if prod.product_variant_ids.id not in products_exists:
-					user_exists.quick_order_line = [(0, 0, {"product_id" : prod.product_variant_ids.id, 'uom_id': kw['uom_id']})]
+					user_exists.quick_order_line = [(0, 0, {"product_id" : prod.product_variant_ids.id, 'uom_id': kw['uom_id'], 'quantity': int(kw['quantity']) })]
 			elif not user_exists:
 				user_exists = request.env['quick.order'].create({
-											"quick_order_line": [(0, 0, {"product_id" : prod.product_variant_ids.id, 'uom_id': kw['uom_id']})]
+											"quick_order_line": [(0, 0, {"product_id" : prod.product_variant_ids.id, 'uom_id': kw['uom_id'], 'quantity': int(kw['quantity'])})]
 											})
 			products = prod.product_variant_ids.ids
-			return Response(request.env['ir.ui.view'].render_template('quick_order.add_to_cart_mutliple_body',{'order_quicks' : user_exists.quick_order_line, 'id':user_exists.id, 'compute_currency' : self.compute_currency, 'product_r': products, 'uom_id': kw['uom_id']}),content_type='text/html;charset=utf-8',status=211)
+			return Response(request.env['ir.ui.view'].render_template('quick_order.add_to_cart_mutliple_body',{'order_quicks' : user_exists.quick_order_line, 'id':user_exists.id, 'compute_currency' : self.compute_currency, 'product_r': products, 'uom_id': kw['uom_id'], 'quantity': int(kw['quantity']) }),content_type='text/html;charset=utf-8',status=211)
 		if not prod.product_variant_ids:
 			return Response({'error' : "No variants found"}, content_type='application/json',status=500)
 		if user_exists:
@@ -228,7 +228,7 @@ class QuickSearchConroller(Controller):
 				else:
 					order_line = request.env['sale.order.line'].sudo().search([('product_id', '=', order['id']), ('product_uom', '=', order['uom_id'])])
 					if len(order_line) > 0:
-						sale_order._cart_update( product_id = order.get('id'), line_id = order_line[0].id, add_qty = order.get('quantity'), set_qty = None )
+						sale_order._cart_update( product_id = order.get('id'), line_id = order_line[0].id, set_qty = order.get('quantity'),  add_qty= None )
 						order_line[0].product_uom = int(order['uom_id'])
 						order_line[0].product_uom_change()
 			if not id:

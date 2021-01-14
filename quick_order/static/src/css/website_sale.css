@@ -1,15 +1,22 @@
 .uom_id_quick{
 	border: 1px solid black;
-    width: 80px;
+    width: 90px;
     height: 29px;
-    margin-top: -9px;
-    margin-right: 0px;
-    margin-left: -30px;
+    margin-right: 15px;
+    margin-left: -38px;
 }
 
 
 .uom_sel2{
-	margin-top: 10px;
-    margin-left: 28%;
+	margin-top: 2px;
+    margin-left: 40%;
 
+}
+
+
+.quick_qty2 {
+    width: 110px !important;
+    margin-top: 6px;
+    margin-left: 0px;
+    margin-right: 10px;
 }

@@ -31,7 +31,7 @@ class Product(models.Model):
 				factor = uom.factor
 				price = price / factor
 
-		return price
+		return price #* line.quantity or 1
 
 
 
