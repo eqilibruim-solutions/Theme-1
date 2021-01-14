@@ -155,17 +155,17 @@ class EmiproThemeBase(http.Controller):
 	def get_uom_price(self, **kw):
 		
 		uom = request.env['uom.uom'].sudo().browse(int(kw['uom']))
-		factor = uom.factor_inv
 		ref = uom.uom_type
 		
 		price = float(kw['price'])
 		if ref == 'bigger':
+			factor = uom.factor_inv
 			price = price * factor
 		if ref == 'smaller':
+			factor = uom.factor
 			price = price / factor
 		
 		
-		print (price, 'PPPPPPPPPPPPPPPPPPPRICEEEEEEE\n\n\n\n\n')
 		return json.dumps({'price': price})
 	
 	

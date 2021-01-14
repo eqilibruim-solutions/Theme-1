@@ -190,7 +190,7 @@ window.onbeforeunload = function() { return };
      $(".main_add_to_cart tr").each(function(i) {
        var quantity = $(this).find('#qunatity').val();
        if(quantity > 0){
-         order.push({"id": parseInt($(this).attr('item_id')), "quantity": parseFloat(quantity)});
+         order.push({"id": parseInt($(this).attr('item_id')), "quantity": parseFloat(quantity), "uom_id": parseInt($(this).attr('uom_id')) });
        }
      })
      return order
@@ -319,7 +319,7 @@ window.onbeforeunload = function() { return };
            if(bool){
              $(this).parents(".clickable").css("border-left","3px solid #428bca");
              var id = $(this).parents(".clickable").attr("data-oe-id");
-             $.get('/quickorder/getvariants', {"product_id" : id})
+             $.get('/quickorder/getvariants', {"product_id" : id, 'uom_id': $('.uom_id_quick').val()})
                .done(function(data,textStatus, xhr) {
                    if(xhr.status == 211){
                      referr.find('.slid-up-table').slideUp(300, function(){

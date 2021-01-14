@@ -143,16 +143,17 @@
                       </div>
                    </td>
                    <td>
-                   		<div class='uom_sel1' >
-					  		<select name="uom_id" class="uom_id2 form-control te_theme_button">
-			                    <t t-foreach="product.units_web()" t-as="uw">
-			                        <option t-att-value="uw.id" >
-			                            <t t-esc="uw.name" />
-			                        </option>
-			                    </t>
-			                </select>
-			                <span t-field="product.list_price" class="base_price" style="display: none" />
-					  	</div>
+                    <div class='uom_sel2' >
+                        <select name="uom_id" class="uom_id_quick form-control te_theme_button">
+                            <t t-foreach="product.units_web()" t-as="uw">
+                                <option t-att-value="uw.id" >
+                                    <t t-esc="uw.name" />
+                                </option>
+                            </t>
+                        </select>
+                        <t t-set="combination_info" t-value="product._get_combination_info(only_template=True, add_qty=add_qty or 1, pricelist=pricelist)"/>
+                        <span t-esc="combination_info['price']" class="base_price" style="display: none" />
+                    </div>
                    </td>
                    <td>
                      <div class="slid-up-table">
@@ -294,7 +295,7 @@
        <t t-foreach="order_quicks" t-as="product" t-if="order_quicks">
         <t t-set="price_list" t-value="website.get_current_pricelist()" />
         <t t-set="combination_info" t-value="product.product_id.product_tmpl_id._get_combination_info(product_id=product.product_id.id, add_qty=product.quantity, pricelist=pricelist )"/>
-        <tr t-att-item_id="product.product_id.id" t-att-temp_id="product.product_id.product_tmpl_id.id" t-att-line_id="product.id" t-att-data_id="id" t-if="product.product_id.id in product_r">
+        <tr t-att-item_id="product.product_id.id" t-att-temp_id="product.product_id.product_tmpl_id.id" t-att-uom_id="uom_id or product.uom_id and product.uom_id.id" t-att-line_id="product.id" t-att-data_id="id" t-if="product.product_id.id in product_r">
         <t t-set="table_hreader_render" t-value="True if request.httprequest.full_path.startswith('/quickorder/shoppinglist') else False"/>
           <td>
              <div class="slid-up-table">
@@ -333,10 +334,11 @@
                <div class="quick_order_stock"/>
              </div>
            </td>
+            <t t-set="uom_price" t-value="product.product_id.get_uom_price_quick_order(combination_info['price'], uom_id, product)"/>
            <td id="lst_price"><div class="slid-up-table">
-             <t t-esc="combination_info['price']" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}"/></div>
+             <t t-esc="uom_price" t-options="{'widget': 'monetary', 'display_currency': website.get_current_pricelist().currency_id, 'from_currency': website.currency_id}"/></div>
            </td>
-           <td id="sub_total" t-att-class="'d-none' if not table_hreader_render else ''"><div class="slid-up-table"><t t-esc="compute_currency(combination_info['price']*float(product.quantity))" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/></div></td>
+           <td id="sub_total" t-att-class="'d-none' if not table_hreader_render else ''"><div class="slid-up-table"><t t-esc="compute_currency(uom_price*float(product.quantity))" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/></div></td>
          </tr>
        </t>
      </template>
