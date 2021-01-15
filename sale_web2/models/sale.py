@@ -73,7 +73,32 @@ class sale_order(models.Model):
 	unique_seq = fields.Char("Unique Sequence")
 	remote_order_id = fields.Integer("Remote Order ID")
 	
-	
+
+
+	def trigger_cretae_pdf(self, A, B, C):
+		#=======================================================================
+		# DATA CONTAINSE-
+		# 1. A -- PDF FILE NAME
+		# 2. B -- BINARY DATA STRING
+		# 3. C -- LOCAL SO ID
+		#=======================================================================
+
+		order = self.sudo().browse(int(C))
+		if order:
+			attachment = self.env['ir.attachment'].sudo().create({
+				'name': A,
+				'datas': B.encode('utf-8'),
+				'res_model': 'sale.order',
+				'res_id': order.id,
+			})
+			##MAKE ORDER AND LINES FULLY INVIOCED
+			for line in order.order_line:
+				line.invoice_status = 'invoiced'
+			order.invoice_status = 'invoiced'
+			order.unique_seq = A.split('.')[0]
+
+
+
 	
 	def write(self, vals):
 		
