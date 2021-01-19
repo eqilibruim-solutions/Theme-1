@@ -61,8 +61,15 @@ class Partner(models.Model):
 	_inherit = "res.partner"
 	
 	customer_id = fields.Char("CUSTOMER ID")
-	
-	
+
+
+class sale_order_line(models.Model):
+	_inherit = "sale.order.line"
+
+	carton = fields.Char("Carton")
+	carrier = fields.Char("Carrier")
+	track_no = fields.Char("Tracking No.")
+
 
 class sale_order(models.Model):
 	
@@ -72,12 +79,35 @@ class sale_order(models.Model):
 	po_number = fields.Char("PO Number")
 	unique_seq = fields.Char("Unique Sequence")
 	remote_order_id = fields.Integer("Remote Order ID")
-	
+
+	## METHOD TO RECIEVE CSV DATA TO RAZOSS WHEN IT IS BIENG UPDATED IN KTNG SALE ORDER (TRACK NO, CARRIER)
+	## METHOD CALLED FROM KTNG
+	def trigger_update_csv_data(self, data):
+		# =======================================================================
+		# ARGUMENTS -
+		# 1. data[0] -- Local SO id
+		# 2. data[1] -- product id
+		# 3. data[2] -- Carrier
+		# 4. data[3] -- Tracking No.
+		# 4. data[4] -- Carton
+		# =======================================================================
+		print (data, '\n VVVVVVV')
+		so = self.browse(data[0])
+		if so:
+			for item in so.order_line:
+				if item.product_id.id == data[1]:
+					item.carrier = data[2]
+					item.track_no = data[3]
+					item.carton = data[4]
 
 
+
+	## METHOD TO RECIEVE PDF INVOICES TO RAZOSS WHEN IT IS BIENG UPLOADED IN KTNG SALE ORDER
+	## ALSO UPDATE UNIQUE SEQUENCE FIELD AND INVOICE STATUS
+	## METHOD CALLED FROM KTNG
 	def trigger_cretae_pdf(self, A, B, C):
 		#=======================================================================
-		# DATA CONTAINSE-
+		# ARGUMENTS -
 		# 1. A -- PDF FILE NAME
 		# 2. B -- BINARY DATA STRING
 		# 3. C -- LOCAL SO ID
