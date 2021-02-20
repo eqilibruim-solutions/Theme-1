@@ -33,8 +33,8 @@
         </record>
 
         <record id="website_menu_gallery" model="website.menu">
-            <field name="name">Gallery</field>
-            <field name="url">/gallery</field>
+            <field name="name">About Us</field>
+            <field name="url">/about-us</field>
             <field name="parent_id" ref="website.main_menu"/>
             <field name="website_id" ref="website.default_website"/>
             <field name="sequence" type="int">12</field>

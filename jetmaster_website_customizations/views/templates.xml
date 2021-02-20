@@ -26,6 +26,8 @@
                         type="text/javascript"/>
                 <script src="/jetmaster_website_customizations/static/src/js/jquery.cookie.min.js"
                         type="text/javascript"/>
+                <script src="/jetmaster_website_customizations/static/src/js/navbar_collapse.js"
+                        type="text/javascript"/>
                 
             </xpath>
         </template>

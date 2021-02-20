@@ -1,6 +1,6 @@
 odoo.define('jetmaster_website_customizations.partlist', function(require){
 	'use strict';
-
+//    console.log('this is my log uzair')
 	function partListRequest(product_id){
 
 		var formatted_table = null;
@@ -10,7 +10,7 @@ odoo.define('jetmaster_website_customizations.partlist', function(require){
 			data : {'product_id': product_id},
 			async : false
 		}).done(function(response){
-			 let parsed_response = JSON.parse(response)
+			let parsed_response = JSON.parse(response)
 			let formatted_table_start = `
 			<div class="container">
 			<center><h2>Partlist</h2></center>
@@ -75,7 +75,7 @@ odoo.define('jetmaster_website_customizations.partlist', function(require){
 			let formatted_table = partListRequest(product_id)
 			$("#partlist_data").html(formatted_table)
 
-			document.getElementById("btnPartlist").addEventListener ("click", showPartList, false);
+			document.getElementById("btnPartlist").addEventListener("click", showPartList, false);
 
 			function showPartList() {
 				let product_id = $(this)[0].form[1].value

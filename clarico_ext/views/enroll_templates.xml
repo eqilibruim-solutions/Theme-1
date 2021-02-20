@@ -118,7 +118,7 @@
 							<div class="form-row" style="margin-top: 50px;">
 
 								<div class="form-group  cus-div col-lg-6" style="padding-right: 20px">
-									<h2 style="margin-bottom: 35px;">Directors</h2>
+									<h2 style="margin-bottom: 35px;">Key Contacts</h2>
 									1.
 									<input type="text" name="dir_name1" class="form-control my-height"
 										placeholder="Name" style="display: inline-block; width: 60%" />
@@ -145,10 +145,11 @@
 
 									<br></br>
 									<br></br>
-									<label class="col-form-label lab-size" for="contact_person">Contact Person
-										Name</label>
-									<input type="text" name="contact_person" class="form-control my-height"
-										placeholder="Contact Person Name" style="" />
+<!--									zz changed-->
+<!--									<label class="col-form-label lab-size" for="contact_person">Contact Person-->
+<!--										Name</label>-->
+<!--									<input type="text" name="contact_person" class="form-control my-height"-->
+<!--										placeholder="Contact Person Name" style="" />-->
 
 									<label class="col-form-label lab-size" for="dunn_no">Dunn &amp;
 										Bradstreet #</label>
@@ -208,7 +209,7 @@
 								<div class="form-group  cus-div col-lg-12" style="padding-right: 20px">
 									<h2 style="margin-top: 20px;">Questionnaire</h2>
 									<br></br>
-									1. How many accounts do you service?
+									1. How many locations do you service?
 									<br></br>
 									<input type="text" name="service_acc_no" class="form-control my-height"
 										placeholder="0"
@@ -247,7 +248,7 @@
 									<br></br>
 
 
-									5. Sales volume for last year?
+									5. Sales volume($) for last year?
 									<br></br>
 									<input type="text" name="sales_vol" class="form-control my-height"
 										placeholder="0.0"
@@ -266,7 +267,7 @@
 									<br></br>
 
 
-									7. Are you able to provide an activity report?
+									7. Are you able to provide an activity report yearly?
 									<br></br>
 									<select name="activity_report_yes_no" class="form-control my-height"
 										style="margin-left: 11px; display: inline-block; width: 50%">
@@ -304,12 +305,12 @@
 								<div class="form-group  cus-div col-lg-12" style="padding-right: 20px">
 									<h2 style="margin-top: 20px;">Memo</h2>
 									<br></br>
-									*KT&amp;G’s products are
+									*Razzo's products are
 									<b>100% guaranteed.</b>
 									(When returning merchandise, an affidavit must be submitted
 									indicating
 									stamped and unstamped product, so a credit can be determined by the
-									state.) And the wholesaler will be responsible
+									state.) And the retailer will be responsible
 									for any costs associated with shipping/handling when returning any
 									merchandise which was NOT refused at the
 									door.
@@ -323,18 +324,18 @@
 								</div>
 
 
-								<div class="form-group  cus-div col-lg-12" style="padding-right: 20px; text-align: center;">
+<!--								<div class="form-group  cus-div col-lg-12" style="padding-right: 20px; text-align: center;">-->
 
-									Signature
-									<input type="file" name="signature_whole"
-										class="form-control my-height signature_whole" style="margin-left: 11px; display: inline-block; width: 220px"></input>
+<!--									Signature-->
+<!--									<input type="file" name="signature_whole"-->
+<!--										class="form-control my-height signature_whole" style="margin-left: 11px; display: inline-block; width: 220px"></input>-->
 
-									<span style="margin-left: 30px; ">
-										Date
-										<input type="date" name="signature_date" class="form-control my-height"
-											style="margin-left: 11px; display: inline-block; width: 170px"></input>
-									</span>
-								</div>
+<!--									<span style="margin-left: 30px; ">-->
+<!--										Date-->
+<!--										<input type="date" name="signature_date" class="form-control my-height"-->
+<!--											style="margin-left: 11px; display: inline-block; width: 170px"></input>-->
+<!--									</span>-->
+<!--								</div>-->
 
 							</div>
 
@@ -392,11 +393,11 @@
 							I hereby request a bank reference letter on your bank’s
 							letterhead including the financial
 							information described below to
-							be provided to KT&amp;G USA. You may use the template provided
+							be provided to Razzo's USA. You may use the template provided
 							in
 							Part II or your own standard template for these types of
 							requests. Please note that a
-							representative from KT&amp;G USA may
+							representative from Razzo's USA may
 							call you to confirm this reference so it is important that
 							you
 							include valid contact information.
@@ -404,12 +405,14 @@
 							<br></br>
 							<br></br>
 							Please send the reference letter by fax to: (214) 299-4207 (fax)
+							or
+							mail us on 	<a href="mailto:abcd@gmail.com"> abcd@gmail.com</a>
 
 							<br></br>
 							<br></br>
-							You may contact me at the below phone number/email if you require
-							further information
-							about this request.
+<!--							You may contact me at the below phone number/email if you require-->
+<!--							further information-->
+<!--							about this request.-->
 
 
 
@@ -463,7 +466,7 @@
 
 							<br></br>
 							<br></br>
-							<b>KT&amp;G USA Corp.</b>
+							<b>Razzo's USA Corp.</b>
 
 							<br></br>
 							<br></br>
@@ -583,7 +586,7 @@
 								</div>
 							</div>
 
-							I (We) hereby authorize KT&amp;G USA. at 1601 E Plano Parkway,
+							I (We) hereby authorize Razzo's USA. at 1601 E Plano Parkway,
 							Plano TX 75074, hereinafter called
 							COMPANY, to initiate debit entries to my (our) account indicated below
 							and the financial institution named
@@ -746,21 +749,21 @@
 									<input type="text" name="deal_customer_contact_name"
 										class="form-control my-height" style="display: inline-block; width: 90%" />
 
-									<label class="col-form-label lab-size" for="deal_customer_ktng_rep_name">KT&amp;G Rep.
+									<label class="col-form-label lab-size" for="deal_customer_ktng_rep_name">Razzo's Rep.
 										Name</label>
 									<input type="text" name="deal_customer_ktng_rep_name"
 										class="form-control my-height" style="display: inline-block; width: 90%" />
 
 								</div>
 
-
+								<div style="font-size:15px;">
 								Payment Terms and type of payment:
 								<u>
 									<b>EFT due on receipt</b>
 								</u>
 
 								<br></br>
-
+								</div>
 								<label class="col-form-label lab-size" for="deal_applied_check">Please select
 									if applied: (GA / FL) , (Stamped / Unstamped)</label>
 								<select name="deal_applied_check" class="form-control my-height"

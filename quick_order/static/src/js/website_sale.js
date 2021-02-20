@@ -25,6 +25,7 @@ odoo.define('quick_order.website_sale', function (require) {
   		var current = $(this).parents('.quick_qty2').find('.quantity').val()
   		current = parseInt(current)
   		if (current > 1){
+  		    console.log(current+" this the current value")
   		    $(this).parents('.quick_qty2').find('.quantity').val((current - 1)+"")
   		}
   	});

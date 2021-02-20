@@ -63,8 +63,8 @@
                                         <p>
                                             <img src="/jetmaster_website_customizations/static/src/images/brands_logo/brand1.png" width="140" style="margin-bottom:20px;"/>
                                             <img src="/jetmaster_website_customizations/static/src/images/brands_logo/brand2.png" width="140" style="margin-bottom:20px;"/>
-                                             <img src="/jetmaster_website_customizations/static/src/images/brands_logo/brand3.png" width="140" style="margin-bottom:20px;"/>
-                                             <img src="/jetmaster_website_customizations/static/src/images/brands_logo/brand1.png" width="140" style="margin-bottom:20px;"/>
+                                             <img src="/jetmaster_website_customizations/static/src/images/brands_logo/brand3.png" width="140" style="margin-bottom:20px;margin-left:60px;"/>
+<!--                                             <img src="/jetmaster_website_customizations/static/src/images/brands_logo/brand1.png" width="140" style="margin-bottom:20px;"/>-->
                                         </p>
   
                                        
@@ -79,15 +79,15 @@
                                             <li>
                                                 <a href="/gallery">Gallery</a>
                                             </li>
-                                            <li>
-                                                <a href="/blog">Blog</a>
-                                            </li>
+<!--                                            <li>-->
+<!--                                                <a href="/blog">Blog</a>-->
+<!--                                            </li>-->
                                             <li>
                                                 <a href="/contact-us">Contact Us</a>
                                             </li>
-                                              <li>
-                                                <a href="/contact-us">Become a Reseller</a>
-                                            </li>
+<!--                                              <li>-->
+<!--                                                <a href="/contact-us">Become a Reseller</a>-->
+<!--                                            </li>-->
                                             
                                         </ul>
                                     </div>
@@ -107,15 +107,15 @@
                                             <p>
                                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
 
-                                                5340 Legacy Dr. Building 3, Suite 160
-												Plano, TX 75024​, United States.
+                                                5501 SandShell Dr STE 100,
+												Fort Worth, TX 76137-2901, United States.
                                             </p>
-                                            <p><i class="fa fa-phone" aria-hidden="true"></i>Sales:
-                                                <a href="tel:123 456 789">123 456 789</a>
-                                            </p>
-                                            <p><i class="fa fa-phone" aria-hidden="true"></i>Service:
-                                                <a href="tel:987 654 321">987 654 321</a>
-                                            </p>
+<!--                                            <p><i class="fa fa-phone" aria-hidden="true"></i>Sales:-->
+<!--                                                <a href="tel:123 456 789">123 456 789</a>-->
+<!--                                            </p>-->
+<!--                                            <p><i class="fa fa-phone" aria-hidden="true"></i>Service:-->
+<!--                                                <a href="tel:987 654 321">987 654 321</a>-->
+<!--                                            </p>-->
                                         </div>
 
                                     </div>

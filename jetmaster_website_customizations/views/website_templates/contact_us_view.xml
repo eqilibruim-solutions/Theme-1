@@ -8,23 +8,23 @@
                             <div class="container">
                                 <h1>How Can We Help You?</h1>
                                 <section>
-                                    Buying or Servicing a Fireplace
+                                    Buying or Enquiring about our brands
                                     <br/>
 
                                     <font style="text-transform:uppercase">Sales</font>
                                     <a href="tel:1300 219 875">1300 219 875</a>
                                     <br/>
-                                    <font style="text-transform:uppercase">Service</font>
-                                    <a href="tel:1300 195 482">1300 195 482</a>
+<!--                                    <font style="text-transform:uppercase">Service</font>-->
+<!--                                    <a href="tel:1300 195 482">1300 195 482</a>-->
                                 </section>
 
                                 <ul class="contact_menu">
                                     <li class="page_item current_page_item">
-                                        <a href="/contact-us/" aria-current="page">Contact Us</a>
+                                        <a href="/contact-us" aria-current="page">Contact Us</a>
                                     </li>
-                                    <li class="page_item">
-                                        <a href="/dealers/">Find Nearest Dealer</a>
-                                    </li>
+<!--                                    <li class="page_item">-->
+<!--                                        <a href="/contact-us">Find Nearest Dealer</a>-->
+<!--                                    </li>-->
                                 </ul>
                             </div>
                         </section>
@@ -48,7 +48,7 @@
                                             <form action="/thank-you" method="post" id="contact_us_form_id">
 
                                                 <div class="form-group">
-                                                    <label>Do you have an existing fireplace?</label>
+                                                    <label>Are you an existing Seller?</label>
                                                     <select id="existing-fireplace"
                                                             class="form-control o_website_form_input"
                                                             name="existing_fireplace">
@@ -58,29 +58,28 @@
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label>What is the main reason for your interest in a fireplace?
+                                                    <label>Which brand you are interest in?
                                                     </label>
                                                     <select id="what_mainreason"
                                                             class="form-control o_website_form_input"
                                                             name="main_reason">
-                                                        <option value="style">STYLE</option>
-                                                        <option value="family">FAMILY</option>
-                                                        <option value="heating">HEATING</option>
-                                                        <option value="other">OTHER</option>
+                                                        <option value="style">CARNIVAL</option>
+                                                        <option value="family">TIME</option>
+                                                        <option value="heating">THIS</option>
                                                     </select>
                                                 </div>
 
-                                                <div class="form-group">
-                                                    <label>What type of fireplace are you looking for</label>
-                                                    <select id="what_mainreason_new"
-                                                            class="form-control o_website_form_input"
-                                                            name="fireplace_type">
-                                                        <option value="gas">GAS FIREPLACE</option>
-                                                        <option value="openwood">OPEN WOOD FIREPLACE</option>
-                                                        <option value="electric">ELECTRIC FIREPLACE</option>
-                                                        <option value="other">OTHER</option>
-                                                    </select>
-                                                </div>
+<!--                                                <div class="form-group">-->
+<!--                                                    <label>What type of Partnership are you looking for</label>-->
+<!--                                                    <select id="what_mainreason_new"-->
+<!--                                                            class="form-control o_website_form_input"-->
+<!--                                                            name="fireplace_type">-->
+<!--                                                        <option value="gas">Re-Seller</option>-->
+<!--                                                        <option value="openwood">End User</option>-->
+<!--                                                        <option value="electric">Customer</option>-->
+<!--                                                        <option value="other">OTHER</option>-->
+<!--                                                    </select>-->
+<!--                                                </div>-->
 
                                                 <div class="form-group">
                                                     <label>How did you hear about us?</label>
@@ -162,21 +161,19 @@
 
                                     <div class="col-md-4 col-sm-4 col-xs-12 contact_leftborder">
 
-                                        <img src="/jetmaster_website_customizations/static/src/images/gayle_hanry.jpg"
-                                             alt="Gayle Hanry"/>
+<!--                                        <img src="/jetmaster_website_customizations/static/src/images/gayle_hanry.jpg"-->
+<!--                                             alt="Gayle Hanry"/>-->
 
 
-                                        <p>“Jetmaster has done a great job capturing our vision with the original ideas
-                                            and plans we had in mind and the result is better than we would have
-                                            expected.”
-                                        </p>
+<!--                                        <p>“Razzos has done a great job capturing our vision with the original ideas-->
+<!--                                            and plans we had in mind and the result is better than we would have-->
+<!--                                            expected.”-->
+<!--                                        </p>-->
 
-                                        <h4>Visit Our Friendly Specialists Jetmaster VIC</h4>
+                                        <h4>Visit Our Office Razzos at:</h4>
                                         <h5>Address</h5>
-                                        <p>444 Swan St, Richmond,
-                                            VIC 3121, Australia
-                                            (Free car parking available
-                                            at rear of building.)
+                                        <p> 5501 SandShell Dr STE 100,
+												Fort Worth, TX 76137-2901, United States.
                                         </p>
                                         <h5>Trading and Phone Hours</h5>
                                         <p>Mon – Fri: 9am to 5pm
@@ -185,14 +182,14 @@
                                             <br/>
                                             Sun: 11am to 3pm
                                         </p>
-                                        <p>
-                                            <b>Our showroom is currently open and observing special social distancing
-                                                practices. For any enquiries please call 1300 219 875 or use the contact
-                                                form and we will be in touch shortly.
-                                            </b>
-                                        </p>
+<!--                                        <p>-->
+<!--                                            <b>Our showroom is currently open and observing special social distancing-->
+<!--                                                practices. For any enquiries please call 1300 219 875 or use the contact-->
+<!--                                                form and we will be in touch shortly.-->
+<!--                                            </b>-->
+<!--                                        </p>-->
 
-                                        <p>Please note Jetmaster Heat &amp; Glo will be closed on public holidays.</p>
+                                        <p>Please note Razzos will be closed on public holidays.</p>
 
                                     </div>
 
@@ -206,8 +203,8 @@
                     <div class="oe_structure">
                         <section>
                             <div id="map_canvas">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1575.7162427289632!2d145.00533726375028!3d-37.826759915578826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad6425fe74345af%3A0x1f90b38ebaf26cf9!2zNDQ0IFN3YW4gU3QsIFJpY2htb25kIFZJQyAzMTIx5r6z5aSn5Yip5Lqa!5e0!3m2!1szh-CN!2s!4v1515155573782"
-                                        width="100%" height="490" frameborder="0" style="border:0"
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3351.957188395869!2d-97.31182524986191!3d32.84638518766014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864e7634c3304a29%3A0x9e82c0ec9b5db90d!2s5501%20Sandshell%20Dr%20%23100%2C%20Fort%20Worth%2C%20TX%2076137%2C%20USA!5e0!3m2!1sen!2sin!4v1611330032962!5m2!1sen!2sin"
+                                        width="100%" height="290" frameborder="0" style="border:0"
                                         allowfullscreen=""></iframe>
                             </div>
 
@@ -242,7 +239,7 @@
                         <section class="getin-touchsec">
                             <div class="container">
                                 <div class="row">
-                                    <p>Got a question for our fireplace specialists?</p>
+                                    <p>Got a question for Us?</p>
                                     <p>
                                         <strong>Call Us Now
                                             <a style="color: black;" href="tel:+611300025316">1300 025 316</a>
