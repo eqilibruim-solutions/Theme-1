@@ -58,7 +58,7 @@
 
 
 							<group>
-								<group string="Directors">
+								<group string="Key Contacts">
 									<field name="dir_name1" />
 									<field name="dir_phone1" />
 									<br></br>
@@ -92,14 +92,14 @@
 
 							<group>
 								<group >
-									<field name="contact_person" />
+<!--									<field name="contact_person" />-->
 									<field name="dunn_no" />
 								</group>
 								
 							</group>
 
 							<group string="Questionnaire">
-								<field name="service_acc_no" />
+								<field name="service_acc_no"  />
 								<field name="year_no" />
 								<field name="stamp_state_names" />
 								<field name="employee_no" />

@@ -240,7 +240,7 @@ class Custom_Website(http.Controller):
             _logger.error('Exception Occurred :', e)
             return request.redirect('/gallery')
 
-    @http.route(['/gallery'], type="http", auth="public", website=True)
+    @http.route(['/about-us'], type="http", auth="public", website=True)
     def gallery_page(self, **kwargs):
         gallery_images = [x for x in request.env['gallery.view'].search([('active', '=', True)])]
         return request.render("jetmaster_website_customizations.gallery_view_template",

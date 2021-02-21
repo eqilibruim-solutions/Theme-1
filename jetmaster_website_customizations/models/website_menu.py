@@ -7,7 +7,7 @@ class WebsiteMenuInherit(models.Model):
 
     @api.model
     def create(self, vals):
-        website_urls = ["/", "/shop", '/gallery', '/contact-us']
+        website_urls = ["/", "/shop","/about-us", '/contact-us']
         if "website_id" in vals and vals.get('url') in website_urls:
             website_menu = self.env['website.menu'].search(
                 [('url', '=', '/default-main-menu'), ('website_id', '=', int(vals.get('website_id')))])

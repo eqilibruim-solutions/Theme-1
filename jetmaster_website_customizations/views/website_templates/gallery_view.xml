@@ -4,32 +4,24 @@
             <t t-call="website.layout">
                 <div id="wrap">
 
-                    
-   <div class="wsite-section-wrap">
-	<div class="wsite-section wsite-header-section wsite-section-bg-image" style="height: 383px;background-image: url(/jetmaster_website_customizations/static/src/images/bann.jpg);background-repeat: no-repeat;background-position: undefined undefined;background-size: 100%;background-color: transparent;/* background-size: cover; */">
-		<div class="wsite-section-content">
-			
-          <div class="container">
-            <div class="banner-text">
-				We Stand Behind our Quality!
-			</div>
-          </div>
-      
-		</div>
-		<div class=""></div>
-	</div>
-</div>                  
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
-                    
+
+                    <div class="wsite-section-wrap">
+                        <div class="wsite-section wsite-header-section wsite-section-bg-image"
+                             style="height: 383px;background-image: url(/jetmaster_website_customizations/static/src/images/download.png);background-repeat: no-repeat;background-position: undefined undefined;background-size: 100%;background-color: transparent;/* background-size: cover; */">
+                            <div class="wsite-section-content">
+
+                                <div class="container">
+                                    <div class="banner-text">
+                                        We Stand Behind our Quality!
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class=""></div>
+                        </div>
+                    </div>
+
+
                     <div class="oe_structure">
                         <section class="home-productcategory gallerypage-sec">
                             <div class="container">
@@ -76,23 +68,27 @@
                                              alt="Jetmaster is available on FaceTime, Facebook Messenger and WhatsApp"
                                              style="width:100%;max-width:350px;margin:1em auto;border:1px solid #fe5900;border-radius:50%;"/>
 
-                                        <p style="font-size:18px;">
-                                            <b>Heat up your home, <span style="font-style: italic;"></span>from home and
-                                                use our online click, select.
-                                            </b>
-                                        </p>
+                                            <p style="font-size:18px;">
+                                                    Rozzor is the top wholeseller of quality products,serving convenience<br/>
+                                                and retial markets in the united states.
+                                            </p>
+<!--                                        <p style="font-size:18px;">-->
+<!--                                            <b>Heat up your home, <span style="font-style: italic;"></span>from home and-->
+<!--                                                use our online click, select.-->
+<!--                                            </b>-->
+<!--                                        </p>-->
 
-                                        <p>Deliver and install system with FREE no contact delivery.
-                                            <br/>
-                                            We'll even organise the installation with your local dealer.
-                                        </p>
+<!--                                        <p>Deliver and install system with FREE no contact delivery.-->
+<!--                                            <br/>-->
+<!--                                            We'll even organise the installation with your local dealer.-->
+<!--                                        </p>-->
 
-                                        <a href="/purchase-unit" class="btn btn-padding" style="margin-bottom:20px">
-                                            Product Enquiry
-                                        </a>
-                                        <p>PLUS check out our new <a href="/products/">product</a> walk-through videos
-                                            on selected models.
-                                        </p>
+<!--                                        <a href="#" class="btn btn-padding" style="margin-bottom:20px">-->
+<!--                                            Product Enquiry-->
+<!--                                        </a>-->
+<!--                                        <p>PLUS check out our new <a href="/shop">product</a> walk-through videos-->
+<!--                                            on selected models.-->
+<!--                                        </p>-->
                                     </div>
 
                                 </div>
@@ -103,138 +99,12 @@
 
                     <div class="oe_structure">
                         <section>
-                            <div class="container">
-                    <div class="row">
-
-                    <img src="/jetmaster_website_customizations/static/src/images/smoke-img/state-map-ppt_orig.png"
-                                             alt="Jetmaster is available on FaceTime, Facebook Messenger and WhatsApp"
-                                             />
-
-                        </div>
-                    </div>
-                    </section>
-                    </div>
-
-
-
-                    <div class="oe_structure">
-                        <section>
-                            <div class="container">
-                    <div class="row">
-
-                    <img src="/jetmaster_website_customizations/static/src/images/smoke-img/this-ppt_orig.png"/>
-
-                    <img src="/jetmaster_website_customizations/static/src/images/smoke-img/time-ppt_1_orig.png"/>
-
-                    <img src="/jetmaster_website_customizations/static/src/images/smoke-img/carnival-ppt_orig.png"/>
-
-                        </div>
-                    </div>
-                    </section>
-                    </div>
-
-
-
-
-
-
-                    <div class="oe_structure">
-                        <section class="home-productcategory" style="margin-top:40px;">
                             <div class="container">
                                 <div class="row">
-                                    <h2 style="margin-top:30px;">Our Products</h2>
 
-                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">
-                                        <a class="thumb_box"
-                                           href="#">
-                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cb100.png"
-                                                 alt="Open Wood Fireplaces"/>
-                                            <button class="btn small_btn">View</button>
-                                        </a>
-                                        <h3>
-                                            <a href="/product_category/wood-fireplaces/open-wood-fireplaces/">Carnival Red 100 S
-                                            </a>
-                                        </h3>
-
-                                    </div>
-
-
-                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">
-                                        <a class="thumb_box"
-                                           href="#">
-                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cm100s.png"
-                                                 alt="Gas Fireplaces"/>
-                                            <button class="btn small_btn">View</button>
-                                        </a>
-                                        <h3>
-                                            <a href="/product_category/gas-fireplaces/">Carnival Blue 100 S</a>
-                                        </h3>
-
-                                    </div>
-
-
-                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">
-                                        <a class="thumb_box"
-                                           href="#">
-                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cmg100h.png"
-                                                 alt="Electric Fireplaces"/>
-                                            <button class="btn small_btn">View</button>
-                                        </a>
-                                        <h3>
-                                            <a href="https://jetmastervic.com.au/product_category/electric-fireplaces/">
-                                                Carnival Silver 100 S
-                                            </a>
-                                        </h3>
-
-                                    </div>
-
-
-                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">
-                                        <a class="thumb_box"
-                                           href="#">
-                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cmg100s.png"
-                                                 alt="Slow Combustion Wood Fireplaces"/>
-                                            <button class="btn small_btn">View</button>
-                                        </a>
-                                        <h3>
-                                            <a href="https://jetmastervic.com.au/product_category/slow-combustion-wood-fireplaces/">
-                                                Carnival M 100 S
-                                            </a>
-                                        </h3>
-
-                                    </div>
-
-
-                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">
-                                        <a class="thumb_box"
-                                           href="#">
-                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cr100.png"
-                                                 alt="Outdoor Fireplaces"/>
-                                            <button class="btn small_btn">View</button>
-                                        </a>
-                                        <h3>
-                                            <a href="https://jetmastervic.com.au/product_category/outdoor-fireplaces/">
-                                                Carnival MG 100 S
-                                            </a>
-                                        </h3>
-                                    </div>
-
-
-                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">
-                                        <a class="thumb_box"
-                                           href="#">
-                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cs100.png"
-                                                 alt="Accessories"/>
-                                            <button class="btn small_btn">View</button>
-                                        </a>
-                                        <h3>
-                                            <a href="https://jetmastervic.com.au/product_category/fireplace-accessories/">
-                                                Carnival MG 100 H
-                                            </a>
-                                        </h3>
-
-                                    </div>
-
+                                    <img src="/jetmaster_website_customizations/static/src/images/state-map-ppt_orig.png"
+                                         alt="Jetmaster is available on FaceTime, Facebook Messenger and WhatsApp"
+                                    />
 
                                 </div>
                             </div>
@@ -243,6 +113,128 @@
 
 
                     <div class="oe_structure">
+                        <section>
+                            <div class="container">
+                                <div class="row">
+
+                                    <img src="/jetmaster_website_customizations/static/src/images/smoke-img/this-ppt_orig.png"/>
+
+                                    <img src="/jetmaster_website_customizations/static/src/images/smoke-img/time-ppt_1_orig.png"/>
+
+                                    <img src="/jetmaster_website_customizations/static/src/images/smoke-img/carnival-ppt_orig.png"/>
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+
+<!--                    <div class="oe_structure">-->
+<!--                        <section class="home-productcategory" style="margin-top:40px;">-->
+<!--                            <div class="container">-->
+<!--                                <div class="row">-->
+<!--                                    <h2 style="margin-top:30px;">Our Products</h2>-->
+
+<!--                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">-->
+<!--                                        <a class="thumb_box"-->
+<!--                                           href="#">-->
+<!--                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cb100.png"-->
+<!--                                                 alt="Open Wood Fireplaces"/>-->
+<!--                                            <button class="btn small_btn">View</button>-->
+<!--                                        </a>-->
+<!--                                        <h3>-->
+<!--                                            <a href="/product_category/wood-fireplaces/open-wood-fireplaces/">Carnival-->
+<!--                                                Red 100 S-->
+<!--                                            </a>-->
+<!--                                        </h3>-->
+
+<!--                                    </div>-->
+
+
+<!--                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">-->
+<!--                                        <a class="thumb_box"-->
+<!--                                           href="#">-->
+<!--                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cm100s.png"-->
+<!--                                                 alt="Gas Fireplaces"/>-->
+<!--                                            <button class="btn small_btn">View</button>-->
+<!--                                        </a>-->
+<!--                                        <h3>-->
+<!--                                            <a href="/product_category/gas-fireplaces/">Carnival Blue 100 S</a>-->
+<!--                                        </h3>-->
+
+<!--                                    </div>-->
+
+
+<!--                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">-->
+<!--                                        <a class="thumb_box"-->
+<!--                                           href="#">-->
+<!--                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cmg100h.png"-->
+<!--                                                 alt="Electric Fireplaces"/>-->
+<!--                                            <button class="btn small_btn">View</button>-->
+<!--                                        </a>-->
+<!--                                        <h3>-->
+<!--                                            <a href="https://jetmastervic.com.au/product_category/electric-fireplaces/">-->
+<!--                                                Carnival Silver 100 S-->
+<!--                                            </a>-->
+<!--                                        </h3>-->
+
+<!--                                    </div>-->
+
+
+<!--                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">-->
+<!--                                        <a class="thumb_box"-->
+<!--                                           href="#">-->
+<!--                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cmg100s.png"-->
+<!--                                                 alt="Slow Combustion Wood Fireplaces"/>-->
+<!--                                            <button class="btn small_btn">View</button>-->
+<!--                                        </a>-->
+<!--                                        <h3>-->
+<!--                                            <a href="https://jetmastervic.com.au/product_category/slow-combustion-wood-fireplaces/">-->
+<!--                                                Carnival M 100 S-->
+<!--                                            </a>-->
+<!--                                        </h3>-->
+
+<!--                                    </div>-->
+
+
+<!--                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">-->
+<!--                                        <a class="thumb_box"-->
+<!--                                           href="#">-->
+<!--                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cr100.png"-->
+<!--                                                 alt="Outdoor Fireplaces"/>-->
+<!--                                            <button class="btn small_btn">View</button>-->
+<!--                                        </a>-->
+<!--                                        <h3>-->
+<!--                                            <a href="https://jetmastervic.com.au/product_category/outdoor-fireplaces/">-->
+<!--                                                Carnival MG 100 S-->
+<!--                                            </a>-->
+<!--                                        </h3>-->
+<!--                                    </div>-->
+
+
+<!--                                    <div class="col-6 col-sm-6 col-md-6 col-lg-4">-->
+<!--                                        <a class="thumb_box"-->
+<!--                                           href="#">-->
+<!--                                            <img src="/jetmaster_website_customizations/static/src/images/smoke-img/cs100.png"-->
+<!--                                                 alt="Accessories"/>-->
+<!--                                            <button class="btn small_btn">View</button>-->
+<!--                                        </a>-->
+<!--                                        <h3>-->
+<!--                                            <a href="https://jetmastervic.com.au/product_category/fireplace-accessories/">-->
+<!--                                                Carnival MG 100 H-->
+<!--                                            </a>-->
+<!--                                        </h3>-->
+
+<!--                                    </div>-->
+
+
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </section>-->
+<!--                    </div>-->
+
+
+                    <!-- <div class="oe_structure">
                         <section class="jetmeter-innovation">
                             <div class="container">
                                 <div class="row">
@@ -269,47 +261,21 @@
                                 </div>
                             </div>
                         </section>
-                    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    </div> -->
 
 
                     <div class="oe_structure">
                         <section class="getin-touchsec">
                             <div class="container">
                                 <div class="row">
-                                    <p>Got a question for our fireplace specialists?</p>
+                                    <p>Got a question for us?</p>
                                     <p>
                                         <strong>Call Us Now
-                                            <a style="color: black;" href="tel:+611300025316">1300 025 316</a>
+                                            <a style="color: black;" href="tel:+611300025316">1 2340 56700</a>
                                         </strong>
                                     </p>
                                     <a class="btn btn-sm btn-primary btn-padding" style="margin: auto;"
-                                       id="getin-touchbtn">
+                                       href="mailto:myemail@gmail.com">
                                         Get in Touch
                                     </a>
 
@@ -398,8 +364,10 @@
                                                     </div>
 
                                                     <div class="form-submit">
-                                                         <input type="button" id="addgallery_query" name="addgallery_query"
-                                                               class="btn btn-sm btn-primary btn-padding" value="Submit"/>
+                                                        <input type="button" id="addgallery_query"
+                                                               name="addgallery_query"
+                                                               class="btn btn-sm btn-primary btn-padding"
+                                                               value="Submit"/>
                                                         <!--<input type="submit" class="btn btn-sm btn-primary btn-padding"-->
                                                         <!--value="Submit"/>-->
 
