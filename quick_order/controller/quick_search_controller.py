@@ -43,6 +43,7 @@ class QuickSearchConroller(Controller):
 	@route(['/quickorder','/quickorder/page/<page_no>','/quickorder/quicksearch'], type = 'http', auth = 'public', website = True)
 	def get_quick_search_form(self,search='', page_no=1, key_press=False, **kw):
 		if request.website.is_public_user():
+			return request.redirect("/web/login")
 			return request.render('quick_order.quick_order_public_user_sugges',{})
 		order_quick = request.env["quick.order"].search([('user_id', '=', request._uid), ('state', '=', 'draft')])
 		domain = [('product_variant_ids.id', 'not in', self.variants_availability()),('website_published','=', True)]

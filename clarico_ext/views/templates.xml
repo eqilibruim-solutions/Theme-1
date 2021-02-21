@@ -76,6 +76,86 @@
     
 
 
+    <template id="website.website_search_box" name="Website Searchbox">
+        <div t-attf-class="input-group #{_classes}" role="search">
+            <input type="text" name="search" class="form-control custom_search" placeholder="Search..."
+                   t-att-value="search"/>
+            <div class="input-group-append">
+                <a class="btn btn-primary oe_search_button_inherited" aria-label="Search" title="Search">
+                    <i class="fa fa-search"/>
+                </a>
+                <i class="fa fa-filter mobile_filters">Filters</i>
+            </div>
+        </div>
+    </template>
+
+
+	<!-- TO SET SHOP PRODUCT LIST VIEW AS DEFAULT VIEW -->
+    <template id="add_website_product_filter" inherit_id="website_sale.products"
+              name="Default List view">
+
+        <!--        FOR FILTERS-->
+        <xpath expr="//div[hasclass('o_wsale_products_main_row')]/div[@id='products_grid']" position="attributes">
+            <attribute name="style">display: inline-flex !important</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('o_wsale_products_main_row')]/div[@id='products_grid']"
+               position="before">
+            <div class="filter_section">
+                <table class="cat_title">
+                    <body>
+                        <tr>
+                            <td class="text-left">Categories</td>
+                        </tr>
+                    </body>
+                </table>
+                <div style="margin-bottom: 10px; max-height: 230px; overflow-y: scroll; ">
+                    <table class="" id="sales_order_table">
+                        <body>
+                            <t t-foreach="filter_cats" t-as="cat">
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="fcat" t-att-value="cat.id">
+                                            <span t-esc="cat.name" style="margin-left: 10px; "/>
+                                        </input>
+                                    </td>
+                                </tr>
+                            </t>
+                        </body>
+                    </table>
+                </div>
+
+                <hr></hr>
+                <table class="brand_title">
+                    <body>
+                        <tr>
+                            <td class="text-left">Brands</td>
+                        </tr>
+                    </body>
+                </table>
+                <div style="margin-bottom: 10px; max-height: 230px; overflow-y: scroll; ">
+                    <table class="" id="sales_order_table">
+                        <body>
+                            <t t-foreach="filter_brands" t-as="brand">
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" class="fbrand" t-att-value="brand.id">
+                                            <span t-esc="brand.name" style="margin-left: 10px; "/>
+                                        </input>
+                                    </td>
+                                </tr>
+                            </t>
+                        </body>
+                    </table>
+                </div>
+            </div>
+        </xpath>
+
+
+    </template>
+
+
+
+
 
 	
 </odoo>

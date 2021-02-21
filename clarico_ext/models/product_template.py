@@ -191,15 +191,19 @@ def _cart_update(self, product_id=None, line_id=None, add_qty=0, set_qty=0, **kw
 SaleOrder._cart_update = _cart_update
 		
 		
-		
-		
-		
+
+
+class ProductBrand(models.Model):
+	_name = "product.brand"
+
+	name = fields.Char("Brand")
+
 
 class product(models.Model):
 	
 	_inherit = 'product.template'
-	
-	
+
+	brand_id = fields.Many2many("product.brand", string="Brand")
 	extra_units = fields.Many2many('uom.uom', 'product_id', 'uom_id', 'prod_uom_rel', string="Extra Units")
 	
 	def units_web(self):

@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_enroll_partner1,enroll_partner1_website,model_enroll_partner,sales_team.group_sale_manager,1,1,1,1
 access_enroll_partner2,enroll_partner2_website,model_enroll_partner,sales_team.group_sale_salesman,1,1,1,1
+product_brand_id,product_brand_name,clarico_ext.model_product_brand,,1,1,1,1

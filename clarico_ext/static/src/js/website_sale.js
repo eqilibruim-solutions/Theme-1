@@ -86,7 +86,60 @@ odoo.define('clarico_ext.website_sale', function(require) {
     	
     	check_exist_class1();
     	
-    	
+
+    	$('.mobile_filters').on('click', function(ev){
+        if ($('.filter_section').is(':visible')){
+            $('.filter_section').css('display', 'none')
+        }
+        else{
+            $('.filter_section').css('display', 'block')
+        }
+    });
+
+    $('.custom_search').keypress(function (e) {
+       if(e.which == 13){
+            e.preventDefault()
+            $('.oe_search_button_inherited').trigger("click");
+       }
+     });
+
+    //ON FILTER CLICK
+    $('.fcat, .fbrand, .oe_search_button_inherited').on('click', function(ev){
+            var cats = []
+            var brands = []
+            var search_f = $('.custom_search').val()
+            $('input:checkbox.fcat').each(function () {
+                if (this.checked){
+                    var id = $(this).val()
+                    cats.push(id)
+                }
+            });
+
+            $('input:checkbox.fbrand').each(function () {
+                if (this.checked){
+                    var id = $(this).val()
+                    brands.push(id)
+                }
+            });
+
+		    $.ajax({
+            url : '/shop_filters',
+            type : 'GET',
+            data: { 'cats': JSON.stringify(cats), 'brands': JSON.stringify(brands), 'search_f': search_f },
+            async : false,
+
+            }).done(function(resp){
+                var html_object = $($.parseHTML(resp));
+                //$('.o_wsale_products_grid_table_wrapper').html(html_object.find('.o_wsale_products_grid_table_wrapper'))
+                $('#products_grid').html(html_object.find('#products_grid'))
+                $('.pagination.m-0.mt-2.ml-md-2').html(html_object.find('.pagination.m-0.mt-2.ml-md-2'))
+                $('.pagination.m-0').html(html_object.find('.pagination.m-0'))
+            });//done
+
+    });
+
+
+
     	//ONCHANGE OF UoM VIEW PRICE ACCORDINGLY
     	$('.uom_id1').on('change', function(ev){
     		var base_price = $(this).parents('.uom_sel1').find('.base_price').text()

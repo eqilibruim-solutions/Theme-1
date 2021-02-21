@@ -37,7 +37,8 @@
 
 .uom_sel1{
 	margin-top: 10px;
-    margin-left: 28%;
+    text-align: center;
+    display: inline-table;
 
 }
 
@@ -120,10 +121,6 @@
 	    margin-top: 10px;
     	margin-left: 0%;
 	}
-	.css_quantity{
-		width: 100% !important;
-	
-	}
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1200px) {
@@ -175,3 +172,150 @@ padding-bottom: 40px;
 
 
 
+.filter_section{
+    width: 25%;
+    box-shadow: 0 0 0px 25px #e6e7e44f;
+    padding: 30px;
+    background-color: #e6e7e4;
+    height: fit-content;
+    margin-top: 2%;
+    margin-left: -5%;
+}
+
+.cat_title{
+    border-bottom: 2px solid #867c7c;
+    color: #524e4e;
+    margin-bottom: 15px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.brand_title{
+    border-bottom: 2px solid #867c7c;
+    color: #524e4e;
+    margin-bottom: 15px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.mobile_filters{
+    display: none !important;
+}
+
+
+.bann_title1{
+text-align: center;
+width: 100%;
+font-size: 40px;
+font-weight: bold;
+color: blanchedalmond;
+}
+
+.bann_title2{
+text-align: center;
+width: 100%;
+font-size: 40px;
+font-weight: bold;
+color: black;
+}
+
+.bann_title3{
+text-align: center;
+width: 100%;
+font-size: 40px;
+font-weight: bold;
+color: blanchedalmond;
+}
+
+.btext{
+    margin-left: 20%;
+margin-right: 15%;
+background-color: white;
+padding: 5%;
+bottom: 25px;
+left: 0;
+position: absolute;
+}
+
+.smallimg{
+    margin-left: 17%;
+margin-right: 17%;
+padding: 5%;
+left: 29px;
+position: absolute;
+}
+
+.smallimg3{
+    margin-left: 23%;
+margin-right: 10%;
+padding: 5%;
+left: 44px;
+position: absolute;
+top: 15px;
+}
+
+
+#products_grid > .oe_product{
+    width: 250px !important;
+}
+
+
+
+
+
+
+
+@media (max-width: 1000px) {
+    .column1 {
+    width: 100% !important;
+}
+
+    .filter_section{
+        width: 35%;
+        box-shadow: 0 0 0px 25px #e6e7e44f;
+        padding: 30px;
+        background-color: #e6e7e4;
+        height: fit-content;
+        margin-top: 2%;
+        z-index: 999 !important;
+        width: 90% !important;
+        position: absolute !important;
+        display: none;
+        font-size: 16px;
+        margin-left: 5px;
+    }
+
+    .mobile_filters{
+        font-size: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 5px;
+        color: #875a7b;
+        display: block !important;
+        cursor: pointer;
+    }
+
+    .product_img_parent > .img-fluid{
+        width: 60% !important;
+    }
+
+    .fcat{
+        width: 25px;
+        height: 25px;
+    }
+
+    .fbrand{
+        width: 25px;
+        height: 25px;
+    }
+
+    .o_wsale_products_item_title{
+        font-size: 21px !important;
+    }
+
+}
+
+
+@media (min-width: 550px) and (max-width: 999px) {
+
+}

@@ -118,8 +118,7 @@ class WebsiteSale2(WebsiteSale):
 		if kw.get('no_variant_attribute_values'):
 			no_variant_attribute_values = json.loads(kw.get('no_variant_attribute_values'))
 
-		print (kw, 'WWWWWWWWWWWWWWWQ\n\n\n')
-		
+
 		if 'uom_id' in kw:
 			sale_order._cart_update(
 				product_id=int(product_id),
@@ -142,13 +141,8 @@ class WebsiteSale2(WebsiteSale):
 #			 return request.redirect("/shop/checkout?express=1")
 
 		return request.redirect("/shop/cart")
-	   
-	   
-	   
 
 
-	   	
-	
 class EmiproThemeBase(http.Controller):
 	
 	@http.route(['/get_uom_price'], type='json', auth="public", website=True)

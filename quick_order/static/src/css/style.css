@@ -20,7 +20,7 @@
 .btn-gp{
   border: 1px solid #428bca !important;
   color: #428bca !important;
-  background-color: white !important;
+  /*background-color: white !important;*/
 }
 .fun:hover{
   text-decoration: underline;
