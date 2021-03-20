@@ -115,9 +115,12 @@
 								</group>
 								<group string="Signature">
 									<field name="signature_date" />
+
 								</group>
 							</group>
-
+							<group>
+								<field name="void_check" />
+							</group>
 						</page>
 
 
@@ -134,12 +137,12 @@
 									<field name="client_customer_aod" />
 									<field name="client_signature" widget="image" class="oe_avatar" />
 									<field name="client_name_customer_bank_off_sig" widget="image" class="oe_avatar" />
-									
+
 								</group>
 							</group>
 						</page>
-						
-						
+
+
 						<page name="eft" string="AGREEMENT for EFT TRANSACTION">
 							<group>
 								<group>
@@ -164,11 +167,11 @@
 									<field name="aggreement_bottom_signature" widget='image' class="oe_avatar" />
 									<field name="aggreement_checkbox" />
 								</group>
-								
+
 							</group>
 						</page>
-						
-						
+
+
 						<page name="cds" string="Customer Deal Sheet">
 							<group>
 								<group>
@@ -199,7 +202,7 @@
 									<field name="deal_time_invoice_net" />
 									<field name="deal_carnival_invoice_net" />
 								</group>
-								
+
 							</group>
 							<group>
 								<group>
@@ -207,7 +210,7 @@
 									<field name="deal_comment" />
 								</group>
 							</group>
-							
+
 							<group>
 								<group>
 									<field name="signature_deal" widget='image' class="oe_avatar" />
@@ -216,106 +219,106 @@
 									<field name="deal_signature_date" />
 								</group>
 							</group>
-							
+
 						</page>
-						
-						
-						<page name="po" string="PURCHASE ORDER">
-							<group>
-								<group>
-									<field name="po_company_name" />
-									<field name="po_addr" />
-								</group>
-								<group>
-									<field name="po_phone" />
-									<field name="po_fax" />
-									<field name="po_no" />
-								</group>
-							</group>
-							
-							
-							
-							
-							<group>
-								<group>
-									<field name="po_red_100_soft_qty" />
-									<field name="po_blue_100_soft_qty" />
-									<field name="po_silver_100_soft_qty" />
-									<field name="po_menthol_100_soft_qty" />
-									<field name="po_menthol_green_100_soft_qty" />
-								</group>
-								<group>
-									<field name="po_red_100_box_qty" />
-									<field name="po_blue_100_box_qty" />
-									<field name="po_silver_100_box_qty" />
-									<field name="po_menthol_100_box_qty" />
-									<field name="po_menthol_green_100_box_qty" />
-								</group>
-							</group>
-							<group>
-								<group>
-									<field name="po_red_king_box_qty" />
-									<field name="po_blue_king_box_qty" />
-									<field name="po_silver_king_box_qty" />
-									<field name="po_menthol_king_box_qty" />
-								</group>
-								<group>
-								</group>
-							</group>
-							
-							
-							
-							<group>
-								<group>
-									<field name="po_red_100_box_qty2" />
-									<field name="po_blue_100_box_qty2" />
-									<field name="po_silver_100_box_qty2" />
-									<field name="po_menthol_100_box_qty2" />
-									<field name="po_menthol_green_100_box_qty2" />
-								</group>
-								<group>
-									<field name="po_red_king_box_qty2" />
-									<field name="po_blue_king_box_qty2" />
-									<field name="po_silver_king_box_qty2" />
-									<field name="po_menthol_king_box_qty2" />
-									<field name="po_menthol_green_king_box_qty2" />
-								</group>
-							</group>
-							
-							
-							<group>
-								<group>
-									<field name="po_red_100_box_qty3" />
-									<field name="po_blue_100_box_qty3" />
-									<field name="po_silver_100_box_qty3" />
-									<field name="po_menthol_100_box_qty3" />
-									<field name="po_menthol_green_100_box_qty3" />
-								</group>
-								<group>
-									<field name="po_red_king_box_qty3" />
-									<field name="po_blue_king_box_qty3" />
-									<field name="po_silver_king_box_qty3" />
-									<field name="po_menthol_king_box_qty3" />
-									<field name="po_menthol_green_king_box_qty3" />
-								</group>
-							</group>
-							
-							
-							
-							
-							
-							
-							<group>
-								<group>
-									<field name="signature_po_customer" widget='image' class="oe_avatar" />
-								</group>
-								<group>
-									<field name="po_cust_signature_date" />
-								</group>
-							</group>
-							
-							
-						</page>
+
+
+<!--						<page name="po" string="PURCHASE ORDER">-->
+<!--							<group>-->
+<!--								<group>-->
+<!--									<field name="po_company_name" />-->
+<!--									<field name="po_addr" />-->
+<!--								</group>-->
+<!--								<group>-->
+<!--									<field name="po_phone" />-->
+<!--									<field name="po_fax" />-->
+<!--									<field name="po_no" />-->
+<!--								</group>-->
+<!--							</group>-->
+<!--							-->
+<!--							-->
+<!--							-->
+<!--							-->
+<!--							<group>-->
+<!--								<group>-->
+<!--									<field name="po_red_100_soft_qty" />-->
+<!--									<field name="po_blue_100_soft_qty" />-->
+<!--									<field name="po_silver_100_soft_qty" />-->
+<!--									<field name="po_menthol_100_soft_qty" />-->
+<!--									<field name="po_menthol_green_100_soft_qty" />-->
+<!--								</group>-->
+<!--								<group>-->
+<!--									<field name="po_red_100_box_qty" />-->
+<!--									<field name="po_blue_100_box_qty" />-->
+<!--									<field name="po_silver_100_box_qty" />-->
+<!--									<field name="po_menthol_100_box_qty" />-->
+<!--									<field name="po_menthol_green_100_box_qty" />-->
+<!--								</group>-->
+<!--							</group>-->
+<!--							<group>-->
+<!--								<group>-->
+<!--									<field name="po_red_king_box_qty" />-->
+<!--									<field name="po_blue_king_box_qty" />-->
+<!--									<field name="po_silver_king_box_qty" />-->
+<!--									<field name="po_menthol_king_box_qty" />-->
+<!--								</group>-->
+<!--								<group>-->
+<!--								</group>-->
+<!--							</group>-->
+<!--							-->
+<!--							-->
+<!--							-->
+<!--							<group>-->
+<!--								<group>-->
+<!--									<field name="po_red_100_box_qty2" />-->
+<!--									<field name="po_blue_100_box_qty2" />-->
+<!--									<field name="po_silver_100_box_qty2" />-->
+<!--									<field name="po_menthol_100_box_qty2" />-->
+<!--									<field name="po_menthol_green_100_box_qty2" />-->
+<!--								</group>-->
+<!--								<group>-->
+<!--									<field name="po_red_king_box_qty2" />-->
+<!--									<field name="po_blue_king_box_qty2" />-->
+<!--									<field name="po_silver_king_box_qty2" />-->
+<!--									<field name="po_menthol_king_box_qty2" />-->
+<!--									<field name="po_menthol_green_king_box_qty2" />-->
+<!--								</group>-->
+<!--							</group>-->
+<!--							-->
+<!--							-->
+<!--							<group>-->
+<!--								<group>-->
+<!--									<field name="po_red_100_box_qty3" />-->
+<!--									<field name="po_blue_100_box_qty3" />-->
+<!--									<field name="po_silver_100_box_qty3" />-->
+<!--									<field name="po_menthol_100_box_qty3" />-->
+<!--									<field name="po_menthol_green_100_box_qty3" />-->
+<!--								</group>-->
+<!--								<group>-->
+<!--									<field name="po_red_king_box_qty3" />-->
+<!--									<field name="po_blue_king_box_qty3" />-->
+<!--									<field name="po_silver_king_box_qty3" />-->
+<!--									<field name="po_menthol_king_box_qty3" />-->
+<!--									<field name="po_menthol_green_king_box_qty3" />-->
+<!--								</group>-->
+<!--							</group>-->
+<!--							-->
+<!--							-->
+<!--							-->
+<!--							-->
+<!--							-->
+<!--							-->
+<!--							<group>-->
+<!--								<group>-->
+<!--									<field name="signature_po_customer" widget='image' class="oe_avatar" />-->
+<!--								</group>-->
+<!--								<group>-->
+<!--									<field name="po_cust_signature_date" />-->
+<!--								</group>-->
+<!--							</group>-->
+<!--							-->
+<!--							-->
+<!--						</page>-->
 						
 						
 						

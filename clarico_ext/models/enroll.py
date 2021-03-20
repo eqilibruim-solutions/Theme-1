@@ -121,7 +121,7 @@ class enroll_partner(models.Model):
 	eft_yes_no = fields.Char("Will you be able to operate with EFT (Electronic Funds Transfer) as a payment option?")
 	signature_whole = fields.Binary("Signature (Wholesaler)")
 	signature_date = fields.Date("Date",default=fields.Date.context_today)
-	
+	void_check = fields.Binary("Attach a VOID CHECK here")
 	
 	#TAB 2 BANK REFERENCE REQUEST
 	client_name = fields.Char("Client Name")
