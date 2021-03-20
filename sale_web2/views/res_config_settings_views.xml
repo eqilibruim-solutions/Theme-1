@@ -13,24 +13,24 @@
                         <div class="o_setting_right_pane">
                         	<span class="o_form_label">Server Details to Sync Sale Orders</span>
                             <div class="content-group">
-                                <div class="row mt16">
-                                    <label class="o_light_label col-lg-3" string="Server URL/Domain" for="sync_url"/>
+                                <div class="row mt16" style="display: inline; " >
+                                    <label class="o_light_label col-lg-6" string="Server URL/Domain" for="sync_url"/>
                                     <field name="sync_url" />
                                 </div>
-                                <div class="row">
-                                    <label class="o_light_label col-lg-3" string="Database" for="sync_db"/>
+                                <div class="row mt16" style="display: inline; ">
+                                    <label class="o_light_label col-lg-6" string="Database" for="sync_db"/>
                                     <field name="sync_db" />
                                 </div>
-                                <div class="row">
-                                    <label class="o_light_label col-lg-3" string="Port" for="sync_port"/>
+                                <div class="row mt16" style="display: inline; ">
+                                    <label class="o_light_label col-lg-6" string="Port" for="sync_port"/>
                                     <field name="sync_port" />
                                 </div>
-                                <div class="row">
-                                    <label class="o_light_label col-lg-3" string="User" for="sync_user"/>
+                                <div class="row mt16" style="display: inline; ">
+                                    <label class="o_light_label col-lg-6" string="User" for="sync_user"/>
                                     <field name="sync_user" />
                                 </div>
-                                <div class="row">
-                                    <label class="o_light_label col-lg-3" string="Password" for="sync_pwd"/>
+                                <div class="row mt16" style="display: inline; ">
+                                    <label class="o_light_label col-lg-6" string="Password" for="sync_pwd"/>
                                     <field name="sync_pwd" />
                                 </div>
                             </div>
@@ -38,6 +38,25 @@
                     </div>
                 </div>
             </div>
+
+
+            <div id="webmaster_settings" position="after">
+                <h2>Order Minimum Amount</h2>
+                <div class="row mt16 o_settings_container" id="ktng_ftp_settings">
+                    <div class="col-12 col-lg-6 o_setting_box" id="ktng_ftp_settings2">
+                        <div class="o_setting_right_pane">
+                            <div class="content-group">
+                                <div class="row mt16" style="display: inline; ">
+                                    <label class="o_light_label col-lg-6" string="Order Minimum Amount" for="order_minimum_amount"/>
+                                    <field name="order_minimum_amount" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </field>
     </record>
     

@@ -67,14 +67,24 @@ class Partner(models.Model):
 class sale_order(models.Model):
 	
 	_inherit = "sale.order"
-	
+
+	def _is_minimum_amount_ok(self):
+		ICP_obj = self.env['ir.config_parameter'].sudo()
+		min_amount = float(ICP_obj.get_param('order_minimum_amount') or 0.0 )
+		for item in self:
+			item.order_min_amount = min_amount
+			if item.amount_total < min_amount:
+				item.is_minimum_amount_ok = False
+			else:
+				item.is_minimum_amount_ok = True
+
 	moved = fields.Boolean("Moved")
 	po_number = fields.Char("PO Number")
 	unique_seq = fields.Char("Unique Sequence")
 	remote_order_id = fields.Integer("Remote Order ID")
+	is_minimum_amount_ok = fields.Boolean(compute="_is_minimum_amount_ok")
+	order_min_amount = fields.Float("Order Minimum Amount")
 	
-
-
 	def trigger_cretae_pdf(self, A, B, C):
 		#=======================================================================
 		# DATA CONTAINSE-

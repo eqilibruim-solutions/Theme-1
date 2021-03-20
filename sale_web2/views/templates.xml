@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <template id="assets_frontend_clarico" inherit_id="website.assets_frontend">
+        <xpath expr="link[last()]" position="after">
+            <link href="/sale_web2/static/src/scss/website_sale.scss" rel="stylesheet"
+                  type="text/scss"/>
+
+        </xpath>
+        <xpath expr="script[last()]" position="after">
+            <script src="/sale_web2/static/src/js/website_sale.js" type="text/javascript"/>
+        </xpath>
+    </template>
+
+
+    <!-- TO ADD PO # INPUT BEFORE PROCESS CHECKOUT -->
+    <template id="cart_in" inherit_id="website_sale.cart" name="cart in">
+        <xpath expr="//a[@href='/shop/checkout?express=1']" position="replace">
+            <input type="hidden" t-att-value="website_sale_order.order_min_amount" id="class_order_min_amount"></input>
+            <div class="min_class" style="background-color: #000000e6; display: none ">
+                <div class="min_class_inner_div" style="background-color: #ded4d6; ">
+                    <div style="padding: 60px; padding-top: 80px; font-size: 18px;">Total Order Amount is not above
+                        minimum order amount
+                    </div>
+                    <div style="padding: 10px; font-size: 25px; color: #676364;">
+                        <i class="fa fa-close close_btn"></i>
+                    </div>
+                </div>
+            </div>
+            <a role="button" t-if="website_sale_order and website_sale_order.website_order_line"
+               class="btn btn-primary float-right d-none d-xl-inline-block no-minimum-amount">
+                <span class="">Process Checkout</span>
+                <span class="fa fa-chevron-right"/>
+            </a>
+
+<!--            Replicated for trigger click-->
+            <a role="button" class="btn btn-primary" id='amount_matched' style="display: none !important ">
+                <span class="">Process Checkout</span>
+                <span class="fa fa-chevron-right"/>
+            </a>
+
+        </xpath>
+
+    </template>
+    <template id="short_cart_summary_minimun_qty" inherit_id="website_sale.short_cart_summary" name="cart minimum qty">
+
+        <xpath expr="//a[@href='/shop/checkout?express=1']" position="replace">
+            <a role="button" t-if="website_sale_order and website_sale_order.website_order_line"
+               class="btn btn-primary float-right no-minimum-amount2">
+                <span class="">Process Checkout</span>
+                <span class="fa fa-chevron-right"/>
+            </a>
+        </xpath>
+
+
+    </template>
+
+
+</odoo>
