@@ -103,7 +103,6 @@ publicWidget.registry.affixMenu = publicWidget.Widget.extend({
         var wOffset = $(window).scrollTop();
         var hOffset = this.$target.scrollTop();
         this.$headerClone.toggleClass('affixed', wOffset > (hOffset + 7));
-        console.log("i am inside log")
         // Reset opened menus
         this.$dropdowns.add(this.$dropdownMenus).removeClass('show');
         this.$navbarCollapses.removeClass('show').attr('aria-expanded', false);

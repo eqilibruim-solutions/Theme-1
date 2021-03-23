@@ -73,17 +73,13 @@ class sale_order(models.Model):
 		min_amount = float(ICP_obj.get_param('order_minimum_amount') or 0.0 )
 		for item in self:
 			item.order_min_amount = min_amount
-			if item.amount_total < min_amount:
-				item.is_minimum_amount_ok = False
-			else:
-				item.is_minimum_amount_ok = True
 
 	moved = fields.Boolean("Moved")
 	po_number = fields.Char("PO Number")
 	unique_seq = fields.Char("Unique Sequence")
 	remote_order_id = fields.Integer("Remote Order ID")
-	is_minimum_amount_ok = fields.Boolean(compute="_is_minimum_amount_ok")
-	order_min_amount = fields.Float("Order Minimum Amount")
+	# is_minimum_amount_ok = fields.Boolean(compute="_is_minimum_amount_ok")
+	order_min_amount = fields.Float(compute="_is_minimum_amount_ok", string="Order Minimum Amount")
 	
 	def trigger_cretae_pdf(self, A, B, C):
 		#=======================================================================
@@ -133,10 +129,16 @@ class sale_order(models.Model):
 		
 		
 		for order in self.search([('moved', '=', False), ('state', 'not in', ['draft', 'cancel'])]):
-			
-			
-			remote_odoo = odoorpc.ODOO(url, port=port1)
-			remote_odoo.login(db, user1, pwd)
+
+			remote_odoo = False
+			try:
+				remote_odoo = odoorpc.ODOO(url, port=port1)
+				remote_odoo.login(db, user1, pwd)
+			except Exception as e:
+				print ("RPC Connection failled")
+
+			if not remote_odoo:
+				return True
 			
 			Partner_r = remote_odoo.env['res.partner']
 			User_r = remote_odoo.env['res.users']
@@ -148,13 +150,11 @@ class sale_order(models.Model):
 			Website_r = remote_odoo.env['website']
 			Product_r = remote_odoo.env['product.product']
 			
-			
 			local_partner_id = order.partner_id
 			remote_partner_id = Partner_r.search([('email', '=', local_partner_id.email)], limit=1)
 			if not remote_partner_id and local_partner_id.customer_id:
 				remote_partner_id = Partner_r.search([('customer_id', '=', local_partner_id.customer_id)], limit=1)
 				
-			print (order, local_partner_id, 'QQQQQ\n\n\n\n\n\n')
 			if not remote_partner_id:
 				remote_partner_id = Partner_r.create({
 											'name': local_partner_id.name,
@@ -181,8 +181,6 @@ class sale_order(models.Model):
 														'name': order.pricelist_id.name,
 														})
 
-				
-			
 			local_payment_term_id = order.payment_term_id
 			remote_payment_term_id = False
 			if local_payment_term_id:
@@ -193,9 +191,7 @@ class sale_order(models.Model):
 					remote_payment_term_id = Payment_Term_r.create({
 																	'name': local_payment_term_id.name,
 																	})
-																		
-																		
-																		
+
 			local_team_id = order.team_id
 			remote_team_id = False
 			if local_team_id:
@@ -206,11 +202,7 @@ class sale_order(models.Model):
 					remote_team_id = Crm_Team_r.create({
 													'name': local_team_id.name,
 													})
-													
-													
-																		
-																		
-																		
+
 			local_website_id = order.website_id
 			remote_website_id = False
 			if local_website_id:
@@ -222,9 +214,6 @@ class sale_order(models.Model):
 													'name': local_website_id.name,
 													})
 													
-													
-													
-		
 			so_val = {
 				'partner_id': remote_partner_id, 
 				'pricelist_id': remote_pricelist_id, 
@@ -232,7 +221,7 @@ class sale_order(models.Model):
 				'team_id': remote_team_id, 
 				'partner_invoice_id': remote_partner_id, 
 				'partner_shipping_id': remote_partner_id, 
-# 				'user_id': remote_user_id, 
+				#'user_id': remote_user_id,
 				'website_id': remote_website_id, 
 				'company_id': 1, 
 				#'plain_date': order.plain_date, 
@@ -257,7 +246,6 @@ class sale_order(models.Model):
 														'type': local_product_id.type,
 														})
 						
-														
 				sol_val = {
 					'product_id': remote_product_id, 
 					'product_uom_qty': item.product_uom_qty, 
@@ -267,33 +255,12 @@ class sale_order(models.Model):
 					'discount': item.discount,
 					}
 					
-				
 				sol_id = Order_Line_r.create(sol_val)
 				print ('SOL', sol_id, 'SOL created...')
-		
-		
+
 			order.moved = True
 			if so_id:
 					order.remote_order_id = so_id
 			self._cr.commit()
 
-				
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		
-		

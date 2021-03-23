@@ -17,6 +17,7 @@
     <!-- TO ADD PO # INPUT BEFORE PROCESS CHECKOUT -->
     <template id="cart_in" inherit_id="website_sale.cart" name="cart in">
         <xpath expr="//a[@href='/shop/checkout?express=1']" position="replace">
+<!--            <span t-if="website_sale_order._is_minimum_amount_ok" ></span>-->
             <input type="hidden" t-att-value="website_sale_order.order_min_amount" id="class_order_min_amount"></input>
             <div class="min_class" style="background-color: #000000e6; display: none ">
                 <div class="min_class_inner_div" style="background-color: #ded4d6; ">
@@ -44,7 +45,6 @@
 
     </template>
     <template id="short_cart_summary_minimun_qty" inherit_id="website_sale.short_cart_summary" name="cart minimum qty">
-
         <xpath expr="//a[@href='/shop/checkout?express=1']" position="replace">
             <a role="button" t-if="website_sale_order and website_sale_order.website_order_line"
                class="btn btn-primary float-right no-minimum-amount2">
