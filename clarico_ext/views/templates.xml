@@ -1,79 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <odoo>
-	<template id="assets_frontend_clarico" inherit_id="website.assets_frontend">
-		<xpath expr="link[last()]" position="after">
-			<link href="/clarico_ext/static/src/scss/website_sale.scss" rel="stylesheet"
-				type="text/scss" />
-				
-			<link href="/clarico_ext/static/src/scss/enroll.scss" rel="stylesheet"
-				type="text/scss" />
-		</xpath>
-		<xpath expr="script[last()]" position="after">
-			<script src="/clarico_ext/static/src/js/website_sale.js" type="text/javascript" />
-			<script src="/clarico_ext/static/src/js/enroll.js" type="text/javascript" />
-		</xpath>
-	</template>
+    <template id="assets_frontend_clarico" inherit_id="website.assets_frontend">
+        <xpath expr="link[last()]" position="after">
+            <link href="/clarico_ext/static/src/scss/website_sale.scss" rel="stylesheet"
+                  type="text/scss"/>
 
-	
-	 
-	<template id="products_item_inherited_uom" inherit_id="website_sale.products_item">
-<!--        <xpath expr="//form/div" position="after">-->
-		<xpath expr="//form/div[@class='card-body p-0 text-center o_wsale_product_information']/div[1]" position="before">
-            <div class='uom_sel1' >
-		  		<select name="uom_id" class="uom_id1 form-control te_theme_button">
+            <link href="/clarico_ext/static/src/scss/enroll.scss" rel="stylesheet"
+                  type="text/scss"/>
+        </xpath>
+        <xpath expr="script[last()]" position="after">
+            <script src="/clarico_ext/static/src/js/website_sale.js" type="text/javascript"/>
+            <script src="/clarico_ext/static/src/js/enroll.js" type="text/javascript"/>
+        </xpath>
+    </template>
+
+
+    <template id="products_item_inherited_uom" inherit_id="website_sale.products_item">
+        <!--        <xpath expr="//form/div" position="after">-->
+        <xpath expr="//form/div[@class='card-body p-0 text-center o_wsale_product_information']/div[1]"
+               position="before">
+            <div class='uom_sel1'>
+                <select name="uom_id" class="uom_id1 form-control te_theme_button">
                     <t t-foreach="product.units_web()" t-as="uw">
-                        <option t-att-value="uw.id" >
-                            <t t-esc="uw.name" />
+                        <option t-att-value="uw.id">
+                            <t t-esc="uw.name"/>
                         </option>
                     </t>
                 </select>
-                <span t-field="product.list_price" class="base_price" style="display: none" />
-		  	</div>
-		</xpath>
-		<xpath expr="//form/div[@class='card-body p-0 text-center o_wsale_product_information']/div[1]" position="before">
-			<div class="css_quantity input-group quick_qty" contenteditable="false">
-				<div class="input-group-prepend">
-					<a t-attf-href="#" class="btn btn-secondary js_add_cart_json" aria-label="Remove one" title="Remove one">
-						<i class="fa fa-minus"></i>
-					</a>
-				</div>
-				<input type="text" class="form-control quantity" data-min="1" name="add_qty" t-att-value="add_qty or 1"/>
-				<div class="input-group-append">
-					<a t-attf-href="#" class="btn btn-secondary float_left js_add_cart_json" aria-label="Add one" title="Add one">
-						<i class="fa fa-plus"></i>
-					</a>
-				</div>
-			</div>
+                <span t-field="product.list_price" class="base_price" style="display: none"/>
+            </div>
+        </xpath>
+        <xpath expr="//form/div[@class='card-body p-0 text-center o_wsale_product_information']/div[1]"
+               position="before">
+            <div class="css_quantity input-group quick_qty" contenteditable="false">
+                <div class="input-group-prepend">
+                    <a t-attf-href="#" class="btn btn-secondary js_add_cart_json" aria-label="Remove one"
+                       title="Remove one">
+                        <i class="fa fa-minus"></i>
+                    </a>
+                </div>
+                <input type="text" class="form-control quantity" data-min="1" name="add_qty"
+                       t-att-value="add_qty or 1"/>
+                <div class="input-group-append">
+                    <a t-attf-href="#" class="btn btn-secondary float_left js_add_cart_json" aria-label="Add one"
+                       title="Add one">
+                        <i class="fa fa-plus"></i>
+                    </a>
+                </div>
+
+                <span id='quick-add-razzos' t-att-data-id="product.id">
+                    <i class="fa fa-shopping-cart"></i>
+                </span>
+
+            </div>
+
 
         </xpath>
-        
+
         <xpath expr="//form/div[1]/a/span" position="replace">
-        	<span t-field="product.image_1920"
+            <span t-field="product.image_1920"
                   t-options="{'widget': 'image', 'preview_image': 'image_1024' if product_image_big else 'image_256'}"
                   class="d-flex h-100 justify-content-center align-items-center img-fluid-equal"/>
         </xpath>
-        
+
     </template>
-     
-    
-    
-	<template id="product_uom_web1" inherit_id="website_sale.product" customize_show="True" name="Select Quantity">
-		<xpath expr="//a[@id='add_to_cart']" position="before">
-		  	<div class='uom_sel' >
-		  		<select id="uom_id" name="uom_id" class="form-control te_theme_button">
+
+
+    <template id="product_uom_web1" inherit_id="website_sale.product" customize_show="True" name="Select Quantity">
+        <xpath expr="//a[@id='add_to_cart']" position="before">
+            <div class='uom_sel'>
+                <select id="uom_id" name="uom_id" class="form-control te_theme_button">
                     <t t-foreach="product.units_web()" t-as="uw">
-                        <option t-att-value="uw.id" >
-                            <t t-esc="uw.name" />
+                        <option t-att-value="uw.id">
+                            <t t-esc="uw.name"/>
                         </option>
                     </t>
                 </select>
-                <span t-field="product.list_price" class="base_price" style="display: none" />
-		  	</div>
-		</xpath>
+                <span t-field="product.list_price" class="base_price" style="display: none"/>
+            </div>
+        </xpath>
     </template>
-    
-    
 
 
     <template id="website.website_search_box" name="Website Searchbox">
@@ -90,7 +97,7 @@
     </template>
 
 
-	<!-- TO SET SHOP PRODUCT LIST VIEW AS DEFAULT VIEW -->
+    <!-- TO SET SHOP PRODUCT LIST VIEW AS DEFAULT VIEW -->
     <template id="add_website_product_filter" inherit_id="website_sale.products"
               name="Default List view">
 
@@ -154,8 +161,4 @@
     </template>
 
 
-
-
-
-	
 </odoo>

@@ -159,21 +159,12 @@ class EmiproThemeBase(http.Controller):
 			factor = uom.factor
 			price = price / factor
 		
-		
 		return json.dumps({'price': price})
-	
-	
-	
-	
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-		   
-	
-	
-	
+
+	@http.route(['/quick_add_product_razzos'], type='http', auth="public", website=True, csrf=False)
+	def quick_add_product_razzos(self, **kwargs):
+		product = request.env['product.product'].sudo().search([('product_tmpl_id', '=', int(kwargs['id']))], limit=1)
+		order = request.website.sale_get_order(force_create=1)
+		if product:
+			order._cart_update(product_id=product.id, product_uom= int(kwargs['unit']), line_id=None, add_qty=0, set_qty=int(kwargs['qty']))
+		return json.dumps({'count': order.cart_quantity})

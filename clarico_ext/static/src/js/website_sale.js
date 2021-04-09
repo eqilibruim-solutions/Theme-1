@@ -42,6 +42,11 @@ odoo.define('clarico_ext.website_sale', function(require) {
     
     }
 
+
+
+
+
+
     $('#bday').keyup(function(event) {
         if ( $('#bday').val().length == 2 )
         {
@@ -178,10 +183,34 @@ odoo.define('clarico_ext.website_sale', function(require) {
 		  }
 		});*/
     	
-    	
-    	
-    	
-    });
+    //ON CLICK FUNCTION FOR QUICK ADD CART ICON
+        $('#products_grid').on('click', '#quick-add-razzos', function(event){
+            //DIFFERENT STYLE CLICK EVENT TO BE WORK FOR DYNAMICALLY ADDED CONTENTS WITH CONSTANT ELEMENT products_grid
+            var self = $(this);
+//            self.find('.fa-shopping-cart').css('color', '#007bff');
+//            self.find('.fa-shopping-cart').css('font-size', '22px');
+
+            var product_id = $(this).attr('data-id');
+            var product_qty = $(this).parent('.css_quantity').find('.quantity').val();
+            var unit_id = $(this).parents('.o_wsale_product_information').find('.uom_id1').val();
+
+
+            $.ajax({
+                url : "/quick_add_product_razzos",
+                data: { id: product_id, qty: product_qty, unit: unit_id},
+
+                success : function(data) {
+                    var data1 = JSON.parse(data);
+                    $('.o_wsale_my_cart').removeClass('d-none');
+	                $('.my_cart_quantity').text(data1.count+"");
+                },
+                fail: function(data){
+                },
+            });
+        });
+
+
+});
     
     
 
