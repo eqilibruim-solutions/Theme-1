@@ -20,7 +20,6 @@ from odoo.addons.product.models.product_pricelist import Pricelist
 def _compute_price_rule(self, products_qty_partner, date=False, uom_id=False):
 		""" Method monkey patched to change code according to customer selection in pricelist
 		"""
-		print ('Computing price......................')
 		self.ensure_one()
 		if not date:
 			date = self._context.get('date') or fields.Date.today()
@@ -145,9 +144,7 @@ def _compute_price_rule(self, products_qty_partner, date=False, uom_id=False):
 					states = rule.state_ids_pricelist.ids
 					
 					current_user = self.env['res.users'].sudo().browse(self._uid) 
-					print ( price, 'SSSSSSSSSSSSSSSSSSSSS \n\n\n\n\n\n\n')
 					if self._uid and states and current_user.partner_id.state_id.id not in states:
-						print (1111111111111111111111111111111111)
 						price = product.list_price
 						
 						
@@ -155,7 +152,6 @@ def _compute_price_rule(self, products_qty_partner, date=False, uom_id=False):
 					rule = self.env['product.pricelist.item'].sudo().browse(rule.id)
 					userss = rule.user_ids.ids
 					if self._uid and userss and self._uid not in userss:
-						print (222222222222222222222222222222222)
 						price = product.list_price
 						
 						
@@ -168,21 +164,17 @@ def _compute_price_rule(self, products_qty_partner, date=False, uom_id=False):
 				else:
 					cur = product.currency_id
 				price = cur._convert(price, self.currency_id, self.env.company, date, round=False)
-				print (333333333333333333333333333333333333333333)
 
 			if not suitable_rule:
 				cur = product.currency_id
 				price = cur._convert(price, self.currency_id, self.env.company, date, round=False)
-				print (444444444444444444444444444444444444444444)
 
 			results[product.id] = (price, suitable_rule and suitable_rule.id or False)
 
 		
 		return results
-	   
-	   
-	   
-	   		
+
+
 Pricelist._compute_price_rule = _compute_price_rule		
 
 	

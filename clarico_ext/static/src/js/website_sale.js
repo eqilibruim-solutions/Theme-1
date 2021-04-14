@@ -194,6 +194,7 @@ odoo.define('clarico_ext.website_sale', function(require) {
             var product_qty = $(this).parent('.css_quantity').find('.quantity').val();
             var unit_id = $(this).parents('.o_wsale_product_information').find('.uom_id1').val();
 
+            $('#added_back').show()
 
             $.ajax({
                 url : "/quick_add_product_razzos",
@@ -203,8 +204,18 @@ odoo.define('clarico_ext.website_sale', function(require) {
                     var data1 = JSON.parse(data);
                     $('.o_wsale_my_cart').removeClass('d-none');
 	                $('.my_cart_quantity').text(data1.count+"");
+
+	                $('#added_div').show()
+	                setTimeout(
+                      function()
+                      {
+                        $('#added_back').hide()
+                        $('#added_div').hide()
+                      }, 2000);
+
                 },
                 fail: function(data){
+                    $('#added_back').hide()
                 },
             });
         });

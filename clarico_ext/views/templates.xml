@@ -31,6 +31,7 @@
                 <span t-field="product.list_price" class="base_price" style="display: none"/>
             </div>
         </xpath>
+
         <xpath expr="//form/div[@class='card-body p-0 text-center o_wsale_product_information']/div[1]"
                position="before">
             <div class="css_quantity input-group quick_qty" contenteditable="false">
@@ -153,6 +154,19 @@
                             </t>
                         </body>
                     </table>
+                </div>
+            </div>
+        </xpath>
+
+
+        <xpath expr="." position="inside">
+            <div id="added_back" style="background-color: #0000009c;">
+                <div id="added_div">
+                    <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                    </svg>
+                    <div style="margin-top: -35px; margin-left: 55px; ">Added into Cart</div>
                 </div>
             </div>
         </xpath>

@@ -106,7 +106,6 @@ def _cart_update(self, product_id=None, line_id=None, add_qty=0, set_qty=0, **kw
 			order_line.product_uom = int(kwargs['product_uom_id'])
 			order_line.product_uom_change()
 
-		print (order_line, values, '\n  \n\n OLOLOLOLOLOLOLOLOL........................')
 
 		try:
 			order_line._compute_tax_id()
