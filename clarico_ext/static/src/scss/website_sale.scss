@@ -28,7 +28,7 @@
 
 .uom_sel{
     margin-bottom: 10px;
-    margin-top: -32px;
+    margin-top: -2px;
     margin-left: 35%;
     position: absolute;
 
@@ -219,8 +219,6 @@
 @media only screen and (max-width: 600px) {
   .uom_sel{
 	    margin-bottom: 10px;
-	    margin-top: 10px;
-    	margin-left: 0%;
     	display: inline-block;
 	}
 	#added_div{
@@ -234,7 +232,7 @@
 		width: 24% !important;
 	}
 	.uom_sel{
-    	margin-left: 24%;
+    	margin-left: 124%;
     	display: inline-block;
 	}
 }
@@ -362,10 +360,9 @@ top: 15px;
 }
 
 
-#products_grid > .oe_product{
-    width: 250px !important;
+#products_grid{
+    max-width: 99% !important;
 }
-
 
 
 
